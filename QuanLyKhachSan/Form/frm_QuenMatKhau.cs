@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QuanLyKhachSan
+{
+    public partial class frm_QuenMatKhau : Form
+    {
+        public frm_QuenMatKhau()
+        {
+            InitializeComponent();
+        }
+
+        private void lbl_DangNhap_Click(object sender, EventArgs e)
+        {
+            frm_DangNhap frm_DangNhap = new frm_DangNhap();
+            frm_DangNhap.ShowDialog();
+        }
+
+        private void pic_Show_Click(object sender, EventArgs e)
+        {
+            pic_Show.Hide();
+            txt_MatKhau.UseSystemPasswordChar = false;
+            pic_Hide.Show();
+        }
+
+        private void pic_Hide_Click(object sender, EventArgs e)
+        {
+            pic_Hide.Hide();
+            txt_MatKhau.UseSystemPasswordChar = true;
+            pic_Show.Show();
+        }
+
+        private void pic_Hide1_Click(object sender, EventArgs e)
+        {
+            pic_Hide1.Hide();
+            txt_NhapLaiMK.UseSystemPasswordChar = true;
+            pic_Show1.Show();
+        }
+
+        private void pic_Show1_Click(object sender, EventArgs e)
+        {
+            pic_Show1.Hide();
+            txt_NhapLaiMK.UseSystemPasswordChar = false;
+            pic_Hide1.Show();
+        }
+
+        private void pic_Show_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pic_Show, "Hiện mật khẩu");
+        }
+
+        private void pic_Hide_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pic_Hide, "Ẩn mật khẩu");
+        }
+
+        private void pic_Hide1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pic_Hide1, "Ẩn mật khẩu");
+        }
+
+        private void pic_Show1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pic_Show1, "Hiện mật khẩu");
+        }
+    }
+}
