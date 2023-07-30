@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,16 @@ namespace QuanLyKhachSan
 {
     public partial class frm_TrangChu : Form
     {
+        BUS_TrangChu bus;
         public Form frm_HienTai;
         public string TenDangNhap;
-        public frm_TrangChu()
+        string _tk;
+        public frm_TrangChu(string tk)
         {
             InitializeComponent();
+
+            _tk = tk;
+            bus = new BUS_TrangChu();
         }
 
         public void OpenChildForm(Form frm_Con)
@@ -32,6 +38,7 @@ namespace QuanLyKhachSan
             frm_Con.Dock = DockStyle.Fill;
             pnl_Main.Controls.Add(frm_Con);
             frm_Con.Show();
+            
         }
 
         private void DiChuyenPanel(Control btn)
@@ -45,8 +52,9 @@ namespace QuanLyKhachSan
         {
             timer1.Start();
             lbl_TenDangNhap.Text = TenDangNhap;
+            ThongTinTaiKoan();
         }
-
+        
         private void linkLabel_Thoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -60,6 +68,13 @@ namespace QuanLyKhachSan
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             DiChuyenPanel(btn_TrangChu);
+        }
+        void ThongTinTaiKoan()
+        {
+            lbl_TenDangNhap.Text = bus.LayTen(_tk);
+            //phân quyền tại đây
+            
+
         }
 
         private void btn_ThuePhong_Click(object sender, EventArgs e)
@@ -120,7 +135,7 @@ namespace QuanLyKhachSan
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_DoiMatKhau());
+            OpenChildForm(new frm_DoiMatKhau(_tk));
         }
 
         private void phòngToolStripMenuItem_Click(object sender, EventArgs e)

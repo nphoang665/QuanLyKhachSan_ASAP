@@ -78,6 +78,7 @@
             this.btn_Luu.TabIndex = 41;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = false;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // pic_Show
             // 

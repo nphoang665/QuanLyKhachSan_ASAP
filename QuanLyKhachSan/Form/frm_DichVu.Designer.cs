@@ -705,6 +705,7 @@
             this.Name = "frm_DichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_DichVu";
+            this.Load += new System.EventHandler(this.frm_DichVu_Load);
             this.tabControl_DichVu_ADM.ResumeLayout(false);
             this.tabPage_ThemDichVu.ResumeLayout(false);
             this.tabPage_ThemDichVu.PerformLayout();

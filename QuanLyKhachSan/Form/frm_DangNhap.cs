@@ -56,7 +56,7 @@ namespace QuanLyKhachSan
             if (dangnhap)
             {
                 this.Hide();
-                frm_TrangChu frm = new frm_TrangChu();
+                frm_TrangChu frm = new frm_TrangChu(tk);
                 frm.ShowDialog();
                 this.Close();
             }
