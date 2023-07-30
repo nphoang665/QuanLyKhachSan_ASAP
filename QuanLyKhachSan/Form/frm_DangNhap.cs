@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,13 @@ namespace QuanLyKhachSan
 {
     public partial class frm_DangNhap : Form
     {
+        BUS_DangNhap bus;
+
         public frm_DangNhap()
         {
             InitializeComponent();
+            bus = new BUS_DangNhap();
+
         }
 
         private void pic_Show_MouseHover(object sender, EventArgs e)
@@ -42,11 +47,36 @@ namespace QuanLyKhachSan
             txt_MatKhau.UseSystemPasswordChar = true;
             pic_Show.Show();
         }
+        void DangNhap()
+        {
+            string tk = txt_TenDangNhap.Text;
+            string mk = txt_MatKhau.Text;
 
+            bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
+            if (dangnhap)
+            {
+                this.Hide();
+                frm_TrangChu frm = new frm_TrangChu();
+                frm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập không thành công");
+            }
+
+
+        }
         private void lbl_QuenMatKhau_Click(object sender, EventArgs e)
         {
             frm_QuenMatKhau frm_QuenMatKhau = new frm_QuenMatKhau();
             frm_QuenMatKhau.Show();
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            DangNhap();
+
         }
     }
 }

@@ -36,21 +36,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pic_Show = new System.Windows.Forms.PictureBox();
             this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.btn_DangNhap = new System.Windows.Forms.Button();
             this.lbl_QuenMatKhau = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_TenDangNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pic_Show = new System.Windows.Forms.PictureBox();
-            this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,6 +122,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng Nhập";
             // 
+            // pic_Show
+            // 
+            this.pic_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
+            this.pic_Show.Location = new System.Drawing.Point(358, 163);
+            this.pic_Show.Name = "pic_Show";
+            this.pic_Show.Size = new System.Drawing.Size(32, 23);
+            this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Show.TabIndex = 4;
+            this.pic_Show.TabStop = false;
+            this.pic_Show.Click += new System.EventHandler(this.pic_Show_Click);
+            this.pic_Show.MouseHover += new System.EventHandler(this.pic_Show_MouseHover);
+            // 
             // txt_MatKhau
             // 
             this.txt_MatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -147,6 +162,7 @@
             this.btn_DangNhap.TabIndex = 3;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // lbl_QuenMatKhau
             // 
@@ -193,32 +209,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên đăng nhập:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::QuanLyKhachSan.Properties.Resources.hotel_building_isolated_city_street_vector_illustration_flat_cartoon_101884_680;
-            this.pictureBox1.Location = new System.Drawing.Point(652, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(517, 390);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pic_Show
-            // 
-            this.pic_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show.Location = new System.Drawing.Point(358, 163);
-            this.pic_Show.Name = "pic_Show";
-            this.pic_Show.Size = new System.Drawing.Size(32, 23);
-            this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Show.TabIndex = 4;
-            this.pic_Show.TabStop = false;
-            this.pic_Show.Click += new System.EventHandler(this.pic_Show_Click);
-            this.pic_Show.MouseHover += new System.EventHandler(this.pic_Show_MouseHover);
-            // 
             // pic_Hide
             // 
             this.pic_Hide.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -233,6 +223,17 @@
             this.pic_Hide.TabStop = false;
             this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             this.pic_Hide.MouseHover += new System.EventHandler(this.pic_Hide_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::QuanLyKhachSan.Properties.Resources.hotel_building_isolated_city_street_vector_illustration_flat_cartoon_101884_680;
+            this.pictureBox1.Location = new System.Drawing.Point(652, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(517, 390);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_DangNhap
             // 
@@ -257,9 +258,9 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

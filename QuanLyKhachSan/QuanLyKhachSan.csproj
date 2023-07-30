@@ -36,8 +36,17 @@
     <ApplicationIcon>1497618989-3_85123.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +58,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_DangNhap.cs" />
+    <Compile Include="BUS\BUS_NhanSu.cs" />
+    <Compile Include="BUS\BUS_Phong.cs" />
+    <Compile Include="BUS\BUS_QuanLyTaiKhoan.cs" />
+    <Compile Include="DA\DangKyDichVu.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\DatPhong.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\DA_DangNhap.cs" />
+    <Compile Include="DA\DA_NhanSu.cs" />
+    <Compile Include="DA\DA_Phong.cs" />
+    <Compile Include="DA\DA_QuanLyTaiKhoan.cs" />
+    <Compile Include="DA\HoaDon.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\LuuMatKhau.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\NhanSu.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\Phong.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\QuanLyDichVu.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\QuanLyKhachSanModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\QuanLyKhachSanModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\QuanLyKhachSanModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DA\TaiKhoan.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\ThongKe.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\ThongTinKhachHang.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form\frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +240,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="DA\QuanLyKhachSanModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DA\QuanLyKhachSanModel.edmx.diagram">
+      <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -208,6 +278,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1497618989-3_85123.ico" />
+    <Content Include="DA\QuanLyKhachSanModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanModel.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DA\QuanLyKhachSanModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKhachSanModel.cs</LastGenOutput>
+    </Content>
     <None Include="Resources\analysis.png" />
     <None Include="Resources\bed.png" />
     <None Include="Resources\management.png" />
@@ -219,6 +299,9 @@
     <None Include="Resources\icons8-hotel-check-out-35.png" />
     <None Include="Resources\icons8-rent-35.png" />
     <None Include="Resources\icons8-home-page-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
