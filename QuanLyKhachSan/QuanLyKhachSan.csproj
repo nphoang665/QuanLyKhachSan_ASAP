@@ -61,6 +61,7 @@
     <Compile Include="BUS\BUS_DangNhap.cs" />
     <Compile Include="BUS\BUS_DichVu.cs" />
     <Compile Include="BUS\BUS_DoiMatKhau.cs" />
+    <Compile Include="BUS\BUS_KhachHang.cs" />
     <Compile Include="BUS\BUS_NhanSu.cs" />
     <Compile Include="BUS\BUS_Phong.cs" />
     <Compile Include="BUS\BUS_QuanLyTaiKhoan.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="DA\DA_DangNhap.cs" />
     <Compile Include="DA\DA_DichVu.cs" />
     <Compile Include="DA\DA_DoiMatKhau.cs" />
+    <Compile Include="DA\DA_KhachHang.cs" />
     <Compile Include="DA\DA_NhanSu.cs" />
     <Compile Include="DA\DA_Phong.cs" />
     <Compile Include="DA\DA_QuanLyTaiKhoan.cs" />

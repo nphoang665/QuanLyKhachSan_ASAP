@@ -77,6 +77,8 @@
             this.lbl_DangKyDichVu = new System.Windows.Forms.Label();
             this.lstv_ThongTinDichVu = new System.Windows.Forms.ListView();
             this.label15 = new System.Windows.Forms.Label();
+            this.txt_Madichvu2 = new System.Windows.Forms.TextBox();
+            this.lbl_MaDichVu2 = new System.Windows.Forms.Label();
             this.tabControl_DichVu_ADM.SuspendLayout();
             this.tabPage_ThemDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu)).BeginInit();
@@ -209,6 +211,7 @@
             this.btn_Them.TabIndex = 40;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // label6
             // 
@@ -269,6 +272,7 @@
             this.cbo_MaDichVu.Name = "cbo_MaDichVu";
             this.cbo_MaDichVu.Size = new System.Drawing.Size(193, 25);
             this.cbo_MaDichVu.TabIndex = 51;
+            this.cbo_MaDichVu.SelectedIndexChanged += new System.EventHandler(this.cbo_MaDichVu_SelectedIndexChanged);
             // 
             // txt_TenDichVu1
             // 
@@ -278,6 +282,7 @@
             this.txt_TenDichVu1.Name = "txt_TenDichVu1";
             this.txt_TenDichVu1.Size = new System.Drawing.Size(193, 25);
             this.txt_TenDichVu1.TabIndex = 48;
+            this.txt_TenDichVu1.TextChanged += new System.EventHandler(this.txt_TenDichVu1_TextChanged);
             // 
             // label7
             // 
@@ -331,6 +336,8 @@
             // 
             this.tabPage_Sua_XoaDichVu.BackColor = System.Drawing.Color.White;
             this.tabPage_Sua_XoaDichVu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_Sua_XoaDichVu.Controls.Add(this.txt_Madichvu2);
+            this.tabPage_Sua_XoaDichVu.Controls.Add(this.lbl_MaDichVu2);
             this.tabPage_Sua_XoaDichVu.Controls.Add(this.btn_Xoa);
             this.tabPage_Sua_XoaDichVu.Controls.Add(this.btn_Sua);
             this.tabPage_Sua_XoaDichVu.Controls.Add(this.txt_DonViTinh2);
@@ -363,6 +370,7 @@
             this.btn_Xoa.TabIndex = 57;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
@@ -379,12 +387,13 @@
             this.btn_Sua.TabIndex = 56;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // txt_DonViTinh2
             // 
             this.txt_DonViTinh2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_DonViTinh2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_DonViTinh2.Location = new System.Drawing.Point(410, 130);
+            this.txt_DonViTinh2.Location = new System.Drawing.Point(407, 163);
             this.txt_DonViTinh2.Name = "txt_DonViTinh2";
             this.txt_DonViTinh2.Size = new System.Drawing.Size(193, 25);
             this.txt_DonViTinh2.TabIndex = 54;
@@ -393,7 +402,7 @@
             // 
             this.txt_DonGia2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_DonGia2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_DonGia2.Location = new System.Drawing.Point(410, 90);
+            this.txt_DonGia2.Location = new System.Drawing.Point(407, 123);
             this.txt_DonGia2.Name = "txt_DonGia2";
             this.txt_DonGia2.Size = new System.Drawing.Size(193, 25);
             this.txt_DonGia2.TabIndex = 50;
@@ -402,7 +411,7 @@
             // 
             this.txt_TenDichVu2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_TenDichVu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenDichVu2.Location = new System.Drawing.Point(410, 53);
+            this.txt_TenDichVu2.Location = new System.Drawing.Point(407, 86);
             this.txt_TenDichVu2.Name = "txt_TenDichVu2";
             this.txt_TenDichVu2.Size = new System.Drawing.Size(193, 25);
             this.txt_TenDichVu2.TabIndex = 50;
@@ -412,7 +421,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 132);
+            this.label3.Location = new System.Drawing.Point(260, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 52;
@@ -423,7 +432,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(263, 95);
+            this.label8.Location = new System.Drawing.Point(260, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 53;
@@ -442,13 +451,14 @@
             this.dgv_DanhSachDichVu2.ReadOnly = true;
             this.dgv_DanhSachDichVu2.Size = new System.Drawing.Size(1005, 235);
             this.dgv_DanhSachDichVu2.TabIndex = 51;
+            this.dgv_DanhSachDichVu2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachDichVu2_CellClick);
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(263, 54);
+            this.label11.Location = new System.Drawing.Point(260, 87);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 20);
             this.label11.TabIndex = 48;
@@ -692,6 +702,26 @@
             this.label15.TabIndex = 77;
             this.label15.Text = "DANH SÁCH CÁC DỊCH VỤ:";
             // 
+            // txt_Madichvu2
+            // 
+            this.txt_Madichvu2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Madichvu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Madichvu2.Location = new System.Drawing.Point(407, 52);
+            this.txt_Madichvu2.Name = "txt_Madichvu2";
+            this.txt_Madichvu2.Size = new System.Drawing.Size(193, 25);
+            this.txt_Madichvu2.TabIndex = 59;
+            // 
+            // lbl_MaDichVu2
+            // 
+            this.lbl_MaDichVu2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_MaDichVu2.AutoSize = true;
+            this.lbl_MaDichVu2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_MaDichVu2.Location = new System.Drawing.Point(260, 53);
+            this.lbl_MaDichVu2.Name = "lbl_MaDichVu2";
+            this.lbl_MaDichVu2.Size = new System.Drawing.Size(89, 20);
+            this.lbl_MaDichVu2.TabIndex = 58;
+            this.lbl_MaDichVu2.Text = "Mã dịch vụ:";
+            // 
             // frm_DichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -773,5 +803,7 @@
         private System.Windows.Forms.Label lbl_DangKyDichVu;
         private System.Windows.Forms.ListView lstv_ThongTinDichVu;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txt_Madichvu2;
+        private System.Windows.Forms.Label lbl_MaDichVu2;
     }
 }

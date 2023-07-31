@@ -18,5 +18,38 @@ namespace QuanLyKhachSan.BUS
         {
             dgv.DataSource = da.LoadDichVu();
         }
+        public void ThemDichVu_b(string madv, string tendv, float dongia, string donvitinh)
+        {
+            da.ThemDichVu_d(madv, tendv, dongia, donvitinh);
+        }
+        public void hienthongtincbo_b(ComboBox cbo)
+        {
+           
+            cbo.DataSource = da.hienthongtincbo_d();
+            cbo.SelectedIndex = -1;
+            
+        }
+        public void TimMaDichVu_b(string madv,DataGridView dgv)
+        {
+           
+            dgv.DataSource = da.timdichvu_d(madv);
+        }
+        public void timtendichvu_b(string tendichvu, DataGridView dgv)
+        {
+
+            dgv.DataSource = da.timtendichvu_d(tendichvu);
+        }
+        public void SuaDichVu_b(string madv, string tendv, float dongia, string donvitinh)
+        {
+            da.SuaDichVu_d(madv, tendv, dongia, donvitinh);
+        }
+        public void XoaDichVu_b(string madv)
+        {
+            da.XoaDichVu_d(madv);
+        }
+        public QuanLyDichVu xuatdichvu(string madv)
+        {
+            return da.laydichvu(madv);
+        }
     }
 }
