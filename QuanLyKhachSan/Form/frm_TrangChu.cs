@@ -177,5 +177,11 @@ namespace QuanLyKhachSan
         {
             lbl_Date.Text = DateTime.Now.ToString("dd/MMM/yyyy hh:mm:ss tt");
         }
+
+        private void btn_Phong_Click(object sender, EventArgs e)
+        {
+            DiChuyenPanel(btn_Phong);
+            OpenChildForm(new frm_Phong());
+        }
     }
 }

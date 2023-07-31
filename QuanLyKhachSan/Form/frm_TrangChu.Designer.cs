@@ -31,22 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangChu));
             this.pnl_left = new System.Windows.Forms.Panel();
-            this.btn_HoaDon = new System.Windows.Forms.Button();
             this.pnl_Slide = new System.Windows.Forms.Panel();
-            this.btn_NhanVien = new System.Windows.Forms.Button();
-            this.btn_TaiKhoan = new System.Windows.Forms.Button();
-            this.btn_TraPhong = new System.Windows.Forms.Button();
-            this.btn_ThuePhong = new System.Windows.Forms.Button();
-            this.btn_KhachHang = new System.Windows.Forms.Button();
-            this.btn_TrangChu = new System.Windows.Forms.Button();
             this.pnl_logo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_Bottom = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnl_ThanhMenu = new System.Windows.Forms.Panel();
             this.menu_Top = new System.Windows.Forms.MenuStrip();
+            this.lbl_TenDangNhap = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_Date = new System.Windows.Forms.Label();
+            this.linkLabel_Thoat = new System.Windows.Forms.LinkLabel();
+            this.pnl_Main = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,28 +63,36 @@
             this.báoCáoThốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbl_TenDangNhap = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_Date = new System.Windows.Forms.Label();
-            this.linkLabel_Thoat = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnl_Main = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn_Phong = new System.Windows.Forms.Button();
+            this.btn_HoaDon = new System.Windows.Forms.Button();
+            this.btn_NhanVien = new System.Windows.Forms.Button();
+            this.btn_TaiKhoan = new System.Windows.Forms.Button();
+            this.btn_TraPhong = new System.Windows.Forms.Button();
+            this.btn_ThuePhong = new System.Windows.Forms.Button();
+            this.btn_KhachHang = new System.Windows.Forms.Button();
+            this.btn_TrangChu = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnl_left.SuspendLayout();
             this.pnl_logo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_Bottom.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnl_ThanhMenu.SuspendLayout();
             this.menu_Top.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_left
             // 
             this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.pnl_left.Controls.Add(this.panel1);
+            this.pnl_left.Controls.Add(this.btn_Phong);
             this.pnl_left.Controls.Add(this.btn_HoaDon);
             this.pnl_left.Controls.Add(this.pnl_Slide);
             this.pnl_left.Controls.Add(this.btn_NhanVien);
@@ -101,24 +109,6 @@
             this.pnl_left.TabIndex = 1;
             this.pnl_left.TabStop = true;
             // 
-            // btn_HoaDon
-            // 
-            this.btn_HoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_HoaDon.FlatAppearance.BorderSize = 0;
-            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
-            this.btn_HoaDon.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bill_35;
-            this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDon.Location = new System.Drawing.Point(12, 475);
-            this.btn_HoaDon.Name = "btn_HoaDon";
-            this.btn_HoaDon.Size = new System.Drawing.Size(239, 52);
-            this.btn_HoaDon.TabIndex = 6;
-            this.btn_HoaDon.Text = "      Hóa đơn";
-            this.btn_HoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_HoaDon.UseVisualStyleBackColor = true;
-            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
-            // 
             // pnl_Slide
             // 
             this.pnl_Slide.BackColor = System.Drawing.Color.White;
@@ -126,114 +116,6 @@
             this.pnl_Slide.Name = "pnl_Slide";
             this.pnl_Slide.Size = new System.Drawing.Size(10, 52);
             this.pnl_Slide.TabIndex = 0;
-            // 
-            // btn_NhanVien
-            // 
-            this.btn_NhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_NhanVien.FlatAppearance.BorderSize = 0;
-            this.btn_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
-            this.btn_NhanVien.Image = global::QuanLyKhachSan.Properties.Resources.icons8_staff_35;
-            this.btn_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NhanVien.Location = new System.Drawing.Point(12, 417);
-            this.btn_NhanVien.Name = "btn_NhanVien";
-            this.btn_NhanVien.Size = new System.Drawing.Size(239, 52);
-            this.btn_NhanVien.TabIndex = 5;
-            this.btn_NhanVien.Text = "      Nhân viên";
-            this.btn_NhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_NhanVien.UseVisualStyleBackColor = true;
-            this.btn_NhanVien.Click += new System.EventHandler(this.btn_NhanVien_Click);
-            // 
-            // btn_TaiKhoan
-            // 
-            this.btn_TaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btn_TaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TaiKhoan.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btn_TaiKhoan.Image = global::QuanLyKhachSan.Properties.Resources.icons8_account_35;
-            this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(12, 533);
-            this.btn_TaiKhoan.Name = "btn_TaiKhoan";
-            this.btn_TaiKhoan.Size = new System.Drawing.Size(239, 52);
-            this.btn_TaiKhoan.TabIndex = 7;
-            this.btn_TaiKhoan.Text = "      Tài khoản";
-            this.btn_TaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TaiKhoan.UseVisualStyleBackColor = true;
-            this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
-            // 
-            // btn_TraPhong
-            // 
-            this.btn_TraPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TraPhong.FlatAppearance.BorderSize = 0;
-            this.btn_TraPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TraPhong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TraPhong.ForeColor = System.Drawing.Color.White;
-            this.btn_TraPhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_hotel_check_out_35;
-            this.btn_TraPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TraPhong.Location = new System.Drawing.Point(12, 301);
-            this.btn_TraPhong.Name = "btn_TraPhong";
-            this.btn_TraPhong.Size = new System.Drawing.Size(239, 52);
-            this.btn_TraPhong.TabIndex = 3;
-            this.btn_TraPhong.Text = "      Trả phòng";
-            this.btn_TraPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TraPhong.UseVisualStyleBackColor = true;
-            this.btn_TraPhong.Click += new System.EventHandler(this.btn_TraPhong_Click);
-            // 
-            // btn_ThuePhong
-            // 
-            this.btn_ThuePhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThuePhong.FlatAppearance.BorderSize = 0;
-            this.btn_ThuePhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThuePhong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThuePhong.ForeColor = System.Drawing.Color.White;
-            this.btn_ThuePhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_rent_35;
-            this.btn_ThuePhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThuePhong.Location = new System.Drawing.Point(12, 243);
-            this.btn_ThuePhong.Name = "btn_ThuePhong";
-            this.btn_ThuePhong.Size = new System.Drawing.Size(239, 52);
-            this.btn_ThuePhong.TabIndex = 2;
-            this.btn_ThuePhong.Text = "      Thuê phòng";
-            this.btn_ThuePhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ThuePhong.UseVisualStyleBackColor = true;
-            this.btn_ThuePhong.Click += new System.EventHandler(this.btn_ThuePhong_Click);
-            // 
-            // btn_KhachHang
-            // 
-            this.btn_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_KhachHang.FlatAppearance.BorderSize = 0;
-            this.btn_KhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_KhachHang.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KhachHang.ForeColor = System.Drawing.Color.White;
-            this.btn_KhachHang.Image = global::QuanLyKhachSan.Properties.Resources.icons8_client_35;
-            this.btn_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_KhachHang.Location = new System.Drawing.Point(12, 359);
-            this.btn_KhachHang.Name = "btn_KhachHang";
-            this.btn_KhachHang.Size = new System.Drawing.Size(239, 52);
-            this.btn_KhachHang.TabIndex = 4;
-            this.btn_KhachHang.Text = "      Khách hàng";
-            this.btn_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_KhachHang.UseVisualStyleBackColor = true;
-            this.btn_KhachHang.Click += new System.EventHandler(this.btn_KhachHang_Click);
-            // 
-            // btn_TrangChu
-            // 
-            this.btn_TrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TrangChu.FlatAppearance.BorderSize = 0;
-            this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TrangChu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TrangChu.ForeColor = System.Drawing.Color.White;
-            this.btn_TrangChu.Image = global::QuanLyKhachSan.Properties.Resources.icons8_home_page_35;
-            this.btn_TrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TrangChu.Location = new System.Drawing.Point(12, 185);
-            this.btn_TrangChu.Name = "btn_TrangChu";
-            this.btn_TrangChu.Size = new System.Drawing.Size(239, 52);
-            this.btn_TrangChu.TabIndex = 1;
-            this.btn_TrangChu.Text = "      Trang chủ";
-            this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TrangChu.UseVisualStyleBackColor = true;
-            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
             // pnl_logo
             // 
@@ -254,16 +136,6 @@
             this.label2.Size = new System.Drawing.Size(181, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Khách sạn A$AP";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QuanLyKhachSan.Properties.Resources.icons8_hotel_100;
-            this.pictureBox2.Location = new System.Drawing.Point(72, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(107, 90);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // pnl_Bottom
             // 
@@ -322,6 +194,93 @@
             this.menu_Top.Size = new System.Drawing.Size(1114, 34);
             this.menu_Top.TabIndex = 8;
             this.menu_Top.Text = "menuStrip1";
+            // 
+            // lbl_TenDangNhap
+            // 
+            this.lbl_TenDangNhap.AutoSize = true;
+            this.lbl_TenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.lbl_TenDangNhap.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TenDangNhap.ForeColor = System.Drawing.Color.White;
+            this.lbl_TenDangNhap.Location = new System.Drawing.Point(115, 90);
+            this.lbl_TenDangNhap.Name = "lbl_TenDangNhap";
+            this.lbl_TenDangNhap.Size = new System.Drawing.Size(25, 23);
+            this.lbl_TenDangNhap.TabIndex = 0;
+            this.lbl_TenDangNhap.Text = "...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(6, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Welcome:";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.lbl_Date);
+            this.panel5.Controls.Add(this.linkLabel_Thoat);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1114, 74);
+            this.panel5.TabIndex = 0;
+            // 
+            // lbl_Date
+            // 
+            this.lbl_Date.AutoSize = true;
+            this.lbl_Date.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.lbl_Date.Location = new System.Drawing.Point(18, 37);
+            this.lbl_Date.Name = "lbl_Date";
+            this.lbl_Date.Size = new System.Drawing.Size(28, 23);
+            this.lbl_Date.TabIndex = 0;
+            this.lbl_Date.Text = "...";
+            // 
+            // linkLabel_Thoat
+            // 
+            this.linkLabel_Thoat.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabel_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel_Thoat.AutoSize = true;
+            this.linkLabel_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel_Thoat.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabel_Thoat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_Thoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabel_Thoat.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabel_Thoat.Location = new System.Drawing.Point(970, 42);
+            this.linkLabel_Thoat.Name = "linkLabel_Thoat";
+            this.linkLabel_Thoat.Size = new System.Drawing.Size(75, 16);
+            this.linkLabel_Thoat.TabIndex = 0;
+            this.linkLabel_Thoat.TabStop = true;
+            this.linkLabel_Thoat.Text = "Đăng xuất";
+            this.linkLabel_Thoat.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.linkLabel_Thoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Thoat_LinkClicked);
+            // 
+            // pnl_Main
+            // 
+            this.pnl_Main.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnl_Main.Location = new System.Drawing.Point(251, 165);
+            this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Size = new System.Drawing.Size(1114, 511);
+            this.pnl_Main.TabIndex = 4;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Location = new System.Drawing.Point(76, 649);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(78, 68);
+            this.panel1.TabIndex = 9;
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -457,72 +416,6 @@
             this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
             this.hóaĐơnToolStripMenuItem.Text = "Hóa đơn";
             // 
-            // lbl_TenDangNhap
-            // 
-            this.lbl_TenDangNhap.AutoSize = true;
-            this.lbl_TenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_TenDangNhap.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenDangNhap.ForeColor = System.Drawing.Color.White;
-            this.lbl_TenDangNhap.Location = new System.Drawing.Point(115, 90);
-            this.lbl_TenDangNhap.Name = "lbl_TenDangNhap";
-            this.lbl_TenDangNhap.Size = new System.Drawing.Size(25, 23);
-            this.lbl_TenDangNhap.TabIndex = 0;
-            this.lbl_TenDangNhap.Text = "...";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Welcome:";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.lbl_Date);
-            this.panel5.Controls.Add(this.linkLabel_Thoat);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1114, 74);
-            this.panel5.TabIndex = 0;
-            // 
-            // lbl_Date
-            // 
-            this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_Date.Location = new System.Drawing.Point(18, 37);
-            this.lbl_Date.Name = "lbl_Date";
-            this.lbl_Date.Size = new System.Drawing.Size(28, 23);
-            this.lbl_Date.TabIndex = 0;
-            this.lbl_Date.Text = "...";
-            // 
-            // linkLabel_Thoat
-            // 
-            this.linkLabel_Thoat.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabel_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel_Thoat.AutoSize = true;
-            this.linkLabel_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel_Thoat.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabel_Thoat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel_Thoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabel_Thoat.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabel_Thoat.Location = new System.Drawing.Point(970, 42);
-            this.linkLabel_Thoat.Name = "linkLabel_Thoat";
-            this.linkLabel_Thoat.Size = new System.Drawing.Size(75, 16);
-            this.linkLabel_Thoat.TabIndex = 0;
-            this.linkLabel_Thoat.TabStop = true;
-            this.linkLabel_Thoat.Text = "Đăng xuất";
-            this.linkLabel_Thoat.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.linkLabel_Thoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Thoat_LinkClicked);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -534,17 +427,178 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnl_Main
+            // pictureBox3
             // 
-            this.pnl_Main.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnl_Main.Location = new System.Drawing.Point(251, 165);
-            this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1114, 511);
-            this.pnl_Main.TabIndex = 4;
+            this.pictureBox3.Image = global::QuanLyKhachSan.Properties.Resources.icons8_exit_50;
+            this.pictureBox3.Location = new System.Drawing.Point(17, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 53);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
-            // timer1
+            // btn_Phong
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btn_Phong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Phong.FlatAppearance.BorderSize = 0;
+            this.btn_Phong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Phong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Phong.ForeColor = System.Drawing.Color.White;
+            this.btn_Phong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bedroom_35;
+            this.btn_Phong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Phong.Location = new System.Drawing.Point(12, 243);
+            this.btn_Phong.Name = "btn_Phong";
+            this.btn_Phong.Size = new System.Drawing.Size(239, 52);
+            this.btn_Phong.TabIndex = 8;
+            this.btn_Phong.Text = "      Phòng";
+            this.btn_Phong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Phong.UseVisualStyleBackColor = true;
+            this.btn_Phong.Click += new System.EventHandler(this.btn_Phong_Click);
+            // 
+            // btn_HoaDon
+            // 
+            this.btn_HoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HoaDon.FlatAppearance.BorderSize = 0;
+            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
+            this.btn_HoaDon.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bill_35;
+            this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HoaDon.Location = new System.Drawing.Point(6, 533);
+            this.btn_HoaDon.Name = "btn_HoaDon";
+            this.btn_HoaDon.Size = new System.Drawing.Size(239, 52);
+            this.btn_HoaDon.TabIndex = 6;
+            this.btn_HoaDon.Text = "      Hóa đơn";
+            this.btn_HoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_HoaDon.UseVisualStyleBackColor = true;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
+            // 
+            // btn_NhanVien
+            // 
+            this.btn_NhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_NhanVien.FlatAppearance.BorderSize = 0;
+            this.btn_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
+            this.btn_NhanVien.Image = global::QuanLyKhachSan.Properties.Resources.icons8_staff_35;
+            this.btn_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_NhanVien.Location = new System.Drawing.Point(6, 475);
+            this.btn_NhanVien.Name = "btn_NhanVien";
+            this.btn_NhanVien.Size = new System.Drawing.Size(239, 52);
+            this.btn_NhanVien.TabIndex = 5;
+            this.btn_NhanVien.Text = "      Nhân viên";
+            this.btn_NhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_NhanVien.UseVisualStyleBackColor = true;
+            this.btn_NhanVien.Click += new System.EventHandler(this.btn_NhanVien_Click);
+            // 
+            // btn_TaiKhoan
+            // 
+            this.btn_TaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btn_TaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TaiKhoan.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btn_TaiKhoan.Image = global::QuanLyKhachSan.Properties.Resources.icons8_account_35;
+            this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(6, 591);
+            this.btn_TaiKhoan.Name = "btn_TaiKhoan";
+            this.btn_TaiKhoan.Size = new System.Drawing.Size(239, 52);
+            this.btn_TaiKhoan.TabIndex = 7;
+            this.btn_TaiKhoan.Text = "      Tài khoản";
+            this.btn_TaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TaiKhoan.UseVisualStyleBackColor = true;
+            this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
+            // 
+            // btn_TraPhong
+            // 
+            this.btn_TraPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TraPhong.FlatAppearance.BorderSize = 0;
+            this.btn_TraPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TraPhong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TraPhong.ForeColor = System.Drawing.Color.White;
+            this.btn_TraPhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_hotel_check_out_35;
+            this.btn_TraPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TraPhong.Location = new System.Drawing.Point(6, 359);
+            this.btn_TraPhong.Name = "btn_TraPhong";
+            this.btn_TraPhong.Size = new System.Drawing.Size(239, 52);
+            this.btn_TraPhong.TabIndex = 3;
+            this.btn_TraPhong.Text = "      Trả phòng";
+            this.btn_TraPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TraPhong.UseVisualStyleBackColor = true;
+            this.btn_TraPhong.Click += new System.EventHandler(this.btn_TraPhong_Click);
+            // 
+            // btn_ThuePhong
+            // 
+            this.btn_ThuePhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThuePhong.FlatAppearance.BorderSize = 0;
+            this.btn_ThuePhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThuePhong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThuePhong.ForeColor = System.Drawing.Color.White;
+            this.btn_ThuePhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_rent_35;
+            this.btn_ThuePhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThuePhong.Location = new System.Drawing.Point(6, 301);
+            this.btn_ThuePhong.Name = "btn_ThuePhong";
+            this.btn_ThuePhong.Size = new System.Drawing.Size(239, 52);
+            this.btn_ThuePhong.TabIndex = 2;
+            this.btn_ThuePhong.Text = "      Thuê phòng";
+            this.btn_ThuePhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ThuePhong.UseVisualStyleBackColor = true;
+            this.btn_ThuePhong.Click += new System.EventHandler(this.btn_ThuePhong_Click);
+            // 
+            // btn_KhachHang
+            // 
+            this.btn_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_KhachHang.FlatAppearance.BorderSize = 0;
+            this.btn_KhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_KhachHang.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KhachHang.ForeColor = System.Drawing.Color.White;
+            this.btn_KhachHang.Image = global::QuanLyKhachSan.Properties.Resources.icons8_client_35;
+            this.btn_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_KhachHang.Location = new System.Drawing.Point(6, 417);
+            this.btn_KhachHang.Name = "btn_KhachHang";
+            this.btn_KhachHang.Size = new System.Drawing.Size(239, 52);
+            this.btn_KhachHang.TabIndex = 4;
+            this.btn_KhachHang.Text = "      Khách hàng";
+            this.btn_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_KhachHang.UseVisualStyleBackColor = true;
+            this.btn_KhachHang.Click += new System.EventHandler(this.btn_KhachHang_Click);
+            // 
+            // btn_TrangChu
+            // 
+            this.btn_TrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TrangChu.FlatAppearance.BorderSize = 0;
+            this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TrangChu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TrangChu.ForeColor = System.Drawing.Color.White;
+            this.btn_TrangChu.Image = global::QuanLyKhachSan.Properties.Resources.icons8_home_page_35;
+            this.btn_TrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TrangChu.Location = new System.Drawing.Point(12, 185);
+            this.btn_TrangChu.Name = "btn_TrangChu";
+            this.btn_TrangChu.Size = new System.Drawing.Size(239, 52);
+            this.btn_TrangChu.TabIndex = 1;
+            this.btn_TrangChu.Text = "      Trang chủ";
+            this.btn_TrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TrangChu.UseVisualStyleBackColor = true;
+            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QuanLyKhachSan.Properties.Resources.icons8_hotel_100;
+            this.pictureBox2.Location = new System.Drawing.Point(72, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(107, 90);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Thoát";
             // 
             // frm_TrangChu
             // 
@@ -567,7 +621,6 @@
             this.pnl_left.ResumeLayout(false);
             this.pnl_logo.ResumeLayout(false);
             this.pnl_logo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_Bottom.ResumeLayout(false);
             this.pnl_Bottom.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -578,7 +631,11 @@
             this.menu_Top.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -626,5 +683,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnl_Main;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btn_Phong;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
     }
 }

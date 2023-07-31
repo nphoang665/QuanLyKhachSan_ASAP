@@ -296,6 +296,8 @@
       <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
       <LastGenOutput>QuanLyKhachSanModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-exit-50.png" />
+    <None Include="Resources\icons8-bedroom-35.png" />
     <None Include="Resources\analysis.png" />
     <None Include="Resources\bed.png" />
     <None Include="Resources\management.png" />
