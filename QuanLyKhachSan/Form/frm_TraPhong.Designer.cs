@@ -47,6 +47,8 @@
             this.lbl_KQTenKhachHang = new System.Windows.Forms.Label();
             this.lbl_Phong = new System.Windows.Forms.Label();
             this.grp_ThongTinThanhToan = new System.Windows.Forms.GroupBox();
+            this.lbl_KQTongTienDichVu = new System.Windows.Forms.Label();
+            this.lbl_TongTienDichVu = new System.Windows.Forms.Label();
             this.grp_ThongTinThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +107,7 @@
             // lbl_KQSoNgayO
             // 
             this.lbl_KQSoNgayO.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQSoNgayO.Location = new System.Drawing.Point(539, 29);
+            this.lbl_KQSoNgayO.Location = new System.Drawing.Point(539, 30);
             this.lbl_KQSoNgayO.Name = "lbl_KQSoNgayO";
             this.lbl_KQSoNgayO.Size = new System.Drawing.Size(174, 22);
             this.lbl_KQSoNgayO.TabIndex = 7;
@@ -125,7 +127,7 @@
             // lbl_KQNgayThanhToan
             // 
             this.lbl_KQNgayThanhToan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQNgayThanhToan.Location = new System.Drawing.Point(196, 92);
+            this.lbl_KQNgayThanhToan.Location = new System.Drawing.Point(577, 70);
             this.lbl_KQNgayThanhToan.Name = "lbl_KQNgayThanhToan";
             this.lbl_KQNgayThanhToan.Size = new System.Drawing.Size(174, 22);
             this.lbl_KQNgayThanhToan.TabIndex = 5;
@@ -135,7 +137,7 @@
             // lbl_KQGiaPhong
             // 
             this.lbl_KQGiaPhong.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQGiaPhong.Location = new System.Drawing.Point(194, 62);
+            this.lbl_KQGiaPhong.Location = new System.Drawing.Point(194, 70);
             this.lbl_KQGiaPhong.Name = "lbl_KQGiaPhong";
             this.lbl_KQGiaPhong.Size = new System.Drawing.Size(174, 22);
             this.lbl_KQGiaPhong.TabIndex = 3;
@@ -180,7 +182,7 @@
             this.lbl_GiaPhong.AutoSize = true;
             this.lbl_GiaPhong.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_GiaPhong.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_GiaPhong.Location = new System.Drawing.Point(70, 62);
+            this.lbl_GiaPhong.Location = new System.Drawing.Point(70, 72);
             this.lbl_GiaPhong.Name = "lbl_GiaPhong";
             this.lbl_GiaPhong.Size = new System.Drawing.Size(78, 19);
             this.lbl_GiaPhong.TabIndex = 2;
@@ -202,7 +204,7 @@
             this.lbl_NgayThanhToan.AutoSize = true;
             this.lbl_NgayThanhToan.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NgayThanhToan.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_NgayThanhToan.Location = new System.Drawing.Point(70, 95);
+            this.lbl_NgayThanhToan.Location = new System.Drawing.Point(451, 72);
             this.lbl_NgayThanhToan.Name = "lbl_NgayThanhToan";
             this.lbl_NgayThanhToan.Size = new System.Drawing.Size(120, 19);
             this.lbl_NgayThanhToan.TabIndex = 4;
@@ -256,6 +258,8 @@
             // grp_ThongTinThanhToan
             // 
             this.grp_ThongTinThanhToan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grp_ThongTinThanhToan.Controls.Add(this.lbl_KQTongTienDichVu);
+            this.grp_ThongTinThanhToan.Controls.Add(this.lbl_TongTienDichVu);
             this.grp_ThongTinThanhToan.Controls.Add(this.lbl_KQSoNgayO);
             this.grp_ThongTinThanhToan.Controls.Add(this.lbl_KQTongTien);
             this.grp_ThongTinThanhToan.Controls.Add(this.lbl_KQNgayThanhToan);
@@ -272,6 +276,27 @@
             this.grp_ThongTinThanhToan.TabIndex = 16;
             this.grp_ThongTinThanhToan.TabStop = false;
             this.grp_ThongTinThanhToan.Text = "Thông tin thanh toán";
+            // 
+            // lbl_KQTongTienDichVu
+            // 
+            this.lbl_KQTongTienDichVu.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQTongTienDichVu.Location = new System.Drawing.Point(194, 110);
+            this.lbl_KQTongTienDichVu.Name = "lbl_KQTongTienDichVu";
+            this.lbl_KQTongTienDichVu.Size = new System.Drawing.Size(174, 22);
+            this.lbl_KQTongTienDichVu.TabIndex = 11;
+            this.lbl_KQTongTienDichVu.Text = "---";
+            this.lbl_KQTongTienDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_TongTienDichVu
+            // 
+            this.lbl_TongTienDichVu.AutoSize = true;
+            this.lbl_TongTienDichVu.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TongTienDichVu.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_TongTienDichVu.Location = new System.Drawing.Point(67, 112);
+            this.lbl_TongTienDichVu.Name = "lbl_TongTienDichVu";
+            this.lbl_TongTienDichVu.Size = new System.Drawing.Size(123, 19);
+            this.lbl_TongTienDichVu.TabIndex = 10;
+            this.lbl_TongTienDichVu.Text = "Tổng tiền dịch vụ:";
             // 
             // frm_TraPhong
             // 
@@ -323,5 +348,7 @@
         private System.Windows.Forms.Label lbl_KQTenKhachHang;
         private System.Windows.Forms.Label lbl_Phong;
         private System.Windows.Forms.GroupBox grp_ThongTinThanhToan;
+        private System.Windows.Forms.Label lbl_KQTongTienDichVu;
+        private System.Windows.Forms.Label lbl_TongTienDichVu;
     }
 }
