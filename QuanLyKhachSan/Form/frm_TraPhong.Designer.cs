@@ -37,7 +37,6 @@
             this.lbl_KQNgayThanhToan = new System.Windows.Forms.Label();
             this.lbl_KQGiaPhong = new System.Windows.Forms.Label();
             this.lbl_KQNgayDatPhong = new System.Windows.Forms.Label();
-            this.cbo_MaKhachHang = new System.Windows.Forms.ComboBox();
             this.lbl_SoNgayO = new System.Windows.Forms.Label();
             this.lbl_GiaPhong = new System.Windows.Forms.Label();
             this.lbl_TongTien = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.grp_ThongTinThanhToan = new System.Windows.Forms.GroupBox();
             this.lbl_KQTongTienDichVu = new System.Windows.Forms.Label();
             this.lbl_TongTienDichVu = new System.Windows.Forms.Label();
+            this.lbl_KQMaKhachHang = new System.Windows.Forms.Label();
             this.grp_ThongTinThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,18 +153,6 @@
             this.lbl_KQNgayDatPhong.TabIndex = 1;
             this.lbl_KQNgayDatPhong.Text = "---";
             this.lbl_KQNgayDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbo_MaKhachHang
-            // 
-            this.cbo_MaKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_MaKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_MaKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_MaKhachHang.FormattingEnabled = true;
-            this.cbo_MaKhachHang.Location = new System.Drawing.Point(528, 94);
-            this.cbo_MaKhachHang.Margin = new System.Windows.Forms.Padding(2);
-            this.cbo_MaKhachHang.Name = "cbo_MaKhachHang";
-            this.cbo_MaKhachHang.Size = new System.Drawing.Size(174, 22);
-            this.cbo_MaKhachHang.TabIndex = 11;
             // 
             // lbl_SoNgayO
             // 
@@ -298,17 +286,28 @@
             this.lbl_TongTienDichVu.TabIndex = 10;
             this.lbl_TongTienDichVu.Text = "Tổng tiền dịch vụ:";
             // 
+            // lbl_KQMaKhachHang
+            // 
+            this.lbl_KQMaKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQMaKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQMaKhachHang.Location = new System.Drawing.Point(532, 94);
+            this.lbl_KQMaKhachHang.Name = "lbl_KQMaKhachHang";
+            this.lbl_KQMaKhachHang.Size = new System.Drawing.Size(174, 22);
+            this.lbl_KQMaKhachHang.TabIndex = 18;
+            this.lbl_KQMaKhachHang.Text = "---";
+            this.lbl_KQMaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frm_TraPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 511);
+            this.Controls.Add(this.lbl_KQMaKhachHang);
             this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.lbl_TenKhachHang);
             this.Controls.Add(this.lbl_MaKhachHang);
             this.Controls.Add(this.lbl_TieuDeThanhToan);
-            this.Controls.Add(this.cbo_MaKhachHang);
             this.Controls.Add(this.lbl_KQPhong);
             this.Controls.Add(this.lbl_KQTenKhachHang);
             this.Controls.Add(this.lbl_Phong);
@@ -338,7 +337,6 @@
         private System.Windows.Forms.Label lbl_KQNgayThanhToan;
         private System.Windows.Forms.Label lbl_KQGiaPhong;
         private System.Windows.Forms.Label lbl_KQNgayDatPhong;
-        private System.Windows.Forms.ComboBox cbo_MaKhachHang;
         private System.Windows.Forms.Label lbl_SoNgayO;
         private System.Windows.Forms.Label lbl_GiaPhong;
         private System.Windows.Forms.Label lbl_TongTien;
@@ -350,5 +348,6 @@
         private System.Windows.Forms.GroupBox grp_ThongTinThanhToan;
         private System.Windows.Forms.Label lbl_KQTongTienDichVu;
         private System.Windows.Forms.Label lbl_TongTienDichVu;
+        private System.Windows.Forms.Label lbl_KQMaKhachHang;
     }
 }
