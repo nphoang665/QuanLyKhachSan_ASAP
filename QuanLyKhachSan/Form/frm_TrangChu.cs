@@ -21,7 +21,7 @@ namespace QuanLyKhachSan
         public frm_TrangChu(string tk)
         {
             InitializeComponent();
-            // Khởi tạo instance của frm_TrangChu
+            // Khởi tạo ViDu của frm_TrangChu
             ViDu = this;
             _tk = tk;
             bus = new BUS_TrangChu();
