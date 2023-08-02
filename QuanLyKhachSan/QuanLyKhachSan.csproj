@@ -65,8 +65,8 @@
     <Compile Include="BUS\BUS_NhanSu.cs" />
     <Compile Include="BUS\BUS_Phong.cs" />
     <Compile Include="BUS\BUS_QuanLyTaiKhoan.cs" />
+    <Compile Include="BUS\BUS_ThongTinPhong.cs" />
     <Compile Include="BUS\BUS_TrangChu.cs" />
-    <Compile Include="BUS\BUS_TraPhong.cs" />
     <Compile Include="BUS\BUS_VatTu.cs" />
     <Compile Include="DA\DangKyDichVu.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
@@ -81,8 +81,8 @@
     <Compile Include="DA\DA_NhanSu.cs" />
     <Compile Include="DA\DA_Phong.cs" />
     <Compile Include="DA\DA_QuanLyTaiKhoan.cs" />
+    <Compile Include="DA\DA_ThongTinPhong.cs" />
     <Compile Include="DA\DA_TrangChu.cs" />
-    <Compile Include="DA\DA_TraPhong.cs" />
     <Compile Include="DA\DA_VatTu.cs" />
     <Compile Include="DA\HoaDon.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
