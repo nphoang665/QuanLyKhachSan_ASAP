@@ -25,7 +25,7 @@ namespace QuanLyKhachSan
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             this.Close();
-            frm_TraPhong quanLyTraPhong = new frm_TraPhong();
+            frm_TraPhong quanLyTraPhong = new frm_TraPhong(maPhong);
             frm_TrangChu.ViDu.OpenChildForm(quanLyTraPhong);
             
         }

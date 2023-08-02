@@ -12,9 +12,11 @@ namespace QuanLyKhachSan
 {
     public partial class frm_TraPhong : Form
     {
-        public frm_TraPhong()
+        string phong;
+        public frm_TraPhong(string phong)
         {
             InitializeComponent();
+            this.phong = phong;
         }
 
         private void frm_TraPhong_Load(object sender, EventArgs e)
