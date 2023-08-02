@@ -69,9 +69,12 @@ namespace QuanLyKhachSan
             {
                 gioitinh = "Nữ";
             }
-            var data = bus.ktkhoa(txt_makh.Text);
-            if (!data)
-                return;
+            //var data = bus.ktkhoa(txt_makh.Text);
+            //if (!data)
+            //{
+            //    MessageBox.Show("Đã tồn tại khách hàng");
+            //    return;
+            //}
             bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, cbb_maphong.Text);
             if (!isValid)
                 return;

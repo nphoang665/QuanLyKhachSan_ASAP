@@ -63,6 +63,7 @@ namespace QuanLyKhachSan.DA
             };
             db.HoaDons.Add(HD);
             db.SaveChanges();
+           
         }
         public DatPhong laydatphong(string madatphong)
         {
@@ -72,6 +73,22 @@ namespace QuanLyKhachSan.DA
         public List<string>laydata()
         {
           return  db.DatPhongs.Select(x => x.MaDatPhong).ToList();
+        }
+        public Phong laytienphong(string maphong)
+        {
+            return db.Phongs.FirstOrDefault(x => x.MaPhong == maphong);
+        }
+        public bool checkkhoa(string madatphong)
+        {
+            var data = db.HoaDons.FirstOrDefault(x => x.MaDatPhong == madatphong);
+            if(data !=null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 

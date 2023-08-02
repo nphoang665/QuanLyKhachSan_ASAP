@@ -30,5 +30,13 @@ namespace QuanLyKhachSan.BUS
         {
             return da.laydata();
         }
+        public Phong laytien(string maphong)
+        {
+            return da.laytienphong(maphong);
+        }
+        public bool checkkhoa(string madatphong)
+        {
+            return da.checkkhoa(madatphong);
+        }
     }
 }
