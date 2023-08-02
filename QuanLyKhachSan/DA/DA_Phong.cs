@@ -47,6 +47,7 @@ namespace QuanLyKhachSan.DA
             var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
+                phong.MaPhong = maPhong;
                 phong.MaDichVu = maDichVu;
                 phong.LoaiPhong = loaiPhong;
                 phong.TinhTrang = tinhTrang;

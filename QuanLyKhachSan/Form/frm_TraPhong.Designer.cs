@@ -290,10 +290,11 @@
             this.Controls.Add(this.grp_ThongTinThanhToan);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_TraPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_TraPhong";
+            this.Load += new System.EventHandler(this.frm_TraPhong_Load);
             this.grp_ThongTinThanhToan.ResumeLayout(false);
             this.grp_ThongTinThanhToan.PerformLayout();
             this.ResumeLayout(false);

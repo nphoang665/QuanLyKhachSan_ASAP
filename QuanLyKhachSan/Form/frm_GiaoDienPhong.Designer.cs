@@ -196,9 +196,9 @@
             this.lbl_405.AutoSize = true;
             this.lbl_405.Location = new System.Drawing.Point(61, 62);
             this.lbl_405.Name = "lbl_405";
-            this.lbl_405.Size = new System.Drawing.Size(17, 17);
+            this.lbl_405.Size = new System.Drawing.Size(29, 17);
             this.lbl_405.TabIndex = 1;
-            this.lbl_405.Text = "...";
+            this.lbl_405.Text = "405";
             this.lbl_405.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_404
@@ -226,9 +226,9 @@
             this.lbl_404.AutoSize = true;
             this.lbl_404.Location = new System.Drawing.Point(61, 62);
             this.lbl_404.Name = "lbl_404";
-            this.lbl_404.Size = new System.Drawing.Size(17, 17);
+            this.lbl_404.Size = new System.Drawing.Size(29, 17);
             this.lbl_404.TabIndex = 1;
-            this.lbl_404.Text = "...";
+            this.lbl_404.Text = "404";
             this.lbl_404.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_403
@@ -256,9 +256,9 @@
             this.lbl_403.AutoSize = true;
             this.lbl_403.Location = new System.Drawing.Point(61, 62);
             this.lbl_403.Name = "lbl_403";
-            this.lbl_403.Size = new System.Drawing.Size(17, 17);
+            this.lbl_403.Size = new System.Drawing.Size(29, 17);
             this.lbl_403.TabIndex = 1;
-            this.lbl_403.Text = "...";
+            this.lbl_403.Text = "403";
             this.lbl_403.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_402
@@ -286,9 +286,9 @@
             this.lbl_402.AutoSize = true;
             this.lbl_402.Location = new System.Drawing.Point(61, 62);
             this.lbl_402.Name = "lbl_402";
-            this.lbl_402.Size = new System.Drawing.Size(17, 17);
+            this.lbl_402.Size = new System.Drawing.Size(29, 17);
             this.lbl_402.TabIndex = 1;
-            this.lbl_402.Text = "...";
+            this.lbl_402.Text = "402";
             this.lbl_402.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_401
@@ -316,9 +316,9 @@
             this.lbl_401.AutoSize = true;
             this.lbl_401.Location = new System.Drawing.Point(61, 62);
             this.lbl_401.Name = "lbl_401";
-            this.lbl_401.Size = new System.Drawing.Size(17, 17);
+            this.lbl_401.Size = new System.Drawing.Size(29, 17);
             this.lbl_401.TabIndex = 1;
-            this.lbl_401.Text = "...";
+            this.lbl_401.Text = "401";
             this.lbl_401.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
@@ -359,9 +359,9 @@
             this.lbl_305.AutoSize = true;
             this.lbl_305.Location = new System.Drawing.Point(61, 62);
             this.lbl_305.Name = "lbl_305";
-            this.lbl_305.Size = new System.Drawing.Size(17, 17);
+            this.lbl_305.Size = new System.Drawing.Size(29, 17);
             this.lbl_305.TabIndex = 1;
-            this.lbl_305.Text = "...";
+            this.lbl_305.Text = "305";
             this.lbl_305.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_304
@@ -389,9 +389,9 @@
             this.lbl_304.AutoSize = true;
             this.lbl_304.Location = new System.Drawing.Point(61, 62);
             this.lbl_304.Name = "lbl_304";
-            this.lbl_304.Size = new System.Drawing.Size(17, 17);
+            this.lbl_304.Size = new System.Drawing.Size(29, 17);
             this.lbl_304.TabIndex = 1;
-            this.lbl_304.Text = "...";
+            this.lbl_304.Text = "304";
             this.lbl_304.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_303
@@ -419,9 +419,9 @@
             this.lbl_303.AutoSize = true;
             this.lbl_303.Location = new System.Drawing.Point(61, 62);
             this.lbl_303.Name = "lbl_303";
-            this.lbl_303.Size = new System.Drawing.Size(17, 17);
+            this.lbl_303.Size = new System.Drawing.Size(29, 17);
             this.lbl_303.TabIndex = 1;
-            this.lbl_303.Text = "...";
+            this.lbl_303.Text = "303";
             this.lbl_303.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_302
@@ -449,9 +449,9 @@
             this.lbl_302.AutoSize = true;
             this.lbl_302.Location = new System.Drawing.Point(61, 62);
             this.lbl_302.Name = "lbl_302";
-            this.lbl_302.Size = new System.Drawing.Size(17, 17);
+            this.lbl_302.Size = new System.Drawing.Size(29, 17);
             this.lbl_302.TabIndex = 1;
-            this.lbl_302.Text = "...";
+            this.lbl_302.Text = "302";
             this.lbl_302.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_301
@@ -479,9 +479,9 @@
             this.lbl_301.AutoSize = true;
             this.lbl_301.Location = new System.Drawing.Point(61, 62);
             this.lbl_301.Name = "lbl_301";
-            this.lbl_301.Size = new System.Drawing.Size(17, 17);
+            this.lbl_301.Size = new System.Drawing.Size(29, 17);
             this.lbl_301.TabIndex = 1;
-            this.lbl_301.Text = "...";
+            this.lbl_301.Text = "301";
             this.lbl_301.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -522,9 +522,9 @@
             this.lbl_205.AutoSize = true;
             this.lbl_205.Location = new System.Drawing.Point(61, 62);
             this.lbl_205.Name = "lbl_205";
-            this.lbl_205.Size = new System.Drawing.Size(17, 17);
+            this.lbl_205.Size = new System.Drawing.Size(29, 17);
             this.lbl_205.TabIndex = 1;
-            this.lbl_205.Text = "...";
+            this.lbl_205.Text = "205";
             this.lbl_205.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_204
@@ -552,9 +552,9 @@
             this.lbl_204.AutoSize = true;
             this.lbl_204.Location = new System.Drawing.Point(61, 62);
             this.lbl_204.Name = "lbl_204";
-            this.lbl_204.Size = new System.Drawing.Size(17, 17);
+            this.lbl_204.Size = new System.Drawing.Size(29, 17);
             this.lbl_204.TabIndex = 1;
-            this.lbl_204.Text = "...";
+            this.lbl_204.Text = "204";
             this.lbl_204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_203
@@ -582,9 +582,9 @@
             this.lbl_203.AutoSize = true;
             this.lbl_203.Location = new System.Drawing.Point(61, 62);
             this.lbl_203.Name = "lbl_203";
-            this.lbl_203.Size = new System.Drawing.Size(17, 17);
+            this.lbl_203.Size = new System.Drawing.Size(29, 17);
             this.lbl_203.TabIndex = 1;
-            this.lbl_203.Text = "...";
+            this.lbl_203.Text = "203";
             this.lbl_203.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_202
@@ -612,9 +612,9 @@
             this.lbl_202.AutoSize = true;
             this.lbl_202.Location = new System.Drawing.Point(61, 62);
             this.lbl_202.Name = "lbl_202";
-            this.lbl_202.Size = new System.Drawing.Size(17, 17);
+            this.lbl_202.Size = new System.Drawing.Size(29, 17);
             this.lbl_202.TabIndex = 1;
-            this.lbl_202.Text = "...";
+            this.lbl_202.Text = "202";
             this.lbl_202.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_201
@@ -642,9 +642,9 @@
             this.lbl_201.AutoSize = true;
             this.lbl_201.Location = new System.Drawing.Point(61, 62);
             this.lbl_201.Name = "lbl_201";
-            this.lbl_201.Size = new System.Drawing.Size(17, 17);
+            this.lbl_201.Size = new System.Drawing.Size(29, 17);
             this.lbl_201.TabIndex = 1;
-            this.lbl_201.Text = "...";
+            this.lbl_201.Text = "201";
             this.lbl_201.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -685,9 +685,9 @@
             this.lbl_105.AutoSize = true;
             this.lbl_105.Location = new System.Drawing.Point(61, 62);
             this.lbl_105.Name = "lbl_105";
-            this.lbl_105.Size = new System.Drawing.Size(17, 17);
+            this.lbl_105.Size = new System.Drawing.Size(29, 17);
             this.lbl_105.TabIndex = 1;
-            this.lbl_105.Text = "...";
+            this.lbl_105.Text = "105";
             this.lbl_105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_104
@@ -715,9 +715,9 @@
             this.lbl_104.AutoSize = true;
             this.lbl_104.Location = new System.Drawing.Point(61, 62);
             this.lbl_104.Name = "lbl_104";
-            this.lbl_104.Size = new System.Drawing.Size(17, 17);
+            this.lbl_104.Size = new System.Drawing.Size(29, 17);
             this.lbl_104.TabIndex = 1;
-            this.lbl_104.Text = "...";
+            this.lbl_104.Text = "104";
             this.lbl_104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_103
@@ -745,9 +745,9 @@
             this.lbl_103.AutoSize = true;
             this.lbl_103.Location = new System.Drawing.Point(61, 62);
             this.lbl_103.Name = "lbl_103";
-            this.lbl_103.Size = new System.Drawing.Size(17, 17);
+            this.lbl_103.Size = new System.Drawing.Size(29, 17);
             this.lbl_103.TabIndex = 1;
-            this.lbl_103.Text = "...";
+            this.lbl_103.Text = "103";
             this.lbl_103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_102
@@ -775,9 +775,9 @@
             this.lbl_102.AutoSize = true;
             this.lbl_102.Location = new System.Drawing.Point(61, 62);
             this.lbl_102.Name = "lbl_102";
-            this.lbl_102.Size = new System.Drawing.Size(17, 17);
+            this.lbl_102.Size = new System.Drawing.Size(29, 17);
             this.lbl_102.TabIndex = 1;
-            this.lbl_102.Text = "...";
+            this.lbl_102.Text = "102";
             this.lbl_102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_101
@@ -805,183 +805,219 @@
             this.lbl_101.AutoSize = true;
             this.lbl_101.Location = new System.Drawing.Point(61, 62);
             this.lbl_101.Name = "lbl_101";
-            this.lbl_101.Size = new System.Drawing.Size(17, 17);
+            this.lbl_101.Size = new System.Drawing.Size(29, 17);
             this.lbl_101.TabIndex = 1;
-            this.lbl_101.Text = "...";
+            this.lbl_101.Text = "101";
             this.lbl_101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pic_405
             // 
+            this.pic_405.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_405.Location = new System.Drawing.Point(0, 0);
             this.pic_405.Name = "pic_405";
             this.pic_405.Size = new System.Drawing.Size(100, 62);
             this.pic_405.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_405.TabIndex = 0;
             this.pic_405.TabStop = false;
+            this.pic_405.Click += new System.EventHandler(this.pic_405_Click);
             // 
             // pic_404
             // 
+            this.pic_404.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_404.Location = new System.Drawing.Point(0, 0);
             this.pic_404.Name = "pic_404";
             this.pic_404.Size = new System.Drawing.Size(100, 62);
             this.pic_404.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_404.TabIndex = 0;
             this.pic_404.TabStop = false;
+            this.pic_404.Click += new System.EventHandler(this.pic_404_Click);
             // 
             // pic_403
             // 
+            this.pic_403.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_403.Location = new System.Drawing.Point(0, 0);
             this.pic_403.Name = "pic_403";
             this.pic_403.Size = new System.Drawing.Size(100, 62);
             this.pic_403.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_403.TabIndex = 0;
             this.pic_403.TabStop = false;
+            this.pic_403.Click += new System.EventHandler(this.pic_403_Click);
             // 
             // pic_402
             // 
+            this.pic_402.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_402.Location = new System.Drawing.Point(0, 0);
             this.pic_402.Name = "pic_402";
             this.pic_402.Size = new System.Drawing.Size(100, 62);
             this.pic_402.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_402.TabIndex = 0;
             this.pic_402.TabStop = false;
+            this.pic_402.Click += new System.EventHandler(this.pic_402_Click);
             // 
             // pic_401
             // 
+            this.pic_401.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_401.Location = new System.Drawing.Point(0, 0);
             this.pic_401.Name = "pic_401";
             this.pic_401.Size = new System.Drawing.Size(100, 62);
             this.pic_401.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_401.TabIndex = 0;
             this.pic_401.TabStop = false;
+            this.pic_401.Click += new System.EventHandler(this.pic_401_Click);
             // 
             // pic_305
             // 
+            this.pic_305.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_305.Location = new System.Drawing.Point(0, 0);
             this.pic_305.Name = "pic_305";
             this.pic_305.Size = new System.Drawing.Size(100, 62);
             this.pic_305.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_305.TabIndex = 0;
             this.pic_305.TabStop = false;
+            this.pic_305.Click += new System.EventHandler(this.pic_305_Click);
             // 
             // pic_304
             // 
+            this.pic_304.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_304.Location = new System.Drawing.Point(0, 0);
             this.pic_304.Name = "pic_304";
             this.pic_304.Size = new System.Drawing.Size(100, 62);
             this.pic_304.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_304.TabIndex = 0;
             this.pic_304.TabStop = false;
+            this.pic_304.Click += new System.EventHandler(this.pic_304_Click);
             // 
             // pic_303
             // 
+            this.pic_303.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_303.Location = new System.Drawing.Point(0, 0);
             this.pic_303.Name = "pic_303";
             this.pic_303.Size = new System.Drawing.Size(100, 62);
             this.pic_303.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_303.TabIndex = 0;
             this.pic_303.TabStop = false;
+            this.pic_303.Click += new System.EventHandler(this.pic_303_Click);
             // 
             // pic_302
             // 
+            this.pic_302.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_302.Location = new System.Drawing.Point(0, 0);
             this.pic_302.Name = "pic_302";
             this.pic_302.Size = new System.Drawing.Size(100, 62);
             this.pic_302.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_302.TabIndex = 0;
             this.pic_302.TabStop = false;
+            this.pic_302.Click += new System.EventHandler(this.pic_302_Click);
             // 
             // pic_301
             // 
+            this.pic_301.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_301.Location = new System.Drawing.Point(0, 0);
             this.pic_301.Name = "pic_301";
             this.pic_301.Size = new System.Drawing.Size(100, 62);
             this.pic_301.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_301.TabIndex = 0;
             this.pic_301.TabStop = false;
+            this.pic_301.Click += new System.EventHandler(this.pic_301_Click);
             // 
             // pic_205
             // 
+            this.pic_205.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_205.Location = new System.Drawing.Point(0, 0);
             this.pic_205.Name = "pic_205";
             this.pic_205.Size = new System.Drawing.Size(100, 62);
             this.pic_205.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_205.TabIndex = 0;
             this.pic_205.TabStop = false;
+            this.pic_205.Click += new System.EventHandler(this.pic_205_Click);
             // 
             // pic_204
             // 
+            this.pic_204.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_204.Location = new System.Drawing.Point(0, 0);
             this.pic_204.Name = "pic_204";
             this.pic_204.Size = new System.Drawing.Size(100, 62);
             this.pic_204.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_204.TabIndex = 0;
             this.pic_204.TabStop = false;
+            this.pic_204.Click += new System.EventHandler(this.pic_204_Click);
             // 
             // pic_203
             // 
+            this.pic_203.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_203.Location = new System.Drawing.Point(0, 0);
             this.pic_203.Name = "pic_203";
             this.pic_203.Size = new System.Drawing.Size(100, 62);
             this.pic_203.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_203.TabIndex = 0;
             this.pic_203.TabStop = false;
+            this.pic_203.Click += new System.EventHandler(this.pic_203_Click);
             // 
             // pic_202
             // 
+            this.pic_202.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_202.Location = new System.Drawing.Point(0, 0);
             this.pic_202.Name = "pic_202";
             this.pic_202.Size = new System.Drawing.Size(100, 62);
             this.pic_202.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_202.TabIndex = 0;
             this.pic_202.TabStop = false;
+            this.pic_202.Click += new System.EventHandler(this.pic_202_Click);
             // 
             // pic_201
             // 
+            this.pic_201.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_201.Location = new System.Drawing.Point(0, 0);
             this.pic_201.Name = "pic_201";
             this.pic_201.Size = new System.Drawing.Size(100, 62);
             this.pic_201.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_201.TabIndex = 0;
             this.pic_201.TabStop = false;
+            this.pic_201.Click += new System.EventHandler(this.pic_201_Click);
             // 
             // pic_105
             // 
+            this.pic_105.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_105.Location = new System.Drawing.Point(0, 0);
             this.pic_105.Name = "pic_105";
             this.pic_105.Size = new System.Drawing.Size(100, 62);
             this.pic_105.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_105.TabIndex = 0;
             this.pic_105.TabStop = false;
+            this.pic_105.Click += new System.EventHandler(this.pic_105_Click);
             // 
             // pic_104
             // 
+            this.pic_104.Image = global::QuanLyKhachSan.Properties.Resources.house1;
             this.pic_104.Location = new System.Drawing.Point(0, 0);
             this.pic_104.Name = "pic_104";
             this.pic_104.Size = new System.Drawing.Size(100, 62);
             this.pic_104.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_104.TabIndex = 0;
             this.pic_104.TabStop = false;
+            this.pic_104.Click += new System.EventHandler(this.pic_104_Click);
             // 
             // pic_103
             // 
-            this.pic_103.Image = global::QuanLyKhachSan.Properties.Resources.house_key__1_;
+            this.pic_103.Image = global::QuanLyKhachSan.Properties.Resources.house2;
             this.pic_103.Location = new System.Drawing.Point(0, 0);
             this.pic_103.Name = "pic_103";
             this.pic_103.Size = new System.Drawing.Size(100, 62);
             this.pic_103.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_103.TabIndex = 0;
             this.pic_103.TabStop = false;
+            this.pic_103.Click += new System.EventHandler(this.pic_103_Click);
             // 
             // pic_102
             // 
-            this.pic_102.Image = global::QuanLyKhachSan.Properties.Resources.investment;
+            this.pic_102.Image = global::QuanLyKhachSan.Properties.Resources.house2;
             this.pic_102.Location = new System.Drawing.Point(0, 0);
             this.pic_102.Name = "pic_102";
             this.pic_102.Size = new System.Drawing.Size(100, 62);
             this.pic_102.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_102.TabIndex = 0;
             this.pic_102.TabStop = false;
+            this.pic_102.Click += new System.EventHandler(this.pic_102_Click);
             // 
             // pic_101
             // 

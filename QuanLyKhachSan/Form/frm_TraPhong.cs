@@ -16,5 +16,9 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
+
+        private void frm_TraPhong_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

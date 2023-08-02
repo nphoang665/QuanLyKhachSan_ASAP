@@ -11,10 +11,12 @@ using System.Windows.Forms;
 namespace QuanLyKhachSan
 {
     public partial class frm_ThongTinPhong : Form
-    {   
-        public frm_ThongTinPhong()
+    {
+        string maPhong;
+        public frm_ThongTinPhong(string maPhong)
         {
             InitializeComponent();
+            this.maPhong = maPhong;
         }
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
@@ -28,6 +30,11 @@ namespace QuanLyKhachSan
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frm_ThongTinPhong_Load(object sender, EventArgs e)
+        {
+            lbl_Phong.Text = maPhong;
         }
     }
 }

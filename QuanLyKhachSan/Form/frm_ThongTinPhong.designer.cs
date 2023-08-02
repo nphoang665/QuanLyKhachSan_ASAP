@@ -290,6 +290,7 @@
             this.Name = "frm_ThongTinPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "---";
+            this.Load += new System.EventHandler(this.frm_ThongTinPhong_Load);
             this.grp_DichVuDaThue.ResumeLayout(false);
             this.grp_ThôngTinKhachHang.ResumeLayout(false);
             this.grp_ThôngTinKhachHang.PerformLayout();

@@ -84,6 +84,7 @@ namespace QuanLyKhachSan
                 string id = dgv_phong3.Rows[e.RowIndex].Cells["MaPhong"].Value.ToString();
                 var taiKhoan = dsp.LayPhong(id);
                 txt_maphong_sua.Text = taiKhoan.MaPhong;
+                txt_madichvu_sua.Text = taiKhoan.MaDichVu;
                 txt_loaiphong_sua.Text = taiKhoan.LoaiPhong;
                 txt_tinhtrang_sua.Text = taiKhoan.TinhTrang;
                 txt_dongia_sua.Text = taiKhoan.DonGia.ToString();
