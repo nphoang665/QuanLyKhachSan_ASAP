@@ -19,16 +19,16 @@ namespace QuanLyKhachSan.DA
             dtgv.Rows.Clear();
             var ds = db.HoaDons.Select(s => new
             {
-               s.MaDatPhong,
-               s.MaHoaDon,
-               s.MaNhanVien,
-               s.MaKhachHang,
-               s.NgayDat,
-               s.NgayTra,
-               s.SoNgay,
-               s.TongTien,
-               
-               
+                s.MaDatPhong,
+                s.MaHoaDon,
+                s.MaNhanVien,
+                s.MaKhachHang,
+                s.NgayDat,
+                s.NgayTra,
+                s.SoNgay,
+                s.TongTien,
+
+
             }).ToList();
             foreach (var hd in ds)
             {
@@ -47,22 +47,34 @@ namespace QuanLyKhachSan.DA
 
             }
         }
-        public void ThemHoaDon(string madatphong, string MaHoaDon, string MaNhanVien, string MaKhachHang, DateTime  ngaydat, int SoNgay, int TongTien, DateTime NgayTra)
+        public void ThemHoaDon(string madatphong, string MaHoaDon, string MaNhanVien, string MaKhachHang, DateTime ngaydat, int SoNgay, int TongTien, DateTime NgayTra)
         {
 
             var HD = new HoaDon
             {
-                MaDatPhong= madatphong,
-                MaHoaDon= MaHoaDon,
-                MaNhanVien= MaNhanVien,
-                MaKhachHang= MaKhachHang,
-                NgayDat= ngaydat,
-                SoNgay= SoNgay,
-                TongTien= TongTien,
-                NgayTra= NgayTra
+                MaDatPhong = madatphong,
+                MaHoaDon = MaHoaDon,
+                MaNhanVien = MaNhanVien,
+                MaKhachHang = MaKhachHang,
+                NgayDat = ngaydat,
+                SoNgay = SoNgay,
+                TongTien = TongTien,
+                NgayTra = NgayTra
             };
             db.HoaDons.Add(HD);
             db.SaveChanges();
         }
+        public DatPhong laydatphong(string madatphong)
+        {
+            return db.DatPhongs.FirstOrDefault(x => x.MaDatPhong == madatphong);
+        }
+
+        public List<string>laydata()
+        {
+          return  db.DatPhongs.Select(x => x.MaDatPhong).ToList();
+        }
     }
+
 }
+
+    
