@@ -98,11 +98,11 @@
             this.lbl_TieuDeThanhToan.AutoSize = true;
             this.lbl_TieuDeThanhToan.Font = new System.Drawing.Font("Roboto Condensed", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TieuDeThanhToan.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_TieuDeThanhToan.Location = new System.Drawing.Point(446, 17);
+            this.lbl_TieuDeThanhToan.Location = new System.Drawing.Point(471, 17);
             this.lbl_TieuDeThanhToan.Name = "lbl_TieuDeThanhToan";
-            this.lbl_TieuDeThanhToan.Size = new System.Drawing.Size(239, 48);
+            this.lbl_TieuDeThanhToan.Size = new System.Drawing.Size(173, 48);
             this.lbl_TieuDeThanhToan.TabIndex = 9;
-            this.lbl_TieuDeThanhToan.Text = "THANH TOÁN";
+            this.lbl_TieuDeThanhToan.Text = "HÓA ĐƠN";
             // 
             // lbl_KQSoNgayO
             // 
