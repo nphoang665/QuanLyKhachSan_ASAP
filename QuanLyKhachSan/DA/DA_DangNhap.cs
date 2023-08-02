@@ -14,6 +14,7 @@ namespace QuanLyKhachSan.DA
         }
         public bool DangNhap(string tk, string mk)
         {
+            string tks="";
             bool frag = false;
             var qr = db.TaiKhoans.Where(s => s.TenDangNhap == tk && s.MatKhau == mk);
             if (qr.Count() > 0)
@@ -26,6 +27,7 @@ namespace QuanLyKhachSan.DA
             }
             return frag;
         }
+        
 
     }
 }

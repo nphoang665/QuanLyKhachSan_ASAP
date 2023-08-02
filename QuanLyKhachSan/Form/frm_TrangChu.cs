@@ -13,6 +13,7 @@ namespace QuanLyKhachSan
 {
     public partial class frm_TrangChu : Form
     {
+        public static frm_TrangChu ViDu { get; private set; }
         BUS_TrangChu bus;
         public Form frm_HienTai;
         public string TenDangNhap;
@@ -20,7 +21,8 @@ namespace QuanLyKhachSan
         public frm_TrangChu(string tk)
         {
             InitializeComponent();
-
+            // Khởi tạo ViDu của frm_TrangChu
+            ViDu = this;
             _tk = tk;
             bus = new BUS_TrangChu();
         }
@@ -52,6 +54,7 @@ namespace QuanLyKhachSan
         {
             timer1.Start();
             lbl_TenDangNhap.Text = TenDangNhap;
+            OpenChildForm(new frm_GiaoDienPhong());
             ThongTinTaiKoan();
         }
         
@@ -68,6 +71,7 @@ namespace QuanLyKhachSan
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             DiChuyenPanel(btn_TrangChu);
+            OpenChildForm(new frm_GiaoDienPhong());
         }
         void ThongTinTaiKoan()
         {
@@ -182,6 +186,16 @@ namespace QuanLyKhachSan
         {
             DiChuyenPanel(btn_Phong);
             OpenChildForm(new frm_Phong());
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn Thoát khỏi ứng dụng?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == result)
+            {
+                timer1.Stop();
+                Application.Exit();
+            }
         }
     }
 }

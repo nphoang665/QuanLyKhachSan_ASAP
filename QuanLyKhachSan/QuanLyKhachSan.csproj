@@ -204,6 +204,18 @@
     <Compile Include="Form\frm_QuenMatKhau.Designer.cs">
       <DependentUpon>frm_QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\frm_GiaoDienPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_GiaoDienPhong.Designer.cs">
+      <DependentUpon>frm_GiaoDienPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_ThongTinPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_ThongTinPhong.designer.cs">
+      <DependentUpon>frm_ThongTinPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\frm_DangNhap.resx">
@@ -244,6 +256,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_QuenMatKhau.resx">
       <DependentUpon>frm_QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_GiaoDienPhong.resx">
+      <DependentUpon>frm_GiaoDienPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_ThongTinPhong.resx">
+      <DependentUpon>frm_ThongTinPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -303,6 +321,9 @@
       <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
       <LastGenOutput>QuanLyKhachSanModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\house-key %281%29.png" />
+    <None Include="Resources\investment.png" />
+    <None Include="Resources\house.png" />
     <None Include="Resources\icons8-exit-50.png" />
     <None Include="Resources\icons8-bedroom-35.png" />
     <None Include="Resources\analysis.png" />
