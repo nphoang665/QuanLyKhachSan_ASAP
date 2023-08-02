@@ -8,7 +8,10 @@ namespace QuanLyKhachSan.DA
 {
     public class DA_TraPhong
     {
-        QuanLyKhachSanEntities entities;
-       
+        QuanLyKhachSanEntities db;
+       public DA_TraPhong()
+        {
+            db= new QuanLyKhachSanEntities();
+        }
     }
 }
