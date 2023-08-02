@@ -113,6 +113,26 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap house {
+            get {
+                object obj = ResourceManager.GetObject("house", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap house_key__1_ {
+            get {
+                object obj = ResourceManager.GetObject("house-key (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_account_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-account-35", resourceCulture);
@@ -226,6 +246,16 @@ namespace QuanLyKhachSan.Properties {
         internal static System.Drawing.Bitmap icons8_user_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap investment {
+            get {
+                object obj = ResourceManager.GetObject("investment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
