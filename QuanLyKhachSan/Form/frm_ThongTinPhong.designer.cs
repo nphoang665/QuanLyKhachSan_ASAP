@@ -36,13 +36,13 @@
             this.lbl_KQDiaChi = new System.Windows.Forms.Label();
             this.lbl_KQCMND = new System.Windows.Forms.Label();
             this.lbl_KQTenKhachHang = new System.Windows.Forms.Label();
-            this.dtp_NgayThue = new System.Windows.Forms.DateTimePicker();
             this.lbl_NgayThue = new System.Windows.Forms.Label();
             this.lbl_DiaChi = new System.Windows.Forms.Label();
             this.lbl_TenKhachHang = new System.Windows.Forms.Label();
             this.lbl_CMND = new System.Windows.Forms.Label();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.lbl_KQ_NgayThue = new System.Windows.Forms.Label();
             this.grp_DichVuDaThue.SuspendLayout();
             this.grp_ThôngTinKhachHang.SuspendLayout();
             this.SuspendLayout();
@@ -98,10 +98,10 @@
             // 
             // grp_ThôngTinKhachHang
             // 
+            this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_KQ_NgayThue);
             this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_KQDiaChi);
             this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_KQCMND);
             this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_KQTenKhachHang);
-            this.grp_ThôngTinKhachHang.Controls.Add(this.dtp_NgayThue);
             this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_NgayThue);
             this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_DiaChi);
             this.grp_ThôngTinKhachHang.Controls.Add(this.lbl_TenKhachHang);
@@ -148,14 +148,6 @@
             this.lbl_KQTenKhachHang.TabIndex = 35;
             this.lbl_KQTenKhachHang.Text = "---";
             this.lbl_KQTenKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dtp_NgayThue
-            // 
-            this.dtp_NgayThue.Location = new System.Drawing.Point(286, 112);
-            this.dtp_NgayThue.Margin = new System.Windows.Forms.Padding(2);
-            this.dtp_NgayThue.Name = "dtp_NgayThue";
-            this.dtp_NgayThue.Size = new System.Drawing.Size(192, 25);
-            this.dtp_NgayThue.TabIndex = 34;
             // 
             // lbl_NgayThue
             // 
@@ -243,6 +235,17 @@
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
+            // lbl_KQ_NgayThue
+            // 
+            this.lbl_KQ_NgayThue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQ_NgayThue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQ_NgayThue.Location = new System.Drawing.Point(286, 107);
+            this.lbl_KQ_NgayThue.Name = "lbl_KQ_NgayThue";
+            this.lbl_KQ_NgayThue.Size = new System.Drawing.Size(192, 25);
+            this.lbl_KQ_NgayThue.TabIndex = 39;
+            this.lbl_KQ_NgayThue.Text = "---";
+            this.lbl_KQ_NgayThue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frm_ThongTinPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -275,7 +278,6 @@
         private System.Windows.Forms.GroupBox grp_DichVuDaThue;
         private System.Windows.Forms.ListView lstv_DichVuDaSuDung;
         private System.Windows.Forms.GroupBox grp_ThôngTinKhachHang;
-        private System.Windows.Forms.DateTimePicker dtp_NgayThue;
         private System.Windows.Forms.Label lbl_NgayThue;
         private System.Windows.Forms.Label lbl_DiaChi;
         private System.Windows.Forms.Label lbl_TenKhachHang;
@@ -285,5 +287,6 @@
         private System.Windows.Forms.Label lbl_KQDiaChi;
         private System.Windows.Forms.Label lbl_KQCMND;
         private System.Windows.Forms.Label lbl_KQTenKhachHang;
+        private System.Windows.Forms.Label lbl_KQ_NgayThue;
     }
 }

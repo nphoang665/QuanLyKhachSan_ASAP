@@ -121,9 +121,6 @@
     <Compile Include="DA\TaiKhoan.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DA\ThongKe.cs">
-      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="DA\ThongTinKhachHang.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>

@@ -89,8 +89,8 @@ namespace QuanLyKhachSan
 
         private void btn_TraPhong_Click(object sender, EventArgs e)
         {
-            DiChuyenPanel(btn_TraPhong);
-            OpenChildForm(new frm_TraPhong());
+            /*DiChuyenPanel(btn_TraPhong);
+            OpenChildForm(new frm_TraPhong());*/
         }
 
         private void btn_KhachHang_Click(object sender, EventArgs e)
@@ -174,7 +174,7 @@ namespace QuanLyKhachSan
 
         private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_TraPhong());
+            //OpenChildForm(new frm_TraPhong());
         }
 
         private void timer1_Tick(object sender, EventArgs e)
