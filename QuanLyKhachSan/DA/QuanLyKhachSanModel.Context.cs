@@ -35,5 +35,6 @@ namespace QuanLyKhachSan.DA
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ThongKe> ThongKes { get; set; }
         public virtual DbSet<ThongTinKhachHang> ThongTinKhachHangs { get; set; }
+        public virtual DbSet<VatTu> VatTus { get; set; }
     }
 }

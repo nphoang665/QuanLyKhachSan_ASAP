@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl_VatTu = new System.Windows.Forms.TabControl();
             this.tabPage_ThemVatTu = new System.Windows.Forms.TabPage();
             this.cbo_NguoiQuanLy = new System.Windows.Forms.ComboBox();
@@ -67,6 +68,7 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.dgv_DanhSachVatTu2 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl_VatTu.SuspendLayout();
             this.tabPage_ThemVatTu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachVatTu)).BeginInit();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachVatTu1)).BeginInit();
             this.tabPage_Sua_XoaPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachVatTu2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_VatTu
@@ -242,6 +245,7 @@
             this.btn_Them.TabIndex = 13;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // label6
             // 
@@ -304,6 +308,7 @@
             this.cbo_NguoiQuanLy1.Name = "cbo_NguoiQuanLy1";
             this.cbo_NguoiQuanLy1.Size = new System.Drawing.Size(193, 25);
             this.cbo_NguoiQuanLy1.TabIndex = 6;
+            this.cbo_NguoiQuanLy1.SelectedIndexChanged += new System.EventHandler(this.cbo_NguoiQuanLy1_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -324,6 +329,7 @@
             this.cbo_MaVatTu1.Name = "cbo_MaVatTu1";
             this.cbo_MaVatTu1.Size = new System.Drawing.Size(193, 25);
             this.cbo_MaVatTu1.TabIndex = 2;
+            this.cbo_MaVatTu1.SelectedIndexChanged += new System.EventHandler(this.cbo_MaVatTu1_SelectedIndexChanged);
             // 
             // txt_TenVatTu1
             // 
@@ -333,6 +339,7 @@
             this.txt_TenVatTu1.Name = "txt_TenVatTu1";
             this.txt_TenVatTu1.Size = new System.Drawing.Size(193, 25);
             this.txt_TenVatTu1.TabIndex = 4;
+            this.txt_TenVatTu1.TextChanged += new System.EventHandler(this.txt_TenVatTu1_TextChanged);
             // 
             // label7
             // 
@@ -500,6 +507,7 @@
             this.btn_Xoa.TabIndex = 10;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
@@ -516,6 +524,7 @@
             this.btn_Sua.TabIndex = 9;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // dgv_DanhSachVatTu2
             // 
@@ -552,10 +561,11 @@
             this.Controls.Add(this.tabControl_VatTu);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_VatTu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_VatTu";
+            this.Load += new System.EventHandler(this.frm_VatTu_Load);
             this.tabControl_VatTu.ResumeLayout(false);
             this.tabPage_ThemVatTu.ResumeLayout(false);
             this.tabPage_ThemVatTu.PerformLayout();
@@ -566,6 +576,7 @@
             this.tabPage_Sua_XoaPhong.ResumeLayout(false);
             this.tabPage_Sua_XoaPhong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachVatTu2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -611,5 +622,6 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.DataGridView dgv_DanhSachVatTu2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

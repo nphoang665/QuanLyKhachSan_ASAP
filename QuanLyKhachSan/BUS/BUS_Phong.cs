@@ -20,6 +20,7 @@ namespace QuanLyKhachSan.BUS
         {
             dgv.DataSource = DA_.LayPhong();
         }
+
         public void ThemPhong(string maPhong,string maDichVu, string loaiPhong, string tinhTrang, float donGia)
         {
             DA_.ThemPhong(maPhong,maDichVu, loaiPhong, tinhTrang, donGia);

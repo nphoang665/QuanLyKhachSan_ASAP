@@ -20,6 +20,7 @@ namespace QuanLyKhachSan.DA
             this.DatPhongs = new HashSet<DatPhong>();
             this.HoaDons = new HashSet<HoaDon>();
             this.TaiKhoans = new HashSet<TaiKhoan>();
+            this.VatTus = new HashSet<VatTu>();
         }
     
         public string MaNhanSu { get; set; }
@@ -37,5 +38,7 @@ namespace QuanLyKhachSan.DA
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VatTu> VatTus { get; set; }
     }
 }

@@ -71,7 +71,7 @@ namespace QuanLyKhachSan
         }
         void ThongTinTaiKoan()
         {
-            lbl_TenDangNhap.Text = bus.LayTen(_tk);
+            //lbl_TenDangNhap.Text = bus.LayTen(_tk);
             //phân quyền tại đây
             
 
