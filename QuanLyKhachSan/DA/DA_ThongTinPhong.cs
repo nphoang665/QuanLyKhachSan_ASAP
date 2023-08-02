@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.DA
 {
-    internal class DA_ThongTinPhong
+    public class DA_ThongTinPhong
     {
+        QuanLyKhachSanEntities db;
+        public DA_ThongTinPhong() { 
+        db= new QuanLyKhachSanEntities();
+        }
+        public DatPhong LoadThongtinPhong(string maphong)
+        {
+            var qr = db.DatPhongs.FirstOrDefault(s => s.MaPhong == maphong);
+            return qr;
+
+        }
+        public ThongTinKhachHang loadthongtinKhachHang (string makhachhang)
+        {
+            var qr = db.ThongTinKhachHangs.FirstOrDefault(s => s.MaKhachHang == makhachhang);
+            return qr;
+        }
     }
 }

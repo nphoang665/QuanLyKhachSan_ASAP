@@ -58,7 +58,7 @@
             this.lbl_TongSoTienDichVu.Location = new System.Drawing.Point(113, 559);
             this.lbl_TongSoTienDichVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TongSoTienDichVu.Name = "lbl_TongSoTienDichVu";
-            this.lbl_TongSoTienDichVu.Size = new System.Drawing.Size(19, 21);
+            this.lbl_TongSoTienDichVu.Size = new System.Drawing.Size(24, 28);
             this.lbl_TongSoTienDichVu.TabIndex = 49;
             this.lbl_TongSoTienDichVu.Text = "...";
             // 
@@ -71,7 +71,7 @@
             this.lbl_TongTien.Location = new System.Drawing.Point(31, 559);
             this.lbl_TongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TongTien.Name = "lbl_TongTien";
-            this.lbl_TongTien.Size = new System.Drawing.Size(78, 21);
+            this.lbl_TongTien.Size = new System.Drawing.Size(99, 28);
             this.lbl_TongTien.TabIndex = 48;
             this.lbl_TongTien.Text = "Tổng tiền:";
             // 
@@ -83,7 +83,7 @@
             this.lbl_Phong.Location = new System.Drawing.Point(424, 9);
             this.lbl_Phong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Phong.Name = "lbl_Phong";
-            this.lbl_Phong.Size = new System.Drawing.Size(28, 30);
+            this.lbl_Phong.Size = new System.Drawing.Size(35, 37);
             this.lbl_Phong.TabIndex = 47;
             this.lbl_Phong.Text = "...";
             // 
@@ -95,7 +95,7 @@
             this.lbl_TieuDeQLThuePhong.Location = new System.Drawing.Point(210, 9);
             this.lbl_TieuDeQLThuePhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TieuDeQLThuePhong.Name = "lbl_TieuDeQLThuePhong";
-            this.lbl_TieuDeQLThuePhong.Size = new System.Drawing.Size(208, 30);
+            this.lbl_TieuDeQLThuePhong.Size = new System.Drawing.Size(263, 37);
             this.lbl_TieuDeQLThuePhong.TabIndex = 46;
             this.lbl_TieuDeQLThuePhong.Text = "THÔNG TIN PHÒNG:";
             // 
@@ -117,10 +117,10 @@
             this.lstv_DichVuDaSuDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstv_DichVuDaSuDung.GridLines = true;
             this.lstv_DichVuDaSuDung.HideSelection = false;
-            this.lstv_DichVuDaSuDung.Location = new System.Drawing.Point(2, 20);
+            this.lstv_DichVuDaSuDung.Location = new System.Drawing.Point(2, 24);
             this.lstv_DichVuDaSuDung.Margin = new System.Windows.Forms.Padding(2);
             this.lstv_DichVuDaSuDung.Name = "lstv_DichVuDaSuDung";
-            this.lstv_DichVuDaSuDung.Size = new System.Drawing.Size(646, 301);
+            this.lstv_DichVuDaSuDung.Size = new System.Drawing.Size(646, 297);
             this.lstv_DichVuDaSuDung.TabIndex = 0;
             this.lstv_DichVuDaSuDung.UseCompatibleStateImageBehavior = false;
             // 
@@ -182,7 +182,7 @@
             this.dtp_NgayThue.Location = new System.Drawing.Point(286, 112);
             this.dtp_NgayThue.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_NgayThue.Name = "dtp_NgayThue";
-            this.dtp_NgayThue.Size = new System.Drawing.Size(192, 25);
+            this.dtp_NgayThue.Size = new System.Drawing.Size(192, 29);
             this.dtp_NgayThue.TabIndex = 34;
             // 
             // lbl_NgayThue
@@ -194,7 +194,7 @@
             this.lbl_NgayThue.Location = new System.Drawing.Point(170, 114);
             this.lbl_NgayThue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_NgayThue.Name = "lbl_NgayThue";
-            this.lbl_NgayThue.Size = new System.Drawing.Size(85, 21);
+            this.lbl_NgayThue.Size = new System.Drawing.Size(107, 28);
             this.lbl_NgayThue.TabIndex = 33;
             this.lbl_NgayThue.Text = "Ngày thuê:";
             // 
@@ -207,7 +207,7 @@
             this.lbl_DiaChi.Location = new System.Drawing.Point(170, 84);
             this.lbl_DiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_DiaChi.Name = "lbl_DiaChi";
-            this.lbl_DiaChi.Size = new System.Drawing.Size(60, 21);
+            this.lbl_DiaChi.Size = new System.Drawing.Size(75, 28);
             this.lbl_DiaChi.TabIndex = 31;
             this.lbl_DiaChi.Text = "Địa chỉ:";
             // 
@@ -220,7 +220,7 @@
             this.lbl_TenKhachHang.Location = new System.Drawing.Point(170, 24);
             this.lbl_TenKhachHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TenKhachHang.Name = "lbl_TenKhachHang";
-            this.lbl_TenKhachHang.Size = new System.Drawing.Size(120, 21);
+            this.lbl_TenKhachHang.Size = new System.Drawing.Size(150, 28);
             this.lbl_TenKhachHang.TabIndex = 27;
             this.lbl_TenKhachHang.Text = "Tên khách hàng:";
             // 
@@ -233,7 +233,7 @@
             this.lbl_CMND.Location = new System.Drawing.Point(170, 54);
             this.lbl_CMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_CMND.Name = "lbl_CMND";
-            this.lbl_CMND.Size = new System.Drawing.Size(107, 21);
+            this.lbl_CMND.Size = new System.Drawing.Size(131, 28);
             this.lbl_CMND.TabIndex = 28;
             this.lbl_CMND.Text = "CMND/CCCD:";
             // 
@@ -273,7 +273,7 @@
             // 
             // frm_ThongTinPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 604);

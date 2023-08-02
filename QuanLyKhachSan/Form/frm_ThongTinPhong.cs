@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,12 @@ namespace QuanLyKhachSan
     public partial class frm_ThongTinPhong : Form
     {
         string maPhong;
+        BUS_ThongTinPhong bus;
         public frm_ThongTinPhong(string maPhong)
         {
             InitializeComponent();
             this.maPhong = maPhong;
+            bus= new BUS_ThongTinPhong();
         }
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
@@ -34,7 +37,15 @@ namespace QuanLyKhachSan
 
         private void frm_ThongTinPhong_Load(object sender, EventArgs e)
         {
+            dtp_NgayThue.Enabled=false;
             lbl_Phong.Text = maPhong;
+           var tt= bus.LoadThongTinPhong(maPhong);
+            
+            dtp_NgayThue.Value =(DateTime)tt.NgayDat;
+            var thongtinkhachhang= bus.loadthongtinkhachhang(tt.MaKhachHang);
+            lbl_KQTenKhachHang.Text = thongtinkhachhang.TenKhachHang;
+            lbl_KQCMND.Text = thongtinkhachhang.CMND;
+            lbl_KQDiaChi.Text = thongtinkhachhang.DiaChi;
         }
     }
 }
