@@ -21,12 +21,10 @@ namespace QuanLyKhachSan.DA
         }
     
         public string MaPhong { get; set; }
-        public string MaDichVu { get; set; }
         public string LoaiPhong { get; set; }
         public string TinhTrang { get; set; }
         public Nullable<double> DonGia { get; set; }
     
-        public virtual DangKyDichVu DangKyDichVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatPhong> DatPhongs { get; set; }
     }

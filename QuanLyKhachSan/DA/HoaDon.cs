@@ -17,12 +17,14 @@ namespace QuanLyKhachSan.DA
         public string MaDatPhong { get; set; }
         public string MaHoaDon { get; set; }
         public string MaNhanVien { get; set; }
+        public string MaKhachHang { get; set; }
         public System.DateTime NgayDat { get; set; }
         public System.DateTime NgayTra { get; set; }
         public int TongTien { get; set; }
-        public int GiamGia { get; set; }
+        public int SoNgay { get; set; }
     
         public virtual DatPhong DatPhong { get; set; }
+        public virtual ThongTinKhachHang ThongTinKhachHang { get; set; }
         public virtual NhanSu NhanSu { get; set; }
     }
 }

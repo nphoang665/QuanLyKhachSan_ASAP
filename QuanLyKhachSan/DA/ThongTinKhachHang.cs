@@ -18,6 +18,7 @@ namespace QuanLyKhachSan.DA
         public ThongTinKhachHang()
         {
             this.DatPhongs = new HashSet<DatPhong>();
+            this.HoaDons = new HashSet<HoaDon>();
         }
     
         public string MaKhachHang { get; set; }
@@ -33,5 +34,7 @@ namespace QuanLyKhachSan.DA
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatPhong> DatPhongs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

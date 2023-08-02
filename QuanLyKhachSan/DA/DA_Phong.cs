@@ -20,7 +20,6 @@ namespace QuanLyKhachSan.DA
             new
             {
                 s.MaPhong,
-                s.MaDichVu,
                 s.LoaiPhong,
                 s.TinhTrang,
                 s.DonGia
@@ -33,7 +32,6 @@ namespace QuanLyKhachSan.DA
             var phong = new Phong
             {
                 MaPhong = maPhong,
-                MaDichVu = maDichVu,
                 LoaiPhong = loaiPhong,
                 TinhTrang = tinhTrang,
                 DonGia = donGia
@@ -47,7 +45,6 @@ namespace QuanLyKhachSan.DA
             var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
-                phong.MaDichVu = maDichVu;
                 phong.LoaiPhong = loaiPhong;
                 phong.TinhTrang = tinhTrang;
                 phong.DonGia = donGia;
@@ -74,7 +71,6 @@ namespace QuanLyKhachSan.DA
                 .Select(select=> new
                 {
                     select.MaPhong,
-                    select.MaDichVu,
                     select.LoaiPhong,
                     select.TinhTrang,
                     select.DonGia
@@ -88,7 +84,6 @@ namespace QuanLyKhachSan.DA
                .Select(select => new
                {
                    select.MaPhong,
-                   select.MaDichVu,
                    select.LoaiPhong,
                    select.TinhTrang,
                    select.DonGia

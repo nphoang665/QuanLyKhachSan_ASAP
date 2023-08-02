@@ -61,6 +61,7 @@
     <Compile Include="BUS\BUS_DangNhap.cs" />
     <Compile Include="BUS\BUS_DichVu.cs" />
     <Compile Include="BUS\BUS_DoiMatKhau.cs" />
+    <Compile Include="BUS\BUS_HoaDon.cs" />
     <Compile Include="BUS\BUS_KhachHang.cs" />
     <Compile Include="BUS\BUS_NhanSu.cs" />
     <Compile Include="BUS\BUS_Phong.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="DA\DA_DangNhap.cs" />
     <Compile Include="DA\DA_DichVu.cs" />
     <Compile Include="DA\DA_DoiMatKhau.cs" />
+    <Compile Include="DA\DA_HoaDon.cs" />
     <Compile Include="DA\DA_KhachHang.cs" />
     <Compile Include="DA\DA_NhanSu.cs" />
     <Compile Include="DA\DA_Phong.cs" />
@@ -293,8 +295,8 @@
     <Content Include="1497618989-3_85123.ico" />
     <Content Include="DA\QuanLyKhachSanModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanModel.Context.cs</LastGenOutput>
       <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKhachSanModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DA\QuanLyKhachSanModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
