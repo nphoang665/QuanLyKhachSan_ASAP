@@ -21,13 +21,13 @@ namespace QuanLyKhachSan.BUS
             dgv.DataSource = DA_.LayPhong();
         }
 
-        public void ThemPhong(string maPhong,string maDichVu, string loaiPhong, string tinhTrang, float donGia)
+        public void ThemPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
         {
-            DA_.ThemPhong(maPhong,maDichVu, loaiPhong, tinhTrang, donGia);
+            DA_.ThemPhong(maPhong, loaiPhong, tinhTrang, donGia);
         }
-        public void SuaPhong(string maPhong, string maDichVu, string loaiPhong, string tinhTrang, float donGia)
+        public void SuaPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
         {
-            DA_.SuaPhong(maPhong, maDichVu, loaiPhong, tinhTrang, donGia);
+            DA_.SuaPhong(maPhong, loaiPhong, tinhTrang, donGia);
         }
 
         public void XoaPhong(string maPhong)

@@ -14,18 +14,9 @@ namespace QuanLyKhachSan.DA
     
     public partial class DangKyDichVu
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DangKyDichVu()
-        {
-            this.Phongs = new HashSet<Phong>();
-        }
-    
         public string MaDichVu { get; set; }
         public string MaPhong { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> DonGia { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phong> Phongs { get; set; }
     }
 }

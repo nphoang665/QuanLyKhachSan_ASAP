@@ -20,7 +20,6 @@ namespace QuanLyKhachSan.DA
             new
             {
                 s.MaPhong,
-                s.MaDichVu,
                 s.LoaiPhong,
                 s.TinhTrang,
                 s.DonGia
@@ -28,12 +27,11 @@ namespace QuanLyKhachSan.DA
             ).ToList();
             return ds;
         }
-        public void ThemPhong(string maPhong,string maDichVu, string loaiPhong, string tinhTrang, float donGia)
+        public void ThemPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
         {
             var phong = new Phong
             {
                 MaPhong = maPhong,
-                MaDichVu = maDichVu,
                 LoaiPhong = loaiPhong,
                 TinhTrang = tinhTrang,
                 DonGia = donGia
@@ -42,13 +40,12 @@ namespace QuanLyKhachSan.DA
             db.SaveChanges();
         }
 
-        public void SuaPhong(string maPhong, string maDichVu, string loaiPhong, string tinhTrang, float donGia)
+        public void SuaPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
         {
             var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
-                phong.MaPhong = maPhong;
-                phong.MaDichVu = maDichVu;
+               
                 phong.LoaiPhong = loaiPhong;
                 phong.TinhTrang = tinhTrang;
                 phong.DonGia = donGia;
@@ -75,7 +72,6 @@ namespace QuanLyKhachSan.DA
                 .Select(select=> new
                 {
                     select.MaPhong,
-                    select.MaDichVu,
                     select.LoaiPhong,
                     select.TinhTrang,
                     select.DonGia
@@ -89,7 +85,6 @@ namespace QuanLyKhachSan.DA
                .Select(select => new
                {
                    select.MaPhong,
-                   select.MaDichVu,
                    select.LoaiPhong,
                    select.TinhTrang,
                    select.DonGia
