@@ -187,15 +187,17 @@ namespace QuanLyKhachSan.DA
                 return true;
             }
         }
-        public bool kiemtrakhoa(string mk)
-        {
-            var data = db.ThongTinKhachHangs.Where(x => x.MaKhachHang == mk);
-            if(data != null)
-            {
-                MessageBox.Show("Trùng khóa chính");
-                return false;
-            }
-            else { return true; }
-        }
+        //public bool checkkhoa(string makh)
+        //{
+        //    var data = db.ThongTinKhachHangs.FirstOrDefault(x => x.MaKhachHang == makh);
+        //    if (data != null)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
     }
 }

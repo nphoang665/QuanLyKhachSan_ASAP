@@ -34,8 +34,7 @@
             this.lbl_mahoadon = new System.Windows.Forms.Label();
             this.lbl_KQTongTien = new System.Windows.Forms.Label();
             this.lbl_KQSoNgay = new System.Windows.Forms.Label();
-            this.dtp_NgayThue = new System.Windows.Forms.DateTimePicker();
-            this.cbo_MaDichVu = new System.Windows.Forms.ComboBox();
+            this.cbo_MaDatPhong = new System.Windows.Forms.ComboBox();
             this.cbo_MaKhachHang = new System.Windows.Forms.ComboBox();
             this.cbo_MaNhanVien = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,10 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_DanhSachHoaDon = new System.Windows.Forms.DataGridView();
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.lbl_madatphong = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.MaDatPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +52,11 @@
             this.SoNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.lbl_madatphong = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtp_NgayThue = new System.Windows.Forms.DateTimePicker();
             this.tabControl_HoaDon.SuspendLayout();
             this.tabPage_HoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
@@ -81,7 +81,7 @@
             this.tabPage_HoaDon.Controls.Add(this.lbl_KQTongTien);
             this.tabPage_HoaDon.Controls.Add(this.lbl_KQSoNgay);
             this.tabPage_HoaDon.Controls.Add(this.dtp_NgayThue);
-            this.tabPage_HoaDon.Controls.Add(this.cbo_MaDichVu);
+            this.tabPage_HoaDon.Controls.Add(this.cbo_MaDatPhong);
             this.tabPage_HoaDon.Controls.Add(this.cbo_MaKhachHang);
             this.tabPage_HoaDon.Controls.Add(this.cbo_MaNhanVien);
             this.tabPage_HoaDon.Controls.Add(this.label6);
@@ -143,22 +143,15 @@
             this.lbl_KQSoNgay.Text = "---";
             this.lbl_KQSoNgay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dtp_NgayThue
+            // cbo_MaDatPhong
             // 
-            this.dtp_NgayThue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_NgayThue.Location = new System.Drawing.Point(660, 49);
-            this.dtp_NgayThue.Name = "dtp_NgayThue";
-            this.dtp_NgayThue.Size = new System.Drawing.Size(193, 25);
-            this.dtp_NgayThue.TabIndex = 10;
-            // 
-            // cbo_MaDichVu
-            // 
-            this.cbo_MaDichVu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_MaDichVu.FormattingEnabled = true;
-            this.cbo_MaDichVu.Location = new System.Drawing.Point(221, 47);
-            this.cbo_MaDichVu.Name = "cbo_MaDichVu";
-            this.cbo_MaDichVu.Size = new System.Drawing.Size(193, 25);
-            this.cbo_MaDichVu.TabIndex = 8;
+            this.cbo_MaDatPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_MaDatPhong.FormattingEnabled = true;
+            this.cbo_MaDatPhong.Location = new System.Drawing.Point(221, 47);
+            this.cbo_MaDatPhong.Name = "cbo_MaDatPhong";
+            this.cbo_MaDatPhong.Size = new System.Drawing.Size(193, 25);
+            this.cbo_MaDatPhong.TabIndex = 8;
+            this.cbo_MaDatPhong.SelectedIndexChanged += new System.EventHandler(this.cbo_MaDatPhong_SelectedIndexChanged);
             // 
             // cbo_MaKhachHang
             // 
@@ -264,56 +257,6 @@
             this.dgv_DanhSachHoaDon.Size = new System.Drawing.Size(1005, 235);
             this.dgv_DanhSachHoaDon.TabIndex = 16;
             // 
-            // btn_Them
-            // 
-            this.btn_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Them.FlatAppearance.BorderSize = 0;
-            this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(921, 88);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(133, 43);
-            this.btn_Them.TabIndex = 15;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = false;
-            // 
-            // lbl_madatphong
-            // 
-            this.lbl_madatphong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_madatphong.AutoSize = true;
-            this.lbl_madatphong.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_madatphong.Location = new System.Drawing.Point(74, 49);
-            this.lbl_madatphong.Name = "lbl_madatphong";
-            this.lbl_madatphong.Size = new System.Drawing.Size(113, 20);
-            this.lbl_madatphong.TabIndex = 7;
-            this.lbl_madatphong.Text = "Mã Đặt Phòng:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã nhân viên:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.label1.Location = new System.Drawing.Point(39, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HÓA ĐƠN:";
-            // 
             // MaDatPhong
             // 
             this.MaDatPhong.HeaderText = "Mã Đặt Phòng";
@@ -362,6 +305,65 @@
             this.NgayLap.Name = "NgayLap";
             this.NgayLap.ReadOnly = true;
             // 
+            // btn_Them
+            // 
+            this.btn_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Them.FlatAppearance.BorderSize = 0;
+            this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.ForeColor = System.Drawing.Color.White;
+            this.btn_Them.Location = new System.Drawing.Point(921, 88);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(133, 43);
+            this.btn_Them.TabIndex = 15;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // lbl_madatphong
+            // 
+            this.lbl_madatphong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_madatphong.AutoSize = true;
+            this.lbl_madatphong.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_madatphong.Location = new System.Drawing.Point(74, 49);
+            this.lbl_madatphong.Name = "lbl_madatphong";
+            this.lbl_madatphong.Size = new System.Drawing.Size(113, 20);
+            this.lbl_madatphong.TabIndex = 7;
+            this.lbl_madatphong.Text = "Mã Đặt Phòng:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã nhân viên:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.label1.Location = new System.Drawing.Point(39, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HÓA ĐƠN:";
+            // 
+            // dtp_NgayThue
+            // 
+            this.dtp_NgayThue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_NgayThue.Location = new System.Drawing.Point(660, 49);
+            this.dtp_NgayThue.Name = "dtp_NgayThue";
+            this.dtp_NgayThue.Size = new System.Drawing.Size(193, 25);
+            this.dtp_NgayThue.TabIndex = 10;
+            // 
             // frm_HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -390,8 +392,7 @@
         private System.Windows.Forms.TabPage tabPage_HoaDon;
         private System.Windows.Forms.Label lbl_KQTongTien;
         private System.Windows.Forms.Label lbl_KQSoNgay;
-        private System.Windows.Forms.DateTimePicker dtp_NgayThue;
-        private System.Windows.Forms.ComboBox cbo_MaDichVu;
+        private System.Windows.Forms.ComboBox cbo_MaDatPhong;
         private System.Windows.Forms.ComboBox cbo_MaKhachHang;
         private System.Windows.Forms.ComboBox cbo_MaNhanVien;
         private System.Windows.Forms.Label label6;
@@ -415,5 +416,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoNgay;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
+        private System.Windows.Forms.DateTimePicker dtp_NgayThue;
     }
 }
