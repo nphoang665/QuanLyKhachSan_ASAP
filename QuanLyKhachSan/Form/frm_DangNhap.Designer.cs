@@ -46,11 +46,13 @@
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -235,6 +237,10 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // KiemLoi
+            // 
+            this.KiemLoi.ContainerControl = this;
+            // 
             // frm_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -261,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,6 +291,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pic_Hide;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ErrorProvider KiemLoi;
     }
 }
 

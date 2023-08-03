@@ -52,6 +52,33 @@ namespace QuanLyKhachSan
             string tk = txt_TenDangNhap.Text;
             string mk = txt_MatKhau.Text;
 
+            /* bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
+             if (dangnhap)
+             {
+                 this.Hide();
+                 frm_TrangChu frm = new frm_TrangChu(tk);
+                 frm.ShowDialog();
+                 this.Close();
+             }
+             else
+             {
+                 MessageBox.Show("Đăng nhập không thành công");
+             }*/
+            KiemLoi.Clear(); // Xóa các lỗi cũ trước khi kiểm tra
+
+            if (string.IsNullOrEmpty(tk))
+            {
+                KiemLoi.SetError(txt_TenDangNhap, "Vui lòng nhập tên đăng nhập");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(mk))
+            {
+                KiemLoi.SetError(txt_MatKhau, "Vui lòng nhập mật khẩu");
+                KiemLoi.SetIconPadding(txt_MatKhau, 30);
+                return;
+            }
+
             bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
             if (dangnhap)
             {
@@ -62,7 +89,7 @@ namespace QuanLyKhachSan
             }
             else
             {
-                MessageBox.Show("Đăng nhập không thành công");
+                MessageBox.Show("Tên đăng nhập, mật khẩu không chính xác");
             }
 
 
@@ -78,5 +105,6 @@ namespace QuanLyKhachSan
             DangNhap();
 
         }
+
     }
 }
