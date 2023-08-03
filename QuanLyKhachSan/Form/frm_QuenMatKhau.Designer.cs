@@ -194,6 +194,7 @@
             this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
             this.lbl_DangNhap.TabIndex = 20;
             this.lbl_DangNhap.Text = "Đăng nhập";
+            this.lbl_DangNhap.Click += new System.EventHandler(this.lbl_DangNhap_Click_1);
             // 
             // txt_NhapLaiMK
             // 

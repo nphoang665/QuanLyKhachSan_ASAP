@@ -170,5 +170,12 @@ namespace QuanLyKhachSan
         {
             toolTip1.SetToolTip(pic_Hide1, "Ẩn mật khẩu");
         }
+
+        private void lbl_DangNhap_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_DangNhap frm_DangNhap = new frm_DangNhap();
+            frm_DangNhap.ShowDialog();
+        }
     }
 }

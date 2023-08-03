@@ -64,7 +64,7 @@ namespace QuanLyKhachSan
              {
                  MessageBox.Show("Đăng nhập không thành công");
              }*/
-            KiemLoi.Clear(); // Xóa các lỗi cũ trước khi kiểm tra
+            KiemLoi.Clear(); 
 
             if (string.IsNullOrEmpty(tk))
             {
@@ -98,6 +98,7 @@ namespace QuanLyKhachSan
         {
             frm_QuenMatKhau frm_QuenMatKhau = new frm_QuenMatKhau();
             frm_QuenMatKhau.Show();
+            this.Hide();
         }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
