@@ -49,6 +49,8 @@
             this.lbl_KQTongTienDichVu = new System.Windows.Forms.Label();
             this.lbl_TongTienDichVu = new System.Windows.Forms.Label();
             this.lbl_KQMaKhachHang = new System.Windows.Forms.Label();
+            this.lbl_kqmahoadon = new System.Windows.Forms.Label();
+            this.lbl_mahoadon = new System.Windows.Forms.Label();
             this.grp_ThongTinThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             this.lbl_TenKhachHang.AutoSize = true;
             this.lbl_TenKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TenKhachHang.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_TenKhachHang.Location = new System.Drawing.Point(408, 131);
+            this.lbl_TenKhachHang.Location = new System.Drawing.Point(407, 155);
             this.lbl_TenKhachHang.Name = "lbl_TenKhachHang";
             this.lbl_TenKhachHang.Size = new System.Drawing.Size(114, 19);
             this.lbl_TenKhachHang.TabIndex = 12;
@@ -86,7 +88,7 @@
             this.lbl_MaKhachHang.AutoSize = true;
             this.lbl_MaKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MaKhachHang.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_MaKhachHang.Location = new System.Drawing.Point(408, 96);
+            this.lbl_MaKhachHang.Location = new System.Drawing.Point(407, 120);
             this.lbl_MaKhachHang.Name = "lbl_MaKhachHang";
             this.lbl_MaKhachHang.Size = new System.Drawing.Size(111, 19);
             this.lbl_MaKhachHang.TabIndex = 10;
@@ -213,7 +215,7 @@
             // 
             this.lbl_KQPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_KQPhong.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQPhong.Location = new System.Drawing.Point(532, 162);
+            this.lbl_KQPhong.Location = new System.Drawing.Point(531, 186);
             this.lbl_KQPhong.Name = "lbl_KQPhong";
             this.lbl_KQPhong.Size = new System.Drawing.Size(174, 22);
             this.lbl_KQPhong.TabIndex = 15;
@@ -224,7 +226,7 @@
             // 
             this.lbl_KQTenKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_KQTenKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQTenKhachHang.Location = new System.Drawing.Point(532, 129);
+            this.lbl_KQTenKhachHang.Location = new System.Drawing.Point(531, 153);
             this.lbl_KQTenKhachHang.Name = "lbl_KQTenKhachHang";
             this.lbl_KQTenKhachHang.Size = new System.Drawing.Size(174, 22);
             this.lbl_KQTenKhachHang.TabIndex = 13;
@@ -237,7 +239,7 @@
             this.lbl_Phong.AutoSize = true;
             this.lbl_Phong.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Phong.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_Phong.Location = new System.Drawing.Point(408, 164);
+            this.lbl_Phong.Location = new System.Drawing.Point(407, 188);
             this.lbl_Phong.Name = "lbl_Phong";
             this.lbl_Phong.Size = new System.Drawing.Size(54, 19);
             this.lbl_Phong.TabIndex = 14;
@@ -290,12 +292,36 @@
             // 
             this.lbl_KQMaKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_KQMaKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQMaKhachHang.Location = new System.Drawing.Point(532, 94);
+            this.lbl_KQMaKhachHang.Location = new System.Drawing.Point(531, 118);
             this.lbl_KQMaKhachHang.Name = "lbl_KQMaKhachHang";
             this.lbl_KQMaKhachHang.Size = new System.Drawing.Size(174, 22);
             this.lbl_KQMaKhachHang.TabIndex = 18;
             this.lbl_KQMaKhachHang.Text = "---";
             this.lbl_KQMaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_kqmahoadon
+            // 
+            this.lbl_kqmahoadon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_kqmahoadon.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kqmahoadon.Location = new System.Drawing.Point(531, 89);
+            this.lbl_kqmahoadon.Name = "lbl_kqmahoadon";
+            this.lbl_kqmahoadon.Size = new System.Drawing.Size(174, 22);
+            this.lbl_kqmahoadon.TabIndex = 20;
+            this.lbl_kqmahoadon.Text = "---";
+            this.lbl_kqmahoadon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_kqmahoadon.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lbl_mahoadon
+            // 
+            this.lbl_mahoadon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_mahoadon.AutoSize = true;
+            this.lbl_mahoadon.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mahoadon.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_mahoadon.Location = new System.Drawing.Point(407, 91);
+            this.lbl_mahoadon.Name = "lbl_mahoadon";
+            this.lbl_mahoadon.Size = new System.Drawing.Size(89, 19);
+            this.lbl_mahoadon.TabIndex = 19;
+            this.lbl_mahoadon.Text = "Mã hóa đơn:";
             // 
             // frm_TraPhong
             // 
@@ -303,6 +329,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 511);
+            this.Controls.Add(this.lbl_kqmahoadon);
+            this.Controls.Add(this.lbl_mahoadon);
             this.Controls.Add(this.lbl_KQMaKhachHang);
             this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.lbl_TenKhachHang);
@@ -349,5 +377,7 @@
         private System.Windows.Forms.Label lbl_KQTongTienDichVu;
         private System.Windows.Forms.Label lbl_TongTienDichVu;
         private System.Windows.Forms.Label lbl_KQMaKhachHang;
+        private System.Windows.Forms.Label lbl_kqmahoadon;
+        private System.Windows.Forms.Label lbl_mahoadon;
     }
 }

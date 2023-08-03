@@ -7,7 +7,6 @@
       <Diagram DiagramId="b59611e416434a619f0cabfa48ee29f6" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyKhachSanModel.DangKyDichVu" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.DatPhong" Width="1.5" PointX="6" PointY="6.25" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="8.25" PointY="5.25" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="5.25" PointY="3.625" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.NhanSu" Width="1.5" PointX="0.75" PointY="4.25" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.Phong" Width="1.5" PointX="3.75" PointY="6.875" />
@@ -18,12 +17,13 @@
         <AssociationConnector Association="QuanLyKhachSanModel.FK__DatPhong__MaKhac__33D4B598" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__DatPhong__MaNhan__35BCFE0A" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__DatPhong__MaPhon__36B12243" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaDatPho__398D8EEE" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaKhachH__3B75D760" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaNhanVi__3A81B327" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2F10007B" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__2C3393D0" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3F466844" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="8.25" PointY="9" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaDatPho__4BAC3F29" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaKhachH__4D94879B" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaNhanVi__4CA06362" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
