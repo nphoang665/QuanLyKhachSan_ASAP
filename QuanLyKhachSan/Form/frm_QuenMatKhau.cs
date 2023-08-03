@@ -12,9 +12,12 @@ namespace QuanLyKhachSan
 {
     public partial class frm_QuenMatKhau : Form
     {
+        BUS_QuenMatKhau bus;
         public frm_QuenMatKhau()
         {
             InitializeComponent();
+            bus= new BUS_QuenMatKhau();
+            pnl_dmk.Visible = false;
         }
 
         private void lbl_DangNhap_Click(object sender, EventArgs e)
@@ -69,6 +72,40 @@ namespace QuanLyKhachSan
         private void pic_Show1_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pic_Show1, "Hiện mật khẩu");
+        }
+
+        private void btn_KiemTra_Click(object sender, EventArgs e)
+        {
+            string tenDangNhap = txt_TenDangNhap.Text;
+            if (bus.kiemTraTenDangNhap(tenDangNhap))
+            {
+               pnl_dmk.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập không tồn tại!");
+            }
+        }
+
+        private void btn_LayLaiMatKhau_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_LayLaiMatKhau_Click_1(object sender, EventArgs e)
+        {
+            string tenDangNhap = txt_TenDangNhap.Text;
+            string matKhauMoi = txt_MatKhau.Text;
+            string nhapLaiMK = txt_NhapLaiMK.Text;
+
+            if (matKhauMoi != nhapLaiMK)
+            {
+                MessageBox.Show("Mật khẩu mới và nhập lại mật khẩu không khớp!");
+                return;
+            }
+
+            bus.doiMatKhau(tenDangNhap, matKhauMoi);
+            MessageBox.Show("Đổi mật khẩu thành công!");
         }
     }
 }

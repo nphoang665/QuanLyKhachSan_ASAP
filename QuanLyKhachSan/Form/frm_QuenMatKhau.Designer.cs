@@ -32,12 +32,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_DangNhap = new System.Windows.Forms.Label();
-            this.txt_NhapLaiMK = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_MatKhau = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_LayLaiMatKhau = new System.Windows.Forms.Button();
             this.btn_KiemTra = new System.Windows.Forms.Button();
             this.txt_TenDangNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +40,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_dmk = new System.Windows.Forms.Panel();
+            this.lbl_DangNhap = new System.Windows.Forms.Label();
+            this.txt_NhapLaiMK = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_MatKhau = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_LayLaiMatKhau = new System.Windows.Forms.Button();
             this.pic_Show = new System.Windows.Forms.PictureBox();
             this.pic_Show1 = new System.Windows.Forms.PictureBox();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
@@ -53,6 +54,7 @@
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_dmk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -92,78 +94,6 @@
             this.panel2.Size = new System.Drawing.Size(5, 489);
             this.panel2.TabIndex = 12;
             // 
-            // lbl_DangNhap
-            // 
-            this.lbl_DangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_DangNhap.AutoSize = true;
-            this.lbl_DangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_DangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_DangNhap.Location = new System.Drawing.Point(209, 354);
-            this.lbl_DangNhap.Name = "lbl_DangNhap";
-            this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
-            this.lbl_DangNhap.TabIndex = 10;
-            this.lbl_DangNhap.Text = "Đăng nhập";
-            this.lbl_DangNhap.Click += new System.EventHandler(this.lbl_DangNhap_Click);
-            // 
-            // txt_NhapLaiMK
-            // 
-            this.txt_NhapLaiMK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_NhapLaiMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_NhapLaiMK.Location = new System.Drawing.Point(191, 229);
-            this.txt_NhapLaiMK.Name = "txt_NhapLaiMK";
-            this.txt_NhapLaiMK.Size = new System.Drawing.Size(253, 23);
-            this.txt_NhapLaiMK.TabIndex = 6;
-            this.txt_NhapLaiMK.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 18);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Nhập lại Mật khẩu:";
-            // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MatKhau.Location = new System.Drawing.Point(191, 180);
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Size = new System.Drawing.Size(253, 23);
-            this.txt_MatKhau.TabIndex = 6;
-            this.txt_MatKhau.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 18);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Mật khẩu mới:";
-            // 
-            // btn_LayLaiMatKhau
-            // 
-            this.btn_LayLaiMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_LayLaiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.btn_LayLaiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_LayLaiMatKhau.FlatAppearance.BorderSize = 0;
-            this.btn_LayLaiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LayLaiMatKhau.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LayLaiMatKhau.ForeColor = System.Drawing.Color.White;
-            this.btn_LayLaiMatKhau.Location = new System.Drawing.Point(91, 277);
-            this.btn_LayLaiMatKhau.Name = "btn_LayLaiMatKhau";
-            this.btn_LayLaiMatKhau.Size = new System.Drawing.Size(324, 47);
-            this.btn_LayLaiMatKhau.TabIndex = 3;
-            this.btn_LayLaiMatKhau.Text = "Lấy lại mật khẩu";
-            this.btn_LayLaiMatKhau.UseVisualStyleBackColor = false;
-            // 
             // btn_KiemTra
             // 
             this.btn_KiemTra.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -179,6 +109,7 @@
             this.btn_KiemTra.TabIndex = 3;
             this.btn_KiemTra.Text = "Kiểm tra";
             this.btn_KiemTra.UseVisualStyleBackColor = false;
+            this.btn_KiemTra.Click += new System.EventHandler(this.btn_KiemTra_Click);
             // 
             // txt_TenDangNhap
             // 
@@ -221,19 +152,10 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.lbl_DangNhap);
-            this.groupBox1.Controls.Add(this.txt_NhapLaiMK);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_MatKhau);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btn_LayLaiMatKhau);
+            this.groupBox1.Controls.Add(this.pnl_dmk);
             this.groupBox1.Controls.Add(this.btn_KiemTra);
             this.groupBox1.Controls.Add(this.txt_TenDangNhap);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pic_Show);
-            this.groupBox1.Controls.Add(this.pic_Show1);
-            this.groupBox1.Controls.Add(this.pic_Hide);
-            this.groupBox1.Controls.Add(this.pic_Hide1);
             this.groupBox1.Location = new System.Drawing.Point(38, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(506, 387);
@@ -252,20 +174,107 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // pnl_dmk
+            // 
+            this.pnl_dmk.Controls.Add(this.lbl_DangNhap);
+            this.pnl_dmk.Controls.Add(this.txt_NhapLaiMK);
+            this.pnl_dmk.Controls.Add(this.label4);
+            this.pnl_dmk.Controls.Add(this.txt_MatKhau);
+            this.pnl_dmk.Controls.Add(this.label3);
+            this.pnl_dmk.Controls.Add(this.btn_LayLaiMatKhau);
+            this.pnl_dmk.Controls.Add(this.pic_Show);
+            this.pnl_dmk.Controls.Add(this.pic_Show1);
+            this.pnl_dmk.Controls.Add(this.pic_Hide);
+            this.pnl_dmk.Controls.Add(this.pic_Hide1);
+            this.pnl_dmk.Location = new System.Drawing.Point(36, 188);
+            this.pnl_dmk.Name = "pnl_dmk";
+            this.pnl_dmk.Size = new System.Drawing.Size(451, 179);
+            this.pnl_dmk.TabIndex = 4;
+            // 
+            // lbl_DangNhap
+            // 
+            this.lbl_DangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_DangNhap.AutoSize = true;
+            this.lbl_DangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_DangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.lbl_DangNhap.Location = new System.Drawing.Point(181, 159);
+            this.lbl_DangNhap.Name = "lbl_DangNhap";
+            this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
+            this.lbl_DangNhap.TabIndex = 20;
+            this.lbl_DangNhap.Text = "Đăng nhập";
+            // 
+            // txt_NhapLaiMK
+            // 
+            this.txt_NhapLaiMK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_NhapLaiMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_NhapLaiMK.Location = new System.Drawing.Point(163, 50);
+            this.txt_NhapLaiMK.Name = "txt_NhapLaiMK";
+            this.txt_NhapLaiMK.Size = new System.Drawing.Size(253, 23);
+            this.txt_NhapLaiMK.TabIndex = 14;
+            this.txt_NhapLaiMK.UseSystemPasswordChar = true;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(5, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 18);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Nhập lại Mật khẩu:";
+            // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_MatKhau.Location = new System.Drawing.Point(163, 1);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Size = new System.Drawing.Size(253, 23);
+            this.txt_MatKhau.TabIndex = 15;
+            this.txt_MatKhau.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Mật khẩu mới:";
+            // 
+            // btn_LayLaiMatKhau
+            // 
+            this.btn_LayLaiMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_LayLaiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_LayLaiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_LayLaiMatKhau.FlatAppearance.BorderSize = 0;
+            this.btn_LayLaiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LayLaiMatKhau.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LayLaiMatKhau.ForeColor = System.Drawing.Color.White;
+            this.btn_LayLaiMatKhau.Location = new System.Drawing.Point(63, 98);
+            this.btn_LayLaiMatKhau.Name = "btn_LayLaiMatKhau";
+            this.btn_LayLaiMatKhau.Size = new System.Drawing.Size(324, 47);
+            this.btn_LayLaiMatKhau.TabIndex = 11;
+            this.btn_LayLaiMatKhau.Text = "Lấy lại mật khẩu";
+            this.btn_LayLaiMatKhau.UseVisualStyleBackColor = false;
+            this.btn_LayLaiMatKhau.Click += new System.EventHandler(this.btn_LayLaiMatKhau_Click_1);
+            // 
             // pic_Show
             // 
             this.pic_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show.Location = new System.Drawing.Point(442, 180);
+            this.pic_Show.Location = new System.Drawing.Point(414, 1);
             this.pic_Show.Name = "pic_Show";
             this.pic_Show.Size = new System.Drawing.Size(32, 23);
             this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Show.TabIndex = 7;
+            this.pic_Show.TabIndex = 16;
             this.pic_Show.TabStop = false;
-            this.pic_Show.Click += new System.EventHandler(this.pic_Show_Click);
-            this.pic_Show.MouseHover += new System.EventHandler(this.pic_Show_MouseHover);
             // 
             // pic_Show1
             // 
@@ -273,14 +282,12 @@
             this.pic_Show1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show1.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show1.Location = new System.Drawing.Point(442, 229);
+            this.pic_Show1.Location = new System.Drawing.Point(414, 50);
             this.pic_Show1.Name = "pic_Show1";
             this.pic_Show1.Size = new System.Drawing.Size(32, 23);
             this.pic_Show1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Show1.TabIndex = 7;
+            this.pic_Show1.TabIndex = 17;
             this.pic_Show1.TabStop = false;
-            this.pic_Show1.Click += new System.EventHandler(this.pic_Show1_Click);
-            this.pic_Show1.MouseHover += new System.EventHandler(this.pic_Show1_MouseHover);
             // 
             // pic_Hide
             // 
@@ -288,14 +295,12 @@
             this.pic_Hide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide.Location = new System.Drawing.Point(442, 180);
+            this.pic_Hide.Location = new System.Drawing.Point(414, 1);
             this.pic_Hide.Name = "pic_Hide";
             this.pic_Hide.Size = new System.Drawing.Size(32, 23);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Hide.TabIndex = 8;
+            this.pic_Hide.TabIndex = 18;
             this.pic_Hide.TabStop = false;
-            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
-            this.pic_Hide.MouseHover += new System.EventHandler(this.pic_Hide_MouseHover);
             // 
             // pic_Hide1
             // 
@@ -303,14 +308,12 @@
             this.pic_Hide1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide1.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide1.Location = new System.Drawing.Point(442, 229);
+            this.pic_Hide1.Location = new System.Drawing.Point(414, 50);
             this.pic_Hide1.Name = "pic_Hide1";
             this.pic_Hide1.Size = new System.Drawing.Size(32, 23);
             this.pic_Hide1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Hide1.TabIndex = 8;
+            this.pic_Hide1.TabIndex = 19;
             this.pic_Hide1.TabStop = false;
-            this.pic_Hide1.Click += new System.EventHandler(this.pic_Hide1_Click);
-            this.pic_Hide1.MouseHover += new System.EventHandler(this.pic_Hide1_MouseHover);
             // 
             // frm_QuenMatKhau
             // 
@@ -326,7 +329,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_QuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUÊN MẬT KHẨU";
@@ -335,6 +338,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_dmk.ResumeLayout(false);
+            this.pnl_dmk.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
@@ -350,22 +355,23 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_KiemTra;
+        private System.Windows.Forms.TextBox txt_TenDangNhap;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel pnl_dmk;
         private System.Windows.Forms.Label lbl_DangNhap;
         private System.Windows.Forms.TextBox txt_NhapLaiMK;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_MatKhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_LayLaiMatKhau;
-        private System.Windows.Forms.Button btn_KiemTra;
-        private System.Windows.Forms.TextBox txt_TenDangNhap;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pic_Show;
         private System.Windows.Forms.PictureBox pic_Show1;
         private System.Windows.Forms.PictureBox pic_Hide;
         private System.Windows.Forms.PictureBox pic_Hide1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
