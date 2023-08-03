@@ -28,17 +28,7 @@ namespace QuanLyKhachSan
             frm_ThongTinPhong.ShowDialog();
             var doianh = bus.layTrangThai(maPhong);
             string tinhTrang = doianh.TinhTrang;
-            if(tinhTrang== "Trống")
-            {
-                pic_101.Image = Image.FromFile("house.png");
-            }
-            else if (tinhTrang== "Đã thuê")
-            {
-                pic_101.Image = Image.FromFile("house-key (1).png");
-             }
-            else {
-                pic_101.Image = Image.FromFile("investment.png");
-                  }
+           
 
         }
 
