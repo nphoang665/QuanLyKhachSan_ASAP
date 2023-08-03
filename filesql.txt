@@ -1,0 +1,122 @@
+create database QuanLyKhachSan
+use QuanLyKhachSan
+
+
+CREATE TABLE NhanSu (
+    MaNhanSu varchar(6) PRIMARY KEY,
+    TenNhanVien NVARCHAR(50),
+    GioiTinh NVARCHAR(3),
+    DiaChi NVARCHAR(200),
+    SoDienThoai VARCHAR(10),
+    NgaySinh DATE,
+	NgayVaoLam DATE,
+	ChucVu nvarchar(50)
+);
+
+CREATE TABLE QuanLyDichVu (
+  MaDichVu varchar(6) PRIMARY KEY,
+  TenDichVu NVARCHAR(50),
+  DonGia float,
+  DonViTinh NVARCHAR(20) 
+ 
+);
+CREATE TABLE DangKyDichVu (
+  MaDichVu varchar(6) PRIMARY KEY ,
+  MaPhong varchar(6) ,
+  SoLuong int,
+  DonGia float, 
+);
+CREATE TABLE Phong (
+  MaPhong varchar(6) PRIMARY KEY,
+  LoaiPhong NVARCHAR(50) ,
+  TinhTrang NVARCHAR(50),
+  DonGia float
+);
+
+create table TaiKhoan (
+TenDangNhap varchar(20) primary key,
+MatKhau varchar(20) not null,
+PhanQuyen varchar(20) not null,
+MaNhanSu varchar(6) FOREIGN KEY (MaNhanSu) REFERENCES NhanSu(MaNhanSu) 
+);
+create table LuuMatKhau(
+TaiKhoan varchar(20) primary key,
+MatKhau varchar(20) not null,
+ FOREIGN KEY (TaiKhoan) REFERENCES TaiKhoan(TenDangNhap) 
+)
+create table ThongTinKhachHang(
+	MaKhachHang varchar(6) PRIMARY KEY,
+	TenKhachHang NVARCHAR(50),
+	NgaySinh DATE,
+	GioiTinh nvarchar(3),
+	CMND varchar(12),
+	DiaChi NVARCHAR(200),
+	SoDienThoai VARCHAR(10),
+	GhiChu text,
+	MaPhong varchar(6),
+	NgayThue date
+);	
+CREATE TABLE DatPhong (
+    MaDatPhong varchar(6) PRIMARY KEY,
+	MaKhachHang varchar(6) FOREIGN KEY REFERENCES ThongTinKhachHang(MaKhachHang),
+    NgayDat DATE  default getdate(),
+    NgayTra DATE,
+    SoLuongKhachHang INT,
+	TienCoc float,
+    MaNhanVien varchar(6) FOREIGN KEY REFERENCES NhanSu(MaNhanSu),
+	MaPhong varchar(6) FOREIGN KEY REFERENCES Phong(MaPhong)
+);
+
+create table HoaDon
+(
+MaDatPhong varchar(6) FOREIGN KEY REFERENCES DatPhong(MaDatPhong),
+MaHoaDon varchar(6) primary key ,
+MaNhanVien varchar(6) foreign key references NhanSu(MaNhanSu) not null,
+MaKhachHang varchar(6) foreign key references ThongTinKhachHang(MaKhachHang) not null,
+NgayDat DATE not null,
+NgayTra date  not null,
+TongTien int not null,
+SoNgay int not null default 0,
+);
+CREATE TABLE VatTu (
+    MaVatTu varchar(6) PRIMARY KEY,
+    TenVatTu NVARCHAR(50),
+    NhaCungCap NVARCHAR(50),
+    NguoiQuanLy varchar(6) FOREIGN KEY REFERENCES NhanSu(MaNhanSu),
+    GhiChu NVARCHAR(200)
+);
+
+
+INSERT INTO Phong (MaPhong, LoaiPhong, TinhTrang, DonGia)
+VALUES ('101', N'Phòng đơn', N'Trống', 200000),
+       ('102', N'Phòng đôi', N'Đã thuê', 400000),
+       ('103', N'Phòng đơn', N'Trống', 200000),
+       ('104', N'Phòng đôi', N'Trống', 400000),
+       ('105', N'Phòng đơn', N'Đã thuê', 200000);
+INSERT INTO NhanSu (MaNhanSu, TenNhanVien, GioiTinh, DiaChi, SoDienThoai, NgaySinh, NgayVaoLam, ChucVu)
+VALUES ('NS001', N'Nguyễn Văn A', N'Nam', N'12 Nguyễn Trãi, Quận 1, TP.HCM', '0123456789', '1990-01-01', '2010-01-01', N'Nhân viên'),
+       ('NS002', N'Trần Thị B', N'Nữ', N'34 Lê Lợi, Quận 1, TP.HCM', '0987654321', '1991-02-02', '2011-02-02', N'Quản lý'),
+       ('NS003', N'Lê Văn C', N'Nam', N'56 Phạm Ngũ Lão, Quận 1, TP.HCM', '0123456789', '1992-03-03', '2012-03-03', N'Nhân viên'),
+       ('NS004', N'Phạm Thị D', N'Nữ', N'78 Nguyễn Huệ, Quận 1, TP.HCM', '0987654321', '1993-04-04', '2013-04-04', N'Quản lý'),
+       ('NS005', N'Huỳnh Văn E', N'Nam', N'90 Lý Tự Trọng, Quận 1, TP.HCM', '0123456789', '1994-05-05', '2014-05-05', N'Nhân viên');
+INSERT INTO ThongTinKhachHang (MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, CMND, DiaChi, SoDienThoai, GhiChu, MaPhong, NgayThue)
+VALUES ('KH001', N'Nguyễn Văn A', '1990-01-01', N'Nam', '001122334455', N'12 Nguyễn Trãi, Quận 1, TP.HCM', '0123456789', N'Khách hàng thân thiết', '101', '2023-01-01'),
+       ('KH002', N'Trần Thị B', '1991-02-02', N'Nữ', '112233445566', N'34 Lê Lợi, Quận 1, TP.HCM', '0987654321', N'Khách hàng mới', '102', '2023-02-02'),
+       ('KH003', N'Lê Văn C', '1992-03-03', N'Nam', '223344556677', N'56 Phạm Ngũ Lão, Quận 1, TP.HCM', '0123456789', N'Khách hàng thân thiết', '103', '2023-03-03'),
+       ('KH004', N'Phạm Thị D', '1993-04-04', N'Nữ', '334455667788', N'78 Nguyễn Huệ, Quận 1, TP.HCM', '0987654321', N'Khách hàng mới', '104', '2023-04-04'),
+       ('KH005', N'Huỳnh Văn E', '1994-05-05', N'Nam', '445566778899', N'90 Lý Tự Trọng, Quận 1, TP.HCM', '0123456789', N'Khách hàng thân thiết','105','2023-05-05');
+INSERT INTO DatPhong (MaDatPhong, MaKhachHang, NgayDat, NgayTra, SoLuongKhachHang, TienCoc, MaNhanVien, MaPhong)
+VALUES ('DP001', 'KH001', '2023-01-01', '2023-01-05', 1, 200000, 'NS001', '101'),
+       ('DP002', 'KH002', '2023-02-02', '2023-02-06', 2, 400000, 'NS002', '102'),
+       ('DP003', 'KH003', '2023-03-03', '2023-03-07', 1, 200000, 'NS003', '103'),
+       ('DP004', 'KH004', '2023-04-04', '2023-04-08', 2, 400000, 'NS004', '104'),
+       ('DP005', 'KH005', '2023-05-05', '2023-05-09', 1, 200000, 'NS005','105');
+INSERT INTO HoaDon (MaDatPhong, MaHoaDon, MaNhanVien, MaKhachHang, NgayDat, NgayTra, TongTien, SoNgay)
+VALUES ('DP001', 'HD001', 'NS001', 'KH001', '2023-01-01', '2023-01-05', 800000, 4),
+       ('DP002', 'HD002', 'NS002', 'KH002', '2023-02-02', '2023-02-06', 1600000, 4),
+       ('DP003', 'HD003', 'NS003', 'KH003', '2023-03-03', '2023-03-07', 800000, 4),
+       ('DP004', 'HD004', 'NS004', 'KH004', '2023-04-04', '2023-04-08', 1600000, 4),
+       ('DP005', 'HD005', 'NS005','KH005','2023-05-05','2023-05-09',800000,4);
+	   	   INSERT INTO VatTu (MaVatTu, TenVatTu, NhaCungCap, NguoiQuanLy, GhiChu)
+VALUES ('VT001', 'Bóng đèn', 'Công ty A', 'NS001', 'Bóng đèn LED'),
+       ('VT002', 'Ổ cắm điện', 'Công ty B', 'NS002', 'Ổ cắm 3 chân');

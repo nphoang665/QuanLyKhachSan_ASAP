@@ -1,9 +1,11 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +14,11 @@ namespace QuanLyKhachSan
 {
     public partial class frm_GiaoDienPhong : Form
     {
+        BUS_GiaoDienPhong bus;
         public frm_GiaoDienPhong()
         {
             InitializeComponent();
+            bus= new BUS_GiaoDienPhong();
         }
 
         private void pic_101_Click(object sender, EventArgs e)
@@ -22,6 +26,20 @@ namespace QuanLyKhachSan
             string maPhong =lbl_101.Text ;
             frm_ThongTinPhong frm_ThongTinPhong = new frm_ThongTinPhong (maPhong);
             frm_ThongTinPhong.ShowDialog();
+            var doianh = bus.layTrangThai(maPhong);
+            string tinhTrang = doianh.TinhTrang;
+            if(tinhTrang== "Trống")
+            {
+                pic_101.Image = Image.FromFile("house.png");
+            }
+            else if (tinhTrang== "Đã thuê")
+            {
+                pic_101.Image = Image.FromFile("house-key (1).png");
+             }
+            else {
+                pic_101.Image = Image.FromFile("investment.png");
+                  }
+
         }
 
         private void pic_102_Click(object sender, EventArgs e)
