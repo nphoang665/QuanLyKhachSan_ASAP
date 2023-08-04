@@ -28,29 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl_Phong = new System.Windows.Forms.TabControl();
             this.tabPage_ThemPhong = new System.Windows.Forms.TabPage();
-            this.tabPage_TimPhong = new System.Windows.Forms.TabPage();
-            this.tabPage_Sua_XoaPhong = new System.Windows.Forms.TabPage();
-            this.txt_MaDichVu_them = new System.Windows.Forms.TextBox();
-            this.lbl_MaDichVu_them = new System.Windows.Forms.Label();
-            this.txt_tinhtrang_them = new System.Windows.Forms.TextBox();
             this.txt_donGia_Them = new System.Windows.Forms.TextBox();
-            this.txt_loaiPhong_them = new System.Windows.Forms.TextBox();
             this.txt_maphong_them = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgv_phong1 = new System.Windows.Forms.DataGridView();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage_TimPhong = new System.Windows.Forms.TabPage();
             this.txt_timtinhtrang = new System.Windows.Forms.TextBox();
             this.txt_timphong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgv_phong2 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabPage_Sua_XoaPhong = new System.Windows.Forms.TabPage();
             this.txt_madichvu_sua = new System.Windows.Forms.TextBox();
             this.lbl_madichvu_sua = new System.Windows.Forms.Label();
             this.txt_maphong_sua = new System.Windows.Forms.TextBox();
@@ -65,13 +60,19 @@
             this.dgv_phong3 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbo_loaiPhong_them = new System.Windows.Forms.ComboBox();
+            this.cbo_tinhTrang_them = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl_Phong.SuspendLayout();
             this.tabPage_ThemPhong.SuspendLayout();
-            this.tabPage_TimPhong.SuspendLayout();
-            this.tabPage_Sua_XoaPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phong1)).BeginInit();
+            this.tabPage_TimPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phong2)).BeginInit();
+            this.tabPage_Sua_XoaPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phong3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_Phong
@@ -89,17 +90,15 @@
             // tabPage_ThemPhong
             // 
             this.tabPage_ThemPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_ThemPhong.Controls.Add(this.txt_MaDichVu_them);
-            this.tabPage_ThemPhong.Controls.Add(this.lbl_MaDichVu_them);
-            this.tabPage_ThemPhong.Controls.Add(this.txt_tinhtrang_them);
+            this.tabPage_ThemPhong.Controls.Add(this.cbo_tinhTrang_them);
+            this.tabPage_ThemPhong.Controls.Add(this.label12);
+            this.tabPage_ThemPhong.Controls.Add(this.label6);
+            this.tabPage_ThemPhong.Controls.Add(this.cbo_loaiPhong_them);
             this.tabPage_ThemPhong.Controls.Add(this.txt_donGia_Them);
-            this.tabPage_ThemPhong.Controls.Add(this.txt_loaiPhong_them);
             this.tabPage_ThemPhong.Controls.Add(this.txt_maphong_them);
             this.tabPage_ThemPhong.Controls.Add(this.label4);
-            this.tabPage_ThemPhong.Controls.Add(this.label5);
             this.tabPage_ThemPhong.Controls.Add(this.dgv_phong1);
             this.tabPage_ThemPhong.Controls.Add(this.btn_Them);
-            this.tabPage_ThemPhong.Controls.Add(this.label6);
             this.tabPage_ThemPhong.Controls.Add(this.label2);
             this.tabPage_ThemPhong.Controls.Add(this.label1);
             this.tabPage_ThemPhong.Location = new System.Drawing.Point(4, 26);
@@ -110,91 +109,13 @@
             this.tabPage_ThemPhong.Text = "Thêm phòng";
             this.tabPage_ThemPhong.UseVisualStyleBackColor = true;
             // 
-            // tabPage_TimPhong
-            // 
-            this.tabPage_TimPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_TimPhong.Controls.Add(this.txt_timtinhtrang);
-            this.tabPage_TimPhong.Controls.Add(this.txt_timphong);
-            this.tabPage_TimPhong.Controls.Add(this.label7);
-            this.tabPage_TimPhong.Controls.Add(this.dgv_phong2);
-            this.tabPage_TimPhong.Controls.Add(this.label9);
-            this.tabPage_TimPhong.Controls.Add(this.label10);
-            this.tabPage_TimPhong.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_TimPhong.Name = "tabPage_TimPhong";
-            this.tabPage_TimPhong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TimPhong.Size = new System.Drawing.Size(1106, 481);
-            this.tabPage_TimPhong.TabIndex = 1;
-            this.tabPage_TimPhong.Text = "Tìm phòng";
-            this.tabPage_TimPhong.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Sua_XoaPhong
-            // 
-            this.tabPage_Sua_XoaPhong.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Sua_XoaPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_madichvu_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_madichvu_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_maphong_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_maphong_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_tinhtrang_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Xoa);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_dongia_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_loaiphong_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.label3);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.label8);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.dgv_phong3);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.label11);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.label13);
-            this.tabPage_Sua_XoaPhong.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_Sua_XoaPhong.Name = "tabPage_Sua_XoaPhong";
-            this.tabPage_Sua_XoaPhong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 481);
-            this.tabPage_Sua_XoaPhong.TabIndex = 2;
-            this.tabPage_Sua_XoaPhong.Text = "Sửa, Xóa phòng";
-            // 
-            // txt_MaDichVu_them
-            // 
-            this.txt_MaDichVu_them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MaDichVu_them.Location = new System.Drawing.Point(222, 102);
-            this.txt_MaDichVu_them.Name = "txt_MaDichVu_them";
-            this.txt_MaDichVu_them.Size = new System.Drawing.Size(193, 25);
-            this.txt_MaDichVu_them.TabIndex = 72;
-            // 
-            // lbl_MaDichVu_them
-            // 
-            this.lbl_MaDichVu_them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_MaDichVu_them.AutoSize = true;
-            this.lbl_MaDichVu_them.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaDichVu_them.Location = new System.Drawing.Point(75, 104);
-            this.lbl_MaDichVu_them.Name = "lbl_MaDichVu_them";
-            this.lbl_MaDichVu_them.Size = new System.Drawing.Size(89, 20);
-            this.lbl_MaDichVu_them.TabIndex = 71;
-            this.lbl_MaDichVu_them.Text = "Mã dịch vụ:";
-            // 
-            // txt_tinhtrang_them
-            // 
-            this.txt_tinhtrang_them.AcceptsTab = true;
-            this.txt_tinhtrang_them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_tinhtrang_them.Location = new System.Drawing.Point(661, 64);
-            this.txt_tinhtrang_them.Name = "txt_tinhtrang_them";
-            this.txt_tinhtrang_them.Size = new System.Drawing.Size(193, 25);
-            this.txt_tinhtrang_them.TabIndex = 70;
-            // 
             // txt_donGia_Them
             // 
             this.txt_donGia_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_donGia_Them.Location = new System.Drawing.Point(661, 104);
+            this.txt_donGia_Them.Location = new System.Drawing.Point(661, 119);
             this.txt_donGia_Them.Name = "txt_donGia_Them";
             this.txt_donGia_Them.Size = new System.Drawing.Size(193, 25);
             this.txt_donGia_Them.TabIndex = 69;
-            // 
-            // txt_loaiPhong_them
-            // 
-            this.txt_loaiPhong_them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_loaiPhong_them.Location = new System.Drawing.Point(222, 136);
-            this.txt_loaiPhong_them.Name = "txt_loaiPhong_them";
-            this.txt_loaiPhong_them.Size = new System.Drawing.Size(193, 25);
-            this.txt_loaiPhong_them.TabIndex = 63;
             // 
             // txt_maphong_them
             // 
@@ -209,22 +130,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(514, 106);
+            this.label4.Location = new System.Drawing.Point(514, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 67;
             this.label4.Text = "Đơn giá";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(514, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "Tình trạng:";
             // 
             // dgv_phong1
             // 
@@ -257,17 +167,6 @@
             this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 138);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 20);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "Loại phòng:";
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -290,6 +189,23 @@
             this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 60;
             this.label1.Text = "THÊM PHÒNG:";
+            // 
+            // tabPage_TimPhong
+            // 
+            this.tabPage_TimPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_TimPhong.Controls.Add(this.txt_timtinhtrang);
+            this.tabPage_TimPhong.Controls.Add(this.txt_timphong);
+            this.tabPage_TimPhong.Controls.Add(this.label7);
+            this.tabPage_TimPhong.Controls.Add(this.dgv_phong2);
+            this.tabPage_TimPhong.Controls.Add(this.label9);
+            this.tabPage_TimPhong.Controls.Add(this.label10);
+            this.tabPage_TimPhong.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_TimPhong.Name = "tabPage_TimPhong";
+            this.tabPage_TimPhong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_TimPhong.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_TimPhong.TabIndex = 1;
+            this.tabPage_TimPhong.Text = "Tìm phòng";
+            this.tabPage_TimPhong.UseVisualStyleBackColor = true;
             // 
             // txt_timtinhtrang
             // 
@@ -356,6 +272,31 @@
             this.label10.Size = new System.Drawing.Size(99, 20);
             this.label10.TabIndex = 56;
             this.label10.Text = "TÌM PHÒNG:";
+            // 
+            // tabPage_Sua_XoaPhong
+            // 
+            this.tabPage_Sua_XoaPhong.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Sua_XoaPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_madichvu_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_madichvu_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_maphong_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_maphong_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_tinhtrang_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Xoa);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_dongia_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_loaiphong_sua);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.label3);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.label8);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.dgv_phong3);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.label11);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.label13);
+            this.tabPage_Sua_XoaPhong.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_Sua_XoaPhong.Name = "tabPage_Sua_XoaPhong";
+            this.tabPage_Sua_XoaPhong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_Sua_XoaPhong.TabIndex = 2;
+            this.tabPage_Sua_XoaPhong.Text = "Sửa, Xóa phòng";
             // 
             // txt_madichvu_sua
             // 
@@ -513,6 +454,48 @@
             this.label13.TabIndex = 78;
             this.label13.Text = "SỬA, XÓA PHÒNG:";
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(75, 120);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 20);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "Loại phòng:";
+            // 
+            // cbo_loaiPhong_them
+            // 
+            this.cbo_loaiPhong_them.FormattingEnabled = true;
+            this.cbo_loaiPhong_them.Location = new System.Drawing.Point(222, 118);
+            this.cbo_loaiPhong_them.Name = "cbo_loaiPhong_them";
+            this.cbo_loaiPhong_them.Size = new System.Drawing.Size(193, 25);
+            this.cbo_loaiPhong_them.TabIndex = 73;
+            // 
+            // cbo_tinhTrang_them
+            // 
+            this.cbo_tinhTrang_them.FormattingEnabled = true;
+            this.cbo_tinhTrang_them.Location = new System.Drawing.Point(661, 65);
+            this.cbo_tinhTrang_them.Name = "cbo_tinhTrang_them";
+            this.cbo_tinhTrang_them.Size = new System.Drawing.Size(193, 25);
+            this.cbo_tinhTrang_them.TabIndex = 75;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(514, 67);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 20);
+            this.label12.TabIndex = 74;
+            this.label12.Text = "Tình trạng:";
+            // 
+            // KiemLoi
+            // 
+            this.KiemLoi.ContainerControl = this;
+            // 
             // frm_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -530,13 +513,14 @@
             this.tabControl_Phong.ResumeLayout(false);
             this.tabPage_ThemPhong.ResumeLayout(false);
             this.tabPage_ThemPhong.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phong1)).EndInit();
             this.tabPage_TimPhong.ResumeLayout(false);
             this.tabPage_TimPhong.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phong2)).EndInit();
             this.tabPage_Sua_XoaPhong.ResumeLayout(false);
             this.tabPage_Sua_XoaPhong.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_phong1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_phong2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phong3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,17 +531,11 @@
         private System.Windows.Forms.TabPage tabPage_ThemPhong;
         private System.Windows.Forms.TabPage tabPage_TimPhong;
         private System.Windows.Forms.TabPage tabPage_Sua_XoaPhong;
-        private System.Windows.Forms.TextBox txt_MaDichVu_them;
-        private System.Windows.Forms.Label lbl_MaDichVu_them;
-        private System.Windows.Forms.TextBox txt_tinhtrang_them;
         private System.Windows.Forms.TextBox txt_donGia_Them;
-        private System.Windows.Forms.TextBox txt_loaiPhong_them;
         private System.Windows.Forms.TextBox txt_maphong_them;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_phong1;
         private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_timtinhtrang;
@@ -580,5 +558,10 @@
         private System.Windows.Forms.DataGridView dgv_phong3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbo_tinhTrang_them;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbo_loaiPhong_them;
+        private System.Windows.Forms.ErrorProvider KiemLoi;
     }
 }
