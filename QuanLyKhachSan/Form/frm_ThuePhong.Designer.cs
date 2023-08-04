@@ -28,44 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Khách hàng", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Thuê phòng", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Mã khách hàng",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Tên khách hàng",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Giới tính",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Ngày sinh",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "CMND/CCCD",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Địa chỉ",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Điện thoại",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Ngày thuê",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Ngày trả",
-            ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Tiền cọc",
-            ""}, -1);
             this.tabControl_ThuePhong = new System.Windows.Forms.TabControl();
             this.tabPage_ThuePhong = new System.Windows.Forms.TabPage();
             this.btn_ThuePhong = new System.Windows.Forms.Button();
             this.tabControl_ThongTin = new System.Windows.Forms.TabControl();
             this.tabPage_ChiTiet = new System.Windows.Forms.TabPage();
-            this.lv_Phong = new System.Windows.Forms.ListView();
             this.lstv_ChiTiet = new System.Windows.Forms.ListView();
             this.ThongTin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GiaTri = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,6 +51,11 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lsv_phongchon = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl_ThuePhong.SuspendLayout();
             this.tabPage_ThuePhong.SuspendLayout();
             this.tabControl_ThongTin.SuspendLayout();
@@ -120,6 +92,7 @@
             this.tabPage_ThuePhong.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_ThuePhong.TabIndex = 0;
             this.tabPage_ThuePhong.Text = "Thuê phòng";
+            this.tabPage_ThuePhong.Click += new System.EventHandler(this.tabPage_ThuePhong_Click);
             // 
             // btn_ThuePhong
             // 
@@ -149,7 +122,8 @@
             // 
             // tabPage_ChiTiet
             // 
-            this.tabPage_ChiTiet.Controls.Add(this.lv_Phong);
+            this.tabPage_ChiTiet.Controls.Add(this.lsv_phongchon);
+            this.tabPage_ChiTiet.Controls.Add(this.label3);
             this.tabPage_ChiTiet.Controls.Add(this.lstv_ChiTiet);
             this.tabPage_ChiTiet.Location = new System.Drawing.Point(4, 26);
             this.tabPage_ChiTiet.Name = "tabPage_ChiTiet";
@@ -159,20 +133,6 @@
             this.tabPage_ChiTiet.Text = "Chi tiết";
             this.tabPage_ChiTiet.UseVisualStyleBackColor = true;
             // 
-            // lv_Phong
-            // 
-            this.lv_Phong.BackColor = System.Drawing.SystemColors.Control;
-            this.lv_Phong.FullRowSelect = true;
-            this.lv_Phong.GridLines = true;
-            this.lv_Phong.HideSelection = false;
-            this.lv_Phong.Location = new System.Drawing.Point(6, 298);
-            this.lv_Phong.Name = "lv_Phong";
-            this.lv_Phong.Scrollable = false;
-            this.lv_Phong.Size = new System.Drawing.Size(537, 131);
-            this.lv_Phong.TabIndex = 1;
-            this.lv_Phong.UseCompatibleStateImageBehavior = false;
-            this.lv_Phong.View = System.Windows.Forms.View.Details;
-            // 
             // lstv_ChiTiet
             // 
             this.lstv_ChiTiet.BackColor = System.Drawing.SystemColors.Control;
@@ -181,53 +141,17 @@
             this.GiaTri});
             this.lstv_ChiTiet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstv_ChiTiet.FullRowSelect = true;
-            listViewGroup1.Header = "Khách hàng";
-            listViewGroup1.Name = "listViewGroupKhachHang";
-            listViewGroup2.Header = "Thuê phòng";
-            listViewGroup2.Name = "listViewGroupThuePhong";
-            this.lstv_ChiTiet.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
             this.lstv_ChiTiet.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lstv_ChiTiet.HideSelection = false;
-            listViewItem1.Group = listViewGroup1;
-            listViewItem2.Group = listViewGroup1;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.Group = listViewGroup1;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.Group = listViewGroup1;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.Group = listViewGroup1;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.Group = listViewGroup1;
-            listViewItem6.StateImageIndex = 0;
-            listViewItem7.Group = listViewGroup1;
-            listViewItem7.StateImageIndex = 0;
-            listViewItem8.Group = listViewGroup2;
-            listViewItem8.StateImageIndex = 0;
-            listViewItem9.Group = listViewGroup2;
-            listViewItem9.StateImageIndex = 0;
-            listViewItem10.Group = listViewGroup2;
-            listViewItem10.StateImageIndex = 0;
-            this.lstv_ChiTiet.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10});
             this.lstv_ChiTiet.Location = new System.Drawing.Point(6, 6);
             this.lstv_ChiTiet.MultiSelect = false;
             this.lstv_ChiTiet.Name = "lstv_ChiTiet";
             this.lstv_ChiTiet.Scrollable = false;
-            this.lstv_ChiTiet.Size = new System.Drawing.Size(537, 286);
+            this.lstv_ChiTiet.Size = new System.Drawing.Size(537, 266);
             this.lstv_ChiTiet.TabIndex = 0;
             this.lstv_ChiTiet.UseCompatibleStateImageBehavior = false;
             this.lstv_ChiTiet.View = System.Windows.Forms.View.Details;
+            this.lstv_ChiTiet.SelectedIndexChanged += new System.EventHandler(this.lstv_ChiTiet_SelectedIndexChanged);
             // 
             // ThongTin
             // 
@@ -243,6 +167,7 @@
             // 
             this.grp_PhongTrong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grp_PhongTrong.BackColor = System.Drawing.SystemColors.Control;
+            this.grp_PhongTrong.Controls.Add(this.label5);
             this.grp_PhongTrong.Controls.Add(this.dgv_PhongTrong);
             this.grp_PhongTrong.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grp_PhongTrong.Location = new System.Drawing.Point(17, 233);
@@ -259,12 +184,14 @@
             this.dgv_PhongTrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_PhongTrong.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv_PhongTrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_PhongTrong.Location = new System.Drawing.Point(6, 34);
+            this.dgv_PhongTrong.Location = new System.Drawing.Point(6, 44);
             this.dgv_PhongTrong.Name = "dgv_PhongTrong";
             this.dgv_PhongTrong.ReadOnly = true;
             this.dgv_PhongTrong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_PhongTrong.Size = new System.Drawing.Size(298, 191);
             this.dgv_PhongTrong.TabIndex = 0;
+            this.dgv_PhongTrong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhongTrong_CellClick);
+            this.dgv_PhongTrong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhongTrong_CellContentClick);
             // 
             // grp_ThuePhong
             // 
@@ -292,6 +219,7 @@
             this.dtp_NgayTra.Name = "dtp_NgayTra";
             this.dtp_NgayTra.Size = new System.Drawing.Size(174, 25);
             this.dtp_NgayTra.TabIndex = 7;
+            this.dtp_NgayTra.ValueChanged += new System.EventHandler(this.dtp_NgayTra_ValueChanged);
             // 
             // dtp_NgayThue
             // 
@@ -300,6 +228,7 @@
             this.dtp_NgayThue.Name = "dtp_NgayThue";
             this.dtp_NgayThue.Size = new System.Drawing.Size(174, 25);
             this.dtp_NgayThue.TabIndex = 5;
+            this.dtp_NgayThue.ValueChanged += new System.EventHandler(this.dtp_NgayThue_ValueChanged);
             // 
             // txt_TienCoc
             // 
@@ -309,6 +238,7 @@
             this.txt_TienCoc.Name = "txt_TienCoc";
             this.txt_TienCoc.Size = new System.Drawing.Size(174, 27);
             this.txt_TienCoc.TabIndex = 3;
+            this.txt_TienCoc.TextChanged += new System.EventHandler(this.txt_TienCoc_TextChanged);
             // 
             // label1
             // 
@@ -348,6 +278,7 @@
             this.cbo_MaKhachHang.Name = "cbo_MaKhachHang";
             this.cbo_MaKhachHang.Size = new System.Drawing.Size(174, 28);
             this.cbo_MaKhachHang.TabIndex = 1;
+            this.cbo_MaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbo_MaKhachHang_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -414,6 +345,53 @@
             this.dataGridView1.Size = new System.Drawing.Size(976, 328);
             this.dataGridView1.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 275);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Phòng đã chọn";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Bấm vào để chọn phòng";
+            // 
+            // lsv_phongchon
+            // 
+            this.lsv_phongchon.BackColor = System.Drawing.SystemColors.Control;
+            this.lsv_phongchon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lsv_phongchon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsv_phongchon.FullRowSelect = true;
+            this.lsv_phongchon.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lsv_phongchon.HideSelection = false;
+            this.lsv_phongchon.Location = new System.Drawing.Point(6, 295);
+            this.lsv_phongchon.MultiSelect = false;
+            this.lsv_phongchon.Name = "lsv_phongchon";
+            this.lsv_phongchon.Scrollable = false;
+            this.lsv_phongchon.Size = new System.Drawing.Size(537, 141);
+            this.lsv_phongchon.TabIndex = 3;
+            this.lsv_phongchon.UseCompatibleStateImageBehavior = false;
+            this.lsv_phongchon.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Thông tin";
+            this.columnHeader1.Width = 180;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Giá trị";
+            this.columnHeader2.Width = 464;
+            // 
             // frm_ThuePhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -423,15 +401,18 @@
             this.Controls.Add(this.tabControl_ThuePhong);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_ThuePhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ThuePhong";
+            this.Load += new System.EventHandler(this.frm_ThuePhong_Load);
             this.tabControl_ThuePhong.ResumeLayout(false);
             this.tabPage_ThuePhong.ResumeLayout(false);
             this.tabControl_ThongTin.ResumeLayout(false);
             this.tabPage_ChiTiet.ResumeLayout(false);
+            this.tabPage_ChiTiet.PerformLayout();
             this.grp_PhongTrong.ResumeLayout(false);
+            this.grp_PhongTrong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhongTrong)).EndInit();
             this.grp_ThuePhong.ResumeLayout(false);
             this.grp_ThuePhong.PerformLayout();
@@ -448,7 +429,6 @@
         private System.Windows.Forms.Button btn_ThuePhong;
         private System.Windows.Forms.TabControl tabControl_ThongTin;
         private System.Windows.Forms.TabPage tabPage_ChiTiet;
-        private System.Windows.Forms.ListView lv_Phong;
         private System.Windows.Forms.ListView lstv_ChiTiet;
         private System.Windows.Forms.ColumnHeader ThongTin;
         private System.Windows.Forms.ColumnHeader GiaTri;
@@ -467,5 +447,10 @@
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListView lsv_phongchon;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
