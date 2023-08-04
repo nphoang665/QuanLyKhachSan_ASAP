@@ -75,7 +75,7 @@ namespace QuanLyKhachSan
             //    MessageBox.Show("Đã tồn tại khách hàng");
             //    return;
             //}
-            bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, cbb_maphong.Text);
+            bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, cbb_maphong.Text,gioitinh);
             if (!isValid)
                 return;
             bus.ThemKH(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, cbb_maphong.Text, dtp_ngaythue.Value.Date);

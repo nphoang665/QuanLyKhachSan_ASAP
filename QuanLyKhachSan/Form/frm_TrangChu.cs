@@ -197,5 +197,10 @@ namespace QuanLyKhachSan
                 Application.Exit();
             }
         }
+
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_ThongKe());
+        }
     }
 }
