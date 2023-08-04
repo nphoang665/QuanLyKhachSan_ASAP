@@ -202,5 +202,10 @@ namespace QuanLyKhachSan
         {
             OpenChildForm(new frm_ThongKe());
         }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
