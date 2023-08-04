@@ -480,7 +480,6 @@
             this.báoCáoThốngKêToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
             this.báoCáoThốngKêToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.báoCáoThốngKêToolStripMenuItem.Text = "Thống kê";
-            this.báoCáoThốngKêToolStripMenuItem.Click += new System.EventHandler(this.báoCáoThốngKêToolStripMenuItem_Click);
             // 
             // doanhThuToolStripMenuItem
             // 

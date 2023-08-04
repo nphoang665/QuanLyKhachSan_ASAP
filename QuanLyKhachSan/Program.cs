@@ -18,7 +18,7 @@ namespace QuanLyKhachSan
           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_ThuePhong());
+            Application.Run(new frm_TrangChu(""));
         }
     }
 }
