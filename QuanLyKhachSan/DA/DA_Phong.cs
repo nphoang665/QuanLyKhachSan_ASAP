@@ -92,6 +92,11 @@ namespace QuanLyKhachSan.DA
             return qr;
 
         }
+        
+        public void tesstkkkaskdlkasdklasdlkasdlkasdkl()
+        {
+
+        }
     }
 }
 
