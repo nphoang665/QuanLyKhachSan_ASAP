@@ -197,10 +197,5 @@ namespace QuanLyKhachSan
                 Application.Exit();
             }
         }
-
-        private void báoCáoThốngKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
