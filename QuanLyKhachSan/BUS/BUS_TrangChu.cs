@@ -21,5 +21,10 @@ namespace QuanLyKhachSan.BUS
             return kq;
 
         }
+        public string LayChucVu(string tk)
+        {
+            return da.LayChucVu(tk);
+        }
+
     }
 }

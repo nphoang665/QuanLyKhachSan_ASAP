@@ -110,14 +110,21 @@ namespace QuanLyKhachSan
                 string username = txt_TenDangNhap.Text;
                 string password = txt_MatKhau.Text;
 
-                bus.UpdateSavedLoginInfo(username, password);
+                var savedLoginInfo = bus.GetSavedLoginInfo();
+                if (savedLoginInfo != null)
+                {
+                    bus.UpdateSavedLoginInfo(username, password);
+                }
+                else
+                {
+                    bus.SaveLoginInfo(username, password);
+                }
             }
             else
             {
                 bus.DeleteSavedLoginInfo();
-               
             }
-          DangNhap();
+            DangNhap();
         }
 
         private void chk_ghiNhoDangNhap_CheckedChanged(object sender, EventArgs e)

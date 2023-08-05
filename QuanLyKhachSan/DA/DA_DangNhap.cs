@@ -54,22 +54,18 @@ namespace QuanLyKhachSan.DA
             // Check if there is any saved login information
             if (savedLoginInfo != null)
             {
-                // Update the saved login information
-                savedLoginInfo.TaiKhoan = username;
-                savedLoginInfo.MatKhau = password;
-                db.SaveChanges();
+                // Delete the existing saved login information
+                db.LuuMatKhaus.Remove(savedLoginInfo);
             }
-            else
+
+            // Create a new record with the updated username and password
+            var newSavedLoginInfo = new LuuMatKhau
             {
-                // There is no saved login information, so create a new record
-                var newSavedLoginInfo = new LuuMatKhau
-                {
-                    TaiKhoan = username,
-                    MatKhau = password
-                };
-                db.LuuMatKhaus.Add(newSavedLoginInfo);
-                db.SaveChanges();
-            }
+                TaiKhoan = username,
+                MatKhau = password
+            };
+            db.LuuMatKhaus.Add(newSavedLoginInfo);
+            db.SaveChanges();
         }
         public void DeleteSavedLoginInfo()
         {

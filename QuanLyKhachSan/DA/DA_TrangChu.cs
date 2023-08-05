@@ -20,5 +20,12 @@ namespace QuanLyKhachSan.DA
             var qrnhasu = db.NhanSus.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
             return qrnhasu.TenNhanVien;
         }
+        public string LayChucVu(string tk)
+        {
+            var qr = db.TaiKhoans.FirstOrDefault(x => x.TenDangNhap == tk);
+            var qrnhasu = db.NhanSus.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
+            return qrnhasu.ChucVu;
+        }
+
     }
 }

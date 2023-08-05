@@ -18,6 +18,8 @@ namespace QuanLyKhachSan
         public Form frm_HienTai;
         public string TenDangNhap;
         string _tk;
+        public string ChucVu;
+
         public frm_TrangChu(string tk)
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace QuanLyKhachSan
             ViDu = this;
             _tk = tk;
             bus = new BUS_TrangChu();
+            ChucVu = bus.LayChucVu(tk);
         }
 
         public void OpenChildForm(Form frm_Con)
@@ -49,12 +52,35 @@ namespace QuanLyKhachSan
             pnl_Slide.Height = btn.Height;
 
         }
+        void PhanQuyen()
+        {
+
+            // Check the role of the current user
+            if (ChucVu == "Nhân viên")
+            {
+                // If the current user is an employee, hide the btn_NhanVien button
+   btn_NhanVien.ForeColor = Color.Gray;
+                btn_NhanVien.Enabled = false;
+             
+
+            }
+            else if (ChucVu == "Quản lý")
+            {
+                // If the current user is a manager, show the btn_NhanVien button
+                btn_NhanVien.Enabled = true;
+            }
+            MessageBox.Show(ChucVu);
+            
+
+        }
 
         private void frm_TrangChu_Load(object sender, EventArgs e)
         {
+            PhanQuyen();
             timer1.Start();
-            lbl_TenDangNhap.Text = TenDangNhap;
+            lbl_TenDangNhap.Text = _tk;
             OpenChildForm(new frm_GiaoDienPhong());
+           
             ThongTinTaiKoan();
         }
         
