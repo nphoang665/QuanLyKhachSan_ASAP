@@ -23,6 +23,11 @@ namespace QuanLyKhachSan.BUS
 
         public void ThemPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
         {
+            if (KiemTraMaPhongTonTai(maPhong))
+            {
+                MessageBox.Show("Mã phòng đã tồn tại trong cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DA_.ThemPhong(maPhong, loaiPhong, tinhTrang, donGia);
         }
         public void SuaPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
@@ -32,6 +37,12 @@ namespace QuanLyKhachSan.BUS
 
         public void XoaPhong(string maPhong)
         {
+            if (KiemTraPhongDaCoKhachThue(maPhong))
+            {
+                MessageBox.Show("Phòng đang có khách thuê. Bạn không thể xóa phòng này.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DA_.XoaPhong(maPhong);
         }
         public Phong LayPhong(string id)
@@ -44,6 +55,22 @@ namespace QuanLyKhachSan.BUS
         public IList timphongbangmatinhtrang (string tinhtrang)
         {
             return DA_.TimPhongBangTinhTrang(tinhtrang);
+        }
+        public IList TimPhongBangLoaiPhong(string LoaiPhong)
+        {
+            return DA_.TimPhongBangLoaiPhong(LoaiPhong);
+        }
+
+        private bool KiemTraMaPhongTonTai(string maPhong)
+        {
+            
+            var phong = DA_.LayPhong(maPhong);
+            return phong != null; // Nếu phòng tồn tại, trả về true; ngược lại trả về false.
+        }
+
+        public bool KiemTraPhongDaCoKhachThue(string maPhong)
+        {
+            return DA_.KiemTraPhongDaCoKhachThue(maPhong);
         }
     }
 }
