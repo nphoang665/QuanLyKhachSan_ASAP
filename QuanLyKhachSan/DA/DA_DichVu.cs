@@ -69,5 +69,29 @@ namespace QuanLyKhachSan.DA
         {
             return db.QuanLyDichVus.FirstOrDefault(t => t.MaDichVu == madv);
         }
+        public List<string> GetRoomIDs()
+        {
+            // Query the database to get the room IDs
+            var roomIDs = db.Phongs.Select(p => p.MaPhong).ToList();
+
+            // Return the room IDs
+            return roomIDs;
+        }
+        public void InsertDangKyDichVu(string maDichVu, string maPhong, int soLuong, float donGia)
+        {
+            // Create a new DangKyDichVu object
+            var dangKyDichVu = new DangKyDichVu
+            {
+                MaDichVu = maDichVu,
+                MaPhong = maPhong,
+                SoLuong = soLuong,
+                DonGia = donGia
+            };
+
+            // Add the new DangKyDichVu object to the database
+            db.DangKyDichVus.Add(dangKyDichVu);
+            db.SaveChanges();
+        }
+
     }
 }

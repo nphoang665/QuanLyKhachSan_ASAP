@@ -51,5 +51,18 @@ namespace QuanLyKhachSan.BUS
         {
             return da.laydichvu(madv);
         }
+        public void LoadRoomIDs(ComboBox cbo)
+        {
+            // Get the room IDs from the DA_Phong class
+            var roomIDs = da.GetRoomIDs();
+
+            // Set the DataSource of the ComboBox to the list of room IDs
+            cbo.DataSource = roomIDs;
+        }
+        public void InsertDangKyDichVu(string maDichVu, string maPhong, int soLuong, float donGia)
+        {
+            da.InsertDangKyDichVu(maDichVu, maPhong, soLuong, donGia);
+        }
+
     }
 }
