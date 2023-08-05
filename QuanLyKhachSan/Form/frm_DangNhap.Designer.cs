@@ -36,6 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_ghiNhoDangNhap = new System.Windows.Forms.CheckBox();
             this.pic_Show = new System.Windows.Forms.PictureBox();
             this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.btn_DangNhap = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
-            this.chk_ghiNhoDangNhap = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
@@ -125,6 +125,19 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng Nhập";
+            // 
+            // chk_ghiNhoDangNhap
+            // 
+            this.chk_ghiNhoDangNhap.AutoSize = true;
+            this.chk_ghiNhoDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chk_ghiNhoDangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_ghiNhoDangNhap.Location = new System.Drawing.Point(94, 208);
+            this.chk_ghiNhoDangNhap.Name = "chk_ghiNhoDangNhap";
+            this.chk_ghiNhoDangNhap.Size = new System.Drawing.Size(157, 22);
+            this.chk_ghiNhoDangNhap.TabIndex = 8;
+            this.chk_ghiNhoDangNhap.Text = "Duy trì đăng nhập";
+            this.chk_ghiNhoDangNhap.UseVisualStyleBackColor = true;
+            this.chk_ghiNhoDangNhap.CheckedChanged += new System.EventHandler(this.chk_ghiNhoDangNhap_CheckedChanged);
             // 
             // pic_Show
             // 
@@ -243,18 +256,6 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
-            // chk_ghiNhoDangNhap
-            // 
-            this.chk_ghiNhoDangNhap.AutoSize = true;
-            this.chk_ghiNhoDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chk_ghiNhoDangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_ghiNhoDangNhap.Location = new System.Drawing.Point(94, 208);
-            this.chk_ghiNhoDangNhap.Name = "chk_ghiNhoDangNhap";
-            this.chk_ghiNhoDangNhap.Size = new System.Drawing.Size(157, 22);
-            this.chk_ghiNhoDangNhap.TabIndex = 8;
-            this.chk_ghiNhoDangNhap.Text = "Duy trì đăng nhập";
-            this.chk_ghiNhoDangNhap.UseVisualStyleBackColor = true;
-            // 
             // frm_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -274,6 +275,7 @@
             this.Name = "frm_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
+            this.Load += new System.EventHandler(this.frm_DangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

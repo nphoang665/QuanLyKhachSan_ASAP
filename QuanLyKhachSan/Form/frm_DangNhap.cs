@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QuanLyKhachSan
 {
@@ -103,9 +104,39 @@ namespace QuanLyKhachSan
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            DangNhap();
 
+            if (chk_ghiNhoDangNhap.Checked)
+            {
+                string username = txt_TenDangNhap.Text;
+                string password = txt_MatKhau.Text;
+
+                bus.UpdateSavedLoginInfo(username, password);
+            }
+            else
+            {
+                bus.DeleteSavedLoginInfo();
+               
+            }
+          DangNhap();
         }
 
+        private void chk_ghiNhoDangNhap_CheckedChanged(object sender, EventArgs e)
+        {
+          
+        }
+        void loadNhomk()
+        {
+            var savedLoginInfo = bus.GetSavedLoginInfo();
+
+            if (savedLoginInfo != null)
+            {
+                txt_TenDangNhap.Text = savedLoginInfo.TaiKhoan;
+                txt_MatKhau.Text = savedLoginInfo.MatKhau;
+            }
+        }
+        private void frm_DangNhap_Load(object sender, EventArgs e)
+        {
+            loadNhomk();
+        }
     }
 }

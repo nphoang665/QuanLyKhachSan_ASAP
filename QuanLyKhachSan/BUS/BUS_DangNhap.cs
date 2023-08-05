@@ -22,6 +22,23 @@ namespace QuanLyKhachSan.BUS
             return kq;
         }
 
+        public void SaveLoginInfo(string username, string password)
+        {
+            da_dangnhap.SaveLoginInfo(username, password);
+        }
+        public LuuMatKhau GetSavedLoginInfo()
+        {
+            return da_dangnhap.GetSavedLoginInfo();
+        }
+        public void UpdateSavedLoginInfo(string username, string password)
+        {
+            da_dangnhap.UpdateSavedLoginInfo(username, password);
+        }
+        public void DeleteSavedLoginInfo()
+        {
+            da_dangnhap.DeleteSavedLoginInfo();
+        }
+
 
     }
 }
