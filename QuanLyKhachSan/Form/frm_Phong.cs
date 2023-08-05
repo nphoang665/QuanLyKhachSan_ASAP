@@ -24,32 +24,64 @@ namespace QuanLyKhachSan
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            string maPhong = txt_maphong_sua.Text;
-           
+            string maPhong = lbl_KQPhong.Text;
             string loaiPhong = txt_loaiphong_sua.Text;
-            string tinhTrang = txt_tinhtrang_sua.Text;
+            string tinhTrang = lbl_KQTinhTrang.Text;
             float donGia = float.Parse(txt_dongia_sua.Text);
 
-            dsp.SuaPhong(maPhong, loaiPhong, tinhTrang, donGia);
+            BUS_Phong busPhong = new BUS_Phong();
+            busPhong.SuaPhong(maPhong, loaiPhong, tinhTrang, donGia);
+
+            MessageBox.Show("Sửa thông tin phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             dsp.LoadDsTk(dgv_phong1);
             dsp.LoadDsTk(dgv_phong2);
             dsp.LoadDsTk(dgv_phong3);
+
+            lbl_KQPhong.Text = string.Empty;
+            txt_loaiphong_sua.Text = string.Empty;
+            lbl_KQTinhTrang.Text = string.Empty;
+            txt_dongia_sua.Text = string.Empty;
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            string maPhong = txt_maphong_sua.Text;
+            string maPhong = lbl_KQPhong.Text;
 
-            dsp.XoaPhong(maPhong);
+            BUS_Phong busPhong = new BUS_Phong();
+            bool phongDaThue = busPhong.KiemTraPhongDaCoKhachThue(maPhong);
 
-            dsp.LoadDsTk(dgv_phong1);
-            dsp.LoadDsTk(dgv_phong2);
-            dsp.LoadDsTk(dgv_phong3);
+            if (phongDaThue)
+            {
+                MessageBox.Show("Phòng đang có khách thuê. Bạn không thể xóa phòng này.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa phòng " + maPhong + " không?", "Xác nhận xóa phòng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    busPhong.XoaPhong(maPhong);
+
+                    MessageBox.Show("Xóa phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dsp.LoadDsTk(dgv_phong1);
+                    dsp.LoadDsTk(dgv_phong2);
+                    dsp.LoadDsTk(dgv_phong3);
+
+                    lbl_KQPhong.Text = string.Empty;
+                    txt_loaiphong_sua.Text = string.Empty;
+                    lbl_KQTinhTrang.Text = string.Empty;
+                    txt_dongia_sua.Text = string.Empty;
+                }
+            }
         }
 
         private void txt_timphong_TextChanged(object sender, EventArgs e)
         {
+            txt_TimLoaiPhong.Text = string.Empty; 
+            txt_timtinhtrang.Text = string.Empty;
+
             string timphong = txt_timphong.Text;
             var kq = dsp.timPhongBangMaPhong(timphong);
             dgv_phong2.DataSource = kq;
@@ -57,6 +89,9 @@ namespace QuanLyKhachSan
 
         private void txt_timtinhtrang_TextChanged(object sender, EventArgs e)
         {
+            txt_timphong.Text = string.Empty;
+            txt_TimLoaiPhong.Text = string.Empty;
+
             string timtinhtrang = txt_timtinhtrang.Text;
             var kq = dsp.timphongbangmatinhtrang(timtinhtrang);
             dgv_phong2.DataSource = kq;
@@ -92,13 +127,14 @@ namespace QuanLyKhachSan
 
         private void dgv_phong3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
                 string id = dgv_phong3.Rows[e.RowIndex].Cells["MaPhong"].Value.ToString();
                 var taiKhoan = dsp.LayPhong(id);
-                txt_maphong_sua.Text = taiKhoan.MaPhong;
+                lbl_KQPhong.Text = taiKhoan.MaPhong;
                 txt_loaiphong_sua.Text = taiKhoan.LoaiPhong;
-                txt_tinhtrang_sua.Text = taiKhoan.TinhTrang;
+                lbl_KQTinhTrang.Text = taiKhoan.TinhTrang;
                 txt_dongia_sua.Text = taiKhoan.DonGia.ToString();
             }
         }
@@ -108,6 +144,10 @@ namespace QuanLyKhachSan
             dsp.LoadDsTk(dgv_phong1);
             dsp.LoadDsTk(dgv_phong2);
             dsp.LoadDsTk(dgv_phong3);
+
+            txt_timphong.TextChanged += txt_timphong_TextChanged;
+            txt_TimLoaiPhong.TextChanged += txt_TimLoaiPhong_TextChanged;
+            txt_timtinhtrang.TextChanged += txt_timtinhtrang_TextChanged;
 
             cbo_loaiPhong_them.Items.AddRange(new object[] {
                 "Phòng đơn",
@@ -123,6 +163,16 @@ namespace QuanLyKhachSan
                 cbo_tinhTrang_them.SelectedIndex = 0;
             }
             cbo_tinhTrang_them.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void txt_TimLoaiPhong_TextChanged(object sender, EventArgs e)
+        {
+            txt_timphong.Text = string.Empty;
+            txt_timtinhtrang.Text = string.Empty;
+
+            string loaiPhong = txt_TimLoaiPhong.Text;
+            var kq = dsp.TimPhongBangLoaiPhong(loaiPhong);
+            dgv_phong2.DataSource = kq;
         }
     }
 }

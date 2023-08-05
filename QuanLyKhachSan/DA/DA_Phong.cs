@@ -68,8 +68,9 @@ namespace QuanLyKhachSan.DA
         }
         public IList TimPhongBangMaPhong(string timkiem)
         {
-           var qr= db.Phongs.Where(s=> s.MaPhong.StartsWith(timkiem))
-                .Select(select=> new
+            var qr = db.Phongs
+                .Where(s => s.MaPhong.Contains(timkiem))
+                .Select(select => new
                 {
                     select.MaPhong,
                     select.LoaiPhong,
@@ -77,25 +78,38 @@ namespace QuanLyKhachSan.DA
                     select.DonGia
                 }).ToList();
             return qr;
-
         }
-        public IList TimPhongBangTinhTrang(string tinhtrang)
+        public IList TimPhongBangTinhTrang(string tinhTrang)
         {
-            var qr = db.Phongs.Where(s => s.TinhTrang.StartsWith(tinhtrang))
-               .Select(select => new
-               {
-                   select.MaPhong,
-                   select.LoaiPhong,
-                   select.TinhTrang,
-                   select.DonGia
-               }).ToList();
+            var qr = db.Phongs
+                .Where(s => s.TinhTrang.Contains(tinhTrang)) 
+                .Select(select => new
+                {
+                    select.MaPhong,
+                    select.LoaiPhong,
+                    select.TinhTrang,
+                    select.DonGia
+                }).ToList();
             return qr;
-
         }
-        
-        public void tesstkkkaskdlkasdklasdlkasdlkasdkl()
-        {
 
+        public IList TimPhongBangLoaiPhong(string loaiPhong)
+        {
+            var qr = db.Phongs
+                .Where(s => s.LoaiPhong.Contains(loaiPhong))
+                .Select(select => new
+                {
+                    select.MaPhong,
+                    select.LoaiPhong,
+                    select.TinhTrang,
+                    select.DonGia
+                }).ToList();
+            return qr;
+        }
+
+        public bool KiemTraPhongDaCoKhachThue(string maPhong)
+        {
+            return db.DatPhongs.Any(d => d.MaPhong == maPhong);
         }
     }
 }

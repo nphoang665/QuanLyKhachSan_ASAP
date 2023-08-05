@@ -47,6 +47,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chk_ghiNhoDangNhap = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
@@ -109,6 +110,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.chk_ghiNhoDangNhap);
             this.groupBox1.Controls.Add(this.pic_Show);
             this.groupBox1.Controls.Add(this.txt_MatKhau);
             this.groupBox1.Controls.Add(this.btn_DangNhap);
@@ -173,7 +175,7 @@
             this.lbl_QuenMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_QuenMatKhau.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_QuenMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_QuenMatKhau.Location = new System.Drawing.Point(173, 209);
+            this.lbl_QuenMatKhau.Location = new System.Drawing.Point(262, 210);
             this.lbl_QuenMatKhau.Name = "lbl_QuenMatKhau";
             this.lbl_QuenMatKhau.Size = new System.Drawing.Size(128, 18);
             this.lbl_QuenMatKhau.TabIndex = 0;
@@ -241,6 +243,18 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
+            // chk_ghiNhoDangNhap
+            // 
+            this.chk_ghiNhoDangNhap.AutoSize = true;
+            this.chk_ghiNhoDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chk_ghiNhoDangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_ghiNhoDangNhap.Location = new System.Drawing.Point(94, 208);
+            this.chk_ghiNhoDangNhap.Name = "chk_ghiNhoDangNhap";
+            this.chk_ghiNhoDangNhap.Size = new System.Drawing.Size(157, 22);
+            this.chk_ghiNhoDangNhap.TabIndex = 8;
+            this.chk_ghiNhoDangNhap.Text = "Duy trì đăng nhập";
+            this.chk_ghiNhoDangNhap.UseVisualStyleBackColor = true;
+            // 
             // frm_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -292,6 +306,7 @@
         private System.Windows.Forms.PictureBox pic_Hide;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider KiemLoi;
+        private System.Windows.Forms.CheckBox chk_ghiNhoDangNhap;
     }
 }
 
