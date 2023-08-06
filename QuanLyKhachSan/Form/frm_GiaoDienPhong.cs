@@ -23,15 +23,23 @@ namespace QuanLyKhachSan
 
         private void pic_101_Click(object sender, EventArgs e)
         {
-            string maPhong =lbl_101.Text ;
-            frm_ThongTinPhong frm_ThongTinPhong = new frm_ThongTinPhong (maPhong);
-            frm_ThongTinPhong.ShowDialog();
-            var doianh = bus.layTrangThai(maPhong);
-            MessageBox.Show(doianh.ToString());
+            string maPhong = lbl_101.Text;
+            var phong = bus.layTrangThai(maPhong);
 
-           
-
+            if (phong.TinhTrang == "Trống")
+            {
+                // Open the frm_DatPhong form if the room is available
+                //frm_ frm_DatPhong = new frm_DatPhong(maPhong);
+                //frm_DatPhong.ShowDialog();
+            }
+            else
+            {
+                // Open the frm_ThongTinPhong form if the room is already rented
+                frm_ThongTinPhong frm_ThongTinPhong = new frm_ThongTinPhong(maPhong);
+                frm_ThongTinPhong.ShowDialog();
+            }
         }
+
 
         private void pic_102_Click(object sender, EventArgs e)
         {

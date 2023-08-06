@@ -17,11 +17,12 @@ namespace QuanLyKhachSan
     public partial class frm_ThuePhong : Form
     {
         BUS_ThuePhong bus;
-        public frm_ThuePhong()
+        string _maphong;
+        public frm_ThuePhong(string maphong)
         {
             InitializeComponent();
             bus = new BUS_ThuePhong();
-           
+           _maphong = maphong;
         }
 
         private void tabPage_ThuePhong_Click(object sender, EventArgs e)
