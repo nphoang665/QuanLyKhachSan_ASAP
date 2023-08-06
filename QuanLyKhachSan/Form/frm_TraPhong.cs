@@ -45,8 +45,8 @@ namespace QuanLyKhachSan
                 lbl_KQSoNgayO.Text = hoaDon.SoNgay.ToString();
                 lbl_KQNgayThanhToan.Text = hoaDon.NgayTra.ToString();
                 float tongTienDichVu = bus.layTongTienDichVu(phong);
-                //lbl_KQTongTien.Text = tongTienDichVu.ToString();
-            
+                lbl_KQTongTien.Text = tongTienDichVu.ToString();
+
 
 
             }

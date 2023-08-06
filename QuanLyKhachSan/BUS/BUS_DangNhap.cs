@@ -39,6 +39,9 @@ namespace QuanLyKhachSan.BUS
             da_dangnhap.DeleteSavedLoginInfo();
         }
 
-
+        public bool kiemtraluumk()
+        {
+            return da_dangnhap.kiemtraluumk();
+        }
     }
 }

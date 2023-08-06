@@ -53,18 +53,6 @@ namespace QuanLyKhachSan
             string tk = txt_TenDangNhap.Text;
             string mk = txt_MatKhau.Text;
 
-            /* bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
-             if (dangnhap)
-             {
-                 this.Hide();
-                 frm_TrangChu frm = new frm_TrangChu(tk);
-                 frm.ShowDialog();
-                 this.Close();
-             }
-             else
-             {
-                 MessageBox.Show("Đăng nhập không thành công");
-             }*/
             KiemLoi.Clear(); 
 
             if (string.IsNullOrEmpty(tk))
@@ -143,6 +131,15 @@ namespace QuanLyKhachSan
         }
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
+            if (bus.kiemtraluumk() == true)
+            {
+                chk_ghiNhoDangNhap.Checked=true;
+
+            }
+            else
+            {
+                chk_ghiNhoDangNhap.Checked = false;
+            }
             loadNhomk();
         }
     }

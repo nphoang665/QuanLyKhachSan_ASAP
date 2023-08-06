@@ -78,7 +78,11 @@ namespace QuanLyKhachSan.DA
             // Delete all data from the LuuMatKhau table
             db.Database.ExecuteSqlCommand("DELETE FROM LuuMatKhau");
         }
-
+        public bool kiemtraluumk()
+        {
+            var qr = db.LuuMatKhaus.Select(s => new { s.TaiKhoan });
+            return qr.Any();
+        }
 
 
 
