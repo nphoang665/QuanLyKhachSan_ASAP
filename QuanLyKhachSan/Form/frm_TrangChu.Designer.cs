@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangChu));
             this.pnl_left = new System.Windows.Forms.Panel();
+            this.btn_ThuePhong = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -89,6 +90,7 @@
             // pnl_left
             // 
             this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.pnl_left.Controls.Add(this.btn_ThuePhong);
             this.pnl_left.Controls.Add(this.panel1);
             this.pnl_left.Controls.Add(this.btn_Phong);
             this.pnl_left.Controls.Add(this.btn_HoaDon);
@@ -104,6 +106,24 @@
             this.pnl_left.Size = new System.Drawing.Size(251, 720);
             this.pnl_left.TabIndex = 1;
             this.pnl_left.TabStop = true;
+            // 
+            // btn_ThuePhong
+            // 
+            this.btn_ThuePhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThuePhong.FlatAppearance.BorderSize = 0;
+            this.btn_ThuePhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThuePhong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThuePhong.ForeColor = System.Drawing.Color.White;
+            this.btn_ThuePhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bedroom_35;
+            this.btn_ThuePhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThuePhong.Location = new System.Drawing.Point(9, 533);
+            this.btn_ThuePhong.Name = "btn_ThuePhong";
+            this.btn_ThuePhong.Size = new System.Drawing.Size(239, 52);
+            this.btn_ThuePhong.TabIndex = 11;
+            this.btn_ThuePhong.Text = "      Thuê Phòng";
+            this.btn_ThuePhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ThuePhong.UseVisualStyleBackColor = true;
+            this.btn_ThuePhong.Click += new System.EventHandler(this.btn_ThuePhong_Click);
             // 
             // panel1
             // 
@@ -440,7 +460,6 @@
             this.thuêPhòngToolStripMenuItem.Name = "thuêPhòngToolStripMenuItem";
             this.thuêPhòngToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
             this.thuêPhòngToolStripMenuItem.Text = "Thuê phòng";
-            this.thuêPhòngToolStripMenuItem.Click += new System.EventHandler(this.thuêPhòngToolStripMenuItem_Click);
             // 
             // trảPhòngToolStripMenuItem
             // 
@@ -648,5 +667,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_ThuePhong;
     }
 }
