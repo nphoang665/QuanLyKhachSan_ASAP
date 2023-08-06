@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyKhachSan.DA
 {
@@ -21,5 +22,26 @@ namespace QuanLyKhachSan.DA
         {
             return db.DatPhongs.FirstOrDefault(s => s.MaPhong == maphong);
         }
+        public float layTongTienDichVu(string maphong)
+        {
+            var dichVu = db.DangKyDichVus.Where(s => s.MaPhong == maphong);
+            float tongTienDichVu = 0;
+            foreach (var dv in dichVu)
+            {
+                tongTienDichVu = (float)(dv.SoLuong * dv.DonGia);
+            }
+            return tongTienDichVu;
+        }
+        public float TinhTongTien(Phong phong,DatPhong datphong, float tongTienDichVu)
+        {
+            int soNgayO = (datphong.NgayTra - datphong.NgayDat)?.Days ?? 0;
+            float giaPhong = (float)phong.DonGia;
+            float tongTien = (soNgayO * giaPhong) + tongTienDichVu;
+
+            
+            return tongTien;
+        }
+
+
     }
 }

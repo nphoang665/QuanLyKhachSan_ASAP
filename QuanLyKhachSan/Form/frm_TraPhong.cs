@@ -41,11 +41,13 @@ namespace QuanLyKhachSan
             if (hoaDon != null)
             {
                 lbl_kqmahoadon.Text = hoaDon.MaHoaDon;
-
+                lbl_KQTongTienDichVu.Text = bus.layTongTienDichVu(phong).ToString();
                 lbl_KQSoNgayO.Text = hoaDon.SoNgay.ToString();
                 lbl_KQNgayThanhToan.Text = hoaDon.NgayTra.ToString();
-                lbl_KQTongTien.Text = hoaDon.TongTien.ToString();
-                //lbl_KQTongTienDichVu.Text = hoaDon.TongTienDichVu.ToString();
+                float tongTienDichVu = bus.layTongTienDichVu(phong);
+                //lbl_KQTongTien.Text = tongTienDichVu.ToString();
+            
+
 
             }
         }
