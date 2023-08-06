@@ -247,7 +247,6 @@ namespace QuanLyKhachSan
 
                     frm_DangNhap dangNhapForm = new frm_DangNhap();
 
-                    // Hiển thị frm_DangNhap
                     dangNhapForm.ShowDialog();
                     e.Cancel = true;
                 }
