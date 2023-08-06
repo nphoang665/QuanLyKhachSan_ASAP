@@ -63,7 +63,18 @@ namespace QuanLyKhachSan
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            doimk();
+            string matKhauMoi = txt_MatKhauMoi.Text;
+            string nhapLaiMK = txt_NhapLaiMatKhau.Text;
+
+            if (matKhauMoi != nhapLaiMK)
+            {
+                MessageBox.Show("Mật khẩu mới không trùng khớp!");
+                return;
+            }
+            else
+            {
+                doimk();
+            }
         }
     }
 }
