@@ -44,15 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_DanhSachKhachHang = new System.Windows.Forms.DataGridView();
-            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaythue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Them = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,7 +70,7 @@
             this.tabPage_Sua_XoaKhachHang = new System.Windows.Forms.TabPage();
             this.txt_makh_sua = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.stp_ngaysinh_sua = new System.Windows.Forms.DateTimePicker();
+            this.dtp_ngaysinh_sua = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.rdb_nu_sua = new System.Windows.Forms.RadioButton();
             this.rdb_nam_sua = new System.Windows.Forms.RadioButton();
@@ -105,6 +96,13 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl_KhachHang.SuspendLayout();
             this.tabPage_ThemKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachHang)).BeginInit();
@@ -305,68 +303,12 @@
             this.ngaysinh,
             this.diachi,
             this.sdt,
-            this.cccd,
-            this.maphong,
-            this.ngaythue});
+            this.cccd});
             this.dgv_DanhSachKhachHang.Location = new System.Drawing.Point(6, 235);
             this.dgv_DanhSachKhachHang.Name = "dgv_DanhSachKhachHang";
             this.dgv_DanhSachKhachHang.ReadOnly = true;
             this.dgv_DanhSachKhachHang.Size = new System.Drawing.Size(1092, 235);
             this.dgv_DanhSachKhachHang.TabIndex = 35;
-            // 
-            // makh
-            // 
-            this.makh.HeaderText = "Mã Khách Hàng";
-            this.makh.Name = "makh";
-            this.makh.ReadOnly = true;
-            // 
-            // tenkh
-            // 
-            this.tenkh.HeaderText = "Tên Khách Hàng";
-            this.tenkh.Name = "tenkh";
-            this.tenkh.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.HeaderText = "GióiTinh";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.HeaderText = "Địa Chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // sdt
-            // 
-            this.sdt.HeaderText = "Số Điện Thoại";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            // 
-            // cccd
-            // 
-            this.cccd.HeaderText = "CMND/CCCD";
-            this.cccd.Name = "cccd";
-            this.cccd.ReadOnly = true;
-            // 
-            // maphong
-            // 
-            this.maphong.HeaderText = "Mã Phòng";
-            this.maphong.Name = "maphong";
-            this.maphong.ReadOnly = true;
-            // 
-            // ngaythue
-            // 
-            this.ngaythue.HeaderText = "Ngày Thuê";
-            this.ngaythue.Name = "ngaythue";
-            this.ngaythue.ReadOnly = true;
             // 
             // btn_Them
             // 
@@ -613,7 +555,7 @@
             this.tabPage_Sua_XoaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.txt_makh_sua);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.label22);
-            this.tabPage_Sua_XoaKhachHang.Controls.Add(this.stp_ngaysinh_sua);
+            this.tabPage_Sua_XoaKhachHang.Controls.Add(this.dtp_ngaysinh_sua);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.label23);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.rdb_nu_sua);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.rdb_nam_sua);
@@ -658,13 +600,15 @@
             this.label22.TabIndex = 64;
             this.label22.Text = "Mã khách hàng:";
             // 
-            // stp_ngaysinh_sua
+            // dtp_ngaysinh_sua
             // 
-            this.stp_ngaysinh_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stp_ngaysinh_sua.Location = new System.Drawing.Point(152, 144);
-            this.stp_ngaysinh_sua.Name = "stp_ngaysinh_sua";
-            this.stp_ngaysinh_sua.Size = new System.Drawing.Size(193, 25);
-            this.stp_ngaysinh_sua.TabIndex = 57;
+            this.dtp_ngaysinh_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_ngaysinh_sua.CustomFormat = "dd/MMM/yyyy";
+            this.dtp_ngaysinh_sua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_ngaysinh_sua.Location = new System.Drawing.Point(152, 144);
+            this.dtp_ngaysinh_sua.Name = "dtp_ngaysinh_sua";
+            this.dtp_ngaysinh_sua.Size = new System.Drawing.Size(193, 25);
+            this.dtp_ngaysinh_sua.TabIndex = 57;
             // 
             // label23
             // 
@@ -920,6 +864,48 @@
             this.label19.TabIndex = 47;
             this.label19.Text = "SỬA, XÓA THÔNG TIN KHÁCH HÀNG:";
             // 
+            // makh
+            // 
+            this.makh.HeaderText = "Mã Khách Hàng";
+            this.makh.Name = "makh";
+            this.makh.ReadOnly = true;
+            // 
+            // tenkh
+            // 
+            this.tenkh.HeaderText = "Tên Khách Hàng";
+            this.tenkh.Name = "tenkh";
+            this.tenkh.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.HeaderText = "GióiTinh";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.HeaderText = "Địa Chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.HeaderText = "Số Điện Thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // cccd
+            // 
+            this.cccd.HeaderText = "CMND/CCCD";
+            this.cccd.Name = "cccd";
+            this.cccd.ReadOnly = true;
+            // 
             // frm_KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -967,15 +953,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_DanhSachKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn makh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenkh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cccd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maphong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaythue;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -1000,7 +977,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_makh_sua;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker stp_ngaysinh_sua;
+        private System.Windows.Forms.DateTimePicker dtp_ngaysinh_sua;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RadioButton rdb_nu_sua;
         private System.Windows.Forms.RadioButton rdb_nam_sua;
@@ -1026,5 +1003,12 @@
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn makh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenkh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cccd;
     }
 }
