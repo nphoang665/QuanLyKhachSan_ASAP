@@ -18,10 +18,13 @@ namespace QuanLyKhachSan
     {
         BUS_ThuePhong bus;
         string _maphong;
-        public frm_ThuePhong(string maphong)
+        public frm_ThuePhong()
         {
             InitializeComponent();
             bus = new BUS_ThuePhong();
+        }
+        public frm_ThuePhong(string maphong)
+        {
            _maphong = maphong;
         }
 
@@ -73,7 +76,7 @@ namespace QuanLyKhachSan
             var item = lstv_ChiTiet.FindItemWithText("Ngày thuê");
             if (item != null)
             {
-                item.Text = "Ngày đặt: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy");
+                item.Text = "Ngày thuê: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy");
             }
             else
             {

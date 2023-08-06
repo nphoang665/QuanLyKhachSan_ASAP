@@ -190,7 +190,7 @@
             // ThongTin
             // 
             this.ThongTin.Text = "Thông tin";
-            this.ThongTin.Width = 180;
+            this.ThongTin.Width = 500;
             // 
             // GiaTri
             // 
