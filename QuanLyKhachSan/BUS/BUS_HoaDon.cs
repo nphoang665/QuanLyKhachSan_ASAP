@@ -15,6 +15,9 @@ namespace QuanLyKhachSan.BUS
         {
             da = new DA_HoaDon();
         }
-       
+       public void loadHD(DataGridView dtgv)
+        {
+            da.loadHD(dtgv);
+        }
     }
 }

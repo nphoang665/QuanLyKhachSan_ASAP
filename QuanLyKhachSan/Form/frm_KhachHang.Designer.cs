@@ -77,10 +77,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage_Sua_XoaKhachHang = new System.Windows.Forms.TabPage();
-            this.cbb_maphong_sua = new System.Windows.Forms.ComboBox();
-            this.stp_ngaythue_sua = new System.Windows.Forms.DateTimePicker();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.txt_makh_sua = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.stp_ngaysinh_sua = new System.Windows.Forms.DateTimePicker();
@@ -615,10 +611,6 @@
             // tabPage_Sua_XoaKhachHang
             // 
             this.tabPage_Sua_XoaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_Sua_XoaKhachHang.Controls.Add(this.cbb_maphong_sua);
-            this.tabPage_Sua_XoaKhachHang.Controls.Add(this.stp_ngaythue_sua);
-            this.tabPage_Sua_XoaKhachHang.Controls.Add(this.label20);
-            this.tabPage_Sua_XoaKhachHang.Controls.Add(this.label21);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.txt_makh_sua);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.label22);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.stp_ngaysinh_sua);
@@ -645,44 +637,6 @@
             this.tabPage_Sua_XoaKhachHang.TabIndex = 2;
             this.tabPage_Sua_XoaKhachHang.Text = "Sửa, Xóa khách hàng";
             this.tabPage_Sua_XoaKhachHang.UseVisualStyleBackColor = true;
-            // 
-            // cbb_maphong_sua
-            // 
-            this.cbb_maphong_sua.FormattingEnabled = true;
-            this.cbb_maphong_sua.Location = new System.Drawing.Point(851, 29);
-            this.cbb_maphong_sua.Name = "cbb_maphong_sua";
-            this.cbb_maphong_sua.Size = new System.Drawing.Size(193, 25);
-            this.cbb_maphong_sua.TabIndex = 69;
-            // 
-            // stp_ngaythue_sua
-            // 
-            this.stp_ngaythue_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stp_ngaythue_sua.Location = new System.Drawing.Point(851, 73);
-            this.stp_ngaythue_sua.Name = "stp_ngaythue_sua";
-            this.stp_ngaythue_sua.Size = new System.Drawing.Size(193, 25);
-            this.stp_ngaythue_sua.TabIndex = 68;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(756, 34);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 20);
-            this.label20.TabIndex = 67;
-            this.label20.Text = "Mã Phòng";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(756, 77);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 20);
-            this.label21.TabIndex = 66;
-            this.label21.Text = "Ngày Thuê:";
             // 
             // txt_makh_sua
             // 
@@ -1044,10 +998,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbb_maphong_sua;
-        private System.Windows.Forms.DateTimePicker stp_ngaythue_sua;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txt_makh_sua;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker stp_ngaysinh_sua;
