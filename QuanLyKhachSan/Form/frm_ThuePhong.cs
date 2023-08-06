@@ -54,7 +54,7 @@ namespace QuanLyKhachSan
         private void cbo_MaKhachHang_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
+            /*string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
 
  
             var kh = bus.LayThongTinKhachHangVaDatPhong(maKhachHang);
@@ -68,6 +68,23 @@ namespace QuanLyKhachSan
                 lstv_ChiTiet.Items.Add(new ListViewItem("Địa chỉ: " + kh.DiaChi));
                 lstv_ChiTiet.Items.Add(new ListViewItem("Số điện thoại: " + kh.SoDienThoai));
                 lstv_ChiTiet.Items.Add(new ListViewItem("Ngày sinh: " + kh.NgaySinh.ToString("dd/MM/yyyy")));             
+            }*/
+            if (cbo_MaKhachHang.SelectedItem != null)
+            {
+                string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
+
+                var kh = bus.LayThongTinKhachHangVaDatPhong(maKhachHang);
+
+                if (kh != null)
+                {
+                    lstv_ChiTiet.Items.Clear();
+                    lstv_ChiTiet.Items.Add(new ListViewItem("Mã khách hàng: " + maKhachHang));
+                    lstv_ChiTiet.Items.Add(new ListViewItem("Tên khách hàng: " + kh.TenKhachHang));
+                    lstv_ChiTiet.Items.Add(new ListViewItem("Giới tính: " + kh.GioiTinh));
+                    lstv_ChiTiet.Items.Add(new ListViewItem("Địa chỉ: " + kh.DiaChi));
+                    lstv_ChiTiet.Items.Add(new ListViewItem("Số điện thoại: " + kh.SoDienThoai));
+                    lstv_ChiTiet.Items.Add(new ListViewItem("Ngày sinh: " + kh.NgaySinh.ToString("dd/MM/yyyy")));
+                }
             }
         }
 
@@ -114,6 +131,52 @@ namespace QuanLyKhachSan
                     lsv_phongchon.Items[2].Text = "Tình trạng: " + tinhTrang;
                     lsv_phongchon.Items[3].Text = "Đơn giá: " + donGia;
                 }
+            }
+        }
+
+        private void btn_ThuePhong_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có chọn khách hàng và phòng trống chưa
+            if (cbo_MaKhachHang.SelectedItem == null || lsv_phongchon.Items.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn khách hàng và phòng trống trước khi thuê.");
+                return;
+            }
+
+            // Lấy thông tin khách hàng và phòng trống
+            string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
+            string maPhong = lsv_phongchon.Items[0].Text.Replace("Mã phòng: ", "");
+
+            // Lấy ngày thuê phòng từ DateTimePicker
+            DateTime ngayThue = dtp_NgayThue.Value;
+
+            // Thêm thông tin thuê phòng vào cơ sở dữ liệu
+            try
+            {
+                // Tạo mã thuê phòng bằng cách lấy số lượng dòng trong bảng ThuePhong + 1
+                int nextId = bus.LayThuePhongCount() + 1;
+                string maThuePhong = "TP" + nextId.ToString().PadLeft(4, '0');
+
+                bus.ThemThuePhong(maThuePhong, maKhachHang, maPhong, ngayThue);
+
+                // Cập nhật trạng thái của phòng từ "Trống" sang "Đã thuê"
+                bus.CapNhatTrangThaiPhong(maPhong, "Đã thuê");
+
+                // Hiển thị thông báo thành công
+                MessageBox.Show("Thuê phòng thành công.");
+
+                // Cập nhật lại danh sách phòng trống sau khi đã thuê phòng
+                var phongs = bus.LayThongTinPhongTrong();
+                dgv_PhongTrong.DataSource = phongs;
+
+                // Xóa thông tin khách hàng đã chọn sau khi đã thuê phòng thành công
+                cbo_MaKhachHang.SelectedIndex = -1;
+                lstv_ChiTiet.Items.Clear();
+                lsv_phongchon.Items.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thuê phòng: " + ex.Message);
             }
         }
     }

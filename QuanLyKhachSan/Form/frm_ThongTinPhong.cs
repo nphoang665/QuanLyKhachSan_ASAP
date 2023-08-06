@@ -1,4 +1,5 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.DA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,13 @@ namespace QuanLyKhachSan
             this.maPhong = maPhong;
             bus= new BUS_ThongTinPhong();
         }
+        public frm_ThongTinPhong(ThuePhong thuePhong)
+        {
+            InitializeComponent();
+            // Các thao tác khởi tạo form thông tin phòng với dữ liệu từ đối tượng thuePhong
+            // ...
+        }
+
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
@@ -43,7 +51,7 @@ namespace QuanLyKhachSan
             var tt = bus.LoadThongTinPhong(maPhong);
             maKhachHang = tt.MaKhachHang;
             
-            lbl_KQ_NgayThue.Text = tt.NgayDat?.ToShortDateString();
+            lbl_KQ_NgayThue.Text = tt.NgayThue?.ToShortDateString();
             var thongtinkhachhang = bus.loadthongtinkhachhang(tt.MaKhachHang);
             lbl_KQTenKhachHang.Text = thongtinkhachhang.TenKhachHang;
             TenKhachHang = thongtinkhachhang.TenKhachHang;

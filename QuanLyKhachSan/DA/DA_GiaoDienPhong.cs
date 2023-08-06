@@ -17,5 +17,11 @@ namespace QuanLyKhachSan.DA
         {
             return db.Phongs.FirstOrDefault(s => s.MaPhong == maphong);
         }
+        public ThuePhong LayThongTinThuePhong(string maPhong)
+        {
+            return db.ThuePhongs.FirstOrDefault(tp => tp.MaPhong == maPhong);
+        }
+
+
     }
 }

@@ -54,5 +54,30 @@ namespace QuanLyKhachSan.DA
                      };
             return qr.ToList();
         }
+        public int LayThuePhongCount()
+        {
+            return db.ThuePhongs.Count();
+        }
+        public void ThemThuePhong(string maThuePhong, string maKhachHang, string maPhong, DateTime ngayThue)
+        {
+            ThuePhong thuePhong = new ThuePhong
+            {
+                MaThuePhong = maThuePhong,
+                MaKhachHang = maKhachHang,
+                MaPhong = maPhong,
+                NgayThue = ngayThue
+            };
+            db.ThuePhongs.Add(thuePhong);
+            db.SaveChanges();
+        }
+        public void CapNhatTrangThaiPhong(string maPhong, string trangThai)
+        {
+            Phong phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
+            if (phong != null)
+            {
+                phong.TinhTrang = trangThai;
+                db.SaveChanges();
+            }
+        }
     }
 }

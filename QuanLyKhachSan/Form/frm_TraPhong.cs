@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,17 +35,29 @@ namespace QuanLyKhachSan
             lbl_KQMaKhachHang.Text = mkh;
             lbl_KQTenKhachHang.Text = tkh;
             lbl_kqmahoadon.Text = hoadon.MaHoaDon;
-            lbl_KQSoNgayO.Text = hoadon.SoNgay.ToString();
-            lbl_KQNgayThanhToan.Text = hoadon.NgayTra?.ToString("d");
+
+            // Lấy thông tin ngày đặt phòng từ bảng ThuePhong
             var datPhong = bus.layttDatphong(phong);
-            lbl_KQNgayDatPhong.Text = datPhong.NgayDat.ToString();
+            /*lbl_KQNgayDatPhong.Text = datPhong.NgayThue.ToString("d", CultureInfo.InvariantCulture);*/
+            lbl_KQNgayDatPhong.Text = datPhong.NgayThue.Value.ToString("dd/MM/yyyy");
+
+
+            // Lấy ngày thanh toán là ngày hiện tại
+            lbl_KQNgayThanhToan.Text = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            // Tính số ngày ở bằng cách lấy ngày hiện tại trừ đi ngày đặt phòng
+            TimeSpan soNgayO = DateTime.Now.Date - datPhong.NgayThue.Value;
+            lbl_KQSoNgayO.Text = soNgayO.TotalDays.ToString();
+
             lbl_KQGiaPhong.Text = datPhong.Phong.DonGia.ToString();
+
             var busTongTienDichvu = bus.layTongTienDichVu(phong);
             lbl_KQTongTienDichVu.Text = busTongTienDichvu.ToString();
-            float soNgayO = float.Parse(lbl_KQSoNgayO.Text);
+
+            float soNgay = float.Parse(lbl_KQSoNgayO.Text);
             float giaPhong = float.Parse(lbl_KQGiaPhong.Text);
             float tongTienDichVu = float.Parse(lbl_KQTongTienDichVu.Text);
-            lbl_KQTongTien.Text = (soNgayO * giaPhong + tongTienDichVu).ToString();
+            lbl_KQTongTien.Text = (soNgay * giaPhong + tongTienDichVu).ToString();
         }
 
 

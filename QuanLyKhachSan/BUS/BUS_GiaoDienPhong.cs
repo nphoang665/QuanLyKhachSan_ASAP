@@ -17,5 +17,11 @@ namespace QuanLyKhachSan.BUS
         {
             return da.LayTrangThai(maPhong);
         }
+        public ThuePhong layThongTin(string maPhong)
+        {
+            return da.LayThongTinThuePhong(maPhong);
+        }
+
+
     }
 }

@@ -9,6 +9,24 @@ namespace QuanLyKhachSan.BUS
 {
     public class BUS_ThuePhong
     {
+        /* DA_ThuePhong db;
+         public BUS_ThuePhong()
+         {
+             db = new DA_ThuePhong();
+         }
+         public dynamic laytt()
+         {
+             return db.ThongTinKhachHang();
+         }
+         public dynamic LayThongTinKhachHangVaDatPhong(string maKhachHang)
+         {
+             return db.LayThongTinKhachHangVaDatPhong(maKhachHang);
+         }
+
+         public dynamic LayThongTinPhongTrong()
+         {
+             return db.LayThongTinPhongTrong();
+         }*/
         DA_ThuePhong db;
         public BUS_ThuePhong()
         {
@@ -26,6 +44,20 @@ namespace QuanLyKhachSan.BUS
         public dynamic LayThongTinPhongTrong()
         {
             return db.LayThongTinPhongTrong();
+        }
+        public int LayThuePhongCount()
+        {
+            return db.LayThuePhongCount();
+        }
+
+        public void ThemThuePhong(string maThuePhong, string maKhachHang, string maPhong, DateTime ngayThue)
+        {
+            db.ThemThuePhong(maThuePhong, maKhachHang, maPhong, ngayThue);
+        }
+
+        public void CapNhatTrangThaiPhong(string maPhong, string trangThai)
+        {
+            db.CapNhatTrangThaiPhong(maPhong, trangThai);
         }
     }
 }

@@ -15,7 +15,6 @@
         <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="11" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.ThanhToan" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.ThongTinKhachHang" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="11" PointY="4" IsExpanded="true" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaKhachH__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaThanhT__412EB0B6" ManuallyRouted="false" />
@@ -23,9 +22,10 @@
         <AssociationConnector Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__44FF419A" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__ThanhToan__MaPho__3C69FB99" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__38996AB5" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__ThanhToan__MaKha__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__36B12243" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="3" PointY="1.125" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__49C3F6B7" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__47DBAE45" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

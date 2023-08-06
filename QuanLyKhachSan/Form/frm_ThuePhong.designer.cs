@@ -105,6 +105,7 @@
             this.btn_ThuePhong.TabIndex = 3;
             this.btn_ThuePhong.Text = "Thuê phòng";
             this.btn_ThuePhong.UseVisualStyleBackColor = false;
+            this.btn_ThuePhong.Click += new System.EventHandler(this.btn_ThuePhong_Click);
             // 
             // tabControl_ThongTin
             // 
