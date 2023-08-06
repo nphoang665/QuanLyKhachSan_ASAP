@@ -27,8 +27,17 @@ namespace QuanLyKhachSan
         public frm_ThongTinPhong(ThuePhong thuePhong)
         {
             InitializeComponent();
-            // Các thao tác khởi tạo form thông tin phòng với dữ liệu từ đối tượng thuePhong
-            // ...
+            this.maPhong = thuePhong.MaPhong;
+            this.maKhachHang = thuePhong.MaKhachHang;
+          //  this.TenKhachHang = thuePhong.KhachHang.TenKhachHang;
+
+            lbl_Phong.Text = maPhong;
+            lbl_KQ_NgayThue.Text = thuePhong.NgayThue?.ToShortDateString();
+            lbl_KQTenKhachHang.Text = TenKhachHang;
+
+            var thongtinkhachhang = bus.loadthongtinkhachhang(thuePhong.MaKhachHang);
+            lbl_KQCMND.Text = thongtinkhachhang.CMND;
+            lbl_KQDiaChi.Text = thongtinkhachhang.DiaChi;
         }
 
 
