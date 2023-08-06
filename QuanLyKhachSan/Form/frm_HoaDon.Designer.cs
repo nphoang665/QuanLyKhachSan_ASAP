@@ -44,8 +44,6 @@
             this.lbl_kqmahd = new System.Windows.Forms.Label();
             this.lbl_kqmakhachhang = new System.Windows.Forms.Label();
             this.lbl_kqngaythue = new System.Windows.Forms.Label();
-            this.lbl_KQngaytra = new System.Windows.Forms.Label();
-            this.lbl_ngaytra = new System.Windows.Forms.Label();
             this.MaThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKhacHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +51,8 @@
             this.SoNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_KQngaytra = new System.Windows.Forms.Label();
             this.tabControl_HoaDon.SuspendLayout();
             this.tabPage_HoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
@@ -72,8 +72,8 @@
             // 
             this.tabPage_HoaDon.BackColor = System.Drawing.Color.White;
             this.tabPage_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_HoaDon.Controls.Add(this.label2);
             this.tabPage_HoaDon.Controls.Add(this.lbl_KQngaytra);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_ngaytra);
             this.tabPage_HoaDon.Controls.Add(this.lbl_kqngaythue);
             this.tabPage_HoaDon.Controls.Add(this.lbl_kqmakhachhang);
             this.tabPage_HoaDon.Controls.Add(this.lbl_kqmahd);
@@ -263,28 +263,6 @@
             this.lbl_kqngaythue.Text = "---";
             this.lbl_kqngaythue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_KQngaytra
-            // 
-            this.lbl_KQngaytra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_KQngaytra.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQngaytra.Location = new System.Drawing.Point(656, 163);
-            this.lbl_KQngaytra.Name = "lbl_KQngaytra";
-            this.lbl_KQngaytra.Size = new System.Drawing.Size(197, 22);
-            this.lbl_KQngaytra.TabIndex = 25;
-            this.lbl_KQngaytra.Text = "---";
-            this.lbl_KQngaytra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_ngaytra
-            // 
-            this.lbl_ngaytra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_ngaytra.AutoSize = true;
-            this.lbl_ngaytra.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ngaytra.Location = new System.Drawing.Point(513, 163);
-            this.lbl_ngaytra.Name = "lbl_ngaytra";
-            this.lbl_ngaytra.Size = new System.Drawing.Size(76, 20);
-            this.lbl_ngaytra.TabIndex = 24;
-            this.lbl_ngaytra.Text = "Ngày Trả:";
-            // 
             // MaThanhToan
             // 
             this.MaThanhToan.HeaderText = "Mã Thanh Toán";
@@ -323,9 +301,31 @@
             // 
             // NgayLap
             // 
-            this.NgayLap.HeaderText = "Ngày Trả";
+            this.NgayLap.HeaderText = "Ngày Lập";
             this.NgayLap.Name = "NgayLap";
             this.NgayLap.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(656, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 22);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "---";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_KQngaytra
+            // 
+            this.lbl_KQngaytra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQngaytra.AutoSize = true;
+            this.lbl_KQngaytra.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQngaytra.Location = new System.Drawing.Point(513, 163);
+            this.lbl_KQngaytra.Name = "lbl_KQngaytra";
+            this.lbl_KQngaytra.Size = new System.Drawing.Size(76, 20);
+            this.lbl_KQngaytra.TabIndex = 24;
+            this.lbl_KQngaytra.Text = "Ngày Trả:";
             // 
             // frm_HoaDon
             // 
@@ -367,8 +367,6 @@
         private System.Windows.Forms.Label lbl_kqmakhachhang;
         private System.Windows.Forms.Label lbl_kqmahd;
         private System.Windows.Forms.Label lbl_kqmathanhtoan;
-        private System.Windows.Forms.Label lbl_KQngaytra;
-        private System.Windows.Forms.Label lbl_ngaytra;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhacHang;
@@ -376,5 +374,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoNgay;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_KQngaytra;
     }
 }

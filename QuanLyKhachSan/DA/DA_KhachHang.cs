@@ -39,7 +39,7 @@ namespace QuanLyKhachSan.DA
                 row.Cells[0].Value = kh.MaKhachHang;
                 row.Cells[1].Value = kh.TenKhachHang;
                 row.Cells[2].Value = kh.GioiTinh;
-                row.Cells[3].Value = kh.NgaySinh;
+                row.Cells[3].Value = kh.NgaySinh.Value.ToShortDateString();
                 row.Cells[4].Value = kh.DiaChi;
                 row.Cells[5].Value = kh.SoDienThoai;
                 row.Cells[6].Value = kh.CMND;
