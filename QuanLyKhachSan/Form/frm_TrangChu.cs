@@ -69,7 +69,7 @@ namespace QuanLyKhachSan
                 // If the current user is a manager, show the btn_NhanVien button
                 btn_NhanVien.Enabled = true;
             }
-            MessageBox.Show(ChucVu);
+         
             
 
         }
@@ -109,8 +109,7 @@ namespace QuanLyKhachSan
 
         private void btn_ThuePhong_Click(object sender, EventArgs e)
         {
-            DiChuyenPanel(btn_ThuePhong);
-            OpenChildForm(new frm_ThuePhong());
+           
         }
 
         private void btn_TraPhong_Click(object sender, EventArgs e)
@@ -195,7 +194,8 @@ namespace QuanLyKhachSan
 
         private void thuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_ThuePhong());
+           
+           
         }
 
         private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)

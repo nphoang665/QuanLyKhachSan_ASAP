@@ -39,7 +39,6 @@
             this.pnl_Slide = new System.Windows.Forms.Panel();
             this.btn_NhanVien = new System.Windows.Forms.Button();
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
-            this.btn_ThuePhong = new System.Windows.Forms.Button();
             this.btn_KhachHang = new System.Windows.Forms.Button();
             this.btn_TrangChu = new System.Windows.Forms.Button();
             this.pnl_logo = new System.Windows.Forms.Panel();
@@ -96,7 +95,6 @@
             this.pnl_left.Controls.Add(this.pnl_Slide);
             this.pnl_left.Controls.Add(this.btn_NhanVien);
             this.pnl_left.Controls.Add(this.btn_TaiKhoan);
-            this.pnl_left.Controls.Add(this.btn_ThuePhong);
             this.pnl_left.Controls.Add(this.btn_KhachHang);
             this.pnl_left.Controls.Add(this.btn_TrangChu);
             this.pnl_left.Controls.Add(this.pnl_logo);
@@ -216,24 +214,6 @@
             this.btn_TaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TaiKhoan.UseVisualStyleBackColor = true;
             this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
-            // 
-            // btn_ThuePhong
-            // 
-            this.btn_ThuePhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThuePhong.FlatAppearance.BorderSize = 0;
-            this.btn_ThuePhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThuePhong.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThuePhong.ForeColor = System.Drawing.Color.White;
-            this.btn_ThuePhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_rent_35;
-            this.btn_ThuePhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThuePhong.Location = new System.Drawing.Point(6, 301);
-            this.btn_ThuePhong.Name = "btn_ThuePhong";
-            this.btn_ThuePhong.Size = new System.Drawing.Size(239, 52);
-            this.btn_ThuePhong.TabIndex = 2;
-            this.btn_ThuePhong.Text = "      Thuê phòng";
-            this.btn_ThuePhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ThuePhong.UseVisualStyleBackColor = true;
-            this.btn_ThuePhong.Click += new System.EventHandler(this.btn_ThuePhong_Click);
             // 
             // btn_KhachHang
             // 
@@ -382,14 +362,14 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -631,7 +611,6 @@
         private System.Windows.Forms.Panel pnl_Slide;
         private System.Windows.Forms.Button btn_NhanVien;
         private System.Windows.Forms.Button btn_TaiKhoan;
-        private System.Windows.Forms.Button btn_ThuePhong;
         private System.Windows.Forms.Button btn_KhachHang;
         private System.Windows.Forms.Button btn_TrangChu;
         private System.Windows.Forms.Panel pnl_logo;

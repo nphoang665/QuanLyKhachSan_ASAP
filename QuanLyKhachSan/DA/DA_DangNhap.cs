@@ -29,44 +29,50 @@ namespace QuanLyKhachSan.DA
         }
         public void SaveLoginInfo(string username, string password)
         {
-            var luuMatKhau = new LuuMatKhau
+            // Check if the provided username and password are correct
+            if (DangNhap(username, password))
             {
-                TaiKhoan = username,
-                MatKhau = password
-            };
+                // If the username and password are correct, save the login information
+                var luuMatKhau = new LuuMatKhau
+                {
+                    TaiKhoan = username,
+                    MatKhau = password
+                };
 
-            db.LuuMatKhaus.Add(luuMatKhau);
-            db.SaveChanges();
+                db.LuuMatKhaus.Add(luuMatKhau);
+                db.SaveChanges();
+            }
         }
+
         public LuuMatKhau GetSavedLoginInfo()
         {
-            // Query the database to get the saved login information
             var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
 
-            // Return the saved login information
             return savedLoginInfo;
         }
         public void UpdateSavedLoginInfo(string username, string password)
         {
-            // Query the database to get the saved login information
-            var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
-
-            // Check if there is any saved login information
-            if (savedLoginInfo != null)
+            // Check if the provided username and password are correct
+            if (DangNhap(username, password))
             {
-                // Delete the existing saved login information
-                db.LuuMatKhaus.Remove(savedLoginInfo);
+                // If the username and password are correct, update the saved login information
+                var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
+
+                if (savedLoginInfo != null)
+                {
+                    db.LuuMatKhaus.Remove(savedLoginInfo);
+                }
+
+                var newSavedLoginInfo = new LuuMatKhau
+                {
+                    TaiKhoan = username,
+                    MatKhau = password
+                };
+                db.LuuMatKhaus.Add(newSavedLoginInfo);
+                db.SaveChanges();
             }
-
-            // Create a new record with the updated username and password
-            var newSavedLoginInfo = new LuuMatKhau
-            {
-                TaiKhoan = username,
-                MatKhau = password
-            };
-            db.LuuMatKhaus.Add(newSavedLoginInfo);
-            db.SaveChanges();
         }
+
         public void DeleteSavedLoginInfo()
         {
             // Delete all data from the LuuMatKhau table

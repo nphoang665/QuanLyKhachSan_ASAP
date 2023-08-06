@@ -70,7 +70,6 @@
     <Compile Include="BUS\BUS_QuanLyTaiKhoan.cs" />
     <Compile Include="BUS\BUS_QuenMatKhau.cs" />
     <Compile Include="BUS\BUS_ThongTinPhong.cs" />
-    <Compile Include="BUS\BUS_ThuePhong.cs" />
     <Compile Include="BUS\BUS_TrangChu.cs" />
     <Compile Include="BUS\BUS_TraPhong.cs" />
     <Compile Include="BUS\BUS_VatTu.cs" />
@@ -93,7 +92,6 @@
     <Compile Include="DA\DA_QuenMatKhau.cs" />
     <Compile Include="DA\DA_ThongKe.cs" />
     <Compile Include="DA\DA_ThongTinPhong.cs" />
-    <Compile Include="DA\DA_ThuePhong.cs" />
     <Compile Include="DA\DA_TrangChu.cs" />
     <Compile Include="DA\DA_TraPhong.cs" />
     <Compile Include="DA\DA_VatTu.cs" />
@@ -192,12 +190,6 @@
     <Compile Include="Form\frm_Phong.Designer.cs">
       <DependentUpon>frm_Phong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frm_ThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\frm_ThuePhong.Designer.cs">
-      <DependentUpon>frm_ThuePhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\frm_TraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_Phong.resx">
       <DependentUpon>frm_Phong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\frm_ThuePhong.resx">
-      <DependentUpon>frm_ThuePhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_TraPhong.resx">
       <DependentUpon>frm_TraPhong.cs</DependentUpon>
