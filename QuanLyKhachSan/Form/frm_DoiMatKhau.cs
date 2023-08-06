@@ -51,10 +51,7 @@ namespace QuanLyKhachSan
             bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Text, txt_MatKhauMoi.Text);
             if (doimk)
             {
-                this.Hide();
-                frm_TrangChu frm_tc = new frm_TrangChu(_tk);
-              
-                frm_tc.Close();
+                frm_TrangChu.ViDu.Hide();
                 frm_DangNhap frm = new frm_DangNhap();
                 frm.ShowDialog();
                 this.Close();
