@@ -29,8 +29,8 @@ namespace QuanLyKhachSan
             if (phong.TinhTrang == "Trống")
             {
                 // Open the frm_DatPhong form if the room is available
-                //frm_ frm_DatPhong = new frm_DatPhong(maPhong);
-                //frm_DatPhong.ShowDialog();
+                frm_ThuePhong frm_DatPhong = new frm_ThuePhong(maPhong);
+                frm_DatPhong.ShowDialog();
             }
             else
             {

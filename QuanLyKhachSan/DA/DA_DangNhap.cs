@@ -75,7 +75,6 @@ namespace QuanLyKhachSan.DA
 
         public void DeleteSavedLoginInfo()
         {
-            // Delete all data from the LuuMatKhau table
             db.Database.ExecuteSqlCommand("DELETE FROM LuuMatKhau");
         }
         public bool kiemtraluumk()

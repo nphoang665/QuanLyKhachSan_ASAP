@@ -230,7 +230,7 @@ namespace QuanLyKhachSan
 
         private void btn_ThuePhong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_ThuePhong());
+          
         }
     }
 }
