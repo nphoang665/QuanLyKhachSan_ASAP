@@ -28,9 +28,6 @@ namespace QuanLyKhachSan
             bus.LoadDsKh(dgv_DanhSachKhachHang2);
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
-            var data = bus.layda();
-            cbb_maphong.DataSource = data;
-            cbb_maphong_sua.DataSource = data;
             var data2 = bus.laykhachhang();
             cbo_TenKhachHang.DataSource = data2;
             cbo_TenKhachHang.SelectedIndex = -1;
@@ -75,10 +72,10 @@ namespace QuanLyKhachSan
             //    MessageBox.Show("Đã tồn tại khách hàng");
             //    return;
             //}
-            bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, cbb_maphong.Text,gioitinh);
+            bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text,gioitinh);
             if (!isValid)
                 return;
-            bus.ThemKH(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, cbb_maphong.Text, dtp_ngaythue.Value.Date);
+            bus.ThemKH(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text);
             bus.LoadDsKh(dgv_DanhSachKhachHang2);
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
@@ -90,9 +87,9 @@ namespace QuanLyKhachSan
             DialogResult result = MessageBox.Show("Bạn có muốn xóa khách hàng này không này không?", "Sửa", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                var data = bus.khachthue(txt_makh.Text);
-                if (!data)
-                    return;
+                //var data = bus.khachthue(txt_makh.Text);
+                //if (!data)
+                //    return;
 
                 bus.XoaKH(txt_makh_sua.Text);
             }
@@ -113,17 +110,17 @@ namespace QuanLyKhachSan
             {
                 gioitinh = "Nữ";
             }
-            bool isValid = batloi(txt_makh_sua.Text, txt_tenkh_sua.Text, gioitinh, txt_diachi_sua.Text, txt_sdt_sua.Text, txt_cccd_sua.Text, cbb_maphong_sua.Text);
+            bool isValid = batloi(txt_makh_sua.Text, txt_tenkh_sua.Text, gioitinh, txt_diachi_sua.Text, txt_sdt_sua.Text, txt_cccd_sua.Text);
             if (!isValid)
                 return;
             DialogResult result = MessageBox.Show("Bạn có muốn sủa thông tin khách hàng này không?", "Sửa", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
-                bus.SuaKH(txt_makh_sua.Text, txt_tenkh_sua.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_diachi_sua.Text, txt_sdt_sua.Text, txt_cccd_sua.Text, cbb_maphong_sua.Text, dtp_ngaythue.Value.Date);
+                bus.SuaKH(txt_makh_sua.Text, txt_tenkh_sua.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_diachi_sua.Text, txt_sdt_sua.Text, txt_cccd_sua.Text);
             bus.LoadDsKh(dgv_DanhSachKhachHang2);
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
         }
-        public bool batloi(string makh, string tenkh, string diachi, string sdt, string cccd, string maphong, string gioitinh)
+        public bool batloi(string makh, string tenkh, string diachi, string sdt, string cccd, string gioitinh)
         {
             try
             {

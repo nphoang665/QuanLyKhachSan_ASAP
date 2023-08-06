@@ -12,17 +12,14 @@ namespace QuanLyKhachSan.DA
     using System;
     using System.Collections.Generic;
     
-    public partial class HoaDon
+    public partial class ThuePhong
     {
-        public string MaHoaDon { get; set; }
-        public string MaThanhToan { get; set; }
+        public string MaThuePhong { get; set; }
         public string MaKhachHang { get; set; }
-        public Nullable<System.DateTime> NgayThue { get; set; }
-        public Nullable<System.DateTime> NgayTra { get; set; }
-        public Nullable<int> TongTien { get; set; }
-        public Nullable<int> SoNgay { get; set; }
+        public Nullable<System.DateTime> NgayDat { get; set; }
+        public string MaPhong { get; set; }
     
+        public virtual Phong Phong { get; set; }
         public virtual ThongTinKhachHang ThongTinKhachHang { get; set; }
-        public virtual ThanhToan ThanhToan { get; set; }
     }
 }

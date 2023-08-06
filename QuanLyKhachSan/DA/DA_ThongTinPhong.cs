@@ -12,9 +12,9 @@ namespace QuanLyKhachSan.DA
         public DA_ThongTinPhong() { 
         db= new QuanLyKhachSanEntities();
         }
-        public DatPhong LoadThongtinPhong(string maphong)
+        public ThuePhong LoadThongtinPhong(string maphong)
         {
-            var qr = db.DatPhongs.FirstOrDefault(s => s.MaPhong == maphong);
+            var qr = db.ThuePhongs.FirstOrDefault(s => s.MaPhong == maphong);
             return qr;
 
         }

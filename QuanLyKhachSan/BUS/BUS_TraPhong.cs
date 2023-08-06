@@ -19,7 +19,7 @@ namespace QuanLyKhachSan.BUS
         {
             return da.layHoaDon(mahoadon);
         }
-        public DatPhong layttDatphong(string maphong)
+        public ThuePhong layttDatphong(string maphong)
         {
             return da.layphong(maphong);
         }
@@ -27,9 +27,9 @@ namespace QuanLyKhachSan.BUS
         {
             return da.layTongTienDichVu(maphong);
         }
-        public float TinhTongTien(Phong phong,DatPhong datphong, float tongTienDichVu)
-        {
-            return da.TinhTongTien(phong,datphong, tongTienDichVu);
-        }
+        //public float TinhTongTien(Phong phong,ThuePhong thuePhong, float tongTienDichVu)
+        //{
+        //    return da.TinhTongTien(phong, thuePhong, tongTienDichVu);
+        //}
     }
 }

@@ -26,14 +26,16 @@ namespace QuanLyKhachSan.DA
         }
     
         public virtual DbSet<DangKyDichVu> DangKyDichVus { get; set; }
-        public virtual DbSet<DatPhong> DatPhongs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
+        public virtual DbSet<KhachHangDaThue> KhachHangDaThues { get; set; }
         public virtual DbSet<LuuMatKhau> LuuMatKhaus { get; set; }
         public virtual DbSet<NhanSu> NhanSus { get; set; }
         public virtual DbSet<Phong> Phongs { get; set; }
         public virtual DbSet<QuanLyDichVu> QuanLyDichVus { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<ThanhToan> ThanhToans { get; set; }
         public virtual DbSet<ThongTinKhachHang> ThongTinKhachHangs { get; set; }
+        public virtual DbSet<ThuePhong> ThuePhongs { get; set; }
         public virtual DbSet<VatTu> VatTus { get; set; }
     }
 }

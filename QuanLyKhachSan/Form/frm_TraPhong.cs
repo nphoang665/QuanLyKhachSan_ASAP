@@ -37,19 +37,19 @@ namespace QuanLyKhachSan
             lbl_KQNgayDatPhong.Text = datPhong.NgayDat.ToString();
             lbl_KQGiaPhong.Text = datPhong.Phong.DonGia.ToString();
 
-            var hoaDon = datPhong.HoaDons.FirstOrDefault();
-            if (hoaDon != null)
-            {
-                lbl_kqmahoadon.Text = hoaDon.MaHoaDon;
-                lbl_KQTongTienDichVu.Text = bus.layTongTienDichVu(phong).ToString();
-                lbl_KQSoNgayO.Text = hoaDon.SoNgay.ToString();
-                lbl_KQNgayThanhToan.Text = hoaDon.NgayTra.ToString();
-                float tongTienDichVu = bus.layTongTienDichVu(phong);
-                lbl_KQTongTien.Text = tongTienDichVu.ToString();
+            ////var hoaDon = datPhong..FirstOrDefault();
+            //if (hoaDon != null)
+            //{
+            //    lbl_kqmahoadon.Text = hoaDon.MaHoaDon;
+            //    lbl_KQTongTienDichVu.Text = bus.layTongTienDichVu(phong).ToString();
+            //    lbl_KQSoNgayO.Text = hoaDon.SoNgay.ToString();
+            //    lbl_KQNgayThanhToan.Text = hoaDon.NgayTra.ToString();
+            //    float tongTienDichVu = bus.layTongTienDichVu(phong);
+            //    lbl_KQTongTien.Text = tongTienDichVu.ToString();
 
 
 
-            }
+            //}
         }
 
         private void label1_Click(object sender, EventArgs e)

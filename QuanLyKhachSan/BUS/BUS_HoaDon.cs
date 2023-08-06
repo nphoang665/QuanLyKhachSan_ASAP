@@ -15,28 +15,6 @@ namespace QuanLyKhachSan.BUS
         {
             da = new DA_HoaDon();
         }
-        public void load(DataGridView dtgv)
-        {
-            da.LayHoaDon(dtgv);
-        }
-        public void themHoaDon(string madatphong, string MaHoaDon, string MaNhanVien, string MaKhachHang, DateTime ngaydat, int SoNgay, int TongTien, DateTime NgayTra) { 
-            da.ThemHoaDon(madatphong,MaHoaDon,MaNhanVien,MaKhachHang,ngaydat,SoNgay,TongTien,NgayTra);
-        }
-        public DatPhong laydata(string madatphong)
-        {
-            return da.laydatphong(madatphong);
-        }
-       public List<string> laydata()
-        {
-            return da.laydata();
-        }
-        public Phong laytien(string maphong)
-        {
-            return da.laytienphong(maphong);
-        }
-        public bool checkkhoa(string madatphong)
-        {
-            return da.checkkhoa(madatphong);
-        }
+       
     }
 }

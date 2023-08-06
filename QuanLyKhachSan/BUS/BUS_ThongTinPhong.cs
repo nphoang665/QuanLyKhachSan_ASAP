@@ -14,7 +14,7 @@ namespace QuanLyKhachSan.BUS
         public BUS_ThongTinPhong() { 
         da=new DA_ThongTinPhong();
         }
-        public DatPhong LoadThongTinPhong(string maphong)
+        public ThuePhong LoadThongTinPhong(string maphong)
         {
           return da.LoadThongtinPhong(maphong);
 

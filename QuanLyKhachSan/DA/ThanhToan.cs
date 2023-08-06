@@ -12,27 +12,25 @@ namespace QuanLyKhachSan.DA
     using System;
     using System.Collections.Generic;
     
-    public partial class DatPhong
+    public partial class ThanhToan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DatPhong()
+        public ThanhToan()
         {
             this.HoaDons = new HashSet<HoaDon>();
         }
     
-        public string MaDatPhong { get; set; }
+        public string MaThanhToan { get; set; }
         public string MaKhachHang { get; set; }
-        public Nullable<System.DateTime> NgayDat { get; set; }
-        public Nullable<System.DateTime> NgayTra { get; set; }
-        public Nullable<int> SoLuongKhachHang { get; set; }
-        public Nullable<double> TienCoc { get; set; }
-        public string MaNhanVien { get; set; }
         public string MaPhong { get; set; }
+        public Nullable<System.DateTime> NgayThue { get; set; }
+        public Nullable<System.DateTime> NgayTra { get; set; }
+        public Nullable<double> TongTienDichVu { get; set; }
+        public Nullable<double> TongTienThanhToan { get; set; }
     
-        public virtual ThongTinKhachHang ThongTinKhachHang { get; set; }
-        public virtual NhanSu NhanSu { get; set; }
-        public virtual Phong Phong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual Phong Phong { get; set; }
+        public virtual ThongTinKhachHang ThongTinKhachHang { get; set; }
     }
 }

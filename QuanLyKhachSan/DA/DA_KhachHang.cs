@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
@@ -26,9 +27,7 @@ namespace QuanLyKhachSan.DA
                 s.NgaySinh,
                 s.DiaChi,
                 s.SoDienThoai,
-                s.CMND,
-                s.MaPhong,
-                s.NgayThue
+                s.CMND
 
             }).ToList();
             foreach (var kh in ds)
@@ -44,12 +43,9 @@ namespace QuanLyKhachSan.DA
                 row.Cells[4].Value = kh.DiaChi;
                 row.Cells[5].Value = kh.SoDienThoai;
                 row.Cells[6].Value = kh.CMND;
-                row.Cells[7].Value = kh.MaPhong;
-                row.Cells[8].Value = kh.NgayThue;
-
             }
         }
-        public void ThemKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd, string maphong, DateTime ngaythue)
+        public void ThemKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string cccd)
         {
 
             var kh = new ThongTinKhachHang
@@ -60,14 +56,12 @@ namespace QuanLyKhachSan.DA
                 NgaySinh = ngaysinh,
                 DiaChi = diachi,
                 SoDienThoai = sdt,
-                CMND = ccccd,
-                MaPhong = maphong,
-                NgayThue = ngaythue
+                CMND = cccd
             };
             db.ThongTinKhachHangs.Add(kh);
             db.SaveChanges();
         }
-        public void SuaKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd, string maphong, DateTime ngaythue)
+        public void SuaKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd)
         {
             var kh = db.ThongTinKhachHangs.FirstOrDefault(a => a.MaKhachHang == makh);
             if (kh != null)
@@ -78,8 +72,7 @@ namespace QuanLyKhachSan.DA
                 kh.DiaChi = diachi;
                 kh.SoDienThoai = sdt;
                 kh.CMND = ccccd;
-                kh.MaPhong = maphong;
-                kh.NgayThue = ngaythue;
+               
                 db.SaveChanges();
             }
         }
@@ -109,8 +102,6 @@ namespace QuanLyKhachSan.DA
                 row.Cells[4].Value = kh.DiaChi;
                 row.Cells[5].Value = kh.SoDienThoai;
                 row.Cells[6].Value = kh.CMND;
-                row.Cells[7].Value = kh.MaPhong;
-                row.Cells[8].Value = kh.NgayThue;
 
             }
 
@@ -133,8 +124,6 @@ namespace QuanLyKhachSan.DA
                 row.Cells[4].Value = kh.DiaChi;
                 row.Cells[5].Value = kh.SoDienThoai;
                 row.Cells[6].Value = kh.CMND;
-                row.Cells[7].Value = kh.MaPhong;
-                row.Cells[8].Value = kh.NgayThue;
 
             }
 
@@ -156,37 +145,29 @@ namespace QuanLyKhachSan.DA
                 row.Cells[4].Value = kh.DiaChi;
                 row.Cells[5].Value = kh.SoDienThoai;
                 row.Cells[6].Value = kh.CMND;
-                row.Cells[7].Value = kh.MaPhong;
-                row.Cells[8].Value = kh.NgayThue;
 
             }
         }
 
-        public List<string> layda()
-        {
-            
-                var data = db.ThongTinKhachHangs.Select(x => x.MaPhong).ToList();
-                return data;
-            
-        }
+ 
         public List<string> laytenkh()
         {
             var data=db.ThongTinKhachHangs.Select(x => x.TenKhachHang).ToList();
             return data;
         }
-        public bool khdatphong(string mkh)
-        {
-            var data = db.DatPhongs.Select(x => x.MaKhachHang==mkh);
-            if (data != null)
-            {
-                MessageBox.Show("Khách vẫn còn đặt phòng");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        //public bool khdatphong(string mkh)
+        //{
+        //    var data = db.DatPhongs.Select(x => x.MaKhachHang==mkh);
+        //    if (data != null)
+        //    {
+        //        MessageBox.Show("Khách vẫn còn đặt phòng");
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
         //public bool checkkhoa(string makh)
         //{
         //    var data = db.ThongTinKhachHangs.FirstOrDefault(x => x.MaKhachHang == makh);

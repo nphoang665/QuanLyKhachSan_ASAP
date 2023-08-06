@@ -30,10 +30,6 @@
         {
             this.tabControl_KhachHang = new System.Windows.Forms.TabControl();
             this.tabPage_ThemKhachHang = new System.Windows.Forms.TabPage();
-            this.cbb_maphong = new System.Windows.Forms.ComboBox();
-            this.dtp_ngaythue = new System.Windows.Forms.DateTimePicker();
-            this.lbl_maphong = new System.Windows.Forms.Label();
-            this.lbl_ngaythue = new System.Windows.Forms.Label();
             this.txt_makh = new System.Windows.Forms.TextBox();
             this.lbl_makh = new System.Windows.Forms.Label();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -138,10 +134,6 @@
             // 
             this.tabPage_ThemKhachHang.BackColor = System.Drawing.Color.White;
             this.tabPage_ThemKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_ThemKhachHang.Controls.Add(this.cbb_maphong);
-            this.tabPage_ThemKhachHang.Controls.Add(this.dtp_ngaythue);
-            this.tabPage_ThemKhachHang.Controls.Add(this.lbl_maphong);
-            this.tabPage_ThemKhachHang.Controls.Add(this.lbl_ngaythue);
             this.tabPage_ThemKhachHang.Controls.Add(this.txt_makh);
             this.tabPage_ThemKhachHang.Controls.Add(this.lbl_makh);
             this.tabPage_ThemKhachHang.Controls.Add(this.dtp_NgaySinh);
@@ -166,44 +158,6 @@
             this.tabPage_ThemKhachHang.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_ThemKhachHang.TabIndex = 0;
             this.tabPage_ThemKhachHang.Text = "Thêm khách hàng";
-            // 
-            // cbb_maphong
-            // 
-            this.cbb_maphong.FormattingEnabled = true;
-            this.cbb_maphong.Location = new System.Drawing.Point(553, 151);
-            this.cbb_maphong.Name = "cbb_maphong";
-            this.cbb_maphong.Size = new System.Drawing.Size(193, 25);
-            this.cbb_maphong.TabIndex = 46;
-            // 
-            // dtp_ngaythue
-            // 
-            this.dtp_ngaythue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_ngaythue.Location = new System.Drawing.Point(870, 35);
-            this.dtp_ngaythue.Name = "dtp_ngaythue";
-            this.dtp_ngaythue.Size = new System.Drawing.Size(193, 25);
-            this.dtp_ngaythue.TabIndex = 45;
-            // 
-            // lbl_maphong
-            // 
-            this.lbl_maphong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_maphong.AutoSize = true;
-            this.lbl_maphong.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_maphong.Location = new System.Drawing.Point(410, 155);
-            this.lbl_maphong.Name = "lbl_maphong";
-            this.lbl_maphong.Size = new System.Drawing.Size(80, 20);
-            this.lbl_maphong.TabIndex = 44;
-            this.lbl_maphong.Text = "Mã Phòng";
-            // 
-            // lbl_ngaythue
-            // 
-            this.lbl_ngaythue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_ngaythue.AutoSize = true;
-            this.lbl_ngaythue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ngaythue.Location = new System.Drawing.Point(775, 39);
-            this.lbl_ngaythue.Name = "lbl_ngaythue";
-            this.lbl_ngaythue.Size = new System.Drawing.Size(89, 20);
-            this.lbl_ngaythue.TabIndex = 43;
-            this.lbl_ngaythue.Text = "Ngày Thuê:";
             // 
             // txt_makh
             // 
@@ -1045,10 +999,6 @@
         private System.Windows.Forms.TabPage tabPage_ThemKhachHang;
         private System.Windows.Forms.TabPage tabPage_DanhSachKhachHang;
         private System.Windows.Forms.TabPage tabPage_Sua_XoaKhachHang;
-        private System.Windows.Forms.ComboBox cbb_maphong;
-        private System.Windows.Forms.DateTimePicker dtp_ngaythue;
-        private System.Windows.Forms.Label lbl_maphong;
-        private System.Windows.Forms.Label lbl_ngaythue;
         private System.Windows.Forms.TextBox txt_makh;
         private System.Windows.Forms.Label lbl_makh;
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;

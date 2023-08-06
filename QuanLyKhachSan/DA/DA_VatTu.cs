@@ -46,7 +46,7 @@ namespace QuanLyKhachSan.DA
             new
             {
                 s.MaNhanSu,
-                s.TenNhanVien
+                s.TenNhanSu
             }
             ).ToList();
             return ds;

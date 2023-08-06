@@ -19,13 +19,13 @@ namespace QuanLyKhachSan.BUS
         {
             da.LayKhachHang(dgv);
         }
-        public void ThemKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd, string maphong, DateTime ngaythue)
+        public void ThemKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd)
         {
-            da.ThemKH(makh, tenkh, gioitinh, ngaysinh,diachi, sdt, ccccd, maphong, ngaythue);
+            da.ThemKH(makh, tenkh, gioitinh, ngaysinh,diachi, sdt, ccccd);
         }
-        public void SuaKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd, string maphong, DateTime ngaythue)
+        public void SuaKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd)
         {
-            da.SuaKH(makh, tenkh, gioitinh, ngaysinh, diachi, sdt, ccccd, maphong, ngaythue);
+            da.SuaKH(makh, tenkh, gioitinh, ngaysinh, diachi, sdt, ccccd);
         }
         public void XoaKH(string makh)
         {
@@ -43,18 +43,14 @@ namespace QuanLyKhachSan.BUS
         {
             da.TimTheocccdKH(cccd, dtgv);
         }
-        public List<string> layda()
-        {
-            return da.layda();
-        }
         public List<string> laykhachhang()
         {
             return da.laytenkh();
         }
-        public bool khachthue(string mkh)
-        {
-          return  da.khdatphong(mkh);
-        }
+        //public bool khachthue(string mkh)
+        //{
+        //  return  da.khdatphong(mkh);
+        //}
         //public bool ktkhoa(string makh)
         //{
         //   return da.checkkhoa(makh);

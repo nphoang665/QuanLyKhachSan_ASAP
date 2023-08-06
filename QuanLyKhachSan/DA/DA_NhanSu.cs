@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DA
             var ds = db.NhanSus.Select(s => new
             {
                 s.MaNhanSu,
-                s.TenNhanVien,
+                s.TenNhanSu,
                 s.GioiTinh,
                 s.DiaChi,
                 s.SoDienThoai,
@@ -33,7 +33,7 @@ namespace QuanLyKhachSan.DA
                 int ViTri = dtgv.Rows.Add();
                 DataGridViewRow row = dtgv.Rows[ViTri];
                 row.Cells[0].Value = ns.MaNhanSu;
-                row.Cells[1].Value = ns.TenNhanVien;
+                row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
                 row.Cells[4].Value = ns.NgaySinh;
@@ -49,7 +49,7 @@ namespace QuanLyKhachSan.DA
             var nhansu = new NhanSu
             {
                 MaNhanSu = mans,
-                TenNhanVien = tenvn,
+                TenNhanSu = tenvn,
                 GioiTinh = gioitinh,
                 DiaChi = diachi,
                 SoDienThoai = sdt,
@@ -65,7 +65,7 @@ namespace QuanLyKhachSan.DA
             var nhanSu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
             if (nhanSu != null)
             {
-                nhanSu.TenNhanVien = tenvn;
+                nhanSu.TenNhanSu = tenvn;
                 nhanSu.GioiTinh = gioitinh;
                 nhanSu.DiaChi = diachi;
                 nhanSu.SoDienThoai = sdt;
@@ -86,7 +86,7 @@ namespace QuanLyKhachSan.DA
         }
         public void TimTheoTenNhanSu(string hoten, DataGridView dtgv)
         {
-            var ds = db.NhanSus.Where(ns => ns.TenNhanVien.Contains(hoten)).ToList();
+            var ds = db.NhanSus.Where(ns => ns. TenNhanSu.Contains(hoten)).ToList();
             dtgv.Rows.Clear();
             foreach (var ns in ds)
             {
@@ -95,7 +95,7 @@ namespace QuanLyKhachSan.DA
                 int ViTri = dtgv.Rows.Add();
                 DataGridViewRow row = dtgv.Rows[ViTri];
                 row.Cells[0].Value = ns.MaNhanSu;
-                row.Cells[1].Value = ns.TenNhanVien;
+                row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
                 row.Cells[4].Value = ns.NgaySinh;
@@ -117,7 +117,7 @@ namespace QuanLyKhachSan.DA
                 int ViTri = dtgv.Rows.Add();
                 DataGridViewRow row = dtgv.Rows[ViTri];
                 row.Cells[0].Value = ns.MaNhanSu;
-                row.Cells[1].Value = ns.TenNhanVien;
+                row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
                 row.Cells[4].Value = ns.NgaySinh;
@@ -139,7 +139,7 @@ namespace QuanLyKhachSan.DA
                 int ViTri = dtgv.Rows.Add();
                 DataGridViewRow row = dtgv.Rows[ViTri];
                 row.Cells[0].Value = ns.MaNhanSu;
-                row.Cells[1].Value = ns.TenNhanVien;
+                row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
                 row.Cells[4].Value = ns.NgaySinh;
@@ -161,7 +161,7 @@ namespace QuanLyKhachSan.DA
                 int ViTri = dtgv.Rows.Add();
                 DataGridViewRow row = dtgv.Rows[ViTri];
                 row.Cells[0].Value = ns.MaNhanSu;
-                row.Cells[1].Value = ns.TenNhanVien;
+                row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
                 row.Cells[4].Value = ns.NgaySinh;

@@ -16,8 +16,8 @@ namespace QuanLyKhachSan.BUS
         }
         public dynamic LayTen(string tk)
         {
-         string kq=   da.LayTenTk(tk);
-            
+            string kq = da.LayTenTk(tk);
+
             return kq;
 
         }

@@ -109,7 +109,7 @@ namespace QuanLyKhachSan.DA
 
         public bool KiemTraPhongDaCoKhachThue(string maPhong)
         {
-            return db.DatPhongs.Any(d => d.MaPhong == maPhong);
+            return db.ThuePhongs.Any(d => d.MaPhong == maPhong);
         }
     }
 }

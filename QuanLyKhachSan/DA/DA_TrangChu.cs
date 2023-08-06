@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DA
         {
            var qr = db.TaiKhoans.FirstOrDefault(x => x.TenDangNhap ==tk);
             var qrnhasu = db.NhanSus.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
-            return qrnhasu.TenNhanVien;
+            return qrnhasu.TenNhanSu;
         }
         public string LayChucVu(string tk)
         {

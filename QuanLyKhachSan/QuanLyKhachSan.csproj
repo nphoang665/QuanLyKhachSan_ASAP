@@ -77,9 +77,6 @@
     <Compile Include="DA\DangKyDichVu.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DA\DatPhong.cs">
-      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="DA\DA_DangNhap.cs" />
     <Compile Include="DA\DA_DichVu.cs" />
     <Compile Include="DA\DA_DoiMatKhau.cs" />
@@ -98,6 +95,9 @@
     <Compile Include="DA\DTO_DoanhThuTheoNgay.cs" />
     <Compile Include="DA\DTO_DoanhThuTheoThang.cs" />
     <Compile Include="DA\HoaDon.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\KhachHangDaThue.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DA\LuuMatKhau.cs">
@@ -130,7 +130,13 @@
     <Compile Include="DA\TaiKhoan.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DA\ThanhToan.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DA\ThongTinKhachHang.cs">
+      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\ThuePhong.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DA\VatTu.cs">

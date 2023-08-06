@@ -17,14 +17,12 @@ namespace QuanLyKhachSan.DA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanSu()
         {
-            this.DatPhongs = new HashSet<DatPhong>();
-            this.HoaDons = new HashSet<HoaDon>();
             this.TaiKhoans = new HashSet<TaiKhoan>();
             this.VatTus = new HashSet<VatTu>();
         }
     
         public string MaNhanSu { get; set; }
-        public string TenNhanVien { get; set; }
+        public string TenNhanSu { get; set; }
         public string GioiTinh { get; set; }
         public string DiaChi { get; set; }
         public string SoDienThoai { get; set; }
@@ -32,10 +30,6 @@ namespace QuanLyKhachSan.DA
         public Nullable<System.DateTime> NgayVaoLam { get; set; }
         public string ChucVu { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DatPhong> DatPhongs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
