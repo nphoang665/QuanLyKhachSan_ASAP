@@ -90,7 +90,9 @@ namespace QuanLyKhachSan
             if (DialogResult.Yes == result)
             {
                 timer1.Stop();
-                this.Close();
+                this.Hide();
+                frm_DangNhap frm_DangNhap = new frm_DangNhap();
+                frm_DangNhap.ShowDialog();
             }
         }
 
@@ -148,7 +150,9 @@ namespace QuanLyKhachSan
             if (DialogResult.Yes == result)
             {
                 timer1.Stop();
-                this.Close();
+                this.Hide();
+                frm_DangNhap frm_DangNhap = new frm_DangNhap();
+                frm_DangNhap.ShowDialog();
             }
         }
 
@@ -232,29 +236,6 @@ namespace QuanLyKhachSan
         private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void frm_TrangChu_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    timer1.Stop();
-
-                    this.Hide();
-
-                    frm_DangNhap dangNhapForm = new frm_DangNhap();
-
-                    dangNhapForm.ShowDialog();
-                    e.Cancel = true;
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
         }
     }
 }

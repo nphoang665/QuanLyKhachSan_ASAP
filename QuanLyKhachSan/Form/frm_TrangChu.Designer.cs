@@ -162,7 +162,7 @@
             this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
             this.btn_HoaDon.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bill_35;
             this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDon.Location = new System.Drawing.Point(6, 475);
+            this.btn_HoaDon.Location = new System.Drawing.Point(12, 417);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Size = new System.Drawing.Size(239, 52);
             this.btn_HoaDon.TabIndex = 6;
@@ -188,7 +188,7 @@
             this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_NhanVien.Image = global::QuanLyKhachSan.Properties.Resources.icons8_staff_35;
             this.btn_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NhanVien.Location = new System.Drawing.Point(6, 417);
+            this.btn_NhanVien.Location = new System.Drawing.Point(12, 359);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(239, 52);
             this.btn_NhanVien.TabIndex = 5;
@@ -206,7 +206,7 @@
             this.btn_TaiKhoan.ForeColor = System.Drawing.Color.White;
             this.btn_TaiKhoan.Image = global::QuanLyKhachSan.Properties.Resources.icons8_account_35;
             this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(6, 533);
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(12, 475);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             this.btn_TaiKhoan.Size = new System.Drawing.Size(239, 52);
             this.btn_TaiKhoan.TabIndex = 7;
@@ -224,7 +224,7 @@
             this.btn_KhachHang.ForeColor = System.Drawing.Color.White;
             this.btn_KhachHang.Image = global::QuanLyKhachSan.Properties.Resources.icons8_client_35;
             this.btn_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_KhachHang.Location = new System.Drawing.Point(6, 359);
+            this.btn_KhachHang.Location = new System.Drawing.Point(12, 301);
             this.btn_KhachHang.Name = "btn_KhachHang";
             this.btn_KhachHang.Size = new System.Drawing.Size(239, 52);
             this.btn_KhachHang.TabIndex = 4;
@@ -355,7 +355,7 @@
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
@@ -580,7 +580,6 @@
             this.Name = "frm_TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRANG CHỦ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_TrangChu_FormClosing);
             this.Load += new System.EventHandler(this.frm_TrangChu_Load);
             this.pnl_left.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
