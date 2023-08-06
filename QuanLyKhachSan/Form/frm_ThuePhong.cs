@@ -63,54 +63,20 @@ namespace QuanLyKhachSan
                 lstv_ChiTiet.Items.Add(new ListViewItem("Giới tính: " + kh.GioiTinh));
                 lstv_ChiTiet.Items.Add(new ListViewItem("Địa chỉ: " + kh.DiaChi));
                 lstv_ChiTiet.Items.Add(new ListViewItem("Số điện thoại: " + kh.SoDienThoai));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày sinh: " + kh.NgaySinh.ToString("dd/MM/yyyy")));
-                if (txt_TienCoc.Text == "")
-                {
-                    lstv_ChiTiet.Items.Add(new ListViewItem("Tiền cọc: " + 0));
-                }
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày đặt: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy")));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày trả: " + dtp_NgayTra.Value.ToString("dd/MM/yyyy")));
-
-            }
-        }
-
-        private void txt_TienCoc_TextChanged(object sender, EventArgs e)
-        {
-            var item = lstv_ChiTiet.FindItemWithText("Tiền cọc");
-            if (item != null)
-            {
-                item.Text = "Tiền cọc: " + txt_TienCoc.Text;
-            }
-            else
-            {
-                lstv_ChiTiet.Items.Add(new ListViewItem("Tiền cọc: " + txt_TienCoc.Text));
+                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày sinh: " + kh.NgaySinh.ToString("dd/MM/yyyy")));             
             }
         }
 
         private void dtp_NgayThue_ValueChanged(object sender, EventArgs e)
         {
-            var item = lstv_ChiTiet.FindItemWithText("Ngày đặt");
+            var item = lstv_ChiTiet.FindItemWithText("Ngày thuê");
             if (item != null)
             {
                 item.Text = "Ngày đặt: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy");
             }
             else
             {
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày đặt: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy")));
-            }
-        }
-
-        private void dtp_NgayTra_ValueChanged(object sender, EventArgs e)
-        {
-
-            var item = lstv_ChiTiet.FindItemWithText("Ngày trả");
-            if (item != null)
-            {
-                item.Text = "Ngày trả: " + dtp_NgayTra.Value.ToString("dd/MM/yyyy");
-            }
-            else
-            {
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày trả: " + dtp_NgayTra.Value.ToString("dd/MM/yyyy")));
+                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày thuê: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy")));
             }
         }
 
