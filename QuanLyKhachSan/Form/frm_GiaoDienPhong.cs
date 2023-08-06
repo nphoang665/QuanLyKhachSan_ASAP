@@ -27,7 +27,6 @@ namespace QuanLyKhachSan
             frm_ThongTinPhong frm_ThongTinPhong = new frm_ThongTinPhong (maPhong);
             frm_ThongTinPhong.ShowDialog();
             var doianh = bus.layTrangThai(maPhong);
-            string tinhTrang = doianh.TinhTrang;
            
 
         }

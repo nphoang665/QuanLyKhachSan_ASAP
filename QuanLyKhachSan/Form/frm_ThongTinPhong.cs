@@ -40,11 +40,11 @@ namespace QuanLyKhachSan
         private void frm_ThongTinPhong_Load(object sender, EventArgs e)
         {
             lbl_Phong.Text = maPhong;
-            var tt= bus.LoadThongTinPhong(maPhong);
+            var tt = bus.LoadThongTinPhong(maPhong);
             maKhachHang = tt.MaKhachHang;
             
             lbl_KQ_NgayThue.Text = tt.NgayDat?.ToShortDateString();
-            var thongtinkhachhang= bus.loadthongtinkhachhang(tt.MaKhachHang);
+            var thongtinkhachhang = bus.loadthongtinkhachhang(tt.MaKhachHang);
             lbl_KQTenKhachHang.Text = thongtinkhachhang.TenKhachHang;
             TenKhachHang = thongtinkhachhang.TenKhachHang;
             lbl_KQCMND.Text = thongtinkhachhang.CMND;

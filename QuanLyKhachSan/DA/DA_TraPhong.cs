@@ -14,9 +14,9 @@ namespace QuanLyKhachSan.DA
         {
             db = new QuanLyKhachSanEntities();
         }
-        public HoaDon layHoaDon(string mahoadon)
+        public HoaDon layHoaDon(string  makhachhang)
         {
-            return db.HoaDons.FirstOrDefault(s => s.MaHoaDon == mahoadon);
+            return db.HoaDons.FirstOrDefault(s => s.MaKhachHang == makhachhang);
         }
         public ThuePhong layphong(string maphong)
         {
@@ -32,15 +32,7 @@ namespace QuanLyKhachSan.DA
             }
             return tongTienDichVu;
         }
-        //public float TinhTongTien(Phong phong,ThuePhong datphong, float tongTienDichVu)
-        //{
-        //    int soNgayO = (datphong.NgayTra - datphong.NgayDat)?.Days ?? 0;
-        //    float giaPhong = (float)phong.DonGia;
-        //    float tongTien = (soNgayO * giaPhong) + tongTienDichVu;
-
-            
-        //    return tongTien;
-        //}
+      
 
 
     }

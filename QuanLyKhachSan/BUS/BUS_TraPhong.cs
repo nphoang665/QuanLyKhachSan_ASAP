@@ -15,9 +15,9 @@ namespace QuanLyKhachSan.BUS
         {
             da = new DA_TraPhong();
         }
-        public HoaDon LayTtTraPhong(string mahoadon)
+        public HoaDon LayTtTraPhong(string makhachhang)
         {
-            return da.layHoaDon(mahoadon);
+            return da.layHoaDon(makhachhang);
         }
         public ThuePhong layttDatphong(string maphong)
         {
@@ -27,9 +27,6 @@ namespace QuanLyKhachSan.BUS
         {
             return da.layTongTienDichVu(maphong);
         }
-        //public float TinhTongTien(Phong phong,ThuePhong thuePhong, float tongTienDichVu)
-        //{
-        //    return da.TinhTongTien(phong, thuePhong, tongTienDichVu);
-        //}
+      
     }
 }
