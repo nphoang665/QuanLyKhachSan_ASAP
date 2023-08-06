@@ -30,8 +30,6 @@
         {
             this.tabControl_NhanVien = new System.Windows.Forms.TabControl();
             this.tabPage_ThemNhanVien = new System.Windows.Forms.TabPage();
-            this.tabPage_TimNhanVien = new System.Windows.Forms.TabPage();
-            this.tabPage_Sua_XoaNhanVien = new System.Windows.Forms.TabPage();
             this.txt_chucvu1 = new System.Windows.Forms.TextBox();
             this.lbl_chuvu1 = new System.Windows.Forms.Label();
             this.txt_manv_them = new System.Windows.Forms.TextBox();
@@ -60,6 +58,7 @@
             this.btn_Them = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage_TimNhanVien = new System.Windows.Forms.TabPage();
             this.btn_load = new System.Windows.Forms.Button();
             this.dgv1_NhanSu = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +79,7 @@
             this.lbl_chucvu = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.tabPage_Sua_XoaNhanVien = new System.Windows.Forms.TabPage();
             this.dgv2_NhanSu = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,10 +111,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tabControl_NhanVien.SuspendLayout();
             this.tabPage_ThemNhanVien.SuspendLayout();
-            this.tabPage_TimNhanVien.SuspendLayout();
-            this.tabPage_Sua_XoaNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhansu)).BeginInit();
+            this.tabPage_TimNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1_NhanSu)).BeginInit();
+            this.tabPage_Sua_XoaNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2_NhanSu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,62 +161,6 @@
             this.tabPage_ThemNhanVien.Text = "Thêm nhân viên";
             this.tabPage_ThemNhanVien.UseVisualStyleBackColor = true;
             // 
-            // tabPage_TimNhanVien
-            // 
-            this.tabPage_TimNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_TimNhanVien.Controls.Add(this.btn_load);
-            this.tabPage_TimNhanVien.Controls.Add(this.dgv1_NhanSu);
-            this.tabPage_TimNhanVien.Controls.Add(this.txt_sdt_tim);
-            this.tabPage_TimNhanVien.Controls.Add(this.lbl_sdt);
-            this.tabPage_TimNhanVien.Controls.Add(this.rdb_nutim);
-            this.tabPage_TimNhanVien.Controls.Add(this.rdb_namtim);
-            this.tabPage_TimNhanVien.Controls.Add(this.label8);
-            this.tabPage_TimNhanVien.Controls.Add(this.txt_timchuvu);
-            this.tabPage_TimNhanVien.Controls.Add(this.txt_timten);
-            this.tabPage_TimNhanVien.Controls.Add(this.lbl_chucvu);
-            this.tabPage_TimNhanVien.Controls.Add(this.label10);
-            this.tabPage_TimNhanVien.Controls.Add(this.label9);
-            this.tabPage_TimNhanVien.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_TimNhanVien.Name = "tabPage_TimNhanVien";
-            this.tabPage_TimNhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TimNhanVien.Size = new System.Drawing.Size(1106, 481);
-            this.tabPage_TimNhanVien.TabIndex = 1;
-            this.tabPage_TimNhanVien.Text = "Danh sách nhân viên";
-            this.tabPage_TimNhanVien.UseVisualStyleBackColor = true;
-            this.tabPage_TimNhanVien.Click += new System.EventHandler(this.tabPage_TimNhanVien_Click);
-            // 
-            // tabPage_Sua_XoaNhanVien
-            // 
-            this.tabPage_Sua_XoaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dgv2_NhanSu);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_chucvu2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.lbl_chuvu);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_manv_sua);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.lbl_manv_sua);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.btn_Xoa);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.btn_Sua);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dtp_NgayVaoLam2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label12);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dtp_NgaySinh2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label13);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.rda_Nu2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.rda_Nam2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label14);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_SoDienThoai2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_DiaChi2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_TenNhanVien2);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label16);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label17);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label18);
-            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label19);
-            this.tabPage_Sua_XoaNhanVien.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_Sua_XoaNhanVien.Name = "tabPage_Sua_XoaNhanVien";
-            this.tabPage_Sua_XoaNhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Sua_XoaNhanVien.Size = new System.Drawing.Size(1106, 481);
-            this.tabPage_Sua_XoaNhanVien.TabIndex = 2;
-            this.tabPage_Sua_XoaNhanVien.Text = "Sửa, Xóa nhân viên:";
-            this.tabPage_Sua_XoaNhanVien.UseVisualStyleBackColor = true;
-            // 
             // txt_chucvu1
             // 
             this.txt_chucvu1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -261,6 +205,8 @@
             // dtp_NgayVaoLam
             // 
             this.dtp_NgayVaoLam.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_NgayVaoLam.CustomFormat = "dd/MMM/yyyy";
+            this.dtp_NgayVaoLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_NgayVaoLam.Location = new System.Drawing.Point(684, 91);
             this.dtp_NgayVaoLam.Name = "dtp_NgayVaoLam";
             this.dtp_NgayVaoLam.Size = new System.Drawing.Size(193, 25);
@@ -280,6 +226,8 @@
             // dtp_NgaySinh
             // 
             this.dtp_NgaySinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_NgaySinh.CustomFormat = "dd/MMM/yyyy";
+            this.dtp_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_NgaySinh.Location = new System.Drawing.Point(684, 51);
             this.dtp_NgaySinh.Name = "dtp_NgaySinh";
             this.dtp_NgaySinh.Size = new System.Drawing.Size(193, 25);
@@ -493,6 +441,30 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "THÊM NHÂN VIÊN:";
             // 
+            // tabPage_TimNhanVien
+            // 
+            this.tabPage_TimNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_TimNhanVien.Controls.Add(this.btn_load);
+            this.tabPage_TimNhanVien.Controls.Add(this.dgv1_NhanSu);
+            this.tabPage_TimNhanVien.Controls.Add(this.txt_sdt_tim);
+            this.tabPage_TimNhanVien.Controls.Add(this.lbl_sdt);
+            this.tabPage_TimNhanVien.Controls.Add(this.rdb_nutim);
+            this.tabPage_TimNhanVien.Controls.Add(this.rdb_namtim);
+            this.tabPage_TimNhanVien.Controls.Add(this.label8);
+            this.tabPage_TimNhanVien.Controls.Add(this.txt_timchuvu);
+            this.tabPage_TimNhanVien.Controls.Add(this.txt_timten);
+            this.tabPage_TimNhanVien.Controls.Add(this.lbl_chucvu);
+            this.tabPage_TimNhanVien.Controls.Add(this.label10);
+            this.tabPage_TimNhanVien.Controls.Add(this.label9);
+            this.tabPage_TimNhanVien.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_TimNhanVien.Name = "tabPage_TimNhanVien";
+            this.tabPage_TimNhanVien.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_TimNhanVien.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_TimNhanVien.TabIndex = 1;
+            this.tabPage_TimNhanVien.Text = "Danh sách nhân viên";
+            this.tabPage_TimNhanVien.UseVisualStyleBackColor = true;
+            this.tabPage_TimNhanVien.Click += new System.EventHandler(this.tabPage_TimNhanVien_Click);
+            // 
             // btn_load
             // 
             this.btn_load.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -690,6 +662,38 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "Tên nhân viên:";
             // 
+            // tabPage_Sua_XoaNhanVien
+            // 
+            this.tabPage_Sua_XoaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dgv2_NhanSu);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_chucvu2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.lbl_chuvu);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_manv_sua);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.lbl_manv_sua);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.btn_Xoa);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.btn_Sua);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dtp_NgayVaoLam2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label12);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dtp_NgaySinh2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label13);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.rda_Nu2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.rda_Nam2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label14);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_SoDienThoai2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_DiaChi2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_TenNhanVien2);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label16);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label17);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label18);
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.label19);
+            this.tabPage_Sua_XoaNhanVien.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_Sua_XoaNhanVien.Name = "tabPage_Sua_XoaNhanVien";
+            this.tabPage_Sua_XoaNhanVien.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Sua_XoaNhanVien.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_Sua_XoaNhanVien.TabIndex = 2;
+            this.tabPage_Sua_XoaNhanVien.Text = "Sửa, Xóa nhân viên:";
+            this.tabPage_Sua_XoaNhanVien.UseVisualStyleBackColor = true;
+            // 
             // dgv2_NhanSu
             // 
             this.dgv2_NhanSu.AllowUserToAddRows = false;
@@ -840,6 +844,8 @@
             // dtp_NgayVaoLam2
             // 
             this.dtp_NgayVaoLam2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_NgayVaoLam2.CustomFormat = "dd/MMM/yyyy";
+            this.dtp_NgayVaoLam2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_NgayVaoLam2.Location = new System.Drawing.Point(668, 51);
             this.dtp_NgayVaoLam2.Name = "dtp_NgayVaoLam2";
             this.dtp_NgayVaoLam2.Size = new System.Drawing.Size(193, 25);
@@ -859,6 +865,8 @@
             // dtp_NgaySinh2
             // 
             this.dtp_NgaySinh2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_NgaySinh2.CustomFormat = "dd/MMM/yyyy";
+            this.dtp_NgaySinh2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_NgaySinh2.Location = new System.Drawing.Point(235, 176);
             this.dtp_NgaySinh2.Name = "dtp_NgaySinh2";
             this.dtp_NgaySinh2.Size = new System.Drawing.Size(193, 25);
@@ -1000,12 +1008,12 @@
             this.tabControl_NhanVien.ResumeLayout(false);
             this.tabPage_ThemNhanVien.ResumeLayout(false);
             this.tabPage_ThemNhanVien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_nhansu)).EndInit();
             this.tabPage_TimNhanVien.ResumeLayout(false);
             this.tabPage_TimNhanVien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1_NhanSu)).EndInit();
             this.tabPage_Sua_XoaNhanVien.ResumeLayout(false);
             this.tabPage_Sua_XoaNhanVien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_nhansu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1_NhanSu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2_NhanSu)).EndInit();
             this.ResumeLayout(false);
 

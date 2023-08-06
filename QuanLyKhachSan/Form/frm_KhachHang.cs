@@ -38,12 +38,11 @@ namespace QuanLyKhachSan
             txt_makh_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[0].Value.ToString();
             txt_tenkh_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[1].Value.ToString();
             string gioitinh = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[2].Value.ToString();
-
-            //dtp_NgaySinh2 = (DateTimePicker)dgv_DanhSachNhanVien2.Rows[e.RowIndex].Cells[3].Value;
+            string ngaysinh = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dtp_ngaysinh_sua.Value = DateTime.Parse(ngaysinh);
             txt_diachi_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[4].Value.ToString();
             txt_sdt_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[5].Value.ToString();
             txt_cccd_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[6].Value.ToString();
-            //dtp_NgayVaoLam2 = (DateTimePicker)dgv_DanhSachNhanVien2.Rows[e.RowIndex].Cells[8].Value;
 
             if (gioitinh == "Nam")
             {

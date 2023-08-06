@@ -117,8 +117,10 @@ namespace QuanLyKhachSan
             txt_TenNhanVien2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[1].Value.ToString();
             string gioitinh = dgv2_NhanSu.Rows[e.RowIndex].Cells[2].Value.ToString();
             txt_chucvu2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //dtp_NgaySinh2 = (DateTimePicker)dgv_DanhSachNhanVien2.Rows[e.RowIndex].Cells[4].Value;
-            //dtp_NgayVaoLam2 = (DateTimePicker)dgv_DanhSachNhanVien2.Rows[e.RowIndex].Cells[5].Value;
+            string ngaysinh2= dgv2_NhanSu.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string ngayvaolam2 = dgv2_NhanSu.Rows[e.RowIndex].Cells[5].Value.ToString();
+            dtp_NgaySinh2.Value = DateTime.Parse(ngaysinh2);
+            dtp_NgayVaoLam2.Value=DateTime.Parse(ngayvaolam2);
             txt_DiaChi2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[6].Value.ToString();
             txt_SoDienThoai2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[7].Value.ToString();
             if (gioitinh == "Nam")
