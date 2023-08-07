@@ -72,5 +72,10 @@ namespace QuanLyKhachSan.BUS
         {
             return DA_.KiemTraPhongDaCoKhachThue(maPhong);
         }
+        public void CapNhatTrangThaiPhong(string maPhong, string tinhTrang)
+        {
+            // Gọi phương thức CapNhatTrangThaiPhong trong DA_Phong để cập nhật trạng thái phòng
+            DA_.CapNhatTrangThaiPhong(maPhong, tinhTrang);
+        }
     }
 }

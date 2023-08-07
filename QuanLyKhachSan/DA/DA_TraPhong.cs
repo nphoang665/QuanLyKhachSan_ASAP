@@ -14,10 +14,6 @@ namespace QuanLyKhachSan.DA
         {
             db = new QuanLyKhachSanEntities();
         }
-        public HoaDon layHoaDon(string  makhachhang)
-        {
-            return db.HoaDons.FirstOrDefault(s => s.MaKhachHang == makhachhang);
-        }
         public ThuePhong layphong(string maphong)
         {
             return db.ThuePhongs.FirstOrDefault(s => s.MaPhong == maphong);
@@ -32,7 +28,12 @@ namespace QuanLyKhachSan.DA
             }
             return tongTienDichVu;
         }
-      
+        public void LuuThongTinThanhToan(HoaDon hoaDon)
+        {
+            db.HoaDons.Add(hoaDon);
+            db.SaveChanges();
+        }
+
 
 
     }

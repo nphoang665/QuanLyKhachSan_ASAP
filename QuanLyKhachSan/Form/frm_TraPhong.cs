@@ -1,4 +1,5 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.DA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace QuanLyKhachSan
 {
     public partial class frm_TraPhong : Form
     {
-
+        BUS_Phong busPhong;
         BUS_TraPhong bus;
         string phong;
         string mkh;
@@ -26,26 +27,26 @@ namespace QuanLyKhachSan
             this.mkh = makhachhang;
             this.tkh = tenkhachhang;
             bus= new BUS_TraPhong();
+            busPhong = new BUS_Phong();
         }
 
         private void frm_TraPhong_Load(object sender, EventArgs e)
         {
-            var hoadon = bus.LayTtTraPhong(mkh);
             lbl_KQPhong.Text = phong;
             lbl_KQMaKhachHang.Text = mkh;
             lbl_KQTenKhachHang.Text = tkh;
-            lbl_kqmahoadon.Text = hoadon.MaHoaDon;
 
-            // Lấy thông tin ngày đặt phòng từ bảng ThuePhong
+            Random random = new Random();
+            int randomNumber = random.Next(1000, 9999);
+            string maHoaDon = "HD" + randomNumber.ToString();
+            lbl_kqmahoadon.Text = maHoaDon;
+
             var datPhong = bus.layttDatphong(phong);
-            /*lbl_KQNgayDatPhong.Text = datPhong.NgayThue.ToString("d", CultureInfo.InvariantCulture);*/
             lbl_KQNgayDatPhong.Text = datPhong.NgayThue.Value.ToString("dd/MM/yyyy");
 
 
-            // Lấy ngày thanh toán là ngày hiện tại
             lbl_KQNgayThanhToan.Text = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-            // Tính số ngày ở bằng cách lấy ngày hiện tại trừ đi ngày đặt phòng
             TimeSpan soNgayO = DateTime.Now.Date - datPhong.NgayThue.Value;
             lbl_KQSoNgayO.Text = soNgayO.TotalDays.ToString();
 
@@ -64,6 +65,58 @@ namespace QuanLyKhachSan
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Lấy thông tin từ giao diện
+                string maHoaDon = lbl_kqmahoadon.Text;
+                string maKhachHang = lbl_KQMaKhachHang.Text;
+                string tenKhachHang = lbl_KQTenKhachHang.Text;
+                string maPhong = lbl_KQPhong.Text;
+
+                // Kiểm tra thông tin ngày đặt phòng hợp lệ
+                DateTime ngayDatPhong;
+                if (!DateTime.TryParseExact(lbl_KQNgayDatPhong.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayDatPhong))
+                {
+                    MessageBox.Show("Ngày đặt phòng không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DateTime ngayTra = DateTime.Now.Date;
+                float tongTien = float.Parse(lbl_KQTongTien.Text);
+
+                // Tạo đối tượng ThanhToan
+                HoaDon thanhToan = new HoaDon
+                {
+                    MaHoaDon = maHoaDon,
+                    TenKhachHang = tenKhachHang,
+                    CMND = "",
+                    SoDienThoai = "",
+                    MaPhong = maPhong,
+                    NgayThue = ngayDatPhong,
+                    NgayTra = ngayTra,
+                    TongTienDichVu = float.Parse(lbl_KQTongTienDichVu.Text),
+                    TongTienThanhToan = tongTien
+                };
+
+                // Lưu thông tin thanh toán vào CSDL
+                bus.LuuThongTinThanhToan(thanhToan);
+                busPhong.CapNhatTrangThaiPhong(maPhong, "Trống");
+
+                // Hiển thị thông báo thành công
+                MessageBox.Show("Thanh toán thành công!");
+
+                // Đóng form
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
     }
 }
