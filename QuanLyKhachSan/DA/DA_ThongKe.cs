@@ -14,30 +14,33 @@ namespace QuanLyKhachSan.DA
         }
         public List<DTO_DoanhThuTheoThang> ThongKeDoanhThuTheoThang(int nam)
         {
+            var query = from hd in db.HoaDons
+                        where hd.NgayThue.Value.Year == nam
+                        group hd by new { Month = hd.NgayThue.Value.Month, Year = hd.NgayThue.Value.Year } into g
+                        select new DTO_DoanhThuTheoThang
+                        {
+                            Thang = g.Key.Month,
+                             Nam = g.Key.Year,
+                            DoanhThu = g.Sum(hd => hd.TongTien)
+                        };
 
-            //var query = from hd in db.HoaDons
-            //            where hd.NgayThue.Value == nam
-            //            group hd by hd.NgayDat.Month into g
-            //            select new DTO_DoanhThuTheoThang
-            //            {
-            //                Thang = g.Key,
-            //                DoanhThu = g.Sum(hd => hd.TongTien)
-            //            };
-            return  null;
-
+            return query.ToList();
         }
+
         public List<DTO_DoanhThuTheoNgay> ThongKeDoanhThuTheoNgay(int nam, int thang)
         {
-            //var query = from hd in db.HoaDons
-            //            where hd.NgayDat.Year == nam && hd.NgayDat.Month == thang
-            //            group hd by hd.NgayDat.Day into g
-            //            select new DTO_DoanhThuTheoNgay
-            //            {
-            //                ngay = g.Key,
-            //                doanhthu = g.Sum(hd => hd.TongTien)
-                        //};
-            return null;
+            var query = from hd in db.HoaDons
+                        where hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang
+                        group hd by hd.NgayThue.Value.Day into g
+                        select new DTO_DoanhThuTheoNgay
+                        {
+                            ngay = g.Key,
+                            doanhthu = g.Sum(hd => hd.TongTien)
+                        };
+
+            return query.ToList();
         }
+
 
     }
 }

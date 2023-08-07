@@ -8,8 +8,9 @@ namespace QuanLyKhachSan.DA
 {
     public class DTO_DoanhThuTheoThang
     {
-        public int Thang { get; set; }
-        public int DoanhThu { get; set; }
+        public int? Nam { get; set; }
+        public int? Thang { get; set; }
+        public int? DoanhThu { get; set; }
 
     }
 }
