@@ -48,6 +48,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_cccd_chkerr = new System.Windows.Forms.Label();
+            this.lbl_tk_checkerr = new System.Windows.Forms.Label();
+            this.lbl_mk_chkerr = new System.Windows.Forms.Label();
+            this.lbl_notice_successfull = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -66,7 +70,7 @@
             this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show.Location = new System.Drawing.Point(358, 210);
+            this.pic_Show.Location = new System.Drawing.Point(358, 222);
             this.pic_Show.Name = "pic_Show";
             this.pic_Show.Size = new System.Drawing.Size(32, 20);
             this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -77,7 +81,7 @@
             // 
             this.txt_MatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MatKhau.Location = new System.Drawing.Point(94, 210);
+            this.txt_MatKhau.Location = new System.Drawing.Point(94, 222);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(265, 20);
             this.txt_MatKhau.TabIndex = 2;
@@ -87,7 +91,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(594, 53);
+            this.panel2.Location = new System.Drawing.Point(571, 35);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 489);
             this.panel2.TabIndex = 10;
@@ -101,7 +105,7 @@
             this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangKy.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangKy.ForeColor = System.Drawing.Color.White;
-            this.btn_DangKy.Location = new System.Drawing.Point(94, 256);
+            this.btn_DangKy.Location = new System.Drawing.Point(94, 268);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(296, 47);
             this.btn_DangKy.TabIndex = 3;
@@ -114,7 +118,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(91, 178);
+            this.label3.Location = new System.Drawing.Point(91, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 18);
             this.label3.TabIndex = 0;
@@ -124,7 +128,7 @@
             // 
             this.txt_TenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_TenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(94, 136);
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(94, 150);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(296, 20);
             this.txt_TenDangNhap.TabIndex = 1;
@@ -134,7 +138,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 104);
+            this.label2.Location = new System.Drawing.Point(91, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 18);
             this.label2.TabIndex = 0;
@@ -146,7 +150,7 @@
             this.pic_Hide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide.Location = new System.Drawing.Point(358, 210);
+            this.pic_Hide.Location = new System.Drawing.Point(358, 222);
             this.pic_Hide.Name = "pic_Hide";
             this.pic_Hide.Size = new System.Drawing.Size(32, 20);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,6 +169,9 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lbl_mk_chkerr);
+            this.groupBox1.Controls.Add(this.lbl_tk_checkerr);
+            this.groupBox1.Controls.Add(this.lbl_cccd_chkerr);
             this.groupBox1.Controls.Add(this.lbl_DangNhap);
             this.groupBox1.Controls.Add(this.txt_cccd);
             this.groupBox1.Controls.Add(this.lbl_cccd);
@@ -175,7 +182,7 @@
             this.groupBox1.Controls.Add(this.txt_TenDangNhap);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pic_Hide);
-            this.groupBox1.Location = new System.Drawing.Point(31, 118);
+            this.groupBox1.Location = new System.Drawing.Point(44, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(480, 360);
             this.groupBox1.TabIndex = 11;
@@ -189,7 +196,7 @@
             this.lbl_DangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_DangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_DangNhap.Location = new System.Drawing.Point(202, 323);
+            this.lbl_DangNhap.Location = new System.Drawing.Point(202, 335);
             this.lbl_DangNhap.Name = "lbl_DangNhap";
             this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
             this.lbl_DangNhap.TabIndex = 7;
@@ -220,9 +227,9 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 661);
+            this.panel1.Location = new System.Drawing.Point(0, 545);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1204, 41);
+            this.panel1.Size = new System.Drawing.Size(1132, 41);
             this.panel1.TabIndex = 9;
             // 
             // label6
@@ -231,7 +238,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.label6.Location = new System.Drawing.Point(886, 487);
+            this.label6.Location = new System.Drawing.Point(1141, 686);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 23);
             this.label6.TabIndex = 13;
@@ -243,7 +250,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.label5.Location = new System.Drawing.Point(787, 464);
+            this.label5.Location = new System.Drawing.Point(1042, 663);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(269, 23);
             this.label5.TabIndex = 14;
@@ -253,18 +260,63 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::QuanLyKhachSan.Properties.Resources.hotel_building_isolated_city_street_vector_illustration_flat_cartoon_101884_680;
-            this.pictureBox1.Location = new System.Drawing.Point(652, 88);
+            this.pictureBox1.Location = new System.Drawing.Point(615, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(517, 390);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // lbl_cccd_chkerr
+            // 
+            this.lbl_cccd_chkerr.AutoSize = true;
+            this.lbl_cccd_chkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cccd_chkerr.ForeColor = System.Drawing.Color.Red;
+            this.lbl_cccd_chkerr.Location = new System.Drawing.Point(93, 97);
+            this.lbl_cccd_chkerr.Name = "lbl_cccd_chkerr";
+            this.lbl_cccd_chkerr.Size = new System.Drawing.Size(11, 13);
+            this.lbl_cccd_chkerr.TabIndex = 8;
+            this.lbl_cccd_chkerr.Text = "*";
+            // 
+            // lbl_tk_checkerr
+            // 
+            this.lbl_tk_checkerr.AutoSize = true;
+            this.lbl_tk_checkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tk_checkerr.ForeColor = System.Drawing.Color.Red;
+            this.lbl_tk_checkerr.Location = new System.Drawing.Point(93, 173);
+            this.lbl_tk_checkerr.Name = "lbl_tk_checkerr";
+            this.lbl_tk_checkerr.Size = new System.Drawing.Size(11, 13);
+            this.lbl_tk_checkerr.TabIndex = 9;
+            this.lbl_tk_checkerr.Text = "*";
+            // 
+            // lbl_mk_chkerr
+            // 
+            this.lbl_mk_chkerr.AutoSize = true;
+            this.lbl_mk_chkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mk_chkerr.ForeColor = System.Drawing.Color.Red;
+            this.lbl_mk_chkerr.Location = new System.Drawing.Point(93, 246);
+            this.lbl_mk_chkerr.Name = "lbl_mk_chkerr";
+            this.lbl_mk_chkerr.Size = new System.Drawing.Size(11, 13);
+            this.lbl_mk_chkerr.TabIndex = 10;
+            this.lbl_mk_chkerr.Text = "*";
+            // 
+            // lbl_notice_successfull
+            // 
+            this.lbl_notice_successfull.AutoSize = true;
+            this.lbl_notice_successfull.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_notice_successfull.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbl_notice_successfull.Location = new System.Drawing.Point(65, 478);
+            this.lbl_notice_successfull.Name = "lbl_notice_successfull";
+            this.lbl_notice_successfull.Size = new System.Drawing.Size(459, 64);
+            this.lbl_notice_successfull.TabIndex = 15;
+            this.lbl_notice_successfull.Text = "Đăng ký thành công";
+            // 
             // frm_DangKyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 702);
+            this.ClientSize = new System.Drawing.Size(1132, 586);
+            this.Controls.Add(this.lbl_notice_successfull);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -274,6 +326,7 @@
             this.Name = "frm_DangKyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký Tài khoản";
+            this.Load += new System.EventHandler(this.frm_DangKyTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
@@ -308,5 +361,9 @@
         private System.Windows.Forms.TextBox txt_cccd;
         private System.Windows.Forms.Label lbl_cccd;
         private System.Windows.Forms.Label lbl_DangNhap;
+        private System.Windows.Forms.Label lbl_tk_checkerr;
+        private System.Windows.Forms.Label lbl_cccd_chkerr;
+        private System.Windows.Forms.Label lbl_mk_chkerr;
+        private System.Windows.Forms.Label lbl_notice_successfull;
     }
 }

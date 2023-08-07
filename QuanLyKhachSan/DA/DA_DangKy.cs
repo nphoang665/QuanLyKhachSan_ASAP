@@ -30,5 +30,16 @@ namespace QuanLyKhachSan.DA
             db.TaiKhoans.Add(taikhoan);
             db.SaveChanges();
         }
+        public bool KiemTraTaiKhoan(string tk)
+        {
+            bool kiemtra=false;
+            var s=  db.TaiKhoans.FirstOrDefault(kt => kt.TenDangNhap == tk);
+            if (s!= null)
+            {
+                kiemtra = true;
+            }
+           
+            return kiemtra;
+        }
     }
 }

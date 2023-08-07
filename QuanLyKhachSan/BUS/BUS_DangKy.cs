@@ -21,5 +21,9 @@ namespace QuanLyKhachSan.BUS
         {
              da.themaccount(tk, mk, kq, mns);
         }
+        public bool kiemTraTk(string tk)
+        {
+           return da.KiemTraTaiKhoan(tk);
+        }
     }
 }
