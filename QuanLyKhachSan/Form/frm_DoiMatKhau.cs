@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+using QuanLyKhachSan.DA;
 
 namespace QuanLyKhachSan
 {
@@ -20,7 +21,7 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
             _tk = tk;
-            bus =new BUS_DoiMatKhau();
+            bus = new BUS_DoiMatKhau();
         }
 
         private void pic_Show_Click_1(object sender, EventArgs e)
@@ -55,7 +56,7 @@ namespace QuanLyKhachSan
                 frm_DangNhap frm = new frm_DangNhap();
                 frm.ShowDialog();
                 this.Close();
-                
+
             }
         }
 
@@ -75,6 +76,11 @@ namespace QuanLyKhachSan
             {
                 doimk();
             }
+        }
+
+        private void pnl_thongtindangnhap_Paint(object sender, PaintEventArgs e)
+        {
+            txt_TaiKhoan.Text = _tk;
         }
     }
 }

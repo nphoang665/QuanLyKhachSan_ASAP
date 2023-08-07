@@ -1,6 +1,15 @@
 ﻿using QuanLyKhachSan.BUS;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+using QuanLyKhachSan.DA;
 
 namespace QuanLyKhachSan
 {
@@ -11,7 +20,7 @@ namespace QuanLyKhachSan
         public frm_NguoiDung()
         {
             InitializeComponent();
-                        dstk = new BUS_QuanLyTaiKhoan();
+            dstk = new BUS_QuanLyTaiKhoan();
 
         }
 
@@ -20,9 +29,9 @@ namespace QuanLyKhachSan
 
         }
 
-      
 
-      
+
+
 
         private void txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
@@ -42,7 +51,7 @@ namespace QuanLyKhachSan
 
                 txt_tk_Sua.Text = taiKhoan.TenDangNhap;
                 txt_mk_Sua.Text = taiKhoan.MatKhau;
-                txt_pq_sua.Text = taiKhoan.PhanQuyen;
+                cbo_phanquyen_sua.SelectedItem = taiKhoan.PhanQuyen;
                 txt_manhansu_sua.Text = taiKhoan.MaNhanSu;
             }
         }
@@ -51,7 +60,7 @@ namespace QuanLyKhachSan
         {
             string tenDangNhap = txt_TenDangNhap.Text;
             string matKhau = txt_MatKhau.Text;
-            string phanQuyen = txt_PhanQuyen.Text;
+            string phanQuyen = cbo_phanquen_them.SelectedItem.ToString();
             string manhansu = txt_manhansu_them.Text;
 
             dstk.ThemTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
@@ -66,13 +75,18 @@ namespace QuanLyKhachSan
             dstk.LoadDsTk(dgv_DanhSachNguoiDung);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung1);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung2);
+            cbo_phanquen_them.Items.Add("Nhân viên");
+            cbo_phanquen_them.Items.Add("Quản lý");
+            cbo_phanquyen_sua.Items.Add("Nhân viên");
+            cbo_phanquyen_sua.Items.Add("Quản lý");
+
         }
 
         private void btn_Sua_Click_1(object sender, EventArgs e)
         {
             string tenDangNhap = txt_tk_Sua.Text;
             string matKhau = txt_mk_Sua.Text;
-            string phanQuyen = txt_pq_sua.Text;
+            string phanQuyen = cbo_phanquyen_sua.SelectedItem.ToString();
             string manhansu = txt_manhansu_sua.Text;
 
             dstk.SuaTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);

@@ -277,6 +277,7 @@
             this.lbl_cccd_chkerr.Size = new System.Drawing.Size(11, 13);
             this.lbl_cccd_chkerr.TabIndex = 8;
             this.lbl_cccd_chkerr.Text = "*";
+            this.lbl_cccd_chkerr.Visible = false;
             // 
             // lbl_tk_checkerr
             // 
@@ -288,6 +289,7 @@
             this.lbl_tk_checkerr.Size = new System.Drawing.Size(11, 13);
             this.lbl_tk_checkerr.TabIndex = 9;
             this.lbl_tk_checkerr.Text = "*";
+            this.lbl_tk_checkerr.Visible = false;
             // 
             // lbl_mk_chkerr
             // 
@@ -299,6 +301,7 @@
             this.lbl_mk_chkerr.Size = new System.Drawing.Size(11, 13);
             this.lbl_mk_chkerr.TabIndex = 10;
             this.lbl_mk_chkerr.Text = "*";
+            this.lbl_mk_chkerr.Visible = false;
             // 
             // lbl_notice_successfull
             // 
@@ -310,6 +313,7 @@
             this.lbl_notice_successfull.Size = new System.Drawing.Size(459, 64);
             this.lbl_notice_successfull.TabIndex = 15;
             this.lbl_notice_successfull.Text = "Đăng ký thành công";
+            this.lbl_notice_successfull.Visible = false;
             // 
             // frm_DangKyTaiKhoan
             // 

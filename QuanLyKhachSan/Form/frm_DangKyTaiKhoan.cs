@@ -41,6 +41,7 @@ namespace QuanLyKhachSan
                 }
                 else if (ktTaiKhoan)
                 {
+                    lbl_cccd_chkerr.Visible = false;
                     throw new Exception("*Lỗi. Trùng tài khoản");
                 }
                 else if (mk == "")
@@ -51,20 +52,21 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
+                    lbl_cccd_chkerr.Visible = false;
+                    lbl_tk_checkerr.Visible = false;
+                    lbl_mk_chkerr.Visible = false;
                     DialogResult result = MessageBox.Show("Bạn có muốn đăng ký với những thông tin bạn đã nhập chưa ?", "Thông báo xác nhận", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
 
-                  
-                    lbl_mk_chkerr.Visible = false;
-
+                      
                     phanQuyen = tt.ChucVu;
                     Manhansu = tt.MaNhanSu;
 
                     bus.ThemTK(tk, mk, phanQuyen, Manhansu);
-                    txt_cccd.Enabled = true;
-                    txt_TenDangNhap.Enabled = true;
-                    txt_MatKhau.Enabled = true;
+                    txt_cccd.Enabled = false;
+                    txt_TenDangNhap.Enabled = false;
+                    txt_MatKhau.Enabled = false;
                     lbl_notice_successfull.Visible = true; 
                     }
                 }
@@ -106,10 +108,7 @@ namespace QuanLyKhachSan
         private void frm_DangKyTaiKhoan_Load(object sender, EventArgs e)
         {
 
-            lbl_cccd_chkerr.Visible = false;
-            lbl_tk_checkerr.Visible = false;
-            lbl_mk_chkerr.Visible = false;
-            lbl_notice_successfull.Visible = false;
+        
         }
     }
 }

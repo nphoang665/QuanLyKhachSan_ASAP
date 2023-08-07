@@ -41,6 +41,8 @@
             this.lbl_mk = new System.Windows.Forms.Label();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.lbl_doimatkhau = new System.Windows.Forms.Label();
+            this.txt_TaiKhoan = new System.Windows.Forms.TextBox();
+            this.lbl_TaiKhoan = new System.Windows.Forms.Label();
             this.pnl_thongtindangnhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -49,6 +51,8 @@
             // pnl_thongtindangnhap
             // 
             this.pnl_thongtindangnhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnl_thongtindangnhap.Controls.Add(this.txt_TaiKhoan);
+            this.pnl_thongtindangnhap.Controls.Add(this.lbl_TaiKhoan);
             this.pnl_thongtindangnhap.Controls.Add(this.btn_Luu);
             this.pnl_thongtindangnhap.Controls.Add(this.pic_Show);
             this.pnl_thongtindangnhap.Controls.Add(this.lbl_mk2);
@@ -58,10 +62,11 @@
             this.pnl_thongtindangnhap.Controls.Add(this.txt_MatKhauMoi);
             this.pnl_thongtindangnhap.Controls.Add(this.lbl_mk);
             this.pnl_thongtindangnhap.Controls.Add(this.pic_Hide);
-            this.pnl_thongtindangnhap.Location = new System.Drawing.Point(278, 166);
+            this.pnl_thongtindangnhap.Location = new System.Drawing.Point(278, 163);
             this.pnl_thongtindangnhap.Name = "pnl_thongtindangnhap";
-            this.pnl_thongtindangnhap.Size = new System.Drawing.Size(559, 249);
+            this.pnl_thongtindangnhap.Size = new System.Drawing.Size(559, 319);
             this.pnl_thongtindangnhap.TabIndex = 10;
+            this.pnl_thongtindangnhap.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_thongtindangnhap_Paint);
             // 
             // btn_Luu
             // 
@@ -72,7 +77,7 @@
             this.btn_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Luu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.ForeColor = System.Drawing.Color.White;
-            this.btn_Luu.Location = new System.Drawing.Point(216, 157);
+            this.btn_Luu.Location = new System.Drawing.Point(216, 192);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(147, 43);
             this.btn_Luu.TabIndex = 41;
@@ -86,9 +91,9 @@
             this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show.Location = new System.Drawing.Point(484, 29);
+            this.pic_Show.Location = new System.Drawing.Point(483, 64);
             this.pic_Show.Name = "pic_Show";
-            this.pic_Show.Size = new System.Drawing.Size(32, 27);
+            this.pic_Show.Size = new System.Drawing.Size(33, 32);
             this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Show.TabIndex = 9;
             this.pic_Show.TabStop = false;
@@ -100,9 +105,9 @@
             this.lbl_mk2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_mk2.AutoSize = true;
             this.lbl_mk2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mk2.Location = new System.Drawing.Point(41, 72);
+            this.lbl_mk2.Location = new System.Drawing.Point(41, 107);
             this.lbl_mk2.Name = "lbl_mk2";
-            this.lbl_mk2.Size = new System.Drawing.Size(166, 21);
+            this.lbl_mk2.Size = new System.Drawing.Size(206, 28);
             this.lbl_mk2.TabIndex = 0;
             this.lbl_mk2.Text = "Nhập mật khẩu mới:";
             // 
@@ -111,9 +116,9 @@
             this.txt_NhapLaiMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_NhapLaiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_NhapLaiMatKhau.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(216, 101);
+            this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(216, 136);
             this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
-            this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(268, 27);
+            this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(268, 32);
             this.txt_NhapLaiMatKhau.TabIndex = 3;
             // 
             // lbl_mk3
@@ -121,9 +126,9 @@
             this.lbl_mk3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_mk3.AutoSize = true;
             this.lbl_mk3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mk3.Location = new System.Drawing.Point(41, 108);
+            this.lbl_mk3.Location = new System.Drawing.Point(41, 143);
             this.lbl_mk3.Name = "lbl_mk3";
-            this.lbl_mk3.Size = new System.Drawing.Size(155, 21);
+            this.lbl_mk3.Size = new System.Drawing.Size(192, 28);
             this.lbl_mk3.TabIndex = 0;
             this.lbl_mk3.Text = "Nhập lại mật khẩu:";
             // 
@@ -132,9 +137,9 @@
             this.txt_MatKhauCu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_MatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_MatKhauCu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MatKhauCu.Location = new System.Drawing.Point(216, 29);
+            this.txt_MatKhauCu.Location = new System.Drawing.Point(216, 64);
             this.txt_MatKhauCu.Name = "txt_MatKhauCu";
-            this.txt_MatKhauCu.Size = new System.Drawing.Size(268, 27);
+            this.txt_MatKhauCu.Size = new System.Drawing.Size(268, 32);
             this.txt_MatKhauCu.TabIndex = 1;
             this.txt_MatKhauCu.UseSystemPasswordChar = true;
             // 
@@ -143,9 +148,9 @@
             this.txt_MatKhauMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_MatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_MatKhauMoi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MatKhauMoi.Location = new System.Drawing.Point(216, 65);
+            this.txt_MatKhauMoi.Location = new System.Drawing.Point(216, 100);
             this.txt_MatKhauMoi.Name = "txt_MatKhauMoi";
-            this.txt_MatKhauMoi.Size = new System.Drawing.Size(268, 27);
+            this.txt_MatKhauMoi.Size = new System.Drawing.Size(268, 32);
             this.txt_MatKhauMoi.TabIndex = 2;
             // 
             // lbl_mk
@@ -153,9 +158,9 @@
             this.lbl_mk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_mk.AutoSize = true;
             this.lbl_mk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mk.Location = new System.Drawing.Point(41, 30);
+            this.lbl_mk.Location = new System.Drawing.Point(41, 65);
             this.lbl_mk.Name = "lbl_mk";
-            this.lbl_mk.Size = new System.Drawing.Size(154, 21);
+            this.lbl_mk.Size = new System.Drawing.Size(191, 28);
             this.lbl_mk.TabIndex = 0;
             this.lbl_mk.Text = "Nhập mật khẩu cũ:";
             // 
@@ -165,9 +170,9 @@
             this.pic_Hide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide.Location = new System.Drawing.Point(484, 29);
+            this.pic_Hide.Location = new System.Drawing.Point(484, 64);
             this.pic_Hide.Name = "pic_Hide";
-            this.pic_Hide.Size = new System.Drawing.Size(32, 27);
+            this.pic_Hide.Size = new System.Drawing.Size(32, 32);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Hide.TabIndex = 10;
             this.pic_Hide.TabStop = false;
@@ -182,13 +187,35 @@
             this.lbl_doimatkhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.lbl_doimatkhau.Location = new System.Drawing.Point(447, 95);
             this.lbl_doimatkhau.Name = "lbl_doimatkhau";
-            this.lbl_doimatkhau.Size = new System.Drawing.Size(232, 42);
+            this.lbl_doimatkhau.Size = new System.Drawing.Size(293, 52);
             this.lbl_doimatkhau.TabIndex = 9;
             this.lbl_doimatkhau.Text = "ĐỔI MẬT KHẨU";
             // 
+            // txt_TaiKhoan
+            // 
+            this.txt_TaiKhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_TaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_TaiKhoan.Enabled = false;
+            this.txt_TaiKhoan.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TaiKhoan.Location = new System.Drawing.Point(216, 28);
+            this.txt_TaiKhoan.Name = "txt_TaiKhoan";
+            this.txt_TaiKhoan.Size = new System.Drawing.Size(268, 32);
+            this.txt_TaiKhoan.TabIndex = 43;
+            // 
+            // lbl_TaiKhoan
+            // 
+            this.lbl_TaiKhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_TaiKhoan.AutoSize = true;
+            this.lbl_TaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TaiKhoan.Location = new System.Drawing.Point(41, 29);
+            this.lbl_TaiKhoan.Name = "lbl_TaiKhoan";
+            this.lbl_TaiKhoan.Size = new System.Drawing.Size(158, 28);
+            this.lbl_TaiKhoan.TabIndex = 42;
+            this.lbl_TaiKhoan.Text = "Nhập tài khoản";
+            // 
             // frm_DoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 511);
@@ -222,5 +249,7 @@
         private System.Windows.Forms.Label lbl_mk;
         private System.Windows.Forms.PictureBox pic_Hide;
         private System.Windows.Forms.Label lbl_doimatkhau;
+        private System.Windows.Forms.TextBox txt_TaiKhoan;
+        private System.Windows.Forms.Label lbl_TaiKhoan;
     }
 }
