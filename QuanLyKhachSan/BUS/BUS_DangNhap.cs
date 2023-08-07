@@ -22,21 +22,21 @@ namespace QuanLyKhachSan.BUS
             return kq;
         }
 
-        public void SaveLoginInfo(string username, string password)
+        public void LuuThongTinDangNhap(string username, string password)
         {
-            da_dangnhap.SaveLoginInfo(username, password);
+            da_dangnhap.da_LuuThongTinDangNhap(username, password);
         }
-        public LuuMatKhau GetSavedLoginInfo()
+        public LuuMatKhau LayThongTinDaLuu()
         {
-            return da_dangnhap.GetSavedLoginInfo();
+            return da_dangnhap.da_LayThongTinDaLuu();
         }
-        public void UpdateSavedLoginInfo(string username, string password)
+        public void CapNhapThongTin(string username, string password)
         {
-            da_dangnhap.UpdateSavedLoginInfo(username, password);
+            da_dangnhap.da_CapNhapThongTin(username, password);
         }
-        public void DeleteSavedLoginInfo()
+        public void XoaThongTinDaLuu()
         {
-            da_dangnhap.DeleteSavedLoginInfo();
+            da_dangnhap.da_XoaThongTinDaLuu();
         }
 
         public bool kiemtraluumk()

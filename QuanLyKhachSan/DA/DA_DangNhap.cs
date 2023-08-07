@@ -27,12 +27,10 @@ namespace QuanLyKhachSan.DA
             }
             return frag;
         }
-        public void SaveLoginInfo(string username, string password)
+        public void da_LuuThongTinDangNhap(string username, string password)
         {
-            // Check if the provided username and password are correct
             if (DangNhap(username, password))
             {
-                // If the username and password are correct, save the login information
                 var luuMatKhau = new LuuMatKhau
                 {
                     TaiKhoan = username,
@@ -44,18 +42,16 @@ namespace QuanLyKhachSan.DA
             }
         }
 
-        public LuuMatKhau GetSavedLoginInfo()
+        public LuuMatKhau da_LayThongTinDaLuu()
         {
             var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
 
             return savedLoginInfo;
         }
-        public void UpdateSavedLoginInfo(string username, string password)
+        public void da_CapNhapThongTin(string username, string password)
         {
-            // Check if the provided username and password are correct
             if (DangNhap(username, password))
             {
-                // If the username and password are correct, update the saved login information
                 var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
 
                 if (savedLoginInfo != null)
@@ -73,7 +69,7 @@ namespace QuanLyKhachSan.DA
             }
         }
 
-        public void DeleteSavedLoginInfo()
+        public void da_XoaThongTinDaLuu()
         {
             db.Database.ExecuteSqlCommand("DELETE FROM LuuMatKhau");
         }

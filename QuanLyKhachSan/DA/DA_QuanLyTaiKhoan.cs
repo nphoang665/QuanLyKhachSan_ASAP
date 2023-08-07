@@ -87,7 +87,7 @@ namespace QuanLyKhachSan.DA
         {
             bool kiemTra = false;
             var PQ = db.NhanSus.FirstOrDefault(s => s.MaNhanSu == MaNhanSu);
-            if(PQ.ChucVu == PhanQuyen)
+            if( PhanQuyen==PQ.ChucVu)
             {
                 kiemTra = true;
 
@@ -106,5 +106,19 @@ namespace QuanLyKhachSan.DA
         {
             return db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tendangnhap);
         }
+        public bool KiemTraTenDangNhap(string tenDangNhap)
+        {
+            // Query the database to see if a record with the given username already exists
+            var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
+            return taiKhoan != null;
+        }
+
+        public bool KiemTraMaNhanSu(string maNhanSu)
+        {
+            // Query the employee table to see if a record with the given employee code already exists
+            var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
+            return nhanSu != null;
+        }
+
     }
 }

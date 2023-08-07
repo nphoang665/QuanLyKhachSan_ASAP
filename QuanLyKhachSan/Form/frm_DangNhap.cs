@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -48,41 +49,7 @@ namespace QuanLyKhachSan
             txt_MatKhau.UseSystemPasswordChar = true;
             pic_Show.Show();
         }
-        void DangNhap()
-        {
-            string tk = txt_TenDangNhap.Text;
-            string mk = txt_MatKhau.Text;
-
-            KiemLoi.Clear(); 
-
-            if (string.IsNullOrEmpty(tk))
-            {
-                KiemLoi.SetError(txt_TenDangNhap, "Vui lòng nhập tên đăng nhập");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(mk))
-            {
-                KiemLoi.SetError(txt_MatKhau, "Vui lòng nhập mật khẩu");
-                KiemLoi.SetIconPadding(txt_MatKhau, 30);
-                return;
-            }
-
-            bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
-            if (dangnhap)
-            {
-                this.Hide();
-                frm_TrangChu frm = new frm_TrangChu(tk);
-                frm.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Tên đăng nhập, mật khẩu không chính xác");
-            }
-
-
-        }
+      
         private void lbl_QuenMatKhau_Click(object sender, EventArgs e)
         {
             frm_QuenMatKhau frm_QuenMatKhau = new frm_QuenMatKhau();
@@ -92,28 +59,88 @@ namespace QuanLyKhachSan
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-
-            if (chk_ghiNhoDangNhap.Checked)
+            try
             {
-                string username = txt_TenDangNhap.Text;
-                string password = txt_MatKhau.Text;
-
-                var savedLoginInfo = bus.GetSavedLoginInfo();
-                if (savedLoginInfo != null)
+                if (string.IsNullOrEmpty(txt_TenDangNhap.Text)) 
                 {
-                    bus.UpdateSavedLoginInfo(username, password);
+                    throw new Exception("Vui lòng nhập tên đăng nhập.");
+                }
+
+                else if ( string.IsNullOrEmpty(txt_MatKhau.Text))
+                {
+                    lbl_chk_TenDangNhap.Visible = false;
+                    throw new Exception("Vui lòng nhập mật khẩu.");
                 }
                 else
                 {
-                    bus.SaveLoginInfo(username, password);
+                    lbl_chk_MatKhau.Visible = false;
+                    lbl_chk_TenDangNhap.Visible = false;
+
+                    if (chk_ghiNhoDangNhap.Checked)
+                {
+                    string username = txt_TenDangNhap.Text;
+                    string password = txt_MatKhau.Text;
+
+                    var savedLoginInfo = bus.LayThongTinDaLuu();
+                    if (savedLoginInfo != null)
+                    {
+                        bus.CapNhapThongTin(username, password);
+                    }
+                    else
+                    {
+                        bus.LuuThongTinDangNhap(username, password);
+                    }
+                }
+                else
+                {
+                    bus.XoaThongTinDaLuu();
+                }
+
+                    //đăng nhập
+                    string tk = txt_TenDangNhap.Text;
+                    string mk = txt_MatKhau.Text;
+
+
+
+
+                    bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
+                    if (dangnhap)
+                    {
+                        this.Hide();
+                        frm_TrangChu frm = new frm_TrangChu(tk);
+                        frm.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        throw new Exception("Tên đăng nhập, mật khẩu không chính xác");
+                    }
+
                 }
             }
-            else
+            catch (Exception ex)
             {
-                bus.DeleteSavedLoginInfo();
+                if (ex.Message==("Vui lòng nhập tên đăng nhập."))
+                {
+                    lbl_chk_TenDangNhap.Visible = true;
+                    lbl_chk_TenDangNhap.ForeColor = Color.Red;
+                    lbl_chk_TenDangNhap.Text = ex.Message;
+                }
+                else if (ex.Message==("Vui lòng nhập mật khẩu."))
+                {
+                    lbl_chk_MatKhau.Visible = true;
+                    lbl_chk_MatKhau.ForeColor = Color.Red;
+                    lbl_chk_MatKhau.Text = ex.Message;
+                }
+                else if (ex.Message==("Tên đăng nhập, mật khẩu không chính xác"))
+                {
+                    lbl_chk_MatKhau.Visible = true;
+                    lbl_chk_MatKhau.ForeColor = Color.Red;
+                    lbl_chk_MatKhau.Text = ex.Message;
+                }
             }
-            DangNhap();
         }
+
 
         private void chk_ghiNhoDangNhap_CheckedChanged(object sender, EventArgs e)
         {
@@ -121,7 +148,7 @@ namespace QuanLyKhachSan
         }
         void loadNhomk()
         {
-            var savedLoginInfo = bus.GetSavedLoginInfo();
+            var savedLoginInfo = bus.LayThongTinDaLuu();
 
             if (savedLoginInfo != null)
             {

@@ -15,6 +15,10 @@ namespace QuanLyKhachSan.BUS
         {
             da = new DA_DoiMatKhau();
         }
+        public TaiKhoan Laymk(string tk)
+        {
+            return da.LayMatKhau(tk);
+        }
         public bool DoiMatKhau(string tk, string mk,string mkmoi)
         {
             bool kt = da.DoiMatKhau(tk, mk, mkmoi);

@@ -48,5 +48,15 @@ namespace QuanLyKhachSan.BUS
         {
             return DA_.KiemTraPhanQuyen(MaNhanSu, PhanQuyen);
         }
+        public bool KiemTraTenDangNhap(string tenDangNhap)
+        {
+            return DA_.KiemTraTenDangNhap(tenDangNhap);
+        }
+
+        public bool KiemTraMaNhanSu(string maNhanSu)
+        {
+            return DA_.KiemTraMaNhanSu(maNhanSu);
+        }
+
     }
 }

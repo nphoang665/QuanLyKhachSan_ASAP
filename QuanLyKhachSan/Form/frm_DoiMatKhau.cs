@@ -1,15 +1,7 @@
 ﻿using QuanLyKhachSan.BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using QuanLyKhachSan.DA;
 
 namespace QuanLyKhachSan
 {
@@ -49,34 +41,91 @@ namespace QuanLyKhachSan
         }
         void doimk()
         {
-            bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Text, txt_MatKhauMoi.Text);
-            if (doimk)
+            try
             {
-                frm_TrangChu.ViDu.Hide();
-                frm_DangNhap frm = new frm_DangNhap();
-                frm.ShowDialog();
-                this.Close();
+                string matKhauCu = txt_MatKhauCu.Text;
+                string matKhauMoi = txt_MatKhauMoi.Text;
+                string nhapLaiMK = txt_NhapLaiMatKhau.Text;
+                if (string.IsNullOrEmpty(matKhauCu))
+                {
+                    throw new Exception("Bạn chưa nhập mật khẩu cũ");
+                }
+                var laymk = bus.Laymk(_tk);
 
+
+                if (txt_MatKhauCu.Text != laymk.MatKhau)
+                {
+                    throw new Exception("Lỗi. Bạn nhập sai mật khẩu cũ");
+                }
+                else if (string.IsNullOrEmpty(matKhauMoi))
+                {
+                    lbl_mkcu_chk.Visible = false;
+
+                    throw new Exception("Bạn chưa nhập mật khẩu mới");
+                }
+                else if (string.IsNullOrEmpty(nhapLaiMK))
+                {
+                    lbl_mkmoi_chk.Visible = false;
+
+                    throw new Exception("Bạn chưa nhập xác nhận mật khẩu mới");
+                }
+                else if (matKhauMoi != nhapLaiMK)
+                {
+                    throw new Exception("Mật khẩu nhập lại không trùng khớp!");
+                }
+                else
+                {
+                    lbl_mkcu_chk.Visible = false;
+                    lbl_mkmoi_chk.Visible = false;
+                    lbl_remkmoi_chk.Visible = false;
+                    bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Text, txt_MatKhauMoi.Text);
+                    lbl_mkcu_chk.Visible = false;
+
+                    frm_TrangChu.ViDu.Hide();
+                    frm_DangNhap frm = new frm_DangNhap();
+                    frm.ShowDialog();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == ("Bạn chưa nhập mật khẩu cũ"))
+                {
+                    lbl_mkcu_chk.Visible = true;
+                    lbl_mkcu_chk.ForeColor = Color.Red;
+                    lbl_mkcu_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Bạn chưa nhập mật khẩu mới"))
+                {
+                    lbl_mkmoi_chk.Visible = true;
+                    lbl_mkmoi_chk.ForeColor = Color.Red;
+                    lbl_mkmoi_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Bạn chưa nhập xác nhận mật khẩu mới"))
+                {
+                    lbl_remkmoi_chk.Visible = true;
+                    lbl_remkmoi_chk.ForeColor = Color.Red;
+                    lbl_remkmoi_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Mật khẩu nhập lại không trùng khớp!"))
+                {
+                    lbl_remkmoi_chk.Visible = true;
+                    lbl_remkmoi_chk.ForeColor = Color.Red;
+                    lbl_remkmoi_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Lỗi. Bạn nhập sai mật khẩu cũ"))
+                {
+                    lbl_mkcu_chk.Visible = true;
+                    lbl_mkcu_chk.ForeColor = Color.Red;
+                    lbl_mkcu_chk.Text = ex.Message;
+                }
             }
         }
-
-
-
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            string matKhauMoi = txt_MatKhauMoi.Text;
-            string nhapLaiMK = txt_NhapLaiMatKhau.Text;
-
-            if (matKhauMoi != nhapLaiMK)
-            {
-                MessageBox.Show("Mật khẩu mới không trùng khớp!");
-                return;
-            }
-            else
-            {
-                doimk();
-            }
+            doimk();
         }
+
 
         private void pnl_thongtindangnhap_Paint(object sender, PaintEventArgs e)
         {

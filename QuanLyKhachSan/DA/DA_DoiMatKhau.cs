@@ -9,7 +9,10 @@ namespace QuanLyKhachSan.DA
         {
             db = new QuanLyKhachSanEntities();
         }
-
+        public TaiKhoan LayMatKhau(string tk)
+        {
+            return db.TaiKhoans.FirstOrDefault(s => s.TenDangNhap == tk);
+        }
         public bool DoiMatKhau(string tk, string mk, string mkmoi)
         {
             bool frag = false;

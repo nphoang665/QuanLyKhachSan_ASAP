@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan
@@ -16,7 +10,7 @@ namespace QuanLyKhachSan
         public frm_QuenMatKhau()
         {
             InitializeComponent();
-            bus= new BUS_QuenMatKhau();
+            bus = new BUS_QuenMatKhau();
             pnl_dmk.Visible = false;
         }
 
@@ -76,51 +70,103 @@ namespace QuanLyKhachSan
 
         private void btn_KiemTra_Click(object sender, EventArgs e)
         {
-            KiemLoi.Clear();
-            string tenDangNhap = txt_TenDangNhap.Text;
-            if (string.IsNullOrEmpty(tenDangNhap))
+            try
             {
-                KiemLoi.SetError(txt_TenDangNhap, "Vui lòng nhập tên đăng nhập");
-                return;
+                string tenDangNhap = txt_TenDangNhap.Text;
+                if (string.IsNullOrEmpty(tenDangNhap))
+                {
+                    throw new Exception("Bạn chưa nhập tên đăng nhập");
+                }
+                else if (!bus.kiemTraTenDangNhap(tenDangNhap))
+                {
+
+                    throw new Exception("Tên đăng nhập không tồn tại!");
+                }
+                else
+                {
+                    lbl_tendangnhap_chk.Visible = false;
+                    pnl_dmk.Visible = true;
+                    txt_TenDangNhap.Enabled = false;
+                }
+
+
             }
-            else if (bus.kiemTraTenDangNhap(tenDangNhap))
+            catch (Exception ex)
             {
-                pnl_dmk.Visible = true;
-                txt_TenDangNhap.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("Tên đăng nhập không tồn tại!");
-                txt_TenDangNhap.Text = "";
+                if (ex.Message == ("Bạn chưa nhập tên đăng nhập"))
+                {
+                    lbl_tendangnhap_chk.Visible = true;
+                    lbl_tendangnhap_chk.ForeColor = Color.Red;
+                    lbl_tendangnhap_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Tên đăng nhập không tồn tại!"))
+                {
+                    lbl_tendangnhap_chk.Visible = true;
+                    lbl_tendangnhap_chk.ForeColor = Color.Red;
+                    lbl_tendangnhap_chk.Text = ex.Message;
+                }
+
+
             }
         }
 
         private void btn_LayLaiMatKhau_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btn_LayLaiMatKhau_Click_1(object sender, EventArgs e)
         {
-            KiemLoi.Clear();
-            string tenDangNhap = txt_TenDangNhap.Text;
-            string matKhauMoi = txt_MatKhau.Text;
-            string nhapLaiMK = txt_NhapLaiMK.Text;
-
-            if (string.IsNullOrEmpty(matKhauMoi))
+            try
             {
-                KiemLoi.SetError(txt_MatKhau, "Vui lòng nhập mật khẩu");
-                KiemLoi.SetIconPadding(txt_MatKhau, 30);
-                return;
+                string tenDangNhap = txt_TenDangNhap.Text;
+                string matKhauMoi = txt_MatKhau.Text;
+                string nhapLaiMK = txt_NhapLaiMK.Text;
+                if (txt_MatKhau.Text == "")
+                {
+                    throw new Exception("Bạn chưa nhập mật khẩu");
+                }
+                else if (txt_NhapLaiMK.Text == "")
+                {
+                    lbl_matkhaumoi_chk.Visible = false;
+                    throw new Exception("Bạn chưa nhập xác nhận lại mật khẩu");
+                }
+                else if(matKhauMoi!= nhapLaiMK)
+                {
+                    lbl_rematkhaumoi_chk.Visible = false;
+                    throw new Exception("Lỗi. Mật khẩu không trùng nhau");
+                }
+                else
+                {
+                    lbl_matkhaumoi_chk.Visible = false;
+                    lbl_rematkhaumoi_chk.Visible = false;
+                    bus.doiMatKhau(tenDangNhap, matKhauMoi);
+                    lbl_notice_successfull.Visible = true;
+                }
             }
-            if (matKhauMoi != nhapLaiMK)
+            catch (Exception ex)
             {
-                MessageBox.Show("Mật khẩu mới không trùng khớp!");
-                return;
-            }
 
-            bus.doiMatKhau(tenDangNhap, matKhauMoi);
-            MessageBox.Show("Đổi mật khẩu thành công!");
+                if (ex.Message == ("Bạn chưa nhập mật khẩu"))
+                {
+                    lbl_matkhaumoi_chk.Visible = true;
+                    lbl_matkhaumoi_chk.ForeColor = Color.Red;
+                    lbl_matkhaumoi_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Lỗi. Mật khẩu không trùng nhau"))
+                {
+                    lbl_rematkhaumoi_chk.Visible = true;
+                    lbl_rematkhaumoi_chk.ForeColor = Color.Red;
+                    lbl_rematkhaumoi_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Bạn chưa nhập xác nhận lại mật khẩu"))
+                {
+                    lbl_rematkhaumoi_chk.Visible = true;
+                    lbl_rematkhaumoi_chk.ForeColor = Color.Red;
+                    lbl_rematkhaumoi_chk.Text = ex.Message;
+                }
+
+            }
         }
 
         private void pic_Show_Click_1(object sender, EventArgs e)

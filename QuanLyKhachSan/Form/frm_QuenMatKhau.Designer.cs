@@ -52,6 +52,10 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbl_tendangnhap_chk = new System.Windows.Forms.Label();
+            this.lbl_rematkhaumoi_chk = new System.Windows.Forms.Label();
+            this.lbl_matkhaumoi_chk = new System.Windows.Forms.Label();
+            this.lbl_notice_successfull = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnl_dmk.SuspendLayout();
@@ -154,6 +158,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lbl_tendangnhap_chk);
             this.groupBox1.Controls.Add(this.pnl_dmk);
             this.groupBox1.Controls.Add(this.btn_KiemTra);
             this.groupBox1.Controls.Add(this.txt_TenDangNhap);
@@ -167,6 +172,8 @@
             // 
             // pnl_dmk
             // 
+            this.pnl_dmk.Controls.Add(this.lbl_matkhaumoi_chk);
+            this.pnl_dmk.Controls.Add(this.lbl_rematkhaumoi_chk);
             this.pnl_dmk.Controls.Add(this.lbl_DangNhap);
             this.pnl_dmk.Controls.Add(this.txt_NhapLaiMK);
             this.pnl_dmk.Controls.Add(this.label4);
@@ -177,9 +184,9 @@
             this.pnl_dmk.Controls.Add(this.pic_Show1);
             this.pnl_dmk.Controls.Add(this.pic_Hide);
             this.pnl_dmk.Controls.Add(this.pic_Hide1);
-            this.pnl_dmk.Location = new System.Drawing.Point(36, 188);
+            this.pnl_dmk.Location = new System.Drawing.Point(36, 174);
             this.pnl_dmk.Name = "pnl_dmk";
-            this.pnl_dmk.Size = new System.Drawing.Size(451, 179);
+            this.pnl_dmk.Size = new System.Drawing.Size(451, 193);
             this.pnl_dmk.TabIndex = 4;
             // 
             // lbl_DangNhap
@@ -189,7 +196,7 @@
             this.lbl_DangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_DangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_DangNhap.Location = new System.Drawing.Point(181, 159);
+            this.lbl_DangNhap.Location = new System.Drawing.Point(181, 166);
             this.lbl_DangNhap.Name = "lbl_DangNhap";
             this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
             this.lbl_DangNhap.TabIndex = 20;
@@ -200,7 +207,7 @@
             // 
             this.txt_NhapLaiMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_NhapLaiMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_NhapLaiMK.Location = new System.Drawing.Point(163, 50);
+            this.txt_NhapLaiMK.Location = new System.Drawing.Point(163, 57);
             this.txt_NhapLaiMK.Name = "txt_NhapLaiMK";
             this.txt_NhapLaiMK.Size = new System.Drawing.Size(224, 23);
             this.txt_NhapLaiMK.TabIndex = 14;
@@ -211,7 +218,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 50);
+            this.label4.Location = new System.Drawing.Point(5, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 18);
             this.label4.TabIndex = 12;
@@ -221,7 +228,7 @@
             // 
             this.txt_MatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MatKhau.Location = new System.Drawing.Point(163, 1);
+            this.txt_MatKhau.Location = new System.Drawing.Point(163, 8);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(224, 23);
             this.txt_MatKhau.TabIndex = 15;
@@ -232,7 +239,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 1);
+            this.label3.Location = new System.Drawing.Point(5, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 18);
             this.label3.TabIndex = 13;
@@ -247,7 +254,7 @@
             this.btn_LayLaiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LayLaiMatKhau.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LayLaiMatKhau.ForeColor = System.Drawing.Color.White;
-            this.btn_LayLaiMatKhau.Location = new System.Drawing.Point(63, 98);
+            this.btn_LayLaiMatKhau.Location = new System.Drawing.Point(63, 105);
             this.btn_LayLaiMatKhau.Name = "btn_LayLaiMatKhau";
             this.btn_LayLaiMatKhau.Size = new System.Drawing.Size(324, 47);
             this.btn_LayLaiMatKhau.TabIndex = 11;
@@ -261,7 +268,7 @@
             this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show.Location = new System.Drawing.Point(384, 1);
+            this.pic_Show.Location = new System.Drawing.Point(384, 8);
             this.pic_Show.Name = "pic_Show";
             this.pic_Show.Size = new System.Drawing.Size(32, 23);
             this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,7 +283,7 @@
             this.pic_Show1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show1.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show1.Location = new System.Drawing.Point(384, 50);
+            this.pic_Show1.Location = new System.Drawing.Point(384, 57);
             this.pic_Show1.Name = "pic_Show1";
             this.pic_Show1.Size = new System.Drawing.Size(32, 23);
             this.pic_Show1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -291,7 +298,7 @@
             this.pic_Hide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide.Location = new System.Drawing.Point(384, 1);
+            this.pic_Hide.Location = new System.Drawing.Point(384, 8);
             this.pic_Hide.Name = "pic_Hide";
             this.pic_Hide.Size = new System.Drawing.Size(32, 23);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -306,7 +313,7 @@
             this.pic_Hide1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide1.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide1.Location = new System.Drawing.Point(384, 50);
+            this.pic_Hide1.Location = new System.Drawing.Point(384, 57);
             this.pic_Hide1.Name = "pic_Hide1";
             this.pic_Hide1.Size = new System.Drawing.Size(32, 23);
             this.pic_Hide1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -330,12 +337,58 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
+            // lbl_tendangnhap_chk
+            // 
+            this.lbl_tendangnhap_chk.AutoSize = true;
+            this.lbl_tendangnhap_chk.ForeColor = System.Drawing.Color.Red;
+            this.lbl_tendangnhap_chk.Location = new System.Drawing.Point(191, 81);
+            this.lbl_tendangnhap_chk.Name = "lbl_tendangnhap_chk";
+            this.lbl_tendangnhap_chk.Size = new System.Drawing.Size(14, 17);
+            this.lbl_tendangnhap_chk.TabIndex = 5;
+            this.lbl_tendangnhap_chk.Text = "*";
+            this.lbl_tendangnhap_chk.Visible = false;
+            // 
+            // lbl_rematkhaumoi_chk
+            // 
+            this.lbl_rematkhaumoi_chk.AutoSize = true;
+            this.lbl_rematkhaumoi_chk.ForeColor = System.Drawing.Color.Red;
+            this.lbl_rematkhaumoi_chk.Location = new System.Drawing.Point(163, 86);
+            this.lbl_rematkhaumoi_chk.Name = "lbl_rematkhaumoi_chk";
+            this.lbl_rematkhaumoi_chk.Size = new System.Drawing.Size(14, 17);
+            this.lbl_rematkhaumoi_chk.TabIndex = 21;
+            this.lbl_rematkhaumoi_chk.Text = "*";
+            this.lbl_rematkhaumoi_chk.Visible = false;
+            // 
+            // lbl_matkhaumoi_chk
+            // 
+            this.lbl_matkhaumoi_chk.AutoSize = true;
+            this.lbl_matkhaumoi_chk.ForeColor = System.Drawing.Color.Red;
+            this.lbl_matkhaumoi_chk.Location = new System.Drawing.Point(163, 37);
+            this.lbl_matkhaumoi_chk.Name = "lbl_matkhaumoi_chk";
+            this.lbl_matkhaumoi_chk.Size = new System.Drawing.Size(14, 17);
+            this.lbl_matkhaumoi_chk.TabIndex = 22;
+            this.lbl_matkhaumoi_chk.Text = "*";
+            this.lbl_matkhaumoi_chk.Visible = false;
+            // 
+            // lbl_notice_successfull
+            // 
+            this.lbl_notice_successfull.AutoSize = true;
+            this.lbl_notice_successfull.Font = new System.Drawing.Font("Barlow Condensed", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_notice_successfull.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbl_notice_successfull.Location = new System.Drawing.Point(128, 543);
+            this.lbl_notice_successfull.Name = "lbl_notice_successfull";
+            this.lbl_notice_successfull.Size = new System.Drawing.Size(364, 54);
+            this.lbl_notice_successfull.TabIndex = 23;
+            this.lbl_notice_successfull.Text = "Đổi mật khẩu thành công";
+            this.lbl_notice_successfull.Visible = false;
+            // 
             // frm_QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1208, 706);
+            this.Controls.Add(this.lbl_notice_successfull);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -390,5 +443,9 @@
         private System.Windows.Forms.PictureBox pic_Hide;
         private System.Windows.Forms.PictureBox pic_Hide1;
         private System.Windows.Forms.ErrorProvider KiemLoi;
+        private System.Windows.Forms.Label lbl_tendangnhap_chk;
+        private System.Windows.Forms.Label lbl_rematkhaumoi_chk;
+        private System.Windows.Forms.Label lbl_matkhaumoi_chk;
+        private System.Windows.Forms.Label lbl_notice_successfull;
     }
 }
