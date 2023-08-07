@@ -44,5 +44,9 @@ namespace QuanLyKhachSan.BUS
         {
             return DA_.LayTaiKhoan(id);
         }
+        public bool KiemTraPhanQuyen(string MaNhanSu,string PhanQuyen)
+        {
+            return DA_.KiemTraPhanQuyen(MaNhanSu, PhanQuyen);
+        }
     }
 }

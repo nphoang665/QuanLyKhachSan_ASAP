@@ -58,16 +58,25 @@ namespace QuanLyKhachSan
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+          
             string tenDangNhap = txt_TenDangNhap.Text;
             string matKhau = txt_MatKhau.Text;
             string phanQuyen = cbo_phanquen_them.SelectedItem.ToString();
             string manhansu = txt_manhansu_them.Text;
-
-            dstk.ThemTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
+            bool ktpq = dstk.KiemTraPhanQuyen(manhansu, phanQuyen);
+            if (ktpq)
+            {
+ dstk.ThemTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
 
             dstk.LoadDsTk(dgv_DanhSachNguoiDung);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung1);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung2);
+            }
+            else
+            {
+                MessageBox.Show("Lỗi. Khác chức vụ");
+            }
+           
         }
 
         private void frm_NguoiDung_Load(object sender, EventArgs e)
@@ -88,12 +97,19 @@ namespace QuanLyKhachSan
             string matKhau = txt_mk_Sua.Text;
             string phanQuyen = cbo_phanquyen_sua.SelectedItem.ToString();
             string manhansu = txt_manhansu_sua.Text;
-
-            dstk.SuaTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
+            bool ktpq = dstk.KiemTraPhanQuyen(manhansu, phanQuyen);
+            if (ktpq)
+            {
+                dstk.SuaTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
 
             dstk.LoadDsTk(dgv_DanhSachNguoiDung);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung1);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung2);
+            }
+            else
+            {
+                MessageBox.Show("Lỗi. Khác chức vụ");
+            }
         }
 
         private void btn_Xoa_Click_1(object sender, EventArgs e)

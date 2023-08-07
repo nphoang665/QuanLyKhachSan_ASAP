@@ -83,7 +83,21 @@ namespace QuanLyKhachSan.DA
             return qr;
         }
 
+        public bool KiemTraPhanQuyen(string MaNhanSu,string PhanQuyen)
+        {
+            bool kiemTra = false;
+            var PQ = db.NhanSus.FirstOrDefault(s => s.MaNhanSu == MaNhanSu);
+            if(PQ.ChucVu == PhanQuyen)
+            {
+                kiemTra = true;
 
+            }
+            else
+            {
+                kiemTra = false;
+            }
+            return kiemTra;
+        }
 
 
 

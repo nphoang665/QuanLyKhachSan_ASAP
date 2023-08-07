@@ -32,129 +32,129 @@
             this.pnl_405 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.lbl_405 = new System.Windows.Forms.Label();
+            this.pic_405 = new System.Windows.Forms.PictureBox();
             this.pnl_404 = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
             this.lbl_404 = new System.Windows.Forms.Label();
+            this.pic_404 = new System.Windows.Forms.PictureBox();
             this.pnl_403 = new System.Windows.Forms.Panel();
             this.label35 = new System.Windows.Forms.Label();
             this.lbl_403 = new System.Windows.Forms.Label();
+            this.pic_403 = new System.Windows.Forms.PictureBox();
             this.pnl_402 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.lbl_402 = new System.Windows.Forms.Label();
+            this.pic_402 = new System.Windows.Forms.PictureBox();
             this.pnl_401 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.lbl_401 = new System.Windows.Forms.Label();
+            this.pic_401 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_305 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.lbl_305 = new System.Windows.Forms.Label();
+            this.pic_305 = new System.Windows.Forms.PictureBox();
             this.pnl_304 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.lbl_304 = new System.Windows.Forms.Label();
+            this.pic_304 = new System.Windows.Forms.PictureBox();
             this.pnl_303 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.lbl_303 = new System.Windows.Forms.Label();
+            this.pic_303 = new System.Windows.Forms.PictureBox();
             this.pnl_302 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.lbl_302 = new System.Windows.Forms.Label();
+            this.pic_302 = new System.Windows.Forms.PictureBox();
             this.pnl_301 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.lbl_301 = new System.Windows.Forms.Label();
+            this.pic_301 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_205 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_205 = new System.Windows.Forms.Label();
+            this.pic_205 = new System.Windows.Forms.PictureBox();
             this.pnl_204 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.lbl_204 = new System.Windows.Forms.Label();
+            this.pic_204 = new System.Windows.Forms.PictureBox();
             this.pnl_203 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.lbl_203 = new System.Windows.Forms.Label();
+            this.pic_203 = new System.Windows.Forms.PictureBox();
             this.pnl_202 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.lbl_202 = new System.Windows.Forms.Label();
+            this.pic_202 = new System.Windows.Forms.PictureBox();
             this.pnl_201 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.lbl_201 = new System.Windows.Forms.Label();
+            this.pic_201 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_105 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_105 = new System.Windows.Forms.Label();
+            this.pic_105 = new System.Windows.Forms.PictureBox();
             this.pnl_104 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_104 = new System.Windows.Forms.Label();
+            this.pic_104 = new System.Windows.Forms.PictureBox();
             this.pnl_103 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_103 = new System.Windows.Forms.Label();
+            this.pic_103 = new System.Windows.Forms.PictureBox();
             this.pnl_102 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_102 = new System.Windows.Forms.Label();
+            this.pic_102 = new System.Windows.Forms.PictureBox();
             this.pnl_101 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_101 = new System.Windows.Forms.Label();
-            this.pic_405 = new System.Windows.Forms.PictureBox();
-            this.pic_404 = new System.Windows.Forms.PictureBox();
-            this.pic_403 = new System.Windows.Forms.PictureBox();
-            this.pic_402 = new System.Windows.Forms.PictureBox();
-            this.pic_401 = new System.Windows.Forms.PictureBox();
-            this.pic_305 = new System.Windows.Forms.PictureBox();
-            this.pic_304 = new System.Windows.Forms.PictureBox();
-            this.pic_303 = new System.Windows.Forms.PictureBox();
-            this.pic_302 = new System.Windows.Forms.PictureBox();
-            this.pic_301 = new System.Windows.Forms.PictureBox();
-            this.pic_205 = new System.Windows.Forms.PictureBox();
-            this.pic_204 = new System.Windows.Forms.PictureBox();
-            this.pic_203 = new System.Windows.Forms.PictureBox();
-            this.pic_202 = new System.Windows.Forms.PictureBox();
-            this.pic_201 = new System.Windows.Forms.PictureBox();
-            this.pic_105 = new System.Windows.Forms.PictureBox();
-            this.pic_104 = new System.Windows.Forms.PictureBox();
-            this.pic_103 = new System.Windows.Forms.PictureBox();
-            this.pic_102 = new System.Windows.Forms.PictureBox();
             this.pic_101 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.pnl_405.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_405)).BeginInit();
             this.pnl_404.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_404)).BeginInit();
             this.pnl_403.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_403)).BeginInit();
             this.pnl_402.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_402)).BeginInit();
             this.pnl_401.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_401)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnl_305.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_305)).BeginInit();
             this.pnl_304.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_304)).BeginInit();
             this.pnl_303.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_303)).BeginInit();
             this.pnl_302.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_302)).BeginInit();
             this.pnl_301.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_301)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnl_205.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_205)).BeginInit();
             this.pnl_204.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_204)).BeginInit();
             this.pnl_203.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_203)).BeginInit();
             this.pnl_202.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_202)).BeginInit();
             this.pnl_201.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_201)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnl_105.SuspendLayout();
-            this.pnl_104.SuspendLayout();
-            this.pnl_103.SuspendLayout();
-            this.pnl_102.SuspendLayout();
-            this.pnl_101.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_405)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_404)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_403)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_402)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_401)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_305)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_304)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_303)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_302)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_301)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_205)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_204)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_203)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_202)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_201)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_105)).BeginInit();
+            this.pnl_104.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_104)).BeginInit();
+            this.pnl_103.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_103)).BeginInit();
+            this.pnl_102.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_102)).BeginInit();
+            this.pnl_101.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_101)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,6 +201,17 @@
             this.lbl_405.Text = "405";
             this.lbl_405.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_405
+            // 
+            this.pic_405.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_405.Location = new System.Drawing.Point(0, 0);
+            this.pic_405.Name = "pic_405";
+            this.pic_405.Size = new System.Drawing.Size(100, 62);
+            this.pic_405.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_405.TabIndex = 0;
+            this.pic_405.TabStop = false;
+            this.pic_405.Click += new System.EventHandler(this.pic_405_Click);
+            // 
             // pnl_404
             // 
             this.pnl_404.BackColor = System.Drawing.Color.White;
@@ -230,6 +241,17 @@
             this.lbl_404.TabIndex = 1;
             this.lbl_404.Text = "404";
             this.lbl_404.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_404
+            // 
+            this.pic_404.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_404.Location = new System.Drawing.Point(0, 0);
+            this.pic_404.Name = "pic_404";
+            this.pic_404.Size = new System.Drawing.Size(100, 62);
+            this.pic_404.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_404.TabIndex = 0;
+            this.pic_404.TabStop = false;
+            this.pic_404.Click += new System.EventHandler(this.pic_404_Click);
             // 
             // pnl_403
             // 
@@ -261,6 +283,17 @@
             this.lbl_403.Text = "403";
             this.lbl_403.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_403
+            // 
+            this.pic_403.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_403.Location = new System.Drawing.Point(0, 0);
+            this.pic_403.Name = "pic_403";
+            this.pic_403.Size = new System.Drawing.Size(100, 62);
+            this.pic_403.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_403.TabIndex = 0;
+            this.pic_403.TabStop = false;
+            this.pic_403.Click += new System.EventHandler(this.pic_403_Click);
+            // 
             // pnl_402
             // 
             this.pnl_402.BackColor = System.Drawing.Color.White;
@@ -291,6 +324,17 @@
             this.lbl_402.Text = "402";
             this.lbl_402.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_402
+            // 
+            this.pic_402.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_402.Location = new System.Drawing.Point(0, 0);
+            this.pic_402.Name = "pic_402";
+            this.pic_402.Size = new System.Drawing.Size(100, 62);
+            this.pic_402.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_402.TabIndex = 0;
+            this.pic_402.TabStop = false;
+            this.pic_402.Click += new System.EventHandler(this.pic_402_Click);
+            // 
             // pnl_401
             // 
             this.pnl_401.BackColor = System.Drawing.Color.White;
@@ -320,6 +364,17 @@
             this.lbl_401.TabIndex = 1;
             this.lbl_401.Text = "401";
             this.lbl_401.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_401
+            // 
+            this.pic_401.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_401.Location = new System.Drawing.Point(0, 0);
+            this.pic_401.Name = "pic_401";
+            this.pic_401.Size = new System.Drawing.Size(100, 62);
+            this.pic_401.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_401.TabIndex = 0;
+            this.pic_401.TabStop = false;
+            this.pic_401.Click += new System.EventHandler(this.pic_401_Click);
             // 
             // panel3
             // 
@@ -364,6 +419,17 @@
             this.lbl_305.Text = "305";
             this.lbl_305.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_305
+            // 
+            this.pic_305.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_305.Location = new System.Drawing.Point(0, 0);
+            this.pic_305.Name = "pic_305";
+            this.pic_305.Size = new System.Drawing.Size(100, 62);
+            this.pic_305.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_305.TabIndex = 0;
+            this.pic_305.TabStop = false;
+            this.pic_305.Click += new System.EventHandler(this.pic_305_Click);
+            // 
             // pnl_304
             // 
             this.pnl_304.BackColor = System.Drawing.Color.White;
@@ -393,6 +459,17 @@
             this.lbl_304.TabIndex = 1;
             this.lbl_304.Text = "304";
             this.lbl_304.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_304
+            // 
+            this.pic_304.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_304.Location = new System.Drawing.Point(0, 0);
+            this.pic_304.Name = "pic_304";
+            this.pic_304.Size = new System.Drawing.Size(100, 62);
+            this.pic_304.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_304.TabIndex = 0;
+            this.pic_304.TabStop = false;
+            this.pic_304.Click += new System.EventHandler(this.pic_304_Click);
             // 
             // pnl_303
             // 
@@ -424,6 +501,17 @@
             this.lbl_303.Text = "303";
             this.lbl_303.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_303
+            // 
+            this.pic_303.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_303.Location = new System.Drawing.Point(0, 0);
+            this.pic_303.Name = "pic_303";
+            this.pic_303.Size = new System.Drawing.Size(100, 62);
+            this.pic_303.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_303.TabIndex = 0;
+            this.pic_303.TabStop = false;
+            this.pic_303.Click += new System.EventHandler(this.pic_303_Click);
+            // 
             // pnl_302
             // 
             this.pnl_302.BackColor = System.Drawing.Color.White;
@@ -454,6 +542,17 @@
             this.lbl_302.Text = "302";
             this.lbl_302.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_302
+            // 
+            this.pic_302.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_302.Location = new System.Drawing.Point(0, 0);
+            this.pic_302.Name = "pic_302";
+            this.pic_302.Size = new System.Drawing.Size(100, 62);
+            this.pic_302.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_302.TabIndex = 0;
+            this.pic_302.TabStop = false;
+            this.pic_302.Click += new System.EventHandler(this.pic_302_Click);
+            // 
             // pnl_301
             // 
             this.pnl_301.BackColor = System.Drawing.Color.White;
@@ -483,6 +582,17 @@
             this.lbl_301.TabIndex = 1;
             this.lbl_301.Text = "301";
             this.lbl_301.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_301
+            // 
+            this.pic_301.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_301.Location = new System.Drawing.Point(0, 0);
+            this.pic_301.Name = "pic_301";
+            this.pic_301.Size = new System.Drawing.Size(100, 62);
+            this.pic_301.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_301.TabIndex = 0;
+            this.pic_301.TabStop = false;
+            this.pic_301.Click += new System.EventHandler(this.pic_301_Click);
             // 
             // panel2
             // 
@@ -527,6 +637,17 @@
             this.lbl_205.Text = "205";
             this.lbl_205.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_205
+            // 
+            this.pic_205.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_205.Location = new System.Drawing.Point(0, 0);
+            this.pic_205.Name = "pic_205";
+            this.pic_205.Size = new System.Drawing.Size(100, 62);
+            this.pic_205.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_205.TabIndex = 0;
+            this.pic_205.TabStop = false;
+            this.pic_205.Click += new System.EventHandler(this.pic_205_Click);
+            // 
             // pnl_204
             // 
             this.pnl_204.BackColor = System.Drawing.Color.White;
@@ -556,6 +677,17 @@
             this.lbl_204.TabIndex = 1;
             this.lbl_204.Text = "204";
             this.lbl_204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_204
+            // 
+            this.pic_204.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_204.Location = new System.Drawing.Point(0, 0);
+            this.pic_204.Name = "pic_204";
+            this.pic_204.Size = new System.Drawing.Size(100, 62);
+            this.pic_204.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_204.TabIndex = 0;
+            this.pic_204.TabStop = false;
+            this.pic_204.Click += new System.EventHandler(this.pic_204_Click);
             // 
             // pnl_203
             // 
@@ -587,6 +719,17 @@
             this.lbl_203.Text = "203";
             this.lbl_203.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_203
+            // 
+            this.pic_203.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_203.Location = new System.Drawing.Point(0, 0);
+            this.pic_203.Name = "pic_203";
+            this.pic_203.Size = new System.Drawing.Size(100, 62);
+            this.pic_203.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_203.TabIndex = 0;
+            this.pic_203.TabStop = false;
+            this.pic_203.Click += new System.EventHandler(this.pic_203_Click);
+            // 
             // pnl_202
             // 
             this.pnl_202.BackColor = System.Drawing.Color.White;
@@ -617,6 +760,17 @@
             this.lbl_202.Text = "202";
             this.lbl_202.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_202
+            // 
+            this.pic_202.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_202.Location = new System.Drawing.Point(0, 0);
+            this.pic_202.Name = "pic_202";
+            this.pic_202.Size = new System.Drawing.Size(100, 62);
+            this.pic_202.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_202.TabIndex = 0;
+            this.pic_202.TabStop = false;
+            this.pic_202.Click += new System.EventHandler(this.pic_202_Click);
+            // 
             // pnl_201
             // 
             this.pnl_201.BackColor = System.Drawing.Color.White;
@@ -646,6 +800,17 @@
             this.lbl_201.TabIndex = 1;
             this.lbl_201.Text = "201";
             this.lbl_201.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_201
+            // 
+            this.pic_201.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_201.Location = new System.Drawing.Point(0, 0);
+            this.pic_201.Name = "pic_201";
+            this.pic_201.Size = new System.Drawing.Size(100, 62);
+            this.pic_201.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_201.TabIndex = 0;
+            this.pic_201.TabStop = false;
+            this.pic_201.Click += new System.EventHandler(this.pic_201_Click);
             // 
             // panel1
             // 
@@ -690,6 +855,17 @@
             this.lbl_105.Text = "105";
             this.lbl_105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_105
+            // 
+            this.pic_105.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_105.Location = new System.Drawing.Point(0, 0);
+            this.pic_105.Name = "pic_105";
+            this.pic_105.Size = new System.Drawing.Size(100, 62);
+            this.pic_105.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_105.TabIndex = 0;
+            this.pic_105.TabStop = false;
+            this.pic_105.Click += new System.EventHandler(this.pic_105_Click);
+            // 
             // pnl_104
             // 
             this.pnl_104.BackColor = System.Drawing.Color.White;
@@ -719,6 +895,17 @@
             this.lbl_104.TabIndex = 1;
             this.lbl_104.Text = "104";
             this.lbl_104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_104
+            // 
+            this.pic_104.Image = global::QuanLyKhachSan.Properties.Resources.house1;
+            this.pic_104.Location = new System.Drawing.Point(0, 0);
+            this.pic_104.Name = "pic_104";
+            this.pic_104.Size = new System.Drawing.Size(100, 62);
+            this.pic_104.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_104.TabIndex = 0;
+            this.pic_104.TabStop = false;
+            this.pic_104.Click += new System.EventHandler(this.pic_104_Click);
             // 
             // pnl_103
             // 
@@ -750,6 +937,17 @@
             this.lbl_103.Text = "103";
             this.lbl_103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pic_103
+            // 
+            this.pic_103.Image = global::QuanLyKhachSan.Properties.Resources.house2;
+            this.pic_103.Location = new System.Drawing.Point(0, 0);
+            this.pic_103.Name = "pic_103";
+            this.pic_103.Size = new System.Drawing.Size(100, 62);
+            this.pic_103.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_103.TabIndex = 0;
+            this.pic_103.TabStop = false;
+            this.pic_103.Click += new System.EventHandler(this.pic_103_Click);
+            // 
             // pnl_102
             // 
             this.pnl_102.BackColor = System.Drawing.Color.White;
@@ -779,6 +977,17 @@
             this.lbl_102.TabIndex = 1;
             this.lbl_102.Text = "102";
             this.lbl_102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_102
+            // 
+            this.pic_102.Image = global::QuanLyKhachSan.Properties.Resources.house2;
+            this.pic_102.Location = new System.Drawing.Point(0, 0);
+            this.pic_102.Name = "pic_102";
+            this.pic_102.Size = new System.Drawing.Size(100, 62);
+            this.pic_102.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_102.TabIndex = 0;
+            this.pic_102.TabStop = false;
+            this.pic_102.Click += new System.EventHandler(this.pic_102_Click);
             // 
             // pnl_101
             // 
@@ -810,215 +1019,6 @@
             this.lbl_101.Text = "101";
             this.lbl_101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pic_405
-            // 
-            this.pic_405.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_405.Location = new System.Drawing.Point(0, 0);
-            this.pic_405.Name = "pic_405";
-            this.pic_405.Size = new System.Drawing.Size(100, 62);
-            this.pic_405.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_405.TabIndex = 0;
-            this.pic_405.TabStop = false;
-            this.pic_405.Click += new System.EventHandler(this.pic_405_Click);
-            // 
-            // pic_404
-            // 
-            this.pic_404.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_404.Location = new System.Drawing.Point(0, 0);
-            this.pic_404.Name = "pic_404";
-            this.pic_404.Size = new System.Drawing.Size(100, 62);
-            this.pic_404.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_404.TabIndex = 0;
-            this.pic_404.TabStop = false;
-            this.pic_404.Click += new System.EventHandler(this.pic_404_Click);
-            // 
-            // pic_403
-            // 
-            this.pic_403.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_403.Location = new System.Drawing.Point(0, 0);
-            this.pic_403.Name = "pic_403";
-            this.pic_403.Size = new System.Drawing.Size(100, 62);
-            this.pic_403.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_403.TabIndex = 0;
-            this.pic_403.TabStop = false;
-            this.pic_403.Click += new System.EventHandler(this.pic_403_Click);
-            // 
-            // pic_402
-            // 
-            this.pic_402.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_402.Location = new System.Drawing.Point(0, 0);
-            this.pic_402.Name = "pic_402";
-            this.pic_402.Size = new System.Drawing.Size(100, 62);
-            this.pic_402.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_402.TabIndex = 0;
-            this.pic_402.TabStop = false;
-            this.pic_402.Click += new System.EventHandler(this.pic_402_Click);
-            // 
-            // pic_401
-            // 
-            this.pic_401.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_401.Location = new System.Drawing.Point(0, 0);
-            this.pic_401.Name = "pic_401";
-            this.pic_401.Size = new System.Drawing.Size(100, 62);
-            this.pic_401.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_401.TabIndex = 0;
-            this.pic_401.TabStop = false;
-            this.pic_401.Click += new System.EventHandler(this.pic_401_Click);
-            // 
-            // pic_305
-            // 
-            this.pic_305.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_305.Location = new System.Drawing.Point(0, 0);
-            this.pic_305.Name = "pic_305";
-            this.pic_305.Size = new System.Drawing.Size(100, 62);
-            this.pic_305.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_305.TabIndex = 0;
-            this.pic_305.TabStop = false;
-            this.pic_305.Click += new System.EventHandler(this.pic_305_Click);
-            // 
-            // pic_304
-            // 
-            this.pic_304.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_304.Location = new System.Drawing.Point(0, 0);
-            this.pic_304.Name = "pic_304";
-            this.pic_304.Size = new System.Drawing.Size(100, 62);
-            this.pic_304.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_304.TabIndex = 0;
-            this.pic_304.TabStop = false;
-            this.pic_304.Click += new System.EventHandler(this.pic_304_Click);
-            // 
-            // pic_303
-            // 
-            this.pic_303.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_303.Location = new System.Drawing.Point(0, 0);
-            this.pic_303.Name = "pic_303";
-            this.pic_303.Size = new System.Drawing.Size(100, 62);
-            this.pic_303.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_303.TabIndex = 0;
-            this.pic_303.TabStop = false;
-            this.pic_303.Click += new System.EventHandler(this.pic_303_Click);
-            // 
-            // pic_302
-            // 
-            this.pic_302.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_302.Location = new System.Drawing.Point(0, 0);
-            this.pic_302.Name = "pic_302";
-            this.pic_302.Size = new System.Drawing.Size(100, 62);
-            this.pic_302.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_302.TabIndex = 0;
-            this.pic_302.TabStop = false;
-            this.pic_302.Click += new System.EventHandler(this.pic_302_Click);
-            // 
-            // pic_301
-            // 
-            this.pic_301.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_301.Location = new System.Drawing.Point(0, 0);
-            this.pic_301.Name = "pic_301";
-            this.pic_301.Size = new System.Drawing.Size(100, 62);
-            this.pic_301.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_301.TabIndex = 0;
-            this.pic_301.TabStop = false;
-            this.pic_301.Click += new System.EventHandler(this.pic_301_Click);
-            // 
-            // pic_205
-            // 
-            this.pic_205.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_205.Location = new System.Drawing.Point(0, 0);
-            this.pic_205.Name = "pic_205";
-            this.pic_205.Size = new System.Drawing.Size(100, 62);
-            this.pic_205.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_205.TabIndex = 0;
-            this.pic_205.TabStop = false;
-            this.pic_205.Click += new System.EventHandler(this.pic_205_Click);
-            // 
-            // pic_204
-            // 
-            this.pic_204.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_204.Location = new System.Drawing.Point(0, 0);
-            this.pic_204.Name = "pic_204";
-            this.pic_204.Size = new System.Drawing.Size(100, 62);
-            this.pic_204.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_204.TabIndex = 0;
-            this.pic_204.TabStop = false;
-            this.pic_204.Click += new System.EventHandler(this.pic_204_Click);
-            // 
-            // pic_203
-            // 
-            this.pic_203.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_203.Location = new System.Drawing.Point(0, 0);
-            this.pic_203.Name = "pic_203";
-            this.pic_203.Size = new System.Drawing.Size(100, 62);
-            this.pic_203.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_203.TabIndex = 0;
-            this.pic_203.TabStop = false;
-            this.pic_203.Click += new System.EventHandler(this.pic_203_Click);
-            // 
-            // pic_202
-            // 
-            this.pic_202.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_202.Location = new System.Drawing.Point(0, 0);
-            this.pic_202.Name = "pic_202";
-            this.pic_202.Size = new System.Drawing.Size(100, 62);
-            this.pic_202.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_202.TabIndex = 0;
-            this.pic_202.TabStop = false;
-            this.pic_202.Click += new System.EventHandler(this.pic_202_Click);
-            // 
-            // pic_201
-            // 
-            this.pic_201.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_201.Location = new System.Drawing.Point(0, 0);
-            this.pic_201.Name = "pic_201";
-            this.pic_201.Size = new System.Drawing.Size(100, 62);
-            this.pic_201.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_201.TabIndex = 0;
-            this.pic_201.TabStop = false;
-            this.pic_201.Click += new System.EventHandler(this.pic_201_Click);
-            // 
-            // pic_105
-            // 
-            this.pic_105.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_105.Location = new System.Drawing.Point(0, 0);
-            this.pic_105.Name = "pic_105";
-            this.pic_105.Size = new System.Drawing.Size(100, 62);
-            this.pic_105.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_105.TabIndex = 0;
-            this.pic_105.TabStop = false;
-            this.pic_105.Click += new System.EventHandler(this.pic_105_Click);
-            // 
-            // pic_104
-            // 
-            this.pic_104.Image = global::QuanLyKhachSan.Properties.Resources.house1;
-            this.pic_104.Location = new System.Drawing.Point(0, 0);
-            this.pic_104.Name = "pic_104";
-            this.pic_104.Size = new System.Drawing.Size(100, 62);
-            this.pic_104.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_104.TabIndex = 0;
-            this.pic_104.TabStop = false;
-            this.pic_104.Click += new System.EventHandler(this.pic_104_Click);
-            // 
-            // pic_103
-            // 
-            this.pic_103.Image = global::QuanLyKhachSan.Properties.Resources.house2;
-            this.pic_103.Location = new System.Drawing.Point(0, 0);
-            this.pic_103.Name = "pic_103";
-            this.pic_103.Size = new System.Drawing.Size(100, 62);
-            this.pic_103.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_103.TabIndex = 0;
-            this.pic_103.TabStop = false;
-            this.pic_103.Click += new System.EventHandler(this.pic_103_Click);
-            // 
-            // pic_102
-            // 
-            this.pic_102.Image = global::QuanLyKhachSan.Properties.Resources.house2;
-            this.pic_102.Location = new System.Drawing.Point(0, 0);
-            this.pic_102.Name = "pic_102";
-            this.pic_102.Size = new System.Drawing.Size(100, 62);
-            this.pic_102.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_102.TabIndex = 0;
-            this.pic_102.TabStop = false;
-            this.pic_102.Click += new System.EventHandler(this.pic_102_Click);
-            // 
             // pic_101
             // 
             this.pic_101.Image = global::QuanLyKhachSan.Properties.Resources.house;
@@ -1045,69 +1045,70 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_GiaoDienPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_GiaoDienPhong_Load);
             this.panel4.ResumeLayout(false);
             this.pnl_405.ResumeLayout(false);
             this.pnl_405.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_405)).EndInit();
             this.pnl_404.ResumeLayout(false);
             this.pnl_404.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_404)).EndInit();
             this.pnl_403.ResumeLayout(false);
             this.pnl_403.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_403)).EndInit();
             this.pnl_402.ResumeLayout(false);
             this.pnl_402.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_402)).EndInit();
             this.pnl_401.ResumeLayout(false);
             this.pnl_401.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_401)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnl_305.ResumeLayout(false);
             this.pnl_305.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_305)).EndInit();
             this.pnl_304.ResumeLayout(false);
             this.pnl_304.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_304)).EndInit();
             this.pnl_303.ResumeLayout(false);
             this.pnl_303.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_303)).EndInit();
             this.pnl_302.ResumeLayout(false);
             this.pnl_302.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_302)).EndInit();
             this.pnl_301.ResumeLayout(false);
             this.pnl_301.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_301)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnl_205.ResumeLayout(false);
             this.pnl_205.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_205)).EndInit();
             this.pnl_204.ResumeLayout(false);
             this.pnl_204.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_204)).EndInit();
             this.pnl_203.ResumeLayout(false);
             this.pnl_203.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_203)).EndInit();
             this.pnl_202.ResumeLayout(false);
             this.pnl_202.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_202)).EndInit();
             this.pnl_201.ResumeLayout(false);
             this.pnl_201.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_201)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnl_105.ResumeLayout(false);
             this.pnl_105.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_105)).EndInit();
             this.pnl_104.ResumeLayout(false);
             this.pnl_104.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_104)).EndInit();
             this.pnl_103.ResumeLayout(false);
             this.pnl_103.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_103)).EndInit();
             this.pnl_102.ResumeLayout(false);
             this.pnl_102.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_102)).EndInit();
             this.pnl_101.ResumeLayout(false);
             this.pnl_101.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_405)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_404)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_403)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_402)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_401)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_305)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_304)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_303)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_302)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_301)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_205)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_204)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_203)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_202)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_201)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_105)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_104)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_103)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_102)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_101)).EndInit();
             this.ResumeLayout(false);
 

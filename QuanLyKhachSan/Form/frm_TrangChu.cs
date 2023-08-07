@@ -230,11 +230,13 @@ namespace QuanLyKhachSan
 
         private void btn_ThuePhong_Click(object sender, EventArgs e)
         {
+            DiChuyenPanel(btn_ThuePhong);
             OpenChildForm(new frm_ThuePhong());
         }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             OpenChildForm(new frm_ThongTinTaiKhoan(_tk));
         }
     }
