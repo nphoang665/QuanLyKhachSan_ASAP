@@ -41,12 +41,13 @@
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_DangNhap = new System.Windows.Forms.Label();
+            this.txt_cccd = new System.Windows.Forms.TextBox();
+            this.lbl_cccd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_cccd = new System.Windows.Forms.TextBox();
-            this.lbl_cccd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -164,6 +165,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lbl_DangNhap);
             this.groupBox1.Controls.Add(this.txt_cccd);
             this.groupBox1.Controls.Add(this.lbl_cccd);
             this.groupBox1.Controls.Add(this.pic_Show);
@@ -179,6 +181,40 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng Ký";
+            // 
+            // lbl_DangNhap
+            // 
+            this.lbl_DangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_DangNhap.AutoSize = true;
+            this.lbl_DangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_DangNhap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.lbl_DangNhap.Location = new System.Drawing.Point(202, 323);
+            this.lbl_DangNhap.Name = "lbl_DangNhap";
+            this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
+            this.lbl_DangNhap.TabIndex = 7;
+            this.lbl_DangNhap.Text = "Đăng nhập";
+            this.lbl_DangNhap.Click += new System.EventHandler(this.lbl_DangNhap_Click);
+            // 
+            // txt_cccd
+            // 
+            this.txt_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cccd.Location = new System.Drawing.Point(94, 67);
+            this.txt_cccd.Name = "txt_cccd";
+            this.txt_cccd.Size = new System.Drawing.Size(296, 20);
+            this.txt_cccd.TabIndex = 6;
+            // 
+            // lbl_cccd
+            // 
+            this.lbl_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_cccd.AutoSize = true;
+            this.lbl_cccd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cccd.Location = new System.Drawing.Point(91, 35);
+            this.lbl_cccd.Name = "lbl_cccd";
+            this.lbl_cccd.Size = new System.Drawing.Size(158, 18);
+            this.lbl_cccd.TabIndex = 5;
+            this.lbl_cccd.Text = "Căn cước công dân";
             // 
             // panel1
             // 
@@ -224,26 +260,6 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // txt_cccd
-            // 
-            this.txt_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cccd.Location = new System.Drawing.Point(94, 67);
-            this.txt_cccd.Name = "txt_cccd";
-            this.txt_cccd.Size = new System.Drawing.Size(296, 20);
-            this.txt_cccd.TabIndex = 6;
-            // 
-            // lbl_cccd
-            // 
-            this.lbl_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_cccd.AutoSize = true;
-            this.lbl_cccd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cccd.Location = new System.Drawing.Point(91, 35);
-            this.lbl_cccd.Name = "lbl_cccd";
-            this.lbl_cccd.Size = new System.Drawing.Size(158, 18);
-            this.lbl_cccd.TabIndex = 5;
-            this.lbl_cccd.Text = "Căn cước công dân";
-            // 
             // frm_DangKyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +272,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frm_DangKyTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký Tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).EndInit();
@@ -290,5 +307,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_cccd;
         private System.Windows.Forms.Label lbl_cccd;
+        private System.Windows.Forms.Label lbl_DangNhap;
     }
 }

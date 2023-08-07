@@ -43,5 +43,13 @@ namespace QuanLyKhachSan
              
                 }
         }
+
+        private void lbl_DangNhap_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_DangNhap frm_DangNhap = new frm_DangNhap();
+            frm_DangNhap.ShowDialog();
+            this.Close();
+        }
     }
 }

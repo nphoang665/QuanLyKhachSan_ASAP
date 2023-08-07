@@ -48,6 +48,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbl_dangky = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
@@ -110,6 +111,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lbl_dangky);
             this.groupBox1.Controls.Add(this.chk_ghiNhoDangNhap);
             this.groupBox1.Controls.Add(this.pic_Show);
             this.groupBox1.Controls.Add(this.txt_MatKhau);
@@ -256,6 +258,20 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
+            // lbl_dangky
+            // 
+            this.lbl_dangky.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_dangky.AutoSize = true;
+            this.lbl_dangky.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_dangky.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dangky.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.lbl_dangky.Location = new System.Drawing.Point(73, 317);
+            this.lbl_dangky.Name = "lbl_dangky";
+            this.lbl_dangky.Size = new System.Drawing.Size(343, 18);
+            this.lbl_dangky.TabIndex = 9;
+            this.lbl_dangky.Text = "Bạn chưa có tài khoản? Đăng ký ngay tại đây";
+            this.lbl_dangky.Click += new System.EventHandler(this.lbl_dangky_Click);
+            // 
             // frm_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -309,6 +325,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider KiemLoi;
         private System.Windows.Forms.CheckBox chk_ghiNhoDangNhap;
+        private System.Windows.Forms.Label lbl_dangky;
     }
 }
 

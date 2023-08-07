@@ -142,5 +142,12 @@ namespace QuanLyKhachSan
             }
             loadNhomk();
         }
+
+        private void lbl_dangky_Click(object sender, EventArgs e)
+        {
+            frm_DangKyTaiKhoan frm_DangKy = new frm_DangKyTaiKhoan();
+            frm_DangKy.Show();
+            this.Hide();
+        }
     }
 }
