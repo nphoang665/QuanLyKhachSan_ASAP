@@ -24,7 +24,7 @@ namespace QuanLyKhachSan
 
         private void pic_101_Click(object sender, EventArgs e)
         {
-            /*string maPhong = lbl_101.Text;
+            string maPhong = lbl_101.Text;
             var phong = bus.layTrangThai(maPhong);
 
             if (phong.TinhTrang == "Trống")
@@ -38,19 +38,6 @@ namespace QuanLyKhachSan
                 // Open the frm_ThongTinPhong form if the room is already rented
                 frm_ThongTinPhong frm_ThongTinPhong = new frm_ThongTinPhong(maPhong);
                 frm_ThongTinPhong.ShowDialog();
-            }*/
-            string maPhong = lbl_101.Text;
-            var phong = bus.layTrangThai(maPhong);
-
-            if (phong.TinhTrang == "Trống")
-            {
-                // Open the frm_ThuePhong form if the room is available
-                OpenFormThuePhong(maPhong);
-            }
-            else
-            {
-                // Open the frm_ThongTinPhong form if the room is already rented
-                OpenFormThongTinPhong(maPhong);
             }
         }
 

@@ -70,6 +70,7 @@
     <Compile Include="BUS\BUS_QuanLyTaiKhoan.cs" />
     <Compile Include="BUS\BUS_QuenMatKhau.cs" />
     <Compile Include="BUS\BUS_ThongTinPhong.cs" />
+    <Compile Include="BUS\BUS_ThongTinTaiKhoan.cs" />
     <Compile Include="BUS\BUS_ThuePhong.cs" />
     <Compile Include="BUS\BUS_TrangChu.cs" />
     <Compile Include="BUS\BUS_TraPhong.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="DA\DA_QuenMatKhau.cs" />
     <Compile Include="DA\DA_ThongKe.cs" />
     <Compile Include="DA\DA_ThongTinPhong.cs" />
+    <Compile Include="DA\DA_ThongTinTaiKhoan.cs" />
     <Compile Include="DA\DA_ThuePhong.cs" />
     <Compile Include="DA\DA_TrangChu.cs" />
     <Compile Include="DA\DA_TraPhong.cs" />
@@ -241,13 +243,31 @@
     <Compile Include="Form\frm_ThuePhong.designer.cs">
       <DependentUpon>frm_ThuePhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\frm_ThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_ThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>frm_ThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_DangKyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_DangKyTaiKhoan.Designer.cs">
+      <DependentUpon>frm_DangKyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\frm_DangKyTaiKhoan.resx">
+      <DependentUpon>frm_DangKyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_ThongKe.resx">
       <DependentUpon>frm_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_ThongTinTaiKhoan.resx">
+      <DependentUpon>frm_ThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_TrangChu.resx">
       <DependentUpon>frm_TrangChu.cs</DependentUpon>
@@ -349,6 +369,8 @@
       <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
       <LastGenOutput>QuanLyKhachSanModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Female_Information.png" />
+    <None Include="Resources\male_information.png" />
     <None Include="Resources\house-key %281%29.png" />
     <None Include="Resources\investment.png" />
     <None Include="Resources\house.png" />

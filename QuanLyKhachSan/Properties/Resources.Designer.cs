@@ -103,6 +103,16 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Female_Information {
+            get {
+                object obj = ResourceManager.GetObject("Female_Information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotel_building_isolated_city_street_vector_illustration_flat_cartoon_101884_680 {
             get {
                 object obj = ResourceManager.GetObject("hotel-building-isolated-city-street-vector-illustration-flat-cartoon_101884-680", resourceCulture);
@@ -276,6 +286,26 @@ namespace QuanLyKhachSan.Properties {
         internal static System.Drawing.Bitmap investment {
             get {
                 object obj = ResourceManager.GetObject("investment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap male_information {
+            get {
+                object obj = ResourceManager.GetObject("male_information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap male_information1 {
+            get {
+                object obj = ResourceManager.GetObject("male_information1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
