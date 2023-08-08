@@ -33,7 +33,6 @@ namespace QuanLyKhachSan.DA
         public virtual DbSet<Phong> Phongs { get; set; }
         public virtual DbSet<QuanLyDichVu> QuanLyDichVus { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<ThanhToan> ThanhToans { get; set; }
         public virtual DbSet<ThongTinKhachHang> ThongTinKhachHangs { get; set; }
         public virtual DbSet<ThuePhong> ThuePhongs { get; set; }
         public virtual DbSet<VatTu> VatTus { get; set; }

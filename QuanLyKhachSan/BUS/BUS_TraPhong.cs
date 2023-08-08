@@ -15,10 +15,6 @@ namespace QuanLyKhachSan.BUS
         {
             da = new DA_TraPhong();
         }
-        public HoaDon LayTtTraPhong(string makhachhang)
-        {
-            return da.layHoaDon(makhachhang);
-        }
         public ThuePhong layttDatphong(string maphong)
         {
             return da.layphong(maphong);
@@ -27,6 +23,11 @@ namespace QuanLyKhachSan.BUS
         {
             return da.layTongTienDichVu(maphong);
         }
-      
+        public void LuuThongTinThanhToan(HoaDon hoaDon)
+        {
+            // Lưu thông tin thanh toán vào CSDL
+            da.LuuThongTinThanhToan(hoaDon);
+        }
+
     }
 }

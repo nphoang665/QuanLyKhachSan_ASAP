@@ -16,9 +16,8 @@ namespace QuanLyKhachSan.DA
     {
         public string MaThuePhong { get; set; }
         public string MaKhachHang { get; set; }
-        public Nullable<System.DateTime> NgayDat { get; set; }
-        public string MaPhong { get; set; }
         public Nullable<System.DateTime> NgayThue { get; set; }
+        public string MaPhong { get; set; }
     
         public virtual Phong Phong { get; set; }
         public virtual ThongTinKhachHang ThongTinKhachHang { get; set; }

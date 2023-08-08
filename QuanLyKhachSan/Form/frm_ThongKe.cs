@@ -30,51 +30,51 @@ namespace QuanLyKhachSan
         }
         private void UpdateChart()
         {
-           
-            chart_doanhthu.Series.Clear();
-            // Call the ThongKeDoanhThuTheoThang method to get the data
-            int nam = dateTimePicker1.Value.Year;
-          var  data = bus.ThongKeDoanhThuTheoThang(nam);
 
-        
+            //chart_doanhthu.Series.Clear();
+            //// Call the ThongKeDoanhThuTheoThang method to get the data
+            //int nam = dateTimePicker1.Value.Year;
+            //var data = bus.ThongKeDoanhThuTheoThang(nam);
 
-            // Set the DataSource property of the Chart control to the data
-            chart_doanhthu.DataSource = data;
 
-            // Create a new Series and add it to the Chart
-            Series series = new Series();
-            series.XValueMember = "Thang";
-            series.YValueMembers = "DoanhThu";
-            chart_doanhthu.Series.Add(series);
 
-    
+            //// Set the DataSource property of the Chart control to the data
+            //chart_doanhthu.DataSource = data;
+
+            //// Create a new Series and add it to the Chart
+            //Series series = new Series();
+            //series.XValueMember = "Thang";
+            //series.YValueMembers = "DoanhThu";
+            //chart_doanhthu.Series.Add(series);
+
+
 
 
         }
         public void doanhthungay()
         {
-            // Call the ThongKeDoanhThuTheoNgay method to get the data
-            int nam = 2023; // Set the year you want to display data for
-            int thang = 8; // Set the month you want to display data for
-            var data = bus.ThongKeDoanhThuTheoNgay(nam, thang);
+            //// Call the ThongKeDoanhThuTheoNgay method to get the data
+            //int nam = 2023; // Set the year you want to display data for
+            //int thang = 8; // Set the month you want to display data for
+            //var data = bus.ThongKeDoanhThuTheoNgay(nam, thang);
 
-            // Create a new Chart control
-      
+            //// Create a new Chart control
 
-            // Set the DataSource property of the Chart control to the data
-            chart_doanhthu.DataSource = data;
 
-            // Create a new Series and add it to the Chart
-            Series series = new Series();
-            series.XValueMember = "ngay";
-            series.YValueMembers = "doanhthu";
-            chart_doanhthu.Series.Add(series);
+            //// Set the DataSource property of the Chart control to the data
+            //chart_doanhthu.DataSource = data;
+
+            //// Create a new Series and add it to the Chart
+            //Series series = new Series();
+            //series.XValueMember = "ngay";
+            //series.YValueMembers = "doanhthu";
+            //chart_doanhthu.Series.Add(series);
 
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-           doanhthungay();
+            //doanhthungay();
         }
     }
 }

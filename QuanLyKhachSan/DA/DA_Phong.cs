@@ -111,6 +111,15 @@ namespace QuanLyKhachSan.DA
         {
             return db.ThuePhongs.Any(d => d.MaPhong == maPhong);
         }
+        public void CapNhatTrangThaiPhong(string maPhong, string tinhTrang)
+        {
+            var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
+            if (phong != null)
+            {
+                phong.TinhTrang = tinhTrang;
+                db.SaveChanges();
+            }
+        }
     }
 }
 
