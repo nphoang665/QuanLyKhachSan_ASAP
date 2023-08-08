@@ -30,6 +30,10 @@
         {
             this.tabControl_NguoiDung = new System.Windows.Forms.TabControl();
             this.tabPage_ThemNguoiDung = new System.Windows.Forms.TabPage();
+            this.lbl_mnsthem_chk = new System.Windows.Forms.Label();
+            this.lbl_pqthem_chk = new System.Windows.Forms.Label();
+            this.lbl_mkthem_chk = new System.Windows.Forms.Label();
+            this.lbl_tdnthem_chk = new System.Windows.Forms.Label();
             this.cbo_phanquen_them = new System.Windows.Forms.ComboBox();
             this.txt_manhansu_them = new System.Windows.Forms.TextBox();
             this.lbl_manhansu_them = new System.Windows.Forms.Label();
@@ -47,6 +51,10 @@
             this.dgv_DanhSachNguoiDung1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage_CapNhat_Xoa = new System.Windows.Forms.TabPage();
+            this.lbl_mnssua_chk = new System.Windows.Forms.Label();
+            this.lbl_pqsua_chk = new System.Windows.Forms.Label();
+            this.lbl_mksua_Chk = new System.Windows.Forms.Label();
+            this.lbl_tksua_chk = new System.Windows.Forms.Label();
             this.cbo_phanquyen_sua = new System.Windows.Forms.ComboBox();
             this.txt_manhansu_sua = new System.Windows.Forms.TextBox();
             this.lbl_manhansu_sua = new System.Windows.Forms.Label();
@@ -59,10 +67,6 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.lbl_tdnthem_chk = new System.Windows.Forms.Label();
-            this.lbl_mkthem_chk = new System.Windows.Forms.Label();
-            this.lbl_pqthem_chk = new System.Windows.Forms.Label();
-            this.lbl_mnsthem_chk = new System.Windows.Forms.Label();
             this.tabControl_NguoiDung.SuspendLayout();
             this.tabPage_ThemNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachNguoiDung)).BeginInit();
@@ -84,6 +88,7 @@
             this.tabControl_NguoiDung.SelectedIndex = 0;
             this.tabControl_NguoiDung.Size = new System.Drawing.Size(1114, 511);
             this.tabControl_NguoiDung.TabIndex = 1;
+            this.tabControl_NguoiDung.SelectedIndexChanged += new System.EventHandler(this.tabControl_NguoiDung_SelectedIndexChanged);
             // 
             // tabPage_ThemNguoiDung
             // 
@@ -109,8 +114,60 @@
             this.tabPage_ThemNguoiDung.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_ThemNguoiDung.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_ThemNguoiDung.TabIndex = 0;
-            this.tabPage_ThemNguoiDung.Text = "Thêm người dùng";
+            this.tabPage_ThemNguoiDung.Text = "Thêm tài khoản";
             this.tabPage_ThemNguoiDung.Click += new System.EventHandler(this.tabPage_ThemNguoiDung_Click);
+            // 
+            // lbl_mnsthem_chk
+            // 
+            this.lbl_mnsthem_chk.AutoSize = true;
+            this.lbl_mnsthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mnsthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_mnsthem_chk.Location = new System.Drawing.Point(408, 158);
+            this.lbl_mnsthem_chk.Name = "lbl_mnsthem_chk";
+            this.lbl_mnsthem_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_mnsthem_chk.TabIndex = 47;
+            this.lbl_mnsthem_chk.Text = "*";
+            this.lbl_mnsthem_chk.Visible = false;
+            this.lbl_mnsthem_chk.Click += new System.EventHandler(this.lbl_mnsthem_chk_Click);
+            // 
+            // lbl_pqthem_chk
+            // 
+            this.lbl_pqthem_chk.AutoSize = true;
+            this.lbl_pqthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pqthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_pqthem_chk.Location = new System.Drawing.Point(408, 206);
+            this.lbl_pqthem_chk.Name = "lbl_pqthem_chk";
+            this.lbl_pqthem_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_pqthem_chk.TabIndex = 46;
+            this.lbl_pqthem_chk.Text = "*";
+            this.lbl_pqthem_chk.Visible = false;
+            this.lbl_pqthem_chk.Click += new System.EventHandler(this.lbl_pqthem_chk_Click);
+            // 
+            // lbl_mkthem_chk
+            // 
+            this.lbl_mkthem_chk.AutoSize = true;
+            this.lbl_mkthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mkthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_mkthem_chk.Location = new System.Drawing.Point(408, 113);
+            this.lbl_mkthem_chk.Name = "lbl_mkthem_chk";
+            this.lbl_mkthem_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_mkthem_chk.TabIndex = 45;
+            this.lbl_mkthem_chk.Text = "*";
+            this.lbl_mkthem_chk.Visible = false;
+            this.lbl_mkthem_chk.Click += new System.EventHandler(this.lbl_mkthem_chk_Click);
+            // 
+            // lbl_tdnthem_chk
+            // 
+            this.lbl_tdnthem_chk.AutoSize = true;
+            this.lbl_tdnthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tdnthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_tdnthem_chk.Location = new System.Drawing.Point(408, 64);
+            this.lbl_tdnthem_chk.Name = "lbl_tdnthem_chk";
+            this.lbl_tdnthem_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_tdnthem_chk.TabIndex = 44;
+            this.lbl_tdnthem_chk.Text = "*";
+            this.lbl_tdnthem_chk.Visible = false;
+            this.lbl_tdnthem_chk.Click += new System.EventHandler(this.lbl_tdnthem_chk_Click);
             // 
             // cbo_phanquen_them
             // 
@@ -228,9 +285,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label1.Location = new System.Drawing.Point(42, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(142, 20);
             this.label1.TabIndex = 32;
-            this.label1.Text = "THÊM NGƯỜI DÙNG:";
+            this.label1.Text = "THÊM TÀI KHOẢN:";
             // 
             // tabPage_DanhSachNguoiDung
             // 
@@ -245,7 +302,7 @@
             this.tabPage_DanhSachNguoiDung.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_DanhSachNguoiDung.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_DanhSachNguoiDung.TabIndex = 1;
-            this.tabPage_DanhSachNguoiDung.Text = "Danh sách người dùng";
+            this.tabPage_DanhSachNguoiDung.Text = "Danh sách tài khoản";
             // 
             // txt_TimKiem
             // 
@@ -291,13 +348,17 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label4.Location = new System.Drawing.Point(43, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 20);
+            this.label4.Size = new System.Drawing.Size(188, 20);
             this.label4.TabIndex = 15;
-            this.label4.Text = "DANH SÁCH NGƯỜI DÙNG:";
+            this.label4.Text = "DANH SÁCH TÀI KHOẢN:";
             // 
             // tabPage_CapNhat_Xoa
             // 
             this.tabPage_CapNhat_Xoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_CapNhat_Xoa.Controls.Add(this.lbl_mnssua_chk);
+            this.tabPage_CapNhat_Xoa.Controls.Add(this.lbl_pqsua_chk);
+            this.tabPage_CapNhat_Xoa.Controls.Add(this.lbl_mksua_Chk);
+            this.tabPage_CapNhat_Xoa.Controls.Add(this.lbl_tksua_chk);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.cbo_phanquyen_sua);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.txt_manhansu_sua);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.lbl_manhansu_sua);
@@ -315,13 +376,61 @@
             this.tabPage_CapNhat_Xoa.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_CapNhat_Xoa.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_CapNhat_Xoa.TabIndex = 2;
-            this.tabPage_CapNhat_Xoa.Text = "Sửa, Xóa Người dùng";
+            this.tabPage_CapNhat_Xoa.Text = "Sửa, Xóa tài khoản";
             this.tabPage_CapNhat_Xoa.UseVisualStyleBackColor = true;
+            // 
+            // lbl_mnssua_chk
+            // 
+            this.lbl_mnssua_chk.AutoSize = true;
+            this.lbl_mnssua_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mnssua_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_mnssua_chk.Location = new System.Drawing.Point(389, 157);
+            this.lbl_mnssua_chk.Name = "lbl_mnssua_chk";
+            this.lbl_mnssua_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_mnssua_chk.TabIndex = 61;
+            this.lbl_mnssua_chk.Text = "*";
+            this.lbl_mnssua_chk.Visible = false;
+            // 
+            // lbl_pqsua_chk
+            // 
+            this.lbl_pqsua_chk.AutoSize = true;
+            this.lbl_pqsua_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pqsua_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_pqsua_chk.Location = new System.Drawing.Point(389, 205);
+            this.lbl_pqsua_chk.Name = "lbl_pqsua_chk";
+            this.lbl_pqsua_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_pqsua_chk.TabIndex = 60;
+            this.lbl_pqsua_chk.Text = "*";
+            this.lbl_pqsua_chk.Visible = false;
+            // 
+            // lbl_mksua_Chk
+            // 
+            this.lbl_mksua_Chk.AutoSize = true;
+            this.lbl_mksua_Chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mksua_Chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_mksua_Chk.Location = new System.Drawing.Point(389, 116);
+            this.lbl_mksua_Chk.Name = "lbl_mksua_Chk";
+            this.lbl_mksua_Chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_mksua_Chk.TabIndex = 59;
+            this.lbl_mksua_Chk.Text = "*";
+            this.lbl_mksua_Chk.Visible = false;
+            // 
+            // lbl_tksua_chk
+            // 
+            this.lbl_tksua_chk.AutoSize = true;
+            this.lbl_tksua_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tksua_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_tksua_chk.Location = new System.Drawing.Point(389, 70);
+            this.lbl_tksua_chk.Name = "lbl_tksua_chk";
+            this.lbl_tksua_chk.Size = new System.Drawing.Size(13, 17);
+            this.lbl_tksua_chk.TabIndex = 58;
+            this.lbl_tksua_chk.Text = "*";
+            this.lbl_tksua_chk.Visible = false;
             // 
             // cbo_phanquyen_sua
             // 
             this.cbo_phanquyen_sua.FormattingEnabled = true;
-            this.cbo_phanquyen_sua.Location = new System.Drawing.Point(389, 135);
+            this.cbo_phanquyen_sua.Location = new System.Drawing.Point(389, 178);
             this.cbo_phanquyen_sua.Name = "cbo_phanquyen_sua";
             this.cbo_phanquyen_sua.Size = new System.Drawing.Size(267, 25);
             this.cbo_phanquyen_sua.TabIndex = 57;
@@ -329,7 +438,7 @@
             // txt_manhansu_sua
             // 
             this.txt_manhansu_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_manhansu_sua.Location = new System.Drawing.Point(389, 174);
+            this.txt_manhansu_sua.Location = new System.Drawing.Point(389, 131);
             this.txt_manhansu_sua.Name = "txt_manhansu_sua";
             this.txt_manhansu_sua.Size = new System.Drawing.Size(267, 25);
             this.txt_manhansu_sua.TabIndex = 56;
@@ -339,7 +448,7 @@
             this.lbl_manhansu_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_manhansu_sua.AutoSize = true;
             this.lbl_manhansu_sua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_manhansu_sua.Location = new System.Drawing.Point(240, 179);
+            this.lbl_manhansu_sua.Location = new System.Drawing.Point(242, 136);
             this.lbl_manhansu_sua.Name = "lbl_manhansu_sua";
             this.lbl_manhansu_sua.Size = new System.Drawing.Size(95, 20);
             this.lbl_manhansu_sua.TabIndex = 55;
@@ -350,7 +459,7 @@
             this.lbl_PhanQuyen_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_PhanQuyen_Sua.AutoSize = true;
             this.lbl_PhanQuyen_Sua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PhanQuyen_Sua.Location = new System.Drawing.Point(242, 136);
+            this.lbl_PhanQuyen_Sua.Location = new System.Drawing.Point(242, 179);
             this.lbl_PhanQuyen_Sua.Name = "lbl_PhanQuyen_Sua";
             this.lbl_PhanQuyen_Sua.Size = new System.Drawing.Size(93, 20);
             this.lbl_PhanQuyen_Sua.TabIndex = 53;
@@ -359,7 +468,7 @@
             // txt_mk_Sua
             // 
             this.txt_mk_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_mk_Sua.Location = new System.Drawing.Point(389, 95);
+            this.txt_mk_Sua.Location = new System.Drawing.Point(389, 89);
             this.txt_mk_Sua.Name = "txt_mk_Sua";
             this.txt_mk_Sua.Size = new System.Drawing.Size(267, 25);
             this.txt_mk_Sua.TabIndex = 52;
@@ -367,7 +476,7 @@
             // txt_tk_Sua
             // 
             this.txt_tk_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_tk_Sua.Location = new System.Drawing.Point(389, 58);
+            this.txt_tk_Sua.Location = new System.Drawing.Point(389, 42);
             this.txt_tk_Sua.Name = "txt_tk_Sua";
             this.txt_tk_Sua.Size = new System.Drawing.Size(267, 25);
             this.txt_tk_Sua.TabIndex = 51;
@@ -377,7 +486,7 @@
             this.lbl_mk_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_mk_sua.AutoSize = true;
             this.lbl_mk_sua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mk_sua.Location = new System.Drawing.Point(242, 95);
+            this.lbl_mk_sua.Location = new System.Drawing.Point(242, 89);
             this.lbl_mk_sua.Name = "lbl_mk_sua";
             this.lbl_mk_sua.Size = new System.Drawing.Size(79, 20);
             this.lbl_mk_sua.TabIndex = 49;
@@ -388,7 +497,7 @@
             this.lbl_tk_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_tk_Sua.AutoSize = true;
             this.lbl_tk_Sua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tk_Sua.Location = new System.Drawing.Point(242, 58);
+            this.lbl_tk_Sua.Location = new System.Drawing.Point(242, 42);
             this.lbl_tk_Sua.Name = "lbl_tk_Sua";
             this.lbl_tk_Sua.Size = new System.Drawing.Size(112, 20);
             this.lbl_tk_Sua.TabIndex = 50;
@@ -452,57 +561,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label8.Location = new System.Drawing.Point(44, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 20);
+            this.label8.Size = new System.Drawing.Size(163, 20);
             this.label8.TabIndex = 45;
-            this.label8.Text = "SỬA, XÓA NGƯỜI DÙNG:";
-            // 
-            // lbl_tdnthem_chk
-            // 
-            this.lbl_tdnthem_chk.AutoSize = true;
-            this.lbl_tdnthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tdnthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_tdnthem_chk.Location = new System.Drawing.Point(408, 64);
-            this.lbl_tdnthem_chk.Name = "lbl_tdnthem_chk";
-            this.lbl_tdnthem_chk.Size = new System.Drawing.Size(13, 17);
-            this.lbl_tdnthem_chk.TabIndex = 44;
-            this.lbl_tdnthem_chk.Text = "*";
-            this.lbl_tdnthem_chk.Visible = false;
-            // 
-            // lbl_mkthem_chk
-            // 
-            this.lbl_mkthem_chk.AutoSize = true;
-            this.lbl_mkthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mkthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_mkthem_chk.Location = new System.Drawing.Point(408, 113);
-            this.lbl_mkthem_chk.Name = "lbl_mkthem_chk";
-            this.lbl_mkthem_chk.Size = new System.Drawing.Size(13, 17);
-            this.lbl_mkthem_chk.TabIndex = 45;
-            this.lbl_mkthem_chk.Text = "*";
-            this.lbl_mkthem_chk.Visible = false;
-            // 
-            // lbl_pqthem_chk
-            // 
-            this.lbl_pqthem_chk.AutoSize = true;
-            this.lbl_pqthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pqthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_pqthem_chk.Location = new System.Drawing.Point(408, 206);
-            this.lbl_pqthem_chk.Name = "lbl_pqthem_chk";
-            this.lbl_pqthem_chk.Size = new System.Drawing.Size(13, 17);
-            this.lbl_pqthem_chk.TabIndex = 46;
-            this.lbl_pqthem_chk.Text = "*";
-            this.lbl_pqthem_chk.Visible = false;
-            // 
-            // lbl_mnsthem_chk
-            // 
-            this.lbl_mnsthem_chk.AutoSize = true;
-            this.lbl_mnsthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mnsthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_mnsthem_chk.Location = new System.Drawing.Point(408, 158);
-            this.lbl_mnsthem_chk.Name = "lbl_mnsthem_chk";
-            this.lbl_mnsthem_chk.Size = new System.Drawing.Size(13, 17);
-            this.lbl_mnsthem_chk.TabIndex = 47;
-            this.lbl_mnsthem_chk.Text = "*";
-            this.lbl_mnsthem_chk.Visible = false;
+            this.label8.Text = "SỬA XÓA TÀI KHOẢN";
             // 
             // frm_NguoiDung
             // 
@@ -568,5 +629,9 @@
         private System.Windows.Forms.Label lbl_pqthem_chk;
         private System.Windows.Forms.Label lbl_mkthem_chk;
         private System.Windows.Forms.Label lbl_tdnthem_chk;
+        private System.Windows.Forms.Label lbl_mnssua_chk;
+        private System.Windows.Forms.Label lbl_pqsua_chk;
+        private System.Windows.Forms.Label lbl_mksua_Chk;
+        private System.Windows.Forms.Label lbl_tksua_chk;
     }
 }

@@ -28,39 +28,45 @@ namespace QuanLyKhachSan
 
                 if (txt_cccd.Text == "")
                 {
+                    lbl_tk_checkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Bạn chưa nhập căn cước công dân");
                 }
                 else if (tt == null)
                 {
+                    lbl_tk_checkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Không có nhân sự nào có mã căn cước công dân như này");
                 }
                 else if (tk == "")
                 {
-                    lbl_cccd_chkerr.Visible = false;
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Bạn chưa nhập thông tin tài khoản");
                 }
                 else if (ktTaiKhoan)
                 {
-                    lbl_cccd_chkerr.Visible = false;
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Trùng tài khoản");
                 }
                 else if (mk == "")
                 {
-
-                    lbl_tk_checkerr.Visible = false;
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_tk_checkerr.Text = "";
                     throw new Exception("*Lỗi. Bạn chưa nhập mật khẩu");
                 }
                 else
                 {
-                    lbl_cccd_chkerr.Visible = false;
-                    lbl_tk_checkerr.Visible = false;
-                    lbl_mk_chkerr.Visible = false;
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_tk_checkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
                     DialogResult result = MessageBox.Show("Bạn có muốn đăng ký với những thông tin bạn đã nhập chưa ?", "Thông báo xác nhận", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
+                       
 
-                      
-                    phanQuyen = tt.ChucVu;
+                        phanQuyen = tt.ChucVu;
                     Manhansu = tt.MaNhanSu;
 
                     bus.ThemTK(tk, mk, phanQuyen, Manhansu);

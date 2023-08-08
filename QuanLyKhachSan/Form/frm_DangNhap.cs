@@ -63,19 +63,18 @@ namespace QuanLyKhachSan
             {
                 if (string.IsNullOrEmpty(txt_TenDangNhap.Text)) 
                 {
+                    lbl_chk_MatKhau.Text = "";
                     throw new Exception("Vui lòng nhập tên đăng nhập.");
                 }
 
                 else if ( string.IsNullOrEmpty(txt_MatKhau.Text))
                 {
-                    lbl_chk_TenDangNhap.Visible = false;
+                    lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Vui lòng nhập mật khẩu.");
                 }
                 else
                 {
-                    lbl_chk_MatKhau.Visible = false;
-                    lbl_chk_TenDangNhap.Visible = false;
-
+                  
                     if (chk_ghiNhoDangNhap.Checked)
                 {
                     string username = txt_TenDangNhap.Text;
@@ -106,6 +105,7 @@ namespace QuanLyKhachSan
                     bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
                     if (dangnhap)
                     {
+                      
                         this.Hide();
                         frm_TrangChu frm = new frm_TrangChu(tk);
                         frm.ShowDialog();
@@ -113,6 +113,7 @@ namespace QuanLyKhachSan
                     }
                     else
                     {
+                        lbl_chk_TenDangNhap.Text = "";
                         throw new Exception("Tên đăng nhập, mật khẩu không chính xác");
                     }
 

@@ -48,6 +48,8 @@ namespace QuanLyKhachSan
                 string nhapLaiMK = txt_NhapLaiMatKhau.Text;
                 if (string.IsNullOrEmpty(matKhauCu))
                 {
+                    lbl_mkmoi_chk.Text = "";
+                    lbl_remkmoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu cũ");
                 }
                 var laymk = bus.Laymk(_tk);
@@ -55,31 +57,34 @@ namespace QuanLyKhachSan
 
                 if (txt_MatKhauCu.Text != laymk.MatKhau)
                 {
+                    lbl_mkmoi_chk.Text = "";
+                    lbl_remkmoi_chk.Text = "";
                     throw new Exception("Lỗi. Bạn nhập sai mật khẩu cũ");
                 }
                 else if (string.IsNullOrEmpty(matKhauMoi))
                 {
-                    lbl_mkcu_chk.Visible = false;
-
+                    lbl_mkcu_chk.Text = "";
+                    lbl_remkmoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu mới");
                 }
                 else if (string.IsNullOrEmpty(nhapLaiMK))
                 {
-                    lbl_mkmoi_chk.Visible = false;
-
+                    lbl_mkcu_chk.Text = "";
+                    lbl_mkmoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập xác nhận mật khẩu mới");
                 }
                 else if (matKhauMoi != nhapLaiMK)
                 {
+                    lbl_mkcu_chk.Text = "";
+                    lbl_mkmoi_chk.Text = "";
                     throw new Exception("Mật khẩu nhập lại không trùng khớp!");
                 }
                 else
                 {
-                    lbl_mkcu_chk.Visible = false;
-                    lbl_mkmoi_chk.Visible = false;
-                    lbl_remkmoi_chk.Visible = false;
+                    lbl_mkcu_chk.Text = "";
+                    lbl_mkmoi_chk.Text = "";
+                    lbl_remkmoi_chk.Text = "";
                     bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Text, txt_MatKhauMoi.Text);
-                    lbl_mkcu_chk.Visible = false;
 
                     frm_TrangChu.ViDu.Hide();
                     frm_DangNhap frm = new frm_DangNhap();

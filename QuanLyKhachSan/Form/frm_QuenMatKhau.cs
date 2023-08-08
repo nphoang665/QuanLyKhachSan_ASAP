@@ -75,6 +75,7 @@ namespace QuanLyKhachSan
                 string tenDangNhap = txt_TenDangNhap.Text;
                 if (string.IsNullOrEmpty(tenDangNhap))
                 {
+                   
                     throw new Exception("Bạn chưa nhập tên đăng nhập");
                 }
                 else if (!bus.kiemTraTenDangNhap(tenDangNhap))
@@ -84,7 +85,7 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
-                    lbl_tendangnhap_chk.Visible = false;
+                    lbl_tendangnhap_chk.Text = "";
                     pnl_dmk.Visible = true;
                     txt_TenDangNhap.Enabled = false;
                 }
@@ -124,22 +125,23 @@ namespace QuanLyKhachSan
                 string nhapLaiMK = txt_NhapLaiMK.Text;
                 if (txt_MatKhau.Text == "")
                 {
+                    lbl_rematkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu");
                 }
                 else if (txt_NhapLaiMK.Text == "")
                 {
-                    lbl_matkhaumoi_chk.Visible = false;
+                    lbl_matkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập xác nhận lại mật khẩu");
                 }
                 else if(matKhauMoi!= nhapLaiMK)
                 {
-                    lbl_rematkhaumoi_chk.Visible = false;
+                    lbl_matkhaumoi_chk.Text = "";
                     throw new Exception("Lỗi. Mật khẩu không trùng nhau");
                 }
                 else
                 {
-                    lbl_matkhaumoi_chk.Visible = false;
-                    lbl_rematkhaumoi_chk.Visible = false;
+                    lbl_matkhaumoi_chk.Text = "";
+                    lbl_rematkhaumoi_chk.Text = "";
                     bus.doiMatKhau(tenDangNhap, matKhauMoi);
                     lbl_notice_successfull.Visible = true;
                 }
