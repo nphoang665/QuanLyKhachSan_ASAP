@@ -50,13 +50,15 @@ namespace QuanLyKhachSan
 
         private void dgv_DanhSachHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            lbl_kqmahd.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[1].Value.ToString();
-            lbl_kqmathanhtoan.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString();
-            lbl_kqmakhachhang.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[2].Value.ToString();
-            lbl_kqngaythue.Text= dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[3].Value.ToString();
-            lbl_KQSoNgay.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[4].Value.ToString();
-            lbl_KQTongTien.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[5].Value.ToString();
-            lbl_KQngaytra.Text= dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[6].Value.ToString();
+            lbl_kqmahd.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString();
+            lbl_kqTenKhachHang.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[1].Value.ToString();
+            lbl_kqCCCD.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[2].Value.ToString();
+            lbl_KQSDT.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[3].Value.ToString();
+            lbl_kqMaPhong.Text= dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[4].Value.ToString();
+            lbl_KQNgayThue.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[5].Value.ToString();
+            lbl_KQNgayTra.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[6].Value.ToString();
+            lbl_KQTienDichVu.Text= dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[7].Value.ToString();
+            lbl_thanhtoan.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[8].Value.ToString();
         }
     }
 }

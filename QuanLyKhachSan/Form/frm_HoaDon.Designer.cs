@@ -30,29 +30,36 @@
         {
             this.tabControl_HoaDon = new System.Windows.Forms.TabControl();
             this.tabPage_HoaDon = new System.Windows.Forms.TabPage();
+            this.lbl_KQSDT = new System.Windows.Forms.Label();
+            this.lbl_SDT = new System.Windows.Forms.Label();
+            this.lbl_kqMaPhong = new System.Windows.Forms.Label();
+            this.lbl_kqCCCD = new System.Windows.Forms.Label();
+            this.lbl_kqmahd = new System.Windows.Forms.Label();
+            this.lbl_kqTenKhachHang = new System.Windows.Forms.Label();
             this.lbl_mahoadon = new System.Windows.Forms.Label();
-            this.lbl_KQTongTien = new System.Windows.Forms.Label();
-            this.lbl_KQSoNgay = new System.Windows.Forms.Label();
+            this.lbl_KQNgayTra = new System.Windows.Forms.Label();
+            this.lbl_KQNgayThue = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_DanhSachHoaDon = new System.Windows.Forms.DataGridView();
-            this.lbl_mathanhtoan = new System.Windows.Forms.Label();
+            this.lbl_tenkhachhang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_kqmathanhtoan = new System.Windows.Forms.Label();
-            this.lbl_kqmahd = new System.Windows.Forms.Label();
-            this.lbl_kqmakhachhang = new System.Windows.Forms.Label();
-            this.lbl_kqngaythue = new System.Windows.Forms.Label();
-            this.MaThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhacHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTienDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTienThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_KQTienDichVu = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_KQngaytra = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_thanhtoan = new System.Windows.Forms.Label();
             this.tabControl_HoaDon.SuspendLayout();
             this.tabPage_HoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
@@ -72,21 +79,26 @@
             // 
             this.tabPage_HoaDon.BackColor = System.Drawing.Color.White;
             this.tabPage_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_HoaDon.Controls.Add(this.lbl_thanhtoan);
             this.tabPage_HoaDon.Controls.Add(this.label2);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_KQngaytra);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_kqngaythue);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_kqmakhachhang);
+            this.tabPage_HoaDon.Controls.Add(this.label7);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_KQTienDichVu);
+            this.tabPage_HoaDon.Controls.Add(this.label3);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_KQSDT);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_SDT);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_kqMaPhong);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_kqCCCD);
             this.tabPage_HoaDon.Controls.Add(this.lbl_kqmahd);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_kqmathanhtoan);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_kqTenKhachHang);
             this.tabPage_HoaDon.Controls.Add(this.lbl_mahoadon);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_KQTongTien);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_KQSoNgay);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_KQNgayTra);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_KQNgayThue);
             this.tabPage_HoaDon.Controls.Add(this.label6);
             this.tabPage_HoaDon.Controls.Add(this.label8);
             this.tabPage_HoaDon.Controls.Add(this.label4);
             this.tabPage_HoaDon.Controls.Add(this.label5);
             this.tabPage_HoaDon.Controls.Add(this.dgv_DanhSachHoaDon);
-            this.tabPage_HoaDon.Controls.Add(this.lbl_mathanhtoan);
+            this.tabPage_HoaDon.Controls.Add(this.lbl_tenkhachhang);
             this.tabPage_HoaDon.Controls.Add(this.label1);
             this.tabPage_HoaDon.Location = new System.Drawing.Point(4, 26);
             this.tabPage_HoaDon.Name = "tabPage_HoaDon";
@@ -95,6 +107,72 @@
             this.tabPage_HoaDon.TabIndex = 0;
             this.tabPage_HoaDon.Text = "Hóa đơn";
             this.tabPage_HoaDon.Click += new System.EventHandler(this.tabPage_HoaDon_Click);
+            // 
+            // lbl_KQSDT
+            // 
+            this.lbl_KQSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQSDT.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQSDT.Location = new System.Drawing.Point(229, 167);
+            this.lbl_KQSDT.Name = "lbl_KQSDT";
+            this.lbl_KQSDT.Size = new System.Drawing.Size(197, 22);
+            this.lbl_KQSDT.TabIndex = 25;
+            this.lbl_KQSDT.Text = "---";
+            this.lbl_KQSDT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_SDT
+            // 
+            this.lbl_SDT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_SDT.AutoSize = true;
+            this.lbl_SDT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SDT.Location = new System.Drawing.Point(72, 169);
+            this.lbl_SDT.Name = "lbl_SDT";
+            this.lbl_SDT.Size = new System.Drawing.Size(109, 20);
+            this.lbl_SDT.TabIndex = 24;
+            this.lbl_SDT.Text = "Số Điện Thoại:";
+            // 
+            // lbl_kqMaPhong
+            // 
+            this.lbl_kqMaPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_kqMaPhong.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kqMaPhong.Location = new System.Drawing.Point(656, 51);
+            this.lbl_kqMaPhong.Name = "lbl_kqMaPhong";
+            this.lbl_kqMaPhong.Size = new System.Drawing.Size(197, 22);
+            this.lbl_kqMaPhong.TabIndex = 23;
+            this.lbl_kqMaPhong.Text = "---";
+            this.lbl_kqMaPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_kqCCCD
+            // 
+            this.lbl_kqCCCD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_kqCCCD.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kqCCCD.Location = new System.Drawing.Point(229, 127);
+            this.lbl_kqCCCD.Name = "lbl_kqCCCD";
+            this.lbl_kqCCCD.Size = new System.Drawing.Size(197, 22);
+            this.lbl_kqCCCD.TabIndex = 21;
+            this.lbl_kqCCCD.Text = "---";
+            this.lbl_kqCCCD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_kqmahd
+            // 
+            this.lbl_kqmahd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_kqmahd.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kqmahd.Location = new System.Drawing.Point(231, 49);
+            this.lbl_kqmahd.Name = "lbl_kqmahd";
+            this.lbl_kqmahd.Size = new System.Drawing.Size(197, 22);
+            this.lbl_kqmahd.TabIndex = 19;
+            this.lbl_kqmahd.Text = "---";
+            this.lbl_kqmahd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_kqTenKhachHang
+            // 
+            this.lbl_kqTenKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_kqTenKhachHang.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kqTenKhachHang.Location = new System.Drawing.Point(231, 85);
+            this.lbl_kqTenKhachHang.Name = "lbl_kqTenKhachHang";
+            this.lbl_kqTenKhachHang.Size = new System.Drawing.Size(197, 22);
+            this.lbl_kqTenKhachHang.TabIndex = 18;
+            this.lbl_kqTenKhachHang.Text = "---";
+            this.lbl_kqTenKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_mahoadon
             // 
@@ -107,27 +185,27 @@
             this.lbl_mahoadon.TabIndex = 17;
             this.lbl_mahoadon.Text = "Mã Hoá Đơn:";
             // 
-            // lbl_KQTongTien
+            // lbl_KQNgayTra
             // 
-            this.lbl_KQTongTien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_KQTongTien.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQTongTien.Location = new System.Drawing.Point(656, 124);
-            this.lbl_KQTongTien.Name = "lbl_KQTongTien";
-            this.lbl_KQTongTien.Size = new System.Drawing.Size(197, 22);
-            this.lbl_KQTongTien.TabIndex = 14;
-            this.lbl_KQTongTien.Text = "---";
-            this.lbl_KQTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_KQNgayTra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQNgayTra.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQNgayTra.Location = new System.Drawing.Point(656, 124);
+            this.lbl_KQNgayTra.Name = "lbl_KQNgayTra";
+            this.lbl_KQNgayTra.Size = new System.Drawing.Size(197, 22);
+            this.lbl_KQNgayTra.TabIndex = 14;
+            this.lbl_KQNgayTra.Text = "---";
+            this.lbl_KQNgayTra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_KQSoNgay
+            // lbl_KQNgayThue
             // 
-            this.lbl_KQSoNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_KQSoNgay.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQSoNgay.Location = new System.Drawing.Point(656, 87);
-            this.lbl_KQSoNgay.Name = "lbl_KQSoNgay";
-            this.lbl_KQSoNgay.Size = new System.Drawing.Size(197, 22);
-            this.lbl_KQSoNgay.TabIndex = 12;
-            this.lbl_KQSoNgay.Text = "---";
-            this.lbl_KQSoNgay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_KQNgayThue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQNgayThue.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQNgayThue.Location = new System.Drawing.Point(656, 87);
+            this.lbl_KQNgayThue.Name = "lbl_KQNgayThue";
+            this.lbl_KQNgayThue.Size = new System.Drawing.Size(197, 22);
+            this.lbl_KQNgayThue.TabIndex = 12;
+            this.lbl_KQNgayThue.Text = "---";
+            this.lbl_KQNgayThue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -136,9 +214,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(72, 126);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 20);
+            this.label6.Size = new System.Drawing.Size(104, 20);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Mã khách hàng:";
+            this.label6.Text = "CMND/CCCD:";
             // 
             // label8
             // 
@@ -147,9 +225,9 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(513, 125);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 20);
+            this.label8.Size = new System.Drawing.Size(76, 20);
             this.label8.TabIndex = 13;
-            this.label8.Text = "Tổng tiền:";
+            this.label8.Text = "Ngày Trả:";
             // 
             // label4
             // 
@@ -158,9 +236,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(513, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Số ngày:";
+            this.label4.Text = "Ngày Thuê:";
             // 
             // label5
             // 
@@ -169,9 +247,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(513, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Ngày thuê:";
+            this.label5.Text = "Mã Phòng:";
             // 
             // dgv_DanhSachHoaDon
             // 
@@ -182,13 +260,15 @@
             this.dgv_DanhSachHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaThanhToan,
             this.MaHoaDon,
-            this.MaKhacHang,
+            this.TenKhachHang,
+            this.CMND,
+            this.SoDienThoai,
+            this.MaPhong,
             this.NgayThue,
-            this.SoNgay,
-            this.TongTien,
-            this.NgayLap});
+            this.NgayTra,
+            this.TongTienDichVu,
+            this.TongTienThanhToan});
             this.dgv_DanhSachHoaDon.Location = new System.Drawing.Point(49, 224);
             this.dgv_DanhSachHoaDon.Name = "dgv_DanhSachHoaDon";
             this.dgv_DanhSachHoaDon.ReadOnly = true;
@@ -196,16 +276,16 @@
             this.dgv_DanhSachHoaDon.TabIndex = 16;
             this.dgv_DanhSachHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachHoaDon_CellClick);
             // 
-            // lbl_mathanhtoan
+            // lbl_tenkhachhang
             // 
-            this.lbl_mathanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_mathanhtoan.AutoSize = true;
-            this.lbl_mathanhtoan.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mathanhtoan.Location = new System.Drawing.Point(74, 87);
-            this.lbl_mathanhtoan.Name = "lbl_mathanhtoan";
-            this.lbl_mathanhtoan.Size = new System.Drawing.Size(121, 20);
-            this.lbl_mathanhtoan.TabIndex = 7;
-            this.lbl_mathanhtoan.Text = "Mã Thanh Toán:";
+            this.lbl_tenkhachhang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_tenkhachhang.AutoSize = true;
+            this.lbl_tenkhachhang.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tenkhachhang.Location = new System.Drawing.Point(74, 87);
+            this.lbl_tenkhachhang.Name = "lbl_tenkhachhang";
+            this.lbl_tenkhachhang.Size = new System.Drawing.Size(126, 20);
+            this.lbl_tenkhachhang.TabIndex = 7;
+            this.lbl_tenkhachhang.Text = "Tên Khách Hâng:";
             // 
             // label1
             // 
@@ -219,67 +299,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HÓA ĐƠN:";
             // 
-            // lbl_kqmathanhtoan
-            // 
-            this.lbl_kqmathanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_kqmathanhtoan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kqmathanhtoan.Location = new System.Drawing.Point(231, 85);
-            this.lbl_kqmathanhtoan.Name = "lbl_kqmathanhtoan";
-            this.lbl_kqmathanhtoan.Size = new System.Drawing.Size(197, 22);
-            this.lbl_kqmathanhtoan.TabIndex = 18;
-            this.lbl_kqmathanhtoan.Text = "---";
-            this.lbl_kqmathanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_kqmahd
-            // 
-            this.lbl_kqmahd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_kqmahd.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kqmahd.Location = new System.Drawing.Point(231, 49);
-            this.lbl_kqmahd.Name = "lbl_kqmahd";
-            this.lbl_kqmahd.Size = new System.Drawing.Size(197, 22);
-            this.lbl_kqmahd.TabIndex = 19;
-            this.lbl_kqmahd.Text = "---";
-            this.lbl_kqmahd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_kqmakhachhang
-            // 
-            this.lbl_kqmakhachhang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_kqmakhachhang.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kqmakhachhang.Location = new System.Drawing.Point(229, 127);
-            this.lbl_kqmakhachhang.Name = "lbl_kqmakhachhang";
-            this.lbl_kqmakhachhang.Size = new System.Drawing.Size(197, 22);
-            this.lbl_kqmakhachhang.TabIndex = 21;
-            this.lbl_kqmakhachhang.Text = "---";
-            this.lbl_kqmakhachhang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_kqngaythue
-            // 
-            this.lbl_kqngaythue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_kqngaythue.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kqngaythue.Location = new System.Drawing.Point(656, 51);
-            this.lbl_kqngaythue.Name = "lbl_kqngaythue";
-            this.lbl_kqngaythue.Size = new System.Drawing.Size(197, 22);
-            this.lbl_kqngaythue.TabIndex = 23;
-            this.lbl_kqngaythue.Text = "---";
-            this.lbl_kqngaythue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // MaThanhToan
-            // 
-            this.MaThanhToan.HeaderText = "Mã Thanh Toán";
-            this.MaThanhToan.Name = "MaThanhToan";
-            this.MaThanhToan.ReadOnly = true;
-            // 
             // MaHoaDon
             // 
             this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
             this.MaHoaDon.Name = "MaHoaDon";
             this.MaHoaDon.ReadOnly = true;
             // 
-            // MaKhacHang
+            // TenKhachHang
             // 
-            this.MaKhacHang.HeaderText = "Mã Khách Hàng";
-            this.MaKhacHang.Name = "MaKhacHang";
-            this.MaKhacHang.ReadOnly = true;
+            this.TenKhachHang.HeaderText = "Tên Khách Hàng";
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.ReadOnly = true;
+            // 
+            // CMND
+            // 
+            this.CMND.HeaderText = "CMND/CCCD";
+            this.CMND.Name = "CMND";
+            this.CMND.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.HeaderText = "Số Điện Thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.HeaderText = "Mã Phòng";
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.ReadOnly = true;
             // 
             // NgayThue
             // 
@@ -287,45 +335,78 @@
             this.NgayThue.Name = "NgayThue";
             this.NgayThue.ReadOnly = true;
             // 
-            // SoNgay
+            // NgayTra
             // 
-            this.SoNgay.HeaderText = "Số Ngày";
-            this.SoNgay.Name = "SoNgay";
-            this.SoNgay.ReadOnly = true;
+            this.NgayTra.HeaderText = "Ngày Trả";
+            this.NgayTra.Name = "NgayTra";
+            this.NgayTra.ReadOnly = true;
             // 
-            // TongTien
+            // TongTienDichVu
             // 
-            this.TongTien.HeaderText = "Tổng Tiên";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
+            this.TongTienDichVu.HeaderText = "Tiền Dịch Vụ";
+            this.TongTienDichVu.Name = "TongTienDichVu";
+            this.TongTienDichVu.ReadOnly = true;
             // 
-            // NgayLap
+            // TongTienThanhToan
             // 
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.ReadOnly = true;
+            this.TongTienThanhToan.HeaderText = "Thanh Toán";
+            this.TongTienThanhToan.Name = "TongTienThanhToan";
+            this.TongTienThanhToan.ReadOnly = true;
+            // 
+            // lbl_KQTienDichVu
+            // 
+            this.lbl_KQTienDichVu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQTienDichVu.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQTienDichVu.Location = new System.Drawing.Point(656, 167);
+            this.lbl_KQTienDichVu.Name = "lbl_KQTienDichVu";
+            this.lbl_KQTienDichVu.Size = new System.Drawing.Size(197, 22);
+            this.lbl_KQTienDichVu.TabIndex = 27;
+            this.lbl_KQTienDichVu.Text = "---";
+            this.lbl_KQTienDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(513, 168);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 20);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Tiền Dịch Vụ:";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(656, 163);
+            this.label2.Location = new System.Drawing.Point(1017, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 22);
-            this.label2.TabIndex = 25;
+            this.label2.TabIndex = 30;
             this.label2.Text = "---";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_KQngaytra
+            // label7
             // 
-            this.lbl_KQngaytra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_KQngaytra.AutoSize = true;
-            this.lbl_KQngaytra.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQngaytra.Location = new System.Drawing.Point(513, 163);
-            this.lbl_KQngaytra.Name = "lbl_KQngaytra";
-            this.lbl_KQngaytra.Size = new System.Drawing.Size(76, 20);
-            this.lbl_KQngaytra.TabIndex = 24;
-            this.lbl_KQngaytra.Text = "Ngày Trả:";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(838, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Thanh Toán";
+            // 
+            // lbl_thanhtoan
+            // 
+            this.lbl_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_thanhtoan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_thanhtoan.Location = new System.Drawing.Point(857, 102);
+            this.lbl_thanhtoan.Name = "lbl_thanhtoan";
+            this.lbl_thanhtoan.Size = new System.Drawing.Size(197, 22);
+            this.lbl_thanhtoan.TabIndex = 31;
+            this.lbl_thanhtoan.Text = "---";
+            this.lbl_thanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frm_HoaDon
             // 
@@ -353,28 +434,35 @@
 
         private System.Windows.Forms.TabControl tabControl_HoaDon;
         private System.Windows.Forms.TabPage tabPage_HoaDon;
-        private System.Windows.Forms.Label lbl_KQTongTien;
-        private System.Windows.Forms.Label lbl_KQSoNgay;
+        private System.Windows.Forms.Label lbl_KQNgayTra;
+        private System.Windows.Forms.Label lbl_KQNgayThue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_DanhSachHoaDon;
-        private System.Windows.Forms.Label lbl_mathanhtoan;
+        private System.Windows.Forms.Label lbl_tenkhachhang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_mahoadon;
-        private System.Windows.Forms.Label lbl_kqngaythue;
-        private System.Windows.Forms.Label lbl_kqmakhachhang;
+        private System.Windows.Forms.Label lbl_kqMaPhong;
+        private System.Windows.Forms.Label lbl_kqCCCD;
         private System.Windows.Forms.Label lbl_kqmahd;
-        private System.Windows.Forms.Label lbl_kqmathanhtoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaThanhToan;
+        private System.Windows.Forms.Label lbl_kqTenKhachHang;
+        private System.Windows.Forms.Label lbl_KQSDT;
+        private System.Windows.Forms.Label lbl_SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhacHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CMND;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayThue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoNgay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTienDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTienThanhToan;
+        private System.Windows.Forms.Label lbl_thanhtoan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_KQngaytra;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_KQTienDichVu;
+        private System.Windows.Forms.Label label3;
     }
 }

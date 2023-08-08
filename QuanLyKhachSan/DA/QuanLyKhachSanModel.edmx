@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QuanLyKhachSanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QuanLyKhachSanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DangKyDichVu">
           <Key>
             <PropertyRef Name="MaDichVu" />
@@ -73,7 +73,7 @@
           </Key>
           <Property Name="TenDangNhap" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="MatKhau" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="PhanQuyen" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PhanQuyen" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="MaNhanSu" Type="varchar" MaxLength="6" />
         </EntityType>
         <EntityType Name="ThongTinKhachHang">
@@ -248,70 +248,27 @@
             <End Role="DangKyDichVu" EntitySet="DangKyDichVu" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyKhachSanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="QuanLyKhachSanEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DangKyDichVus" EntityType="QuanLyKhachSanModel.DangKyDichVu" />
-          <EntitySet Name="HoaDons" EntityType="QuanLyKhachSanModel.HoaDon" />
-          <EntitySet Name="LuuMatKhaus" EntityType="QuanLyKhachSanModel.LuuMatKhau" />
-          <EntitySet Name="NhanSus" EntityType="QuanLyKhachSanModel.NhanSu" />
-          <EntitySet Name="Phongs" EntityType="QuanLyKhachSanModel.Phong" />
-          <EntitySet Name="QuanLyDichVus" EntityType="QuanLyKhachSanModel.QuanLyDichVu" />
-          <EntitySet Name="TaiKhoans" EntityType="QuanLyKhachSanModel.TaiKhoan" />
-          <EntitySet Name="ThongTinKhachHangs" EntityType="QuanLyKhachSanModel.ThongTinKhachHang" />
-          <EntitySet Name="ThuePhongs" EntityType="QuanLyKhachSanModel.ThuePhong" />
-          <EntitySet Name="VatTus" EntityType="QuanLyKhachSanModel.VatTu" />
-          <AssociationSet Name="FK_DangKyDichVu_Phong" Association="QuanLyKhachSanModel.FK_DangKyDichVu_Phong">
-            <End Role="Phong" EntitySet="Phongs" />
-            <End Role="DangKyDichVu" EntitySet="DangKyDichVus" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DangKyDichVu_QuanLyDichVu" Association="QuanLyKhachSanModel.FK_DangKyDichVu_QuanLyDichVu">
-            <End Role="QuanLyDichVu" EntitySet="QuanLyDichVus" />
-            <End Role="DangKyDichVu" EntitySet="DangKyDichVus" />
-          </AssociationSet>
-          <AssociationSet Name="FK__HoaDon__MaPhong__35BCFE0A" Association="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A">
-            <End Role="Phong" EntitySet="Phongs" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK__LuuMatKha__TaiKh__2B3F6F97" Association="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97">
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-            <End Role="LuuMatKhau" EntitySet="LuuMatKhaus" />
-          </AssociationSet>
-          <AssociationSet Name="FK__TaiKhoan__MaNhan__286302EC" Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC">
-            <End Role="NhanSu" EntitySet="NhanSus" />
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VatTu__NguoiQuan__3A81B327" Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3A81B327">
-            <End Role="NhanSu" EntitySet="NhanSus" />
-            <End Role="VatTu" EntitySet="VatTus" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ThuePhong__MaPho__32E0915F" Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F">
-            <End Role="Phong" EntitySet="Phongs" />
-            <End Role="ThuePhong" EntitySet="ThuePhongs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ThuePhong__MaKha__30F848ED" Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED">
-            <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
-            <End Role="ThuePhong" EntitySet="ThuePhongs" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="DangKyDichVu">
           <Key>
             <PropertyRef Name="MaDichVu" />
           </Key>
-          <Property Name="MaDichVu" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaDichVu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaPhong" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Double" />
-          <NavigationProperty Name="Phong" Relationship="QuanLyKhachSanModel.FK_DangKyDichVu_Phong" FromRole="DangKyDichVu" ToRole="Phong" />
-          <NavigationProperty Name="QuanLyDichVu" Relationship="QuanLyKhachSanModel.FK_DangKyDichVu_QuanLyDichVu" FromRole="DangKyDichVu" ToRole="QuanLyDichVu" />
+          <NavigationProperty Name="Phong" Relationship="Self.FK_DangKyDichVu_Phong" FromRole="DangKyDichVu" ToRole="Phong" />
+          <NavigationProperty Name="QuanLyDichVu" Relationship="Self.FK_DangKyDichVu_QuanLyDichVu" FromRole="DangKyDichVu" ToRole="QuanLyDichVu" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="MaHoaDon" />
           </Key>
-          <Property Name="MaHoaDon" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaHoaDon" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CMND" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
@@ -320,21 +277,21 @@
           <Property Name="NgayTra" Type="DateTime" Precision="0" />
           <Property Name="TongTienDichVu" Type="Double" />
           <Property Name="TongTienThanhToan" Type="Double" />
-          <NavigationProperty Name="Phong" Relationship="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A" FromRole="HoaDon" ToRole="Phong" />
+          <NavigationProperty Name="Phong" Relationship="Self.FK__HoaDon__MaPhong__35BCFE0A" FromRole="HoaDon" ToRole="Phong" />
         </EntityType>
         <EntityType Name="LuuMatKhau">
           <Key>
             <PropertyRef Name="TaiKhoan" />
           </Key>
-          <Property Name="TaiKhoan" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="TaiKhoan1" Relationship="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97" FromRole="LuuMatKhau" ToRole="TaiKhoan" />
+          <Property Name="TaiKhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TaiKhoan1" Relationship="Self.FK__LuuMatKha__TaiKh__2B3F6F97" FromRole="LuuMatKhau" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="NhanSu">
           <Key>
             <PropertyRef Name="MaNhanSu" />
           </Key>
-          <Property Name="MaNhanSu" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaNhanSu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenNhanSu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
@@ -343,47 +300,47 @@
           <Property Name="NgayVaoLam" Type="DateTime" Precision="0" />
           <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="TaiKhoans" Relationship="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC" FromRole="NhanSu" ToRole="TaiKhoan" />
-          <NavigationProperty Name="VatTus" Relationship="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3A81B327" FromRole="NhanSu" ToRole="VatTu" />
+          <NavigationProperty Name="TaiKhoans" Relationship="Self.FK__TaiKhoan__MaNhan__286302EC" FromRole="NhanSu" ToRole="TaiKhoan" />
+          <NavigationProperty Name="VatTus" Relationship="Self.FK__VatTu__NguoiQuan__3A81B327" FromRole="NhanSu" ToRole="VatTu" />
         </EntityType>
         <EntityType Name="Phong">
           <Key>
             <PropertyRef Name="MaPhong" />
           </Key>
-          <Property Name="MaPhong" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaPhong" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LoaiPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Double" />
-          <NavigationProperty Name="DangKyDichVus" Relationship="QuanLyKhachSanModel.FK_DangKyDichVu_Phong" FromRole="Phong" ToRole="DangKyDichVu" />
-          <NavigationProperty Name="HoaDons" Relationship="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A" FromRole="Phong" ToRole="HoaDon" />
-          <NavigationProperty Name="ThuePhongs" Relationship="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F" FromRole="Phong" ToRole="ThuePhong" />
+          <NavigationProperty Name="DangKyDichVus" Relationship="Self.FK_DangKyDichVu_Phong" FromRole="Phong" ToRole="DangKyDichVu" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__MaPhong__35BCFE0A" FromRole="Phong" ToRole="HoaDon" />
+          <NavigationProperty Name="ThuePhongs" Relationship="Self.FK__ThuePhong__MaPho__32E0915F" FromRole="Phong" ToRole="ThuePhong" />
         </EntityType>
         <EntityType Name="QuanLyDichVu">
           <Key>
             <PropertyRef Name="MaDichVu" />
           </Key>
-          <Property Name="MaDichVu" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaDichVu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenDichVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Double" />
           <Property Name="DonViTinh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DangKyDichVu" Relationship="QuanLyKhachSanModel.FK_DangKyDichVu_QuanLyDichVu" FromRole="QuanLyDichVu" ToRole="DangKyDichVu" />
+          <NavigationProperty Name="DangKyDichVu" Relationship="Self.FK_DangKyDichVu_QuanLyDichVu" FromRole="QuanLyDichVu" ToRole="DangKyDichVu" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
             <PropertyRef Name="TenDangNhap" />
           </Key>
-          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="PhanQuyen" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PhanQuyen" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaNhanSu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="LuuMatKhau" Relationship="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97" FromRole="TaiKhoan" ToRole="LuuMatKhau" />
-          <NavigationProperty Name="NhanSu" Relationship="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC" FromRole="TaiKhoan" ToRole="NhanSu" />
+          <NavigationProperty Name="LuuMatKhau" Relationship="Self.FK__LuuMatKha__TaiKh__2B3F6F97" FromRole="TaiKhoan" ToRole="LuuMatKhau" />
+          <NavigationProperty Name="NhanSu" Relationship="Self.FK__TaiKhoan__MaNhan__286302EC" FromRole="TaiKhoan" ToRole="NhanSu" />
         </EntityType>
         <EntityType Name="ThongTinKhachHang">
           <Key>
             <PropertyRef Name="MaKhachHang" />
           </Key>
-          <Property Name="MaKhachHang" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaKhachHang" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
           <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
@@ -391,33 +348,33 @@
           <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ThuePhongs" Relationship="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED" FromRole="ThongTinKhachHang" ToRole="ThuePhong" />
+          <NavigationProperty Name="ThuePhongs" Relationship="Self.FK__ThuePhong__MaKha__30F848ED" FromRole="ThongTinKhachHang" ToRole="ThuePhong" />
         </EntityType>
         <EntityType Name="ThuePhong">
           <Key>
             <PropertyRef Name="MaThuePhong" />
           </Key>
-          <Property Name="MaThuePhong" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaThuePhong" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaKhachHang" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="NgayThue" Type="DateTime" Precision="0" />
           <Property Name="MaPhong" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Phong" Relationship="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F" FromRole="ThuePhong" ToRole="Phong" />
-          <NavigationProperty Name="ThongTinKhachHang" Relationship="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED" FromRole="ThuePhong" ToRole="ThongTinKhachHang" />
+          <NavigationProperty Name="Phong" Relationship="Self.FK__ThuePhong__MaPho__32E0915F" FromRole="ThuePhong" ToRole="Phong" />
+          <NavigationProperty Name="ThongTinKhachHang" Relationship="Self.FK__ThuePhong__MaKha__30F848ED" FromRole="ThuePhong" ToRole="ThongTinKhachHang" />
         </EntityType>
         <EntityType Name="VatTu">
           <Key>
             <PropertyRef Name="MaVatTu" />
           </Key>
-          <Property Name="MaVatTu" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="MaVatTu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenVatTu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NhaCungCap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NguoiQuanLy" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NhanSu" Relationship="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3A81B327" FromRole="VatTu" ToRole="NhanSu" />
+          <NavigationProperty Name="NhanSu" Relationship="Self.FK__VatTu__NguoiQuan__3A81B327" FromRole="VatTu" ToRole="NhanSu" />
         </EntityType>
         <Association Name="FK_DangKyDichVu_Phong">
-          <End Type="QuanLyKhachSanModel.Phong" Role="Phong" Multiplicity="0..1" />
-          <End Type="QuanLyKhachSanModel.DangKyDichVu" Role="DangKyDichVu" Multiplicity="*" />
+          <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+          <End Role="DangKyDichVu" Type="Self.DangKyDichVu" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Phong">
               <PropertyRef Name="MaPhong" />
@@ -428,8 +385,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DangKyDichVu_QuanLyDichVu">
-          <End Type="QuanLyKhachSanModel.QuanLyDichVu" Role="QuanLyDichVu" Multiplicity="1" />
-          <End Type="QuanLyKhachSanModel.DangKyDichVu" Role="DangKyDichVu" Multiplicity="0..1" />
+          <End Role="QuanLyDichVu" Type="Self.QuanLyDichVu" Multiplicity="1" />
+          <End Role="DangKyDichVu" Type="Self.DangKyDichVu" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="QuanLyDichVu">
               <PropertyRef Name="MaDichVu" />
@@ -440,8 +397,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__HoaDon__MaPhong__35BCFE0A">
-          <End Type="QuanLyKhachSanModel.Phong" Role="Phong" Multiplicity="0..1" />
-          <End Type="QuanLyKhachSanModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Phong">
               <PropertyRef Name="MaPhong" />
@@ -452,8 +409,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__LuuMatKha__TaiKh__2B3F6F97">
-          <End Type="QuanLyKhachSanModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
-          <End Type="QuanLyKhachSanModel.LuuMatKhau" Role="LuuMatKhau" Multiplicity="0..1" />
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
+          <End Role="LuuMatKhau" Type="Self.LuuMatKhau" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="TaiKhoan">
               <PropertyRef Name="TenDangNhap" />
@@ -464,8 +421,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__TaiKhoan__MaNhan__286302EC">
-          <End Type="QuanLyKhachSanModel.NhanSu" Role="NhanSu" Multiplicity="0..1" />
-          <End Type="QuanLyKhachSanModel.TaiKhoan" Role="TaiKhoan" Multiplicity="*" />
+          <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="0..1" />
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanSu">
               <PropertyRef Name="MaNhanSu" />
@@ -476,8 +433,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__VatTu__NguoiQuan__3A81B327">
-          <End Type="QuanLyKhachSanModel.NhanSu" Role="NhanSu" Multiplicity="0..1" />
-          <End Type="QuanLyKhachSanModel.VatTu" Role="VatTu" Multiplicity="*" />
+          <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="0..1" />
+          <End Role="VatTu" Type="Self.VatTu" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanSu">
               <PropertyRef Name="MaNhanSu" />
@@ -488,8 +445,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ThuePhong__MaPho__32E0915F">
-          <End Type="QuanLyKhachSanModel.Phong" Role="Phong" Multiplicity="0..1" />
-          <End Type="QuanLyKhachSanModel.ThuePhong" Role="ThuePhong" Multiplicity="*" />
+          <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+          <End Role="ThuePhong" Type="Self.ThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Phong">
               <PropertyRef Name="MaPhong" />
@@ -500,8 +457,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ThuePhong__MaKha__30F848ED">
-          <End Type="QuanLyKhachSanModel.ThongTinKhachHang" Role="ThongTinKhachHang" Multiplicity="0..1" />
-          <End Type="QuanLyKhachSanModel.ThuePhong" Role="ThuePhong" Multiplicity="*" />
+          <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="0..1" />
+          <End Role="ThuePhong" Type="Self.ThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ThongTinKhachHang">
               <PropertyRef Name="MaKhachHang" />
@@ -511,7 +468,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <EntityContainer Name="QuanLyKhachSanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DangKyDichVus" EntityType="Self.DangKyDichVu" />
+          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+          <EntitySet Name="LuuMatKhaus" EntityType="Self.LuuMatKhau" />
+          <EntitySet Name="NhanSus" EntityType="Self.NhanSu" />
+          <EntitySet Name="Phongs" EntityType="Self.Phong" />
+          <EntitySet Name="QuanLyDichVus" EntityType="Self.QuanLyDichVu" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <EntitySet Name="ThongTinKhachHangs" EntityType="Self.ThongTinKhachHang" />
+          <EntitySet Name="ThuePhongs" EntityType="Self.ThuePhong" />
+          <EntitySet Name="VatTus" EntityType="Self.VatTu" />
+          <AssociationSet Name="FK_DangKyDichVu_Phong" Association="Self.FK_DangKyDichVu_Phong">
+            <End Role="Phong" EntitySet="Phongs" />
+            <End Role="DangKyDichVu" EntitySet="DangKyDichVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DangKyDichVu_QuanLyDichVu" Association="Self.FK_DangKyDichVu_QuanLyDichVu">
+            <End Role="QuanLyDichVu" EntitySet="QuanLyDichVus" />
+            <End Role="DangKyDichVu" EntitySet="DangKyDichVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HoaDon__MaPhong__35BCFE0A" Association="Self.FK__HoaDon__MaPhong__35BCFE0A">
+            <End Role="Phong" EntitySet="Phongs" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LuuMatKha__TaiKh__2B3F6F97" Association="Self.FK__LuuMatKha__TaiKh__2B3F6F97">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="LuuMatKhau" EntitySet="LuuMatKhaus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TaiKhoan__MaNhan__286302EC" Association="Self.FK__TaiKhoan__MaNhan__286302EC">
+            <End Role="NhanSu" EntitySet="NhanSus" />
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VatTu__NguoiQuan__3A81B327" Association="Self.FK__VatTu__NguoiQuan__3A81B327">
+            <End Role="NhanSu" EntitySet="NhanSus" />
+            <End Role="VatTu" EntitySet="VatTus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ThuePhong__MaPho__32E0915F" Association="Self.FK__ThuePhong__MaPho__32E0915F">
+            <End Role="Phong" EntitySet="Phongs" />
+            <End Role="ThuePhong" EntitySet="ThuePhongs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ThuePhong__MaKha__30F848ED" Association="Self.FK__ThuePhong__MaKha__30F848ED">
+            <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHangs" />
+            <End Role="ThuePhong" EntitySet="ThuePhongs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -520,113 +521,113 @@
           <EntitySetMapping Name="DangKyDichVus">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.DangKyDichVu">
               <MappingFragment StoreEntitySet="DangKyDichVu">
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
                 <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
+                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
-                <ScalarProperty Name="TongTienThanhToan" ColumnName="TongTienThanhToan" />
-                <ScalarProperty Name="TongTienDichVu" ColumnName="TongTienDichVu" />
-                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-                <ScalarProperty Name="NgayThue" ColumnName="NgayThue" />
-                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="CMND" ColumnName="CMND" />
-                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
                 <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+                <ScalarProperty Name="NgayThue" ColumnName="NgayThue" />
+                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+                <ScalarProperty Name="TongTienDichVu" ColumnName="TongTienDichVu" />
+                <ScalarProperty Name="TongTienThanhToan" ColumnName="TongTienThanhToan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LuuMatKhaus">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.LuuMatKhau">
               <MappingFragment StoreEntitySet="LuuMatKhau">
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NhanSus">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.NhanSu">
               <MappingFragment StoreEntitySet="NhanSu">
-                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
-                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
-                <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
-                <ScalarProperty Name="TenNhanSu" ColumnName="TenNhanSu" />
                 <ScalarProperty Name="MaNhanSu" ColumnName="MaNhanSu" />
+                <ScalarProperty Name="TenNhanSu" ColumnName="TenNhanSu" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
+                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Phongs">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.Phong">
               <MappingFragment StoreEntitySet="Phong">
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-                <ScalarProperty Name="LoaiPhong" ColumnName="LoaiPhong" />
                 <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+                <ScalarProperty Name="LoaiPhong" ColumnName="LoaiPhong" />
+                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="QuanLyDichVus">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.QuanLyDichVu">
               <MappingFragment StoreEntitySet="QuanLyDichVu">
-                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
                 <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
+                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
-                <ScalarProperty Name="MaNhanSu" ColumnName="MaNhanSu" />
-                <ScalarProperty Name="PhanQuyen" ColumnName="PhanQuyen" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="PhanQuyen" ColumnName="PhanQuyen" />
+                <ScalarProperty Name="MaNhanSu" ColumnName="MaNhanSu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ThongTinKhachHangs">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.ThongTinKhachHang">
               <MappingFragment StoreEntitySet="ThongTinKhachHang">
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="CMND" ColumnName="CMND" />
-                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
                 <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ThuePhongs">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.ThuePhong">
               <MappingFragment StoreEntitySet="ThuePhong">
-                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
-                <ScalarProperty Name="NgayThue" ColumnName="NgayThue" />
-                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
                 <ScalarProperty Name="MaThuePhong" ColumnName="MaThuePhong" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="NgayThue" ColumnName="NgayThue" />
+                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VatTus">
             <EntityTypeMapping TypeName="QuanLyKhachSanModel.VatTu">
               <MappingFragment StoreEntitySet="VatTu">
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-                <ScalarProperty Name="NguoiQuanLy" ColumnName="NguoiQuanLy" />
-                <ScalarProperty Name="NhaCungCap" ColumnName="NhaCungCap" />
-                <ScalarProperty Name="TenVatTu" ColumnName="TenVatTu" />
                 <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+                <ScalarProperty Name="TenVatTu" ColumnName="TenVatTu" />
+                <ScalarProperty Name="NhaCungCap" ColumnName="NhaCungCap" />
+                <ScalarProperty Name="NguoiQuanLy" ColumnName="NguoiQuanLy" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

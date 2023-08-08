@@ -20,6 +20,8 @@ namespace QuanLyKhachSan
         string phong;
         string mkh;
         string tkh;
+        string cccd;
+        string sdt;
         public frm_TraPhong(string phong,string makhachhang, string tenkhachhang)
         {
             InitializeComponent();
@@ -35,7 +37,8 @@ namespace QuanLyKhachSan
             lbl_KQPhong.Text = phong;
             lbl_KQMaKhachHang.Text = mkh;
             lbl_KQTenKhachHang.Text = tkh;
-
+            cccd = bus.laycccd(lbl_KQMaKhachHang.Text);
+            sdt = bus.LaySDT(lbl_KQMaKhachHang.Text);
             Random random = new Random();
             int randomNumber = random.Next(1000, 9999);
             string maHoaDon = "HD" + randomNumber.ToString();
@@ -93,8 +96,8 @@ namespace QuanLyKhachSan
                 {
                     MaHoaDon = maHoaDon,
                     TenKhachHang = tenKhachHang,
-                    CMND = "",
-                    SoDienThoai = "",
+                    CMND = cccd,
+                    SoDienThoai = sdt,
                     MaPhong = maPhong,
                     NgayThue = ngayDatPhong,
                     NgayTra = ngayTra,

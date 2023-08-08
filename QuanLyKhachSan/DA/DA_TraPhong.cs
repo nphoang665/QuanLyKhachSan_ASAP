@@ -33,7 +33,17 @@ namespace QuanLyKhachSan.DA
             db.HoaDons.Add(hoaDon);
             db.SaveChanges();
         }
+        public string layCCCD(string makhachhang)
+        {
+            var cccd = db.ThongTinKhachHangs.FirstOrDefault(x => x.MaKhachHang == makhachhang).CMND;
+            return cccd;
+        }
 
+        public string laySDT(string makhachhang)
+        {
+            var sdt = db.ThongTinKhachHangs.FirstOrDefault(x => x.MaKhachHang == makhachhang).SoDienThoai;
+            return sdt;
+        }
 
 
     }

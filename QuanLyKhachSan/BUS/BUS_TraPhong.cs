@@ -28,6 +28,15 @@ namespace QuanLyKhachSan.BUS
             // Lưu thông tin thanh toán vào CSDL
             da.LuuThongTinThanhToan(hoaDon);
         }
+        public string laycccd(string makhachhang)
+        {
+            return da.layCCCD(makhachhang);
+            
+        }
+        public string LaySDT(string makhachhang)
+        {
+            return da.laySDT(makhachhang);
 
+        }
     }
 }
