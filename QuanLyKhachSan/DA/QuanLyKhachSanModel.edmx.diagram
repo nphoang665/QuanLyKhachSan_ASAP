@@ -5,23 +5,24 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="752ebbfe1f8046c1816d11e8257178fc" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.DangKyDichVu" Width="1.5" PointX="5.75" PointY="9.875" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="3" PointY="7.625" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.KhachHangDaThue" Width="1.5" PointX="7.75" PointY="9.875" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="10.25" PointY="3.5" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.NhanSu" Width="1.5" PointX="5.75" PointY="4.125" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.Phong" Width="1.5" PointX="0.75" PointY="5" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.QuanLyDichVu" Width="1.5" PointX="0.75" PointY="11.875" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="8" PointY="3.125" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThongTinKhachHang" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="3" PointY="4" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="8" PointY="6.125" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaPhong__4BAC3F29" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2F10007B" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__2C3393D0" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3F466844" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__38996AB5" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__36B12243" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.DangKyDichVu" Width="1.5" PointX="3" PointY="1.625" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="3" PointY="10" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="10.25" PointY="4.25" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.NhanSu" Width="1.5" PointX="5.75" PointY="2" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.Phong" Width="1.5" PointX="0.75" PointY="4.5" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.QuanLyDichVu" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="8" PointY="4" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThongTinKhachHang" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="8" PointY="1.125" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK_DangKyDichVu_Phong" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK_DangKyDichVu_QuanLyDichVu" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3A81B327" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

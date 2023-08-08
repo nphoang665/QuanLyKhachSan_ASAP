@@ -54,25 +54,27 @@ namespace QuanLyKhachSan
         }
         void PhanQuyen()
         {
-
-            // Check the role of the current user
             if (ChucVu == "Nhân viên")
             {
-                // If the current user is an employee, hide the btn_NhanVien button
-   btn_NhanVien.ForeColor = Color.Gray;
-                btn_NhanVien.Enabled = false;
-             
+                btn_NhanVien.Visible = false;
+                quảnLýToolStripMenuItem.Enabled = false;
+                btn_TaiKhoan.Visible = false;
 
+                btn_NhanVien.ForeColor = Color.Gray;
+                quảnLýToolStripMenuItem.ForeColor = Color.Gray;
+                btn_TaiKhoan.ForeColor = Color.Gray;
+
+                btn_NhanVien.Click += (s, e) => MessageBox.Show("Chức năng này chỉ dành cho quản lý");
+                quảnLýToolStripMenuItem.Click += (s, e) => MessageBox.Show("Chức năng này chỉ dành cho quản lý");
+                btn_TaiKhoan.Click += (s, e) => MessageBox.Show("Chức năng này chỉ dành cho quản lý");
             }
             else if (ChucVu == "Quản lý")
             {
-                // If the current user is a manager, show the btn_NhanVien button
                 btn_NhanVien.Enabled = true;
             }
-         
-            
-
         }
+
+
 
         private void frm_TrangChu_Load(object sender, EventArgs e)
         {

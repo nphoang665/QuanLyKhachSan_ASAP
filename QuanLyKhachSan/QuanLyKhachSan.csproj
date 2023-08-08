@@ -103,9 +103,6 @@
     <Compile Include="DA\HoaDon.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DA\KhachHangDaThue.cs">
-      <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="DA\LuuMatKhau.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>

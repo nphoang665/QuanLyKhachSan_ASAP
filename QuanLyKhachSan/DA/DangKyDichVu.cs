@@ -18,5 +18,8 @@ namespace QuanLyKhachSan.DA
         public string MaPhong { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> DonGia { get; set; }
+    
+        public virtual Phong Phong { get; set; }
+        public virtual QuanLyDichVu QuanLyDichVu { get; set; }
     }
 }

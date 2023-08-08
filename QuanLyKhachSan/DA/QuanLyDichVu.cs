@@ -18,5 +18,7 @@ namespace QuanLyKhachSan.DA
         public string TenDichVu { get; set; }
         public Nullable<double> DonGia { get; set; }
         public string DonViTinh { get; set; }
+    
+        public virtual DangKyDichVu DangKyDichVu { get; set; }
     }
 }
