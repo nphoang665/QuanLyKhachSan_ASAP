@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -43,22 +46,26 @@ namespace QuanLyKhachSan.DA
 
             }
         }
-        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu)
+        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu,PictureBox pi)
         {
-
-            var nhansu = new NhanSu
-            {
-                MaNhanSu = mans,
-                TenNhanSu = tenvn,
-                GioiTinh = gioitinh,
-                DiaChi = diachi,
-                SoDienThoai = sdt,
-                NgaySinh = ngaysinh,
-                NgayVaoLam = ngayvaolam,
-                ChucVu = chucvu
-            };
+            using (MemoryStream steam =new MemoryStream()) { 
+                pi.Image.Save(steam, ImageFormat.Jpeg);
+                var nhansu = new NhanSu
+                {
+                    MaNhanSu = mans,
+                    TenNhanSu = tenvn,
+                    GioiTinh = gioitinh,
+                    DiaChi = diachi,
+                    SoDienThoai = sdt,
+                    NgaySinh = ngaysinh,
+                    NgayVaoLam = ngayvaolam,
+                    ChucVu = chucvu,
+                    AnhNhanVien=steam.ToArray(),
+                    
+                };
             db.NhanSus.Add(nhansu);
             db.SaveChanges();
+            }
         }
         public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu)
         {
@@ -171,6 +178,19 @@ namespace QuanLyKhachSan.DA
 
             }
 
+        }
+        public void layanhNV(string manv,PictureBox pic)
+        {
+            var sv = db.NhanSus.FirstOrDefault(a => a.MaNhanSu == manv);
+            if (sv == null)
+            {
+                MessageBox.Show("Không có");
+                return;
+            }
+            using (MemoryStream stream = new MemoryStream(sv.AnhNhanVien))
+            {
+                pic.Image = Image.FromStream(stream);
+            }
         }
 
 

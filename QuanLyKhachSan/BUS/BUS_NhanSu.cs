@@ -15,9 +15,9 @@ namespace QuanLyKhachSan.BUS
         {
             da_NhanSu.LayNhanVien(dgv);
         }
-        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu)
+        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu,PictureBox pi)
         {
-            da_NhanSu.ThemNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu);
+            da_NhanSu.ThemNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu,pi);
         }
         public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu)
         {
@@ -42,6 +42,10 @@ namespace QuanLyKhachSan.BUS
         public void TimNhanSuTheosdt(string sdt, DataGridView dtgv)
         {
             da_NhanSu.TimTheosdtNhanSu(sdt, dtgv);
+        }
+        public void layanhNV(string manv, PictureBox pic)
+        {
+            da_NhanSu.layanhNV(manv, pic);
         }
     }
 }

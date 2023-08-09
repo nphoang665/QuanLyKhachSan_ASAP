@@ -30,6 +30,7 @@ namespace QuanLyKhachSan.DA
         public Nullable<System.DateTime> NgayVaoLam { get; set; }
         public string ChucVu { get; set; }
         public string CCCD { get; set; }
+        public byte[] AnhNhanVien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }

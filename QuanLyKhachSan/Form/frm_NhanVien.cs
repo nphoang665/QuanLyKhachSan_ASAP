@@ -1,9 +1,11 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.DA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +16,7 @@ namespace QuanLyKhachSan
     public partial class frm_NhanVien : Form
     {
         BUS_NhanSu bus;
-
+        
         public frm_NhanVien()
         {
             InitializeComponent();
@@ -66,9 +68,8 @@ namespace QuanLyKhachSan
             bool isValid = batloi(txt_manv_them.Text, txt_TenNhanVien.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_chucvu1.Text);
             if (!isValid)
                 return;
-            bus.ThemNhanSu(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text);
-
-
+            bus.ThemNhanSu(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text, pic_anhnhanvien);
+           
             bus.LoadDsNv(dgv_nhansu);
             bus.LoadDsNv(dgv1_NhanSu);
             bus.LoadDsNv(dgv2_NhanSu);
@@ -113,6 +114,8 @@ namespace QuanLyKhachSan
 
         private void dgv2_NhanSu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+           
             txt_manv_sua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[0].Value.ToString();
             txt_TenNhanVien2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[1].Value.ToString();
             string gioitinh = dgv2_NhanSu.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -131,6 +134,7 @@ namespace QuanLyKhachSan
             {
                 rda_Nu2.Checked = true;
             }
+            bus.layanhNV(txt_manv_sua.Text, pic_anh);
         }
 
         private void tabPage_TimNhanVien_Click(object sender, EventArgs e)
@@ -226,6 +230,14 @@ namespace QuanLyKhachSan
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void btn_mo_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pic_anhnhanvien.Image = Image.FromFile(openFileDialog1.FileName);
+            }
         }
     }
 }
