@@ -68,7 +68,6 @@
             this.btn_Them_DKDV = new System.Windows.Forms.Button();
             this.cbo_MaDichVu3 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.listView_DanhSachDichVu = new System.Windows.Forms.ListView();
             this.cbo_MaPhong = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_TimKiem = new System.Windows.Forms.TextBox();
@@ -81,6 +80,7 @@
             this.lbl_DangKyDichVu = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgv_DanhSachDichVu3 = new System.Windows.Forms.DataGridView();
             this.tabControl_DichVu_ADM.SuspendLayout();
             this.tabPage_ThemDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu)).BeginInit();
@@ -90,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu2)).BeginInit();
             this.tabPage_DangKyDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_DichVu_ADM
@@ -502,12 +503,12 @@
             // tabPage_DangKyDichVu
             // 
             this.tabPage_DangKyDichVu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_DangKyDichVu.Controls.Add(this.dgv_DanhSachDichVu3);
             this.tabPage_DangKyDichVu.Controls.Add(this.listView_DichVuDaDat);
             this.tabPage_DangKyDichVu.Controls.Add(this.btn_XoaDKDV);
             this.tabPage_DangKyDichVu.Controls.Add(this.btn_Them_DKDV);
             this.tabPage_DangKyDichVu.Controls.Add(this.cbo_MaDichVu3);
             this.tabPage_DangKyDichVu.Controls.Add(this.label16);
-            this.tabPage_DangKyDichVu.Controls.Add(this.listView_DanhSachDichVu);
             this.tabPage_DangKyDichVu.Controls.Add(this.cbo_MaPhong);
             this.tabPage_DangKyDichVu.Controls.Add(this.label12);
             this.tabPage_DangKyDichVu.Controls.Add(this.txt_TimKiem);
@@ -595,19 +596,6 @@
             this.label16.TabIndex = 5;
             this.label16.Text = "Mã dịch vụ:";
             // 
-            // listView_DanhSachDichVu
-            // 
-            this.listView_DanhSachDichVu.FullRowSelect = true;
-            this.listView_DanhSachDichVu.GridLines = true;
-            this.listView_DanhSachDichVu.HideSelection = false;
-            this.listView_DanhSachDichVu.Location = new System.Drawing.Point(29, 83);
-            this.listView_DanhSachDichVu.Name = "listView_DanhSachDichVu";
-            this.listView_DanhSachDichVu.Size = new System.Drawing.Size(461, 258);
-            this.listView_DanhSachDichVu.TabIndex = 1;
-            this.listView_DanhSachDichVu.UseCompatibleStateImageBehavior = false;
-            this.listView_DanhSachDichVu.View = System.Windows.Forms.View.Details;
-            this.listView_DanhSachDichVu.SelectedIndexChanged += new System.EventHandler(this.listView_DanhSachDichVu_SelectedIndexChanged);
-            // 
             // cbo_MaPhong
             // 
             this.cbo_MaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -638,6 +626,7 @@
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.Size = new System.Drawing.Size(222, 25);
             this.txt_TimKiem.TabIndex = 92;
+            this.txt_TimKiem.TextChanged += new System.EventHandler(this.txt_TimKiem_TextChanged);
             // 
             // label14
             // 
@@ -745,6 +734,20 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
+            // dgv_DanhSachDichVu3
+            // 
+            this.dgv_DanhSachDichVu3.AllowUserToAddRows = false;
+            this.dgv_DanhSachDichVu3.AllowUserToDeleteRows = false;
+            this.dgv_DanhSachDichVu3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachDichVu3.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_DanhSachDichVu3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DanhSachDichVu3.Location = new System.Drawing.Point(41, 83);
+            this.dgv_DanhSachDichVu3.Name = "dgv_DanhSachDichVu3";
+            this.dgv_DanhSachDichVu3.ReadOnly = true;
+            this.dgv_DanhSachDichVu3.Size = new System.Drawing.Size(461, 291);
+            this.dgv_DanhSachDichVu3.TabIndex = 94;
+            this.dgv_DanhSachDichVu3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachDichVu3_CellClick);
+            // 
             // frm_DichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -772,6 +775,7 @@
             this.tabPage_DangKyDichVu.ResumeLayout(false);
             this.tabPage_DangKyDichVu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -825,10 +829,10 @@
         private System.Windows.Forms.ComboBox cbo_MaPhong;
         private System.Windows.Forms.ComboBox cbo_MaDichVu3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ListView listView_DanhSachDichVu;
         private System.Windows.Forms.Button btn_XoaDKDV;
         private System.Windows.Forms.Button btn_Them_DKDV;
         private System.Windows.Forms.ListView listView_DichVuDaDat;
         private System.Windows.Forms.ErrorProvider KiemLoi;
+        private System.Windows.Forms.DataGridView dgv_DanhSachDichVu3;
     }
 }

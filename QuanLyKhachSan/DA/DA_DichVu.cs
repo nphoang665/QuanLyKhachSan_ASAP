@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace QuanLyKhachSan.DA
@@ -166,6 +167,19 @@ namespace QuanLyKhachSan.DA
         {
             var tenDichVu1 = db.QuanLyDichVus.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.TenDichVu).FirstOrDefault();
             return tenDichVu1;
+        }
+        public IList timDV(string tenDV)
+        {
+            var qr = db.QuanLyDichVus
+                .Where(s => s.TenDichVu.Contains(tenDV))
+                .Select(select => new
+                {
+                    select.MaDichVu,
+                    select.TenDichVu,
+                    select.DonGia,
+                    select.DonViTinh
+                }).ToList();
+            return qr;
         }
 
 

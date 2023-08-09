@@ -1,5 +1,6 @@
 ﻿using QuanLyKhachSan.DA;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -108,6 +109,10 @@ namespace QuanLyKhachSan.BUS
         public string GetTenDichVuByMaDichVu(string tenDichVu)
         {
             return da.GetTenDichVuByMaDichVu(tenDichVu);
+        }
+        public IList timDV(string tenDV)
+        {
+            return da.timDV(tenDV);
         }
 
 

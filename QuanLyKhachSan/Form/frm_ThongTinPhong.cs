@@ -90,6 +90,8 @@ namespace QuanLyKhachSan
             lbl_KQDiaChi.Text = thongtinkhachhang.DiaChi;
 
             LoadDanhSachDichVuDaSuDung();
+
+
         }
         public void UpdateDichVuDaSuDung(ListViewItem newItem)
         {

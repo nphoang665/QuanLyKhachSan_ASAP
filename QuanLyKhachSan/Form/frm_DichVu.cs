@@ -1,10 +1,13 @@
 ﻿using QuanLyKhachSan.BUS;
 using QuanLyKhachSan.DA;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+
 
 namespace QuanLyKhachSan
 {
@@ -36,26 +39,26 @@ namespace QuanLyKhachSan
             bus.LoadDichVu(dgv_DanhSachDichVu);
             bus.LoadDichVu(dgv_DanhSachDichVu1);
             bus.LoadDichVu(dgv_DanhSachDichVu2);
+            bus.LoadDichVu(dgv_DanhSachDichVu3);
             bus.hienthongtincbo_b(cbo: cbo_MaDichVu);
             cbo_MaDichVu.SelectedItem = "";
         }
 
         private void frm_DichVu_Load(object sender, EventArgs e)
         {
-            listView_DanhSachDichVu.Columns.Add("MaDichVu", "Mã dịch vụ", 100);
-            listView_DanhSachDichVu.Columns.Add("TenDichVu", "Tên dịch vụ", 150);
-            listView_DanhSachDichVu.Columns.Add("DonGia", "Đơn giá", 100);
-            listView_DanhSachDichVu.Columns.Add("DonViTinh", "Đơn vị tính", 100);
-
             bus.LoadDichVu(dgv_DanhSachDichVu);
             LoadDichVu();
-            CopyDataFromDataGridViewToListView(dgv_DanhSachDichVu, listView_DanhSachDichVu);
             bus.LoadRentedRoomIDs(cbo_MaPhong);
 
             listView_DichVuDaDat.Columns.Add("TenDichVu", "Tên dịch vụ", 160);
             listView_DichVuDaDat.Columns.Add("SoLuong", "Số lượng", 100);
             listView_DichVuDaDat.Columns.Add("MaPhong", "Mã phòng", 100);
-            bus.hienthongtincbo_b(cbo_MaDichVu3);          
+            bus.hienthongtincbo_b(cbo_MaDichVu3);
+
+            dgv_DanhSachDichVu3.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
+            dgv_DanhSachDichVu3.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
+            dgv_DanhSachDichVu3.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgv_DanhSachDichVu3.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -67,7 +70,6 @@ namespace QuanLyKhachSan
             string donViTinh = txt_DonViTinh.Text;
             bus.ThemDichVu_b(maDichVu, tenDichVu, donGia, donViTinh);
             LoadDichVu();
-            CopyDataFromDataGridViewToListView(dgv_DanhSachDichVu, listView_DanhSachDichVu);
             bus.hienthongtincbo_b(cbo_MaDichVu3);
         }
 
@@ -102,7 +104,6 @@ namespace QuanLyKhachSan
         {
             bus.SuaDichVu_b(txt_Madichvu2.Text,txt_TenDichVu2.Text,float.Parse(txt_DonGia2.Text),txt_DonViTinh2.Text);
             LoadDichVu();
-            CopyDataFromDataGridViewToListView(dgv_DanhSachDichVu, listView_DanhSachDichVu);
             bus.hienthongtincbo_b(cbo_MaDichVu3);
 
         }
@@ -111,7 +112,6 @@ namespace QuanLyKhachSan
         {
             bus.XoaDichVu_b(txt_Madichvu2.Text);
             LoadDichVu();
-            CopyDataFromDataGridViewToListView(dgv_DanhSachDichVu, listView_DanhSachDichVu);
             bus.hienthongtincbo_b(cbo_MaDichVu3);
         }
 
@@ -125,25 +125,6 @@ namespace QuanLyKhachSan
                 txt_TenDichVu2.Text = dv.TenDichVu;
                 txt_DonGia2.Text = dv.DonViTinh;
                 txt_DonViTinh2.Text = dv.DonViTinh.ToString();
-            }
-        }
-        
-        private void CopyDataFromDataGridViewToListView(DataGridView dgv, ListView listView)
-        {
-            listView.Items.Clear();
-
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                if (!row.IsNewRow)
-                {
-                    string maDichVu = row.Cells["MaDichVu"].Value.ToString();
-                    string tenDichVu = row.Cells["TenDichVu"].Value.ToString();
-                    float donGia = float.Parse(row.Cells["DonGia"].Value.ToString());
-                    string donViTinh = row.Cells["DonViTinh"].Value.ToString();
-
-                    ListViewItem item = new ListViewItem(new string[] { maDichVu, tenDichVu, donGia.ToString(), donViTinh });
-                    listView.Items.Add(item);
-                }
             }
         }
 
@@ -305,12 +286,28 @@ namespace QuanLyKhachSan
             return bus.GetMaDichVuByTenDichVu(tenDichVu);
         }
 
-        private void listView_DanhSachDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        private void txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
-            if (listView_DanhSachDichVu.SelectedItems.Count > 0)
+            string tenDV = txt_TimKiem.Text;
+            var kq = bus.timDV(tenDV);
+            dgv_DanhSachDichVu3.DataSource = kq;
+        }
+
+        private void dgv_DanhSachDichVu3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) 
             {
-                int selectedIndex = listView_DanhSachDichVu.SelectedIndices[0];
-                cbo_MaDichVu3.SelectedIndex = selectedIndex;
+                string maDichVu = dgv_DanhSachDichVu3.Rows[e.RowIndex].Cells["MaDichVu"].Value.ToString();
+
+                // Lặp qua danh sách tùy chọn trong combobox để tìm giá trị khớp
+                for (int i = 0; i < cbo_MaDichVu3.Items.Count; i++)
+                {
+                    if (cbo_MaDichVu3.GetItemText(cbo_MaDichVu3.Items[i]) == maDichVu)
+                    {
+                        cbo_MaDichVu3.SelectedIndex = i;
+                        break;
+                    }
+                }
             }
         }
     }
