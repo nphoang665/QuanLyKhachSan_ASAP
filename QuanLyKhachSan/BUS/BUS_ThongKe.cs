@@ -14,17 +14,17 @@ namespace QuanLyKhachSan.BUS
         {
             da = new DA_ThongKe();
         }
-        //public List<DTO_DoanhThuTheoThang> ThongKeDoanhThuTheoThang(int nam)
-        //{
+        public List<DTO_DoanhThuTheoThang> ThongKeDoanhThuTheoThang(int nam)
+        {
 
-        //    return da.ThongKeDoanhThuTheoThang(nam);
+            return da.ThongKeDoanhThuTheoThang(nam);
 
-        //}
-        //public List<DTO_DoanhThuTheoNgay> ThongKeDoanhThuTheoNgay(int nam, int thang)
-        //{
+        }
+        public List<DTO_DoanhThuTheoNgay> ThongKeDoanhThuTheoNgay(int nam, int thang)
+        {
 
 
-        //    return da.ThongKeDoanhThuTheoNgay(nam, thang);
-        //}
+            return da.ThongKeDoanhThuTheoNgay(nam, thang);
+        }
     }
 }

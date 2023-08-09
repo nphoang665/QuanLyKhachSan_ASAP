@@ -10,7 +10,7 @@ namespace QuanLyKhachSan.DA
     {
         public int? Nam { get; set; }
         public int? Thang { get; set; }
-        public int? DoanhThu { get; set; }
+        public double? DoanhThu { get; set; }
 
     }
 }

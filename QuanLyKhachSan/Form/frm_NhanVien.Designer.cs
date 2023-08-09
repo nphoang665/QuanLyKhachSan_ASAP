@@ -30,6 +30,8 @@
         {
             this.tabControl_NhanVien = new System.Windows.Forms.TabControl();
             this.tabPage_ThemNhanVien = new System.Windows.Forms.TabPage();
+            this.btn_mo = new System.Windows.Forms.Button();
+            this.pic_anhnhanvien = new System.Windows.Forms.PictureBox();
             this.txt_chucvu1 = new System.Windows.Forms.TextBox();
             this.lbl_chuvu1 = new System.Windows.Forms.Label();
             this.txt_manv_them = new System.Windows.Forms.TextBox();
@@ -80,6 +82,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage_Sua_XoaNhanVien = new System.Windows.Forms.TabPage();
+            this.pic_anh = new System.Windows.Forms.PictureBox();
             this.dgv2_NhanSu = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,19 +112,17 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.pic_anhnhanvien = new System.Windows.Forms.PictureBox();
-            this.btn_mo = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pic_anh = new System.Windows.Forms.PictureBox();
+            this.btn_mo_sua = new System.Windows.Forms.Button();
             this.tabControl_NhanVien.SuspendLayout();
             this.tabPage_ThemNhanVien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_anhnhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhansu)).BeginInit();
             this.tabPage_TimNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1_NhanSu)).BeginInit();
             this.tabPage_Sua_XoaNhanVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2_NhanSu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_anhnhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_anh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2_NhanSu)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_NhanVien
@@ -168,6 +169,25 @@
             this.tabPage_ThemNhanVien.TabIndex = 0;
             this.tabPage_ThemNhanVien.Text = "Thêm nhân viên";
             this.tabPage_ThemNhanVien.UseVisualStyleBackColor = true;
+            // 
+            // btn_mo
+            // 
+            this.btn_mo.Location = new System.Drawing.Point(825, 138);
+            this.btn_mo.Name = "btn_mo";
+            this.btn_mo.Size = new System.Drawing.Size(75, 23);
+            this.btn_mo.TabIndex = 46;
+            this.btn_mo.Text = "Mở";
+            this.btn_mo.UseVisualStyleBackColor = true;
+            this.btn_mo.Click += new System.EventHandler(this.btn_mo_Click);
+            // 
+            // pic_anhnhanvien
+            // 
+            this.pic_anhnhanvien.Location = new System.Drawing.Point(917, 19);
+            this.pic_anhnhanvien.Name = "pic_anhnhanvien";
+            this.pic_anhnhanvien.Size = new System.Drawing.Size(134, 142);
+            this.pic_anhnhanvien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_anhnhanvien.TabIndex = 45;
+            this.pic_anhnhanvien.TabStop = false;
             // 
             // txt_chucvu1
             // 
@@ -673,6 +693,7 @@
             // tabPage_Sua_XoaNhanVien
             // 
             this.tabPage_Sua_XoaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_Sua_XoaNhanVien.Controls.Add(this.btn_mo_sua);
             this.tabPage_Sua_XoaNhanVien.Controls.Add(this.pic_anh);
             this.tabPage_Sua_XoaNhanVien.Controls.Add(this.dgv2_NhanSu);
             this.tabPage_Sua_XoaNhanVien.Controls.Add(this.txt_chucvu2);
@@ -702,6 +723,15 @@
             this.tabPage_Sua_XoaNhanVien.TabIndex = 2;
             this.tabPage_Sua_XoaNhanVien.Text = "Sửa, Xóa nhân viên:";
             this.tabPage_Sua_XoaNhanVien.UseVisualStyleBackColor = true;
+            // 
+            // pic_anh
+            // 
+            this.pic_anh.Location = new System.Drawing.Point(885, 7);
+            this.pic_anh.Name = "pic_anh";
+            this.pic_anh.Size = new System.Drawing.Size(134, 142);
+            this.pic_anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_anh.TabIndex = 46;
+            this.pic_anh.TabStop = false;
             // 
             // dgv2_NhanSu
             // 
@@ -1000,37 +1030,19 @@
             this.label19.TabIndex = 24;
             this.label19.Text = "SỬA, XÓA NHÂN VIÊN:";
             // 
-            // pic_anhnhanvien
-            // 
-            this.pic_anhnhanvien.Location = new System.Drawing.Point(917, 19);
-            this.pic_anhnhanvien.Name = "pic_anhnhanvien";
-            this.pic_anhnhanvien.Size = new System.Drawing.Size(134, 142);
-            this.pic_anhnhanvien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_anhnhanvien.TabIndex = 45;
-            this.pic_anhnhanvien.TabStop = false;
-            // 
-            // btn_mo
-            // 
-            this.btn_mo.Location = new System.Drawing.Point(825, 138);
-            this.btn_mo.Name = "btn_mo";
-            this.btn_mo.Size = new System.Drawing.Size(75, 23);
-            this.btn_mo.TabIndex = 46;
-            this.btn_mo.Text = "Mở";
-            this.btn_mo.UseVisualStyleBackColor = true;
-            this.btn_mo.Click += new System.EventHandler(this.btn_mo_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pic_anh
+            // btn_mo_sua
             // 
-            this.pic_anh.Location = new System.Drawing.Point(885, 7);
-            this.pic_anh.Name = "pic_anh";
-            this.pic_anh.Size = new System.Drawing.Size(134, 142);
-            this.pic_anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_anh.TabIndex = 46;
-            this.pic_anh.TabStop = false;
+            this.btn_mo_sua.Location = new System.Drawing.Point(804, 126);
+            this.btn_mo_sua.Name = "btn_mo_sua";
+            this.btn_mo_sua.Size = new System.Drawing.Size(75, 23);
+            this.btn_mo_sua.TabIndex = 47;
+            this.btn_mo_sua.Text = "Mở";
+            this.btn_mo_sua.UseVisualStyleBackColor = true;
+            this.btn_mo_sua.Click += new System.EventHandler(this.btn_mo_sua_Click);
             // 
             // frm_NhanVien
             // 
@@ -1049,15 +1061,15 @@
             this.tabControl_NhanVien.ResumeLayout(false);
             this.tabPage_ThemNhanVien.ResumeLayout(false);
             this.tabPage_ThemNhanVien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_anhnhanvien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhansu)).EndInit();
             this.tabPage_TimNhanVien.ResumeLayout(false);
             this.tabPage_TimNhanVien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1_NhanSu)).EndInit();
             this.tabPage_Sua_XoaNhanVien.ResumeLayout(false);
             this.tabPage_Sua_XoaNhanVien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2_NhanSu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_anhnhanvien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_anh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2_NhanSu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1149,5 +1161,6 @@
         private System.Windows.Forms.PictureBox pic_anhnhanvien;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pic_anh;
+        private System.Windows.Forms.Button btn_mo_sua;
     }
 }

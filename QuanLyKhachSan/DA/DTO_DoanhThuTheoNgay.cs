@@ -9,7 +9,7 @@ namespace QuanLyKhachSan.DA
     public class DTO_DoanhThuTheoNgay
     {
        public int? ngay { get; set; }
-        public int? doanhthu { get; set; }
+        public double? doanhthu { get; set; }
 
     }
 }

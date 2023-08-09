@@ -12,34 +12,39 @@ namespace QuanLyKhachSan.DA
         public DA_ThongKe() { 
             db=new QuanLyKhachSanEntities();
         }
-        //public List<DTO_DoanhThuTheoThang> ThongKeDoanhThuTheoThang(int nam)
-        //{
-        //    var query = from hd in db.HoaDons
-        //                where hd.NgayThue.Value.Year == nam
-        //                group hd by new { Month = hd.NgayThue.Value.Month, Year = hd.NgayThue.Value.Year } into g
-        //                select new DTO_DoanhThuTheoThang
-        //                {
-        //                    Thang = g.Key.Month,
-        //                     Nam = g.Key.Year,
-        //                    DoanhThu = g.Sum(hd => hd.TongTien)
-        //                };
+        public List<DTO_DoanhThuTheoThang> ThongKeDoanhThuTheoThang(int nam)
+        {
+            var months = Enumerable.Range(1, 11);
+            var query = from month in months
+                        join hd in db.HoaDons.Where(hd => hd.NgayThue.Value.Year == nam)
+                        on month equals hd.NgayThue.Value.Month into g
+                        select new DTO_DoanhThuTheoThang
+                        {
+                            Thang = month,
+                            Nam = nam,
+                            DoanhThu = g.Sum(hd => hd.TongTienThanhToan)
+                        };
+            return query.ToList();
+        }
 
-        //    return query.ToList();
-        //}
+        public List<DTO_DoanhThuTheoNgay> ThongKeDoanhThuTheoNgay(int nam, int thang)
+        {
+            //int daysInMonth = DateTime.DaysInMonth(nam, thang);
+            //var days = Enumerable.Range(1, daysInMonth);
+            //var query = from day in days
+            //            join hd in db.HoaDons.Where(hd => hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang)
+            //            on day equals hd.NgayThue.Value.Day into g
+            //            from hd in g.DefaultIfEmpty()
+            //            group hd by day into g
+            //            select new DTO_DoanhThuTheoNgay
+            //            {
+            //                ngay = g.Key,
+            //                doanhthu = g.Sum(hd => hd.TongTienThanhToan)
+            //            };
+            //return query.ToList();
+            return null;
+        }
 
-        //public List<DTO_DoanhThuTheoNgay> ThongKeDoanhThuTheoNgay(int nam, int thang)
-        //{
-        //    var query = from hd in db.HoaDons
-        //                where hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang
-        //                group hd by hd.NgayThue.Value.Day into g
-        //                select new DTO_DoanhThuTheoNgay
-        //                {
-        //                    ngay = g.Key,
-        //                    doanhthu = g.Sum(hd => hd.TongTien)
-        //                };
-
-        //    return query.ToList();
-        //}
 
 
     }
