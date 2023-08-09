@@ -174,6 +174,7 @@ namespace QuanLyKhachSan.DA
                 row.Cells[4].Value = ns.NgaySinh;
                 row.Cells[5].Value = ns.NgayVaoLam;
                 row.Cells[6].Value = ns.DiaChi;
+
                 row.Cells[7].Value = ns.SoDienThoai;
 
             }
