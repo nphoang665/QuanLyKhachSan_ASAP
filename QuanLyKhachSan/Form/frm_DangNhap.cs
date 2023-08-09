@@ -29,45 +29,49 @@ namespace QuanLyKhachSan
         private void pic_Show_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pic_Show, "Hiện mật khẩu");
+            txt_MatKhau.PasswordChar = false;
         }
 
         private void pic_Hide_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(pic_Hide, "Ẩn mật khẩu");
+            txt_MatKhau.PasswordChar = true;
+
         }
 
         private void pic_Show_Click(object sender, EventArgs e)
         {
             pic_Show.Hide();
-            txt_MatKhau.UseSystemPasswordChar = false;
             pic_Hide.Show();
         }
 
         private void pic_Hide_Click(object sender, EventArgs e)
         {
             pic_Hide.Hide();
-            txt_MatKhau.UseSystemPasswordChar = true;
             pic_Show.Show();
         }
       
         private void lbl_QuenMatKhau_Click(object sender, EventArgs e)
         {
-            frm_QuenMatKhau frm_QuenMatKhau = new frm_QuenMatKhau();
-            frm_QuenMatKhau.Show();
             this.Hide();
+            frm_QuenMatKhau frm_QuenMatKhau = new frm_QuenMatKhau();
+           
+            frm_QuenMatKhau.ShowDialog();
+           
+         
         }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txt_TenDangNhap.Text)) 
+                if (string.IsNullOrEmpty(txt_TenDangNhap.Texts)) 
                 {
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Vui lòng nhập tên đăng nhập.");
                 }
 
-                else if ( string.IsNullOrEmpty(txt_MatKhau.Text))
+                else if ( string.IsNullOrEmpty(txt_MatKhau.Texts))
                 {
                     lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Vui lòng nhập mật khẩu.");
@@ -77,8 +81,8 @@ namespace QuanLyKhachSan
                   
                     if (chk_ghiNhoDangNhap.Checked)
                 {
-                    string username = txt_TenDangNhap.Text;
-                    string password = txt_MatKhau.Text;
+                    string username = txt_TenDangNhap.Texts;
+                    string password = txt_MatKhau.Texts;
 
                     var savedLoginInfo = bus.LayThongTinDaLuu();
                     if (savedLoginInfo != null)
@@ -96,8 +100,8 @@ namespace QuanLyKhachSan
                 }
 
                     //đăng nhập
-                    string tk = txt_TenDangNhap.Text;
-                    string mk = txt_MatKhau.Text;
+                    string tk = txt_TenDangNhap.Texts;
+                    string mk = txt_MatKhau.Texts;
 
 
 
@@ -105,7 +109,9 @@ namespace QuanLyKhachSan
                     bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
                     if (dangnhap)
                     {
-                      
+                        // Change border color to green
+                        
+
                         this.Hide();
                         frm_TrangChu frm = new frm_TrangChu(tk);
                         frm.ShowDialog();
@@ -113,9 +119,13 @@ namespace QuanLyKhachSan
                     }
                     else
                     {
+                        // Change border color to red
+                     
+
                         lbl_chk_TenDangNhap.Text = "";
                         throw new Exception("Tên đăng nhập, mật khẩu không chính xác");
                     }
+
 
                 }
             }
@@ -153,8 +163,8 @@ namespace QuanLyKhachSan
 
             if (savedLoginInfo != null)
             {
-                txt_TenDangNhap.Text = savedLoginInfo.TaiKhoan;
-                txt_MatKhau.Text = savedLoginInfo.MatKhau;
+                txt_TenDangNhap.Texts = savedLoginInfo.TaiKhoan;
+                txt_MatKhau.Texts = savedLoginInfo.MatKhau;
             }
         }
         private void frm_DangNhap_Load(object sender, EventArgs e)

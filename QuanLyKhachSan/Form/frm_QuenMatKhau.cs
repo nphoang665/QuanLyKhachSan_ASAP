@@ -23,28 +23,29 @@ namespace QuanLyKhachSan
         private void pic_Show_Click(object sender, EventArgs e)
         {
             pic_Show.Hide();
-            txt_MatKhau.UseSystemPasswordChar = false;
+            //txt_MatKhau.UseSystemPasswordChar = false;
+            txt_MatKhau.PasswordChar = false;
             pic_Hide.Show();
         }
 
         private void pic_Hide_Click(object sender, EventArgs e)
         {
             pic_Hide.Hide();
-            txt_MatKhau.UseSystemPasswordChar = true;
+            txt_MatKhau.PasswordChar = true;
             pic_Show.Show();
         }
 
         private void pic_Hide1_Click(object sender, EventArgs e)
         {
             pic_Hide1.Hide();
-            txt_NhapLaiMK.UseSystemPasswordChar = true;
+            txt_NhapLaiMK.PasswordChar = true;
             pic_Show1.Show();
         }
 
         private void pic_Show1_Click(object sender, EventArgs e)
         {
             pic_Show1.Hide();
-            txt_NhapLaiMK.UseSystemPasswordChar = false;
+            txt_NhapLaiMK.PasswordChar = false;
             pic_Hide1.Show();
         }
 
@@ -72,7 +73,7 @@ namespace QuanLyKhachSan
         {
             try
             {
-                string tenDangNhap = txt_TenDangNhap.Text;
+                string tenDangNhap = txt_TenDangNhap.Texts;
                 if (string.IsNullOrEmpty(tenDangNhap))
                 {
                    
@@ -120,15 +121,15 @@ namespace QuanLyKhachSan
         {
             try
             {
-                string tenDangNhap = txt_TenDangNhap.Text;
-                string matKhauMoi = txt_MatKhau.Text;
-                string nhapLaiMK = txt_NhapLaiMK.Text;
-                if (txt_MatKhau.Text == "")
+                string tenDangNhap = txt_TenDangNhap.Texts;
+                string matKhauMoi = txt_MatKhau.Texts;
+                string nhapLaiMK = txt_NhapLaiMK.Texts;
+                if (txt_MatKhau.Texts == "")
                 {
                     lbl_rematkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu");
                 }
-                else if (txt_NhapLaiMK.Text == "")
+                else if (txt_NhapLaiMK.Texts == "")
                 {
                     lbl_matkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập xác nhận lại mật khẩu");
@@ -174,28 +175,28 @@ namespace QuanLyKhachSan
         private void pic_Show_Click_1(object sender, EventArgs e)
         {
             pic_Show.Hide();
-            txt_MatKhau.UseSystemPasswordChar = false;
+            txt_MatKhau.PasswordChar = false;
             pic_Hide.Show();
         }
 
         private void pic_Hide_Click_1(object sender, EventArgs e)
         {
             pic_Hide.Hide();
-            txt_MatKhau.UseSystemPasswordChar = true;
+            txt_MatKhau.PasswordChar = true;
             pic_Show.Show();
         }
 
         private void pic_Show1_Click_1(object sender, EventArgs e)
         {
             pic_Show1.Hide();
-            txt_NhapLaiMK.UseSystemPasswordChar = false;
+            txt_NhapLaiMK.PasswordChar = false;
             pic_Hide1.Show();
         }
 
         private void pic_Hide1_Click_1(object sender, EventArgs e)
         {
             pic_Hide1.Hide();
-            txt_NhapLaiMK.UseSystemPasswordChar = true;
+            txt_NhapLaiMK.PasswordChar = true;
             pic_Show1.Show();
         }
 
@@ -221,7 +222,7 @@ namespace QuanLyKhachSan
 
         private void lbl_DangNhap_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frm_DangNhap frm_DangNhap = new frm_DangNhap();
             frm_DangNhap.ShowDialog();
         }

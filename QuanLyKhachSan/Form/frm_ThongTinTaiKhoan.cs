@@ -22,24 +22,35 @@ namespace QuanLyKhachSan
             _tk = taikhoan;
             bus = new BUS_ThongTinTaiKhoan();
         }
-
+        void EnableTextBox() {
+            txt_TenDangNhap.Enabled = false;
+            txt_ChucVu.Enabled = false;
+            txt_cmnd.Enabled = false;
+            txt_diaChi.Enabled = false;
+            txt_TenNhanVien.Enabled = false;
+            txt_sdt.Enabled = false;
+            txt_gioitinh.Enabled = false;
+            txt_NgaySinh.Enabled = false;
+            txt_NgayVaoLam.Enabled = false;
+        }
         private void frm_ThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
+            
             var thongtintaikhoan = bus.LayttTaiKhoan(_tk);
-            txt_TenDangNhap.Text = thongtintaikhoan.TenDangNhap;
+            txt_TenDangNhap.Texts = thongtintaikhoan.TenDangNhap;
             //lấy mã nhân viên
             Manhansu = thongtintaikhoan.MaNhanSu;
             //điền thông tin nhân sự
             var thongtinnhansu = bus.LayTTNhanSu(Manhansu);
-            txt_cmnd.Text = thongtinnhansu.CCCD;
-            txt_TenNhanVien.Text = thongtinnhansu.TenNhanSu;
-            txt_ChucVu.Text = thongtinnhansu.ChucVu;
-            txt_gioitinh.Text = thongtinnhansu.GioiTinh;
-            dtp_NgaySinh.Value = thongtinnhansu.NgaySinh.Value;
-            dtp_NgayVaoLam.Value = thongtinnhansu.NgayVaoLam.Value;
-            txt_sdt.Text = thongtinnhansu.SoDienThoai;
-            txt_diaChi.Text = thongtinnhansu.DiaChi;
-            if (txt_gioitinh.Text == "Nam")
+            txt_cmnd.Texts = thongtinnhansu.CCCD;
+            txt_TenNhanVien.Texts = thongtinnhansu.TenNhanSu;
+            txt_ChucVu.Texts = thongtinnhansu.ChucVu;
+            txt_gioitinh.Texts = thongtinnhansu.GioiTinh;
+            txt_NgaySinh.Texts = thongtinnhansu.NgaySinh.ToString();
+            txt_NgayVaoLam.Texts = thongtinnhansu.NgayVaoLam.ToString();
+            txt_sdt.Texts = thongtinnhansu.SoDienThoai;
+            txt_diaChi.Texts = thongtinnhansu.DiaChi;
+            if (txt_gioitinh.Texts == "Nam")
             {
                 pictureBox1.Image = Properties.Resources.male_information;
             }
@@ -47,7 +58,42 @@ namespace QuanLyKhachSan
             {
                 pictureBox1.Image = Properties.Resources.Female_Information;
             }
+            EnableTextBox();
 
+        }
+
+        private void txt_TenDangNhap__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TenNhanVien__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ChucVu__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_gioitinh__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_diaChi__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cmnd__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_sdt__TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
