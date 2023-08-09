@@ -265,6 +265,7 @@
             this.dgv_DanhSachNguoiDung.AllowUserToDeleteRows = false;
             this.dgv_DanhSachNguoiDung.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachNguoiDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachNguoiDung.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachNguoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachNguoiDung.Location = new System.Drawing.Point(7, 207);
@@ -374,6 +375,7 @@
             this.dgv_DanhSachNguoiDung1.AllowUserToDeleteRows = false;
             this.dgv_DanhSachNguoiDung1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachNguoiDung1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachNguoiDung1.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachNguoiDung1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachNguoiDung1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachNguoiDung1.Location = new System.Drawing.Point(7, 207);
@@ -590,6 +592,7 @@
             this.dgv_DanhSachNguoiDung2.AllowUserToDeleteRows = false;
             this.dgv_DanhSachNguoiDung2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachNguoiDung2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachNguoiDung2.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachNguoiDung2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachNguoiDung2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachNguoiDung2.Location = new System.Drawing.Point(7, 207);

@@ -312,6 +312,7 @@
             this.dgv_DanhSachHoaDon.AllowUserToDeleteRows = false;
             this.dgv_DanhSachHoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -117,6 +117,7 @@
             // 
             // tabPage_ChiTiet
             // 
+            this.tabPage_ChiTiet.BackColor = System.Drawing.Color.White;
             this.tabPage_ChiTiet.Controls.Add(this.lsv_phongchon);
             this.tabPage_ChiTiet.Controls.Add(this.label3);
             this.tabPage_ChiTiet.Controls.Add(this.lstv_ChiTiet);
@@ -126,11 +127,10 @@
             this.tabPage_ChiTiet.Size = new System.Drawing.Size(549, 439);
             this.tabPage_ChiTiet.TabIndex = 0;
             this.tabPage_ChiTiet.Text = "Chi tiết";
-            this.tabPage_ChiTiet.UseVisualStyleBackColor = true;
             // 
             // lsv_phongchon
             // 
-            this.lsv_phongchon.BackColor = System.Drawing.SystemColors.Control;
+            this.lsv_phongchon.BackColor = System.Drawing.Color.White;
             this.lsv_phongchon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
@@ -168,7 +168,7 @@
             // 
             // lstv_ChiTiet
             // 
-            this.lstv_ChiTiet.BackColor = System.Drawing.SystemColors.Control;
+            this.lstv_ChiTiet.BackColor = System.Drawing.Color.White;
             this.lstv_ChiTiet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ThongTin,
             this.GiaTri});
@@ -199,7 +199,7 @@
             // grp_PhongTrong
             // 
             this.grp_PhongTrong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grp_PhongTrong.BackColor = System.Drawing.SystemColors.Control;
+            this.grp_PhongTrong.BackColor = System.Drawing.Color.White;
             this.grp_PhongTrong.Controls.Add(this.label5);
             this.grp_PhongTrong.Controls.Add(this.dgv_PhongTrong);
             this.grp_PhongTrong.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -224,7 +224,7 @@
             this.dgv_PhongTrong.AllowUserToAddRows = false;
             this.dgv_PhongTrong.AllowUserToDeleteRows = false;
             this.dgv_PhongTrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_PhongTrong.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv_PhongTrong.BackgroundColor = System.Drawing.Color.White;
             this.dgv_PhongTrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PhongTrong.Location = new System.Drawing.Point(6, 44);
             this.dgv_PhongTrong.Name = "dgv_PhongTrong";
@@ -238,7 +238,7 @@
             // grp_ThuePhong
             // 
             this.grp_ThuePhong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grp_ThuePhong.BackColor = System.Drawing.SystemColors.Control;
+            this.grp_ThuePhong.BackColor = System.Drawing.Color.White;
             this.grp_ThuePhong.Controls.Add(this.dtp_NgayThue);
             this.grp_ThuePhong.Controls.Add(this.label2);
             this.grp_ThuePhong.Controls.Add(this.cbo_MaKhachHang);
@@ -304,7 +304,7 @@
             // dgv_DanhSachKhachDaThue
             // 
             this.dgv_DanhSachKhachDaThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_DanhSachKhachDaThue.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv_DanhSachKhachDaThue.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachKhachDaThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachKhachDaThue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DanhSachKhachDaThue.Location = new System.Drawing.Point(3, 3);

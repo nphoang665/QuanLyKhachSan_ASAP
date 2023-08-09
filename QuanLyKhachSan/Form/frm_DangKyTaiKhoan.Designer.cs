@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DangKyTaiKhoan));
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pic_Show = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,9 @@
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_mk_chkerr = new System.Windows.Forms.Label();
+            this.lbl_tk_checkerr = new System.Windows.Forms.Label();
+            this.lbl_cccd_chkerr = new System.Windows.Forms.Label();
             this.lbl_DangNhap = new System.Windows.Forms.Label();
             this.txt_cccd = new System.Windows.Forms.TextBox();
             this.lbl_cccd = new System.Windows.Forms.Label();
@@ -48,9 +52,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_cccd_chkerr = new System.Windows.Forms.Label();
-            this.lbl_tk_checkerr = new System.Windows.Forms.Label();
-            this.lbl_mk_chkerr = new System.Windows.Forms.Label();
             this.lbl_notice_successfull = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
@@ -189,6 +190,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng Ký";
             // 
+            // lbl_mk_chkerr
+            // 
+            this.lbl_mk_chkerr.AutoSize = true;
+            this.lbl_mk_chkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mk_chkerr.ForeColor = System.Drawing.Color.Red;
+            this.lbl_mk_chkerr.Location = new System.Drawing.Point(93, 246);
+            this.lbl_mk_chkerr.Name = "lbl_mk_chkerr";
+            this.lbl_mk_chkerr.Size = new System.Drawing.Size(11, 13);
+            this.lbl_mk_chkerr.TabIndex = 10;
+            this.lbl_mk_chkerr.Text = "*";
+            this.lbl_mk_chkerr.Visible = false;
+            // 
+            // lbl_tk_checkerr
+            // 
+            this.lbl_tk_checkerr.AutoSize = true;
+            this.lbl_tk_checkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tk_checkerr.ForeColor = System.Drawing.Color.Red;
+            this.lbl_tk_checkerr.Location = new System.Drawing.Point(93, 173);
+            this.lbl_tk_checkerr.Name = "lbl_tk_checkerr";
+            this.lbl_tk_checkerr.Size = new System.Drawing.Size(11, 13);
+            this.lbl_tk_checkerr.TabIndex = 9;
+            this.lbl_tk_checkerr.Text = "*";
+            this.lbl_tk_checkerr.Visible = false;
+            // 
+            // lbl_cccd_chkerr
+            // 
+            this.lbl_cccd_chkerr.AutoSize = true;
+            this.lbl_cccd_chkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cccd_chkerr.ForeColor = System.Drawing.Color.Red;
+            this.lbl_cccd_chkerr.Location = new System.Drawing.Point(93, 97);
+            this.lbl_cccd_chkerr.Name = "lbl_cccd_chkerr";
+            this.lbl_cccd_chkerr.Size = new System.Drawing.Size(11, 13);
+            this.lbl_cccd_chkerr.TabIndex = 8;
+            this.lbl_cccd_chkerr.Text = "*";
+            this.lbl_cccd_chkerr.Visible = false;
+            // 
             // lbl_DangNhap
             // 
             this.lbl_DangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -225,8 +262,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 545);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1132, 41);
@@ -267,44 +304,9 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // lbl_cccd_chkerr
-            // 
-            this.lbl_cccd_chkerr.AutoSize = true;
-            this.lbl_cccd_chkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cccd_chkerr.ForeColor = System.Drawing.Color.Red;
-            this.lbl_cccd_chkerr.Location = new System.Drawing.Point(93, 97);
-            this.lbl_cccd_chkerr.Name = "lbl_cccd_chkerr";
-            this.lbl_cccd_chkerr.Size = new System.Drawing.Size(11, 13);
-            this.lbl_cccd_chkerr.TabIndex = 8;
-            this.lbl_cccd_chkerr.Text = "*";
-            this.lbl_cccd_chkerr.Visible = false;
-            // 
-            // lbl_tk_checkerr
-            // 
-            this.lbl_tk_checkerr.AutoSize = true;
-            this.lbl_tk_checkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tk_checkerr.ForeColor = System.Drawing.Color.Red;
-            this.lbl_tk_checkerr.Location = new System.Drawing.Point(93, 173);
-            this.lbl_tk_checkerr.Name = "lbl_tk_checkerr";
-            this.lbl_tk_checkerr.Size = new System.Drawing.Size(11, 13);
-            this.lbl_tk_checkerr.TabIndex = 9;
-            this.lbl_tk_checkerr.Text = "*";
-            this.lbl_tk_checkerr.Visible = false;
-            // 
-            // lbl_mk_chkerr
-            // 
-            this.lbl_mk_chkerr.AutoSize = true;
-            this.lbl_mk_chkerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mk_chkerr.ForeColor = System.Drawing.Color.Red;
-            this.lbl_mk_chkerr.Location = new System.Drawing.Point(93, 246);
-            this.lbl_mk_chkerr.Name = "lbl_mk_chkerr";
-            this.lbl_mk_chkerr.Size = new System.Drawing.Size(11, 13);
-            this.lbl_mk_chkerr.TabIndex = 10;
-            this.lbl_mk_chkerr.Text = "*";
-            this.lbl_mk_chkerr.Visible = false;
-            // 
             // lbl_notice_successfull
             // 
+            this.lbl_notice_successfull.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_notice_successfull.AutoSize = true;
             this.lbl_notice_successfull.Font = new System.Drawing.Font("Segoe Script", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_notice_successfull.ForeColor = System.Drawing.Color.DarkGreen;
@@ -319,6 +321,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1132, 586);
             this.Controls.Add(this.lbl_notice_successfull);
             this.Controls.Add(this.label6);
@@ -327,6 +330,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_DangKyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký Tài khoản";

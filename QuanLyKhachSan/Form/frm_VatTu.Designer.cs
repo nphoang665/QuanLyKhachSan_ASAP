@@ -93,6 +93,7 @@
             // 
             // tabPage_ThemVatTu
             // 
+            this.tabPage_ThemVatTu.BackColor = System.Drawing.Color.White;
             this.tabPage_ThemVatTu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_ThemVatTu.Controls.Add(this.cbo_NguoiQuanLy);
             this.tabPage_ThemVatTu.Controls.Add(this.txt_GhiChu);
@@ -115,7 +116,6 @@
             this.tabPage_ThemVatTu.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_ThemVatTu.TabIndex = 0;
             this.tabPage_ThemVatTu.Text = "Thêm vật tư:";
-            this.tabPage_ThemVatTu.UseVisualStyleBackColor = true;
             // 
             // cbo_NguoiQuanLy
             // 
@@ -222,6 +222,7 @@
             this.dgv_DanhSachVatTu.AllowUserToDeleteRows = false;
             this.dgv_DanhSachVatTu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachVatTu.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachVatTu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachVatTu.Location = new System.Drawing.Point(7, 207);
@@ -283,6 +284,7 @@
             // 
             // tabPage_TimVatTu
             // 
+            this.tabPage_TimVatTu.BackColor = System.Drawing.Color.White;
             this.tabPage_TimVatTu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_TimVatTu.Controls.Add(this.cbo_NguoiQuanLy1);
             this.tabPage_TimVatTu.Controls.Add(this.label11);
@@ -298,7 +300,6 @@
             this.tabPage_TimVatTu.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_TimVatTu.TabIndex = 1;
             this.tabPage_TimVatTu.Text = "Tìm vật tư";
-            this.tabPage_TimVatTu.UseVisualStyleBackColor = true;
             // 
             // cbo_NguoiQuanLy1
             // 
@@ -358,6 +359,7 @@
             this.dgv_DanhSachVatTu1.AllowUserToDeleteRows = false;
             this.dgv_DanhSachVatTu1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachVatTu1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachVatTu1.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachVatTu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachVatTu1.Location = new System.Drawing.Point(7, 207);
@@ -391,6 +393,7 @@
             // 
             // tabPage_Sua_XoaPhong
             // 
+            this.tabPage_Sua_XoaPhong.BackColor = System.Drawing.Color.White;
             this.tabPage_Sua_XoaPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_Sua_XoaPhong.Controls.Add(this.cbo_NguoiQuanLy2);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_NhaCungCap2);
@@ -410,7 +413,6 @@
             this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_Sua_XoaPhong.TabIndex = 2;
             this.tabPage_Sua_XoaPhong.Text = "Sửa, Xóa vật tư";
-            this.tabPage_Sua_XoaPhong.UseVisualStyleBackColor = true;
             // 
             // cbo_NguoiQuanLy2
             // 
@@ -532,6 +534,7 @@
             this.dgv_DanhSachVatTu2.AllowUserToDeleteRows = false;
             this.dgv_DanhSachVatTu2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachVatTu2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachVatTu2.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachVatTu2.Location = new System.Drawing.Point(7, 207);

@@ -364,6 +364,7 @@
             this.dgv_nhansu.AllowUserToDeleteRows = false;
             this.dgv_nhansu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_nhansu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_nhansu.BackgroundColor = System.Drawing.Color.White;
             this.dgv_nhansu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_nhansu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nhansu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -471,6 +472,7 @@
             // 
             // tabPage_TimNhanVien
             // 
+            this.tabPage_TimNhanVien.BackColor = System.Drawing.Color.White;
             this.tabPage_TimNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_TimNhanVien.Controls.Add(this.btn_load);
             this.tabPage_TimNhanVien.Controls.Add(this.dgv1_NhanSu);
@@ -490,7 +492,6 @@
             this.tabPage_TimNhanVien.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_TimNhanVien.TabIndex = 1;
             this.tabPage_TimNhanVien.Text = "Danh sách nhân viên";
-            this.tabPage_TimNhanVien.UseVisualStyleBackColor = true;
             this.tabPage_TimNhanVien.Click += new System.EventHandler(this.tabPage_TimNhanVien_Click);
             // 
             // btn_load
@@ -516,6 +517,7 @@
             this.dgv1_NhanSu.AllowUserToDeleteRows = false;
             this.dgv1_NhanSu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv1_NhanSu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv1_NhanSu.BackgroundColor = System.Drawing.Color.White;
             this.dgv1_NhanSu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv1_NhanSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1_NhanSu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -692,6 +694,7 @@
             // 
             // tabPage_Sua_XoaNhanVien
             // 
+            this.tabPage_Sua_XoaNhanVien.BackColor = System.Drawing.Color.White;
             this.tabPage_Sua_XoaNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_Sua_XoaNhanVien.Controls.Add(this.btn_mo_sua);
             this.tabPage_Sua_XoaNhanVien.Controls.Add(this.pic_anh);
@@ -722,7 +725,6 @@
             this.tabPage_Sua_XoaNhanVien.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_Sua_XoaNhanVien.TabIndex = 2;
             this.tabPage_Sua_XoaNhanVien.Text = "Sửa, Xóa nhân viên:";
-            this.tabPage_Sua_XoaNhanVien.UseVisualStyleBackColor = true;
             // 
             // btn_mo_sua
             // 
@@ -749,6 +751,7 @@
             this.dgv2_NhanSu.AllowUserToDeleteRows = false;
             this.dgv2_NhanSu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv2_NhanSu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv2_NhanSu.BackgroundColor = System.Drawing.Color.White;
             this.dgv2_NhanSu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv2_NhanSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv2_NhanSu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

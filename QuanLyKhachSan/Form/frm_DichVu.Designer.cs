@@ -192,6 +192,7 @@
             this.dgv_DanhSachDichVu.AllowUserToDeleteRows = false;
             this.dgv_DanhSachDichVu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachDichVu.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachDichVu.Location = new System.Drawing.Point(7, 207);
@@ -305,6 +306,7 @@
             this.dgv_DanhSachDichVu1.AllowUserToDeleteRows = false;
             this.dgv_DanhSachDichVu1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachDichVu1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachDichVu1.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachDichVu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachDichVu1.Location = new System.Drawing.Point(7, 207);
@@ -468,6 +470,7 @@
             this.dgv_DanhSachDichVu2.AllowUserToDeleteRows = false;
             this.dgv_DanhSachDichVu2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachDichVu2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachDichVu2.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachDichVu2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachDichVu2.Location = new System.Drawing.Point(7, 207);
@@ -502,6 +505,7 @@
             // 
             // tabPage_DangKyDichVu
             // 
+            this.tabPage_DangKyDichVu.BackColor = System.Drawing.Color.White;
             this.tabPage_DangKyDichVu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_DangKyDichVu.Controls.Add(this.dgv_DanhSachDichVu3);
             this.tabPage_DangKyDichVu.Controls.Add(this.listView_DichVuDaDat);
@@ -526,7 +530,6 @@
             this.tabPage_DangKyDichVu.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_DangKyDichVu.TabIndex = 3;
             this.tabPage_DangKyDichVu.Text = "Đăng ký dịch vụ";
-            this.tabPage_DangKyDichVu.UseVisualStyleBackColor = true;
             // 
             // listView_DichVuDaDat
             // 
@@ -549,7 +552,7 @@
             this.btn_XoaDKDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XoaDKDV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XoaDKDV.ForeColor = System.Drawing.Color.White;
-            this.btn_XoaDKDV.Location = new System.Drawing.Point(952, 185);
+            this.btn_XoaDKDV.Location = new System.Drawing.Point(952, 186);
             this.btn_XoaDKDV.Name = "btn_XoaDKDV";
             this.btn_XoaDKDV.Size = new System.Drawing.Size(77, 29);
             this.btn_XoaDKDV.TabIndex = 10;
@@ -566,7 +569,7 @@
             this.btn_Them_DKDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Them_DKDV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them_DKDV.ForeColor = System.Drawing.Color.White;
-            this.btn_Them_DKDV.Location = new System.Drawing.Point(831, 185);
+            this.btn_Them_DKDV.Location = new System.Drawing.Point(831, 186);
             this.btn_Them_DKDV.Name = "btn_Them_DKDV";
             this.btn_Them_DKDV.Size = new System.Drawing.Size(77, 29);
             this.btn_Them_DKDV.TabIndex = 9;
@@ -611,7 +614,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.label12.Location = new System.Drawing.Point(183, 377);
+            this.label12.Location = new System.Drawing.Point(183, 378);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(136, 25);
             this.label12.TabIndex = 93;
@@ -650,7 +653,7 @@
             this.btn_DangKyDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangKyDV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangKyDV.ForeColor = System.Drawing.Color.White;
-            this.btn_DangKyDV.Location = new System.Drawing.Point(846, 415);
+            this.btn_DangKyDV.Location = new System.Drawing.Point(846, 416);
             this.btn_DangKyDV.Name = "btn_DangKyDV";
             this.btn_DangKyDV.Size = new System.Drawing.Size(129, 43);
             this.btn_DangKyDV.TabIndex = 12;
@@ -724,7 +727,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.label15.Location = new System.Drawing.Point(93, 21);
+            this.label15.Location = new System.Drawing.Point(93, 22);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(363, 37);
             this.label15.TabIndex = 0;

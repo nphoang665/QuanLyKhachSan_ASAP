@@ -294,6 +294,7 @@
             this.dgv_DanhSachKhachHang.AllowUserToDeleteRows = false;
             this.dgv_DanhSachKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachKhachHang.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -405,6 +406,7 @@
             // 
             // tabPage_DanhSachKhachHang
             // 
+            this.tabPage_DanhSachKhachHang.BackColor = System.Drawing.Color.White;
             this.tabPage_DanhSachKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_DanhSachKhachHang.Controls.Add(this.radioButton1);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.radioButton2);
@@ -421,7 +423,6 @@
             this.tabPage_DanhSachKhachHang.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_DanhSachKhachHang.TabIndex = 1;
             this.tabPage_DanhSachKhachHang.Text = "Danh sách khách hàng";
-            this.tabPage_DanhSachKhachHang.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
@@ -466,6 +467,7 @@
             this.dgv_DanhSachKhachHang1.AllowUserToDeleteRows = false;
             this.dgv_DanhSachKhachHang1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachKhachHang1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachKhachHang1.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachKhachHang1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachKhachHang1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachKhachHang1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -594,6 +596,7 @@
             // 
             // tabPage_Sua_XoaKhachHang
             // 
+            this.tabPage_Sua_XoaKhachHang.BackColor = System.Drawing.Color.White;
             this.tabPage_Sua_XoaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.txt_makh_sua);
             this.tabPage_Sua_XoaKhachHang.Controls.Add(this.label22);
@@ -620,7 +623,6 @@
             this.tabPage_Sua_XoaKhachHang.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_Sua_XoaKhachHang.TabIndex = 2;
             this.tabPage_Sua_XoaKhachHang.Text = "Sửa, Xóa khách hàng";
-            this.tabPage_Sua_XoaKhachHang.UseVisualStyleBackColor = true;
             // 
             // txt_makh_sua
             // 
@@ -787,6 +789,7 @@
             this.dgv_DanhSachKhachHang2.AllowUserToDeleteRows = false;
             this.dgv_DanhSachKhachHang2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_DanhSachKhachHang2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachKhachHang2.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachKhachHang2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachKhachHang2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachKhachHang2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

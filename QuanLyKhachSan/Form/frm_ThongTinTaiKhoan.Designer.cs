@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grp_thongtintaikhoan = new System.Windows.Forms.GroupBox();
+            this.txt_ChucVu = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_TenNhanVien = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
             this.lbl_ChucVu = new System.Windows.Forms.Label();
             this.lbl_TenNhanVien = new System.Windows.Forms.Label();
             this.lbl_TenDangNhap = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@
             this.txt_sdt = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_gioitinh = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_cmnd = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_ChucVu = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_TenNhanVien = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
             this.grp_thongtintaikhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +85,66 @@
             this.grp_thongtintaikhoan.TabIndex = 1;
             this.grp_thongtintaikhoan.TabStop = false;
             this.grp_thongtintaikhoan.Text = "Thông tin tài khoản";
+            // 
+            // txt_ChucVu
+            // 
+            this.txt_ChucVu.BackColor = System.Drawing.Color.White;
+            this.txt_ChucVu.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_ChucVu.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_ChucVu.BorderSize = 2;
+            this.txt_ChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ChucVu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ChucVu.Location = new System.Drawing.Point(53, 244);
+            this.txt_ChucVu.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ChucVu.Multiline = false;
+            this.txt_ChucVu.Name = "txt_ChucVu";
+            this.txt_ChucVu.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
+            this.txt_ChucVu.PasswordChar = false;
+            this.txt_ChucVu.Size = new System.Drawing.Size(333, 43);
+            this.txt_ChucVu.TabIndex = 9;
+            this.txt_ChucVu.Texts = "";
+            this.txt_ChucVu.UnderLineStyle = true;
+            this.txt_ChucVu._TextChanged += new System.EventHandler(this.txt_ChucVu__TextChanged);
+            // 
+            // txt_TenNhanVien
+            // 
+            this.txt_TenNhanVien.BackColor = System.Drawing.Color.White;
+            this.txt_TenNhanVien.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenNhanVien.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenNhanVien.BorderSize = 2;
+            this.txt_TenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenNhanVien.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_TenNhanVien.Location = new System.Drawing.Point(53, 146);
+            this.txt_TenNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenNhanVien.Multiline = false;
+            this.txt_TenNhanVien.Name = "txt_TenNhanVien";
+            this.txt_TenNhanVien.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
+            this.txt_TenNhanVien.PasswordChar = false;
+            this.txt_TenNhanVien.Size = new System.Drawing.Size(333, 43);
+            this.txt_TenNhanVien.TabIndex = 8;
+            this.txt_TenNhanVien.Texts = "";
+            this.txt_TenNhanVien.UnderLineStyle = true;
+            this.txt_TenNhanVien._TextChanged += new System.EventHandler(this.txt_TenNhanVien__TextChanged);
+            // 
+            // txt_TenDangNhap
+            // 
+            this.txt_TenDangNhap.BackColor = System.Drawing.Color.White;
+            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenDangNhap.BorderSize = 2;
+            this.txt_TenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenDangNhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(53, 60);
+            this.txt_TenDangNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenDangNhap.Multiline = false;
+            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
+            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
+            this.txt_TenDangNhap.PasswordChar = false;
+            this.txt_TenDangNhap.Size = new System.Drawing.Size(333, 43);
+            this.txt_TenDangNhap.TabIndex = 7;
+            this.txt_TenDangNhap.Texts = "";
+            this.txt_TenDangNhap.UnderLineStyle = true;
+            this.txt_TenDangNhap._TextChanged += new System.EventHandler(this.txt_TenDangNhap__TextChanged);
             // 
             // lbl_ChucVu
             // 
@@ -244,7 +304,7 @@
             // 
             // txt_NgaySinh
             // 
-            this.txt_NgaySinh.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_NgaySinh.BackColor = System.Drawing.Color.White;
             this.txt_NgaySinh.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txt_NgaySinh.BorderFocusColor = System.Drawing.Color.Magenta;
             this.txt_NgaySinh.BorderSize = 2;
@@ -263,7 +323,7 @@
             // 
             // txt_NgayVaoLam
             // 
-            this.txt_NgayVaoLam.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_NgayVaoLam.BackColor = System.Drawing.Color.White;
             this.txt_NgayVaoLam.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txt_NgayVaoLam.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_NgayVaoLam.BorderSize = 2;
@@ -282,7 +342,7 @@
             // 
             // txt_diaChi
             // 
-            this.txt_diaChi.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_diaChi.BackColor = System.Drawing.Color.White;
             this.txt_diaChi.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txt_diaChi.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_diaChi.BorderSize = 2;
@@ -302,7 +362,7 @@
             // 
             // txt_sdt
             // 
-            this.txt_sdt.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_sdt.BackColor = System.Drawing.Color.White;
             this.txt_sdt.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txt_sdt.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_sdt.BorderSize = 2;
@@ -322,7 +382,7 @@
             // 
             // txt_gioitinh
             // 
-            this.txt_gioitinh.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_gioitinh.BackColor = System.Drawing.Color.White;
             this.txt_gioitinh.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txt_gioitinh.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_gioitinh.BorderSize = 2;
@@ -342,7 +402,7 @@
             // 
             // txt_cmnd
             // 
-            this.txt_cmnd.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_cmnd.BackColor = System.Drawing.Color.White;
             this.txt_cmnd.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txt_cmnd.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_cmnd.BorderSize = 2;
@@ -360,71 +420,11 @@
             this.txt_cmnd.UnderLineStyle = true;
             this.txt_cmnd._TextChanged += new System.EventHandler(this.txt_cmnd__TextChanged);
             // 
-            // txt_ChucVu
-            // 
-            this.txt_ChucVu.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_ChucVu.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_ChucVu.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_ChucVu.BorderSize = 2;
-            this.txt_ChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ChucVu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ChucVu.Location = new System.Drawing.Point(53, 244);
-            this.txt_ChucVu.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ChucVu.Multiline = false;
-            this.txt_ChucVu.Name = "txt_ChucVu";
-            this.txt_ChucVu.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
-            this.txt_ChucVu.PasswordChar = false;
-            this.txt_ChucVu.Size = new System.Drawing.Size(333, 43);
-            this.txt_ChucVu.TabIndex = 9;
-            this.txt_ChucVu.Texts = "";
-            this.txt_ChucVu.UnderLineStyle = true;
-            this.txt_ChucVu._TextChanged += new System.EventHandler(this.txt_ChucVu__TextChanged);
-            // 
-            // txt_TenNhanVien
-            // 
-            this.txt_TenNhanVien.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_TenNhanVien.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_TenNhanVien.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_TenNhanVien.BorderSize = 2;
-            this.txt_TenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenNhanVien.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_TenNhanVien.Location = new System.Drawing.Point(53, 146);
-            this.txt_TenNhanVien.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_TenNhanVien.Multiline = false;
-            this.txt_TenNhanVien.Name = "txt_TenNhanVien";
-            this.txt_TenNhanVien.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
-            this.txt_TenNhanVien.PasswordChar = false;
-            this.txt_TenNhanVien.Size = new System.Drawing.Size(333, 43);
-            this.txt_TenNhanVien.TabIndex = 8;
-            this.txt_TenNhanVien.Texts = "";
-            this.txt_TenNhanVien.UnderLineStyle = true;
-            this.txt_TenNhanVien._TextChanged += new System.EventHandler(this.txt_TenNhanVien__TextChanged);
-            // 
-            // txt_TenDangNhap
-            // 
-            this.txt_TenDangNhap.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_TenDangNhap.BorderSize = 2;
-            this.txt_TenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenDangNhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(53, 60);
-            this.txt_TenDangNhap.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_TenDangNhap.Multiline = false;
-            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
-            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
-            this.txt_TenDangNhap.PasswordChar = false;
-            this.txt_TenDangNhap.Size = new System.Drawing.Size(333, 43);
-            this.txt_TenDangNhap.TabIndex = 7;
-            this.txt_TenDangNhap.Texts = "";
-            this.txt_TenDangNhap.UnderLineStyle = true;
-            this.txt_TenDangNhap._TextChanged += new System.EventHandler(this.txt_TenDangNhap__TextChanged);
-            // 
             // frm_ThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1083, 537);
             this.Controls.Add(this.btn_XoaAvt);
             this.Controls.Add(this.btn_KhoiPhucAvt);
