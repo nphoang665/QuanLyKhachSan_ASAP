@@ -60,6 +60,7 @@ namespace QuanLyKhachSan
             {
                 pictureBox1.Image = Properties.Resources.Female_Information;
             }
+            bus.layanhNV(Manhansu,pictureBox1);
             EnableTextBox();
 
         }
@@ -97,6 +98,34 @@ namespace QuanLyKhachSan
         private void txt_sdt__TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_mo_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                bus.LuuAnhNv(Manhansu, pictureBox1.Image);
+            }
+        }
+
+        private void btn_XoaAvt_Click(object sender, EventArgs e)
+        {
+            if (txt_gioitinh.Texts == "Nam")
+            {
+                pictureBox1.Image = Properties.Resources.male_information;
+            }
+            else if (txt_gioitinh.Text == "Nữ")
+            {
+                pictureBox1.Image = Properties.Resources.Female_Information;
+            }
+        }
+
+        private void btn_KhoiPhucAvt_Click(object sender, EventArgs e)
+        {
+          
+                bus.KhoiPhucAnhNv(Manhansu, pictureBox1);
+            
         }
     }
 }

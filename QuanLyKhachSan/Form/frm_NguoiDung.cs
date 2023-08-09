@@ -42,7 +42,7 @@ namespace QuanLyKhachSan
                 string tendangnhap = dgv_DanhSachNguoiDung2.Rows[e.RowIndex].Cells["TenDangNhap"].Value.ToString();
                 var taiKhoan = dstk.LayTaiKhoan(tendangnhap);
 
-                txt_tk_Sua.Text = taiKhoan.TenDangNhap;
+                txt_tk_Sua.Texts = taiKhoan.TenDangNhap;
                 txt_mk_Sua.Texts = taiKhoan.MatKhau;
                 cbo_phanquyen_sua.SelectedItem = taiKhoan.PhanQuyen;
                 txt_manhansu_sua.Texts = taiKhoan.MaNhanSu;
