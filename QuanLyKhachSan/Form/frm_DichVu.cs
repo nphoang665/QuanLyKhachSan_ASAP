@@ -54,11 +54,6 @@ namespace QuanLyKhachSan
             listView_DichVuDaDat.Columns.Add("SoLuong", "Số lượng", 100);
             listView_DichVuDaDat.Columns.Add("MaPhong", "Mã phòng", 100);
             bus.hienthongtincbo_b(cbo_MaDichVu3);
-
-            /*dgv_DanhSachDichVu3.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
-            dgv_DanhSachDichVu3.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
-            dgv_DanhSachDichVu3.Columns["DonGia"].HeaderText = "Đơn giá";
-            dgv_DanhSachDichVu3.Columns["DonViTinh"].HeaderText = "Đơn vị tính";*/
             loadTenDGV();
         }
 
