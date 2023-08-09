@@ -55,10 +55,11 @@ namespace QuanLyKhachSan
             listView_DichVuDaDat.Columns.Add("MaPhong", "Mã phòng", 100);
             bus.hienthongtincbo_b(cbo_MaDichVu3);
 
-            dgv_DanhSachDichVu3.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
+            /*dgv_DanhSachDichVu3.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
             dgv_DanhSachDichVu3.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
             dgv_DanhSachDichVu3.Columns["DonGia"].HeaderText = "Đơn giá";
-            dgv_DanhSachDichVu3.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            dgv_DanhSachDichVu3.Columns["DonViTinh"].HeaderText = "Đơn vị tính";*/
+            loadTenDGV();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -309,6 +310,29 @@ namespace QuanLyKhachSan
                     }
                 }
             }
+        }
+
+        public void loadTenDGV()
+        {
+            dgv_DanhSachDichVu.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
+            dgv_DanhSachDichVu.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
+            dgv_DanhSachDichVu.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgv_DanhSachDichVu.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+
+            dgv_DanhSachDichVu1.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
+            dgv_DanhSachDichVu1.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
+            dgv_DanhSachDichVu1.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgv_DanhSachDichVu1.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+
+            dgv_DanhSachDichVu2.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
+            dgv_DanhSachDichVu2.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
+            dgv_DanhSachDichVu2.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgv_DanhSachDichVu2.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+
+            dgv_DanhSachDichVu3.Columns["MaDichVu"].HeaderText = "Mã dịch vụ";
+            dgv_DanhSachDichVu3.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
+            dgv_DanhSachDichVu3.Columns["DonGia"].HeaderText = "Đơn giá";
+            dgv_DanhSachDichVu3.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
         }
     }
 }

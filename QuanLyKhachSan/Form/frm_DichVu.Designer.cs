@@ -549,7 +549,7 @@
             this.btn_XoaDKDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XoaDKDV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XoaDKDV.ForeColor = System.Drawing.Color.White;
-            this.btn_XoaDKDV.Location = new System.Drawing.Point(882, 187);
+            this.btn_XoaDKDV.Location = new System.Drawing.Point(952, 185);
             this.btn_XoaDKDV.Name = "btn_XoaDKDV";
             this.btn_XoaDKDV.Size = new System.Drawing.Size(77, 29);
             this.btn_XoaDKDV.TabIndex = 10;
@@ -566,7 +566,7 @@
             this.btn_Them_DKDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Them_DKDV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them_DKDV.ForeColor = System.Drawing.Color.White;
-            this.btn_Them_DKDV.Location = new System.Drawing.Point(794, 187);
+            this.btn_Them_DKDV.Location = new System.Drawing.Point(831, 185);
             this.btn_Them_DKDV.Name = "btn_Them_DKDV";
             this.btn_Them_DKDV.Size = new System.Drawing.Size(77, 29);
             this.btn_Them_DKDV.TabIndex = 9;
@@ -578,9 +578,9 @@
             // 
             this.cbo_MaDichVu3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaDichVu3.FormattingEnabled = true;
-            this.cbo_MaDichVu3.Location = new System.Drawing.Point(794, 118);
+            this.cbo_MaDichVu3.Location = new System.Drawing.Point(831, 116);
             this.cbo_MaDichVu3.Name = "cbo_MaDichVu3";
-            this.cbo_MaDichVu3.Size = new System.Drawing.Size(164, 25);
+            this.cbo_MaDichVu3.Size = new System.Drawing.Size(197, 25);
             this.cbo_MaDichVu3.TabIndex = 6;
             // 
             // label16
@@ -589,7 +589,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(689, 118);
+            this.label16.Location = new System.Drawing.Point(726, 116);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 20);
@@ -600,9 +600,9 @@
             // 
             this.cbo_MaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaPhong.FormattingEnabled = true;
-            this.cbo_MaPhong.Location = new System.Drawing.Point(794, 83);
+            this.cbo_MaPhong.Location = new System.Drawing.Point(831, 81);
             this.cbo_MaPhong.Name = "cbo_MaPhong";
-            this.cbo_MaPhong.Size = new System.Drawing.Size(164, 25);
+            this.cbo_MaPhong.Size = new System.Drawing.Size(197, 25);
             this.cbo_MaPhong.TabIndex = 4;
             // 
             // label12
@@ -661,10 +661,10 @@
             // txt_SoLuong
             // 
             this.txt_SoLuong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SoLuong.Location = new System.Drawing.Point(795, 148);
+            this.txt_SoLuong.Location = new System.Drawing.Point(832, 146);
             this.txt_SoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SoLuong.Name = "txt_SoLuong";
-            this.txt_SoLuong.Size = new System.Drawing.Size(164, 25);
+            this.txt_SoLuong.Size = new System.Drawing.Size(197, 25);
             this.txt_SoLuong.TabIndex = 8;
             // 
             // lbl_SoLuong
@@ -673,7 +673,7 @@
             this.lbl_SoLuong.BackColor = System.Drawing.Color.Transparent;
             this.lbl_SoLuong.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SoLuong.ForeColor = System.Drawing.Color.Black;
-            this.lbl_SoLuong.Location = new System.Drawing.Point(690, 149);
+            this.lbl_SoLuong.Location = new System.Drawing.Point(727, 147);
             this.lbl_SoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SoLuong.Name = "lbl_SoLuong";
             this.lbl_SoLuong.Size = new System.Drawing.Size(75, 20);
@@ -699,7 +699,7 @@
             this.lbl_MaPhong.BackColor = System.Drawing.Color.Transparent;
             this.lbl_MaPhong.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MaPhong.ForeColor = System.Drawing.Color.Black;
-            this.lbl_MaPhong.Location = new System.Drawing.Point(688, 85);
+            this.lbl_MaPhong.Location = new System.Drawing.Point(725, 83);
             this.lbl_MaPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_MaPhong.Name = "lbl_MaPhong";
             this.lbl_MaPhong.Size = new System.Drawing.Size(84, 20);
@@ -711,7 +711,7 @@
             this.lbl_DangKyDichVu.AutoSize = true;
             this.lbl_DangKyDichVu.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DangKyDichVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.lbl_DangKyDichVu.Location = new System.Drawing.Point(763, 32);
+            this.lbl_DangKyDichVu.Location = new System.Drawing.Point(767, 31);
             this.lbl_DangKyDichVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_DangKyDichVu.Name = "lbl_DangKyDichVu";
             this.lbl_DangKyDichVu.Size = new System.Drawing.Size(256, 37);

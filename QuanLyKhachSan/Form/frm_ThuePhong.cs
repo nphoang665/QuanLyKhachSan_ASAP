@@ -45,12 +45,10 @@ namespace QuanLyKhachSan
 
             dgv_DanhSachKhachDaThue.Columns.Clear();
 
-            // Truy vấn dữ liệu từ cơ sở dữ liệu (bạn cần điều chỉnh truy vấn này dựa trên cấu trúc dữ liệu thực tế)
-            var data = bus.LayDanhSachKhachDaThue(); // Thay thế bằng phương thức thực tế lấy dữ liệu
-
             // Điền dữ liệu vào DataGridView
             var danhSachKhachDaThue = bus.LayDanhSachKhachDaThue();
             dgv_DanhSachKhachDaThue.DataSource = danhSachKhachDaThue;
+            TenDGV();
         }
      
         private void lstv_ChiTiet_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,23 +57,7 @@ namespace QuanLyKhachSan
         }
 
         private void cbo_MaKhachHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            /*string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
-
- 
-            var kh = bus.LayThongTinKhachHangVaDatPhong(maKhachHang);
-
-            if (kh != null)
-            {
-                lstv_ChiTiet.Items.Clear();
-                lstv_ChiTiet.Items.Add(new ListViewItem("Mã khách hàng: " + maKhachHang));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Tên khách hàng: " + kh.TenKhachHang));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Giới tính: " + kh.GioiTinh));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Địa chỉ: " + kh.DiaChi));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Số điện thoại: " + kh.SoDienThoai));
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày sinh: " + kh.NgaySinh.ToString("dd/MM/yyyy")));             
-            }*/
+        {       
             if (cbo_MaKhachHang.SelectedItem != null)
             {
                 string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
@@ -186,5 +168,27 @@ namespace QuanLyKhachSan
                 MessageBox.Show("Lỗi khi thuê phòng: " + ex.Message);
             }
         }
+        public void TenDGV()
+        {
+            if (dgv_DanhSachKhachDaThue.Columns.Contains("MaKhachHang") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("TenKhachHang") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("NgaySinh") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("GioiTinh") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("CMND") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("DiaChi") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("SoDienThoai") &&
+                dgv_DanhSachKhachDaThue.Columns.Contains("MaPhong"))
+            {
+                dgv_DanhSachKhachDaThue.Columns["MaKhachHang"].HeaderText = "Mã khách hàng";
+                dgv_DanhSachKhachDaThue.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
+                dgv_DanhSachKhachDaThue.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+                dgv_DanhSachKhachDaThue.Columns["GioiTinh"].HeaderText = "Giới tính";
+                dgv_DanhSachKhachDaThue.Columns["CMND"].HeaderText = "CMND/CCCD";
+                dgv_DanhSachKhachDaThue.Columns["DiaChi"].HeaderText = "Địa chỉ";
+                dgv_DanhSachKhachDaThue.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+                dgv_DanhSachKhachDaThue.Columns["MaPhong"].HeaderText = "Mã phòng";
+            }
+        }
+
     }
 }
