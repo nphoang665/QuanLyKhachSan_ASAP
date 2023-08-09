@@ -73,7 +73,7 @@ namespace QuanLyKhachSan
         }
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
-        {         
+        {  /*       
             try
             {
                 string maHoaDon = lbl_kqmahoadon.Text;
@@ -113,9 +113,69 @@ namespace QuanLyKhachSan
 
                 // Xóa thông tin đặt phòng trong bảng ThuePhong
                 bus.XoaThuePhong(maPhong);
-                MessageBox.Show($"Bạn có muốn thanh toán cho Khách hàng '{tenKhachHang}' với số tiền là '{tongTien.ToString("#,##0")}'?", "Thanh toán thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Bạn có muốn thanh toán cho Khách hàng '{tenKhachHang}' với số tiền là '{tongTien.ToString("#,##0")}?", "Thanh toán thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //MessageBox.Show("Thanh toán thành công!");
                 this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
+            try
+            {
+                string maHoaDon = lbl_kqmahoadon.Text;
+                string maKhachHang = lbl_KQMaKhachHang.Text;
+                string tenKhachHang = lbl_KQTenKhachHang.Text;
+                string maPhong = lbl_KQPhong.Text;
+
+                DateTime ngayDatPhong;
+                if (!DateTime.TryParseExact(lbl_KQNgayDatPhong.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayDatPhong))
+                {
+                    MessageBox.Show("Ngày đặt phòng không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DateTime ngayTra = DateTime.Now.Date;
+                double tongTien = double.Parse(lbl_KQTongTien.Text);
+
+                // Hiển thị thông báo xác nhận thanh toán
+                string message = $"Bạn có muốn thanh toán Phòng:{maPhong} - Khách hàng: {tenKhachHang} - tổng tiền: {tongTien:C} không?";
+                DialogResult result = MessageBox.Show(message, "Xác nhận thanh toán", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    HoaDon thanhToan = new HoaDon
+                    {
+                        MaHoaDon = maHoaDon,
+                        TenKhachHang = tenKhachHang,
+                        CMND = cccd,
+                        SoDienThoai = sdt,
+                        MaPhong = maPhong,
+                        NgayThue = ngayDatPhong,
+                        NgayTra = ngayTra,
+                        TongTienDichVu = double.Parse(lbl_KQTongTienDichVu.Text),
+                        TongTienThanhToan = tongTien
+                    };
+
+                    // Lưu thông tin thanh toán vào CSDL
+                    bus.LuuThongTinThanhToan(thanhToan);
+                    busPhong.CapNhatTrangThaiPhong(maPhong, "Trống");
+
+                    // Xóa các dịch vụ đã đăng ký cho phòng
+                    bus.XoaDichVuDaDangKyCuaPhong(maPhong);
+
+                    // Xóa thông tin đặt phòng trong bảng ThuePhong
+                    bus.XoaThuePhong(maPhong);
+
+                    MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    frm_TrangChu frm_TrangChu = new frm_TrangChu();
+                    frm_TrangChu.ViDu.OpenChildForm(new frm_GiaoDienPhong());
+                }
+                else
+                {
+                    // Người dùng không muốn thanh toán, không cần thực hiện gì thêm
+                }
             }
             catch (Exception ex)
             {

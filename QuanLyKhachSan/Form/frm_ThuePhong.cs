@@ -138,6 +138,11 @@ namespace QuanLyKhachSan
 
             // Lấy ngày thuê phòng từ DateTimePicker
             DateTime ngayThue = dtp_NgayThue.Value;
+            if (ngayThue.Date > DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày thuê không được lớn hơn ngày hiện tại.");
+                return;
+            }
 
             // Thêm thông tin thuê phòng vào cơ sở dữ liệu
             try
@@ -187,6 +192,12 @@ namespace QuanLyKhachSan
                 dgv_DanhSachKhachDaThue.Columns["DiaChi"].HeaderText = "Địa chỉ";
                 dgv_DanhSachKhachDaThue.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
                 dgv_DanhSachKhachDaThue.Columns["MaPhong"].HeaderText = "Mã phòng";
+
+                dgv_PhongTrong.Columns["MaPhong"].HeaderText = "Mã phòng";
+                dgv_PhongTrong.Columns["LoaiPhong"].HeaderText = "Loại phòng";
+                dgv_PhongTrong.Columns["TinhTrang"].HeaderText = "Tình trạng";
+                dgv_PhongTrong.Columns["DonGia"].HeaderText = "Đơn giá";
+
             }
         }
 

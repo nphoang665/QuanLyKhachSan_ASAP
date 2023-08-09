@@ -31,15 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TrangChu));
             this.pnl_left = new System.Windows.Forms.Panel();
+            this.btn_TaiKhoan = new System.Windows.Forms.Button();
             this.btn_ThuePhong = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_Phong = new System.Windows.Forms.Button();
             this.btn_HoaDon = new System.Windows.Forms.Button();
             this.pnl_Slide = new System.Windows.Forms.Panel();
             this.btn_NhanVien = new System.Windows.Forms.Button();
-            this.btn_TaiKhoan = new System.Windows.Forms.Button();
             this.btn_KhachHang = new System.Windows.Forms.Button();
             this.btn_TrangChu = new System.Windows.Forms.Button();
             this.pnl_logo = new System.Windows.Forms.Panel();
@@ -108,6 +107,24 @@
             this.pnl_left.TabIndex = 1;
             this.pnl_left.TabStop = true;
             // 
+            // btn_TaiKhoan
+            // 
+            this.btn_TaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btn_TaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TaiKhoan.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btn_TaiKhoan.Image = global::QuanLyKhachSan.Properties.Resources.icons8_account_35;
+            this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(12, 533);
+            this.btn_TaiKhoan.Name = "btn_TaiKhoan";
+            this.btn_TaiKhoan.Size = new System.Drawing.Size(239, 52);
+            this.btn_TaiKhoan.TabIndex = 7;
+            this.btn_TaiKhoan.Text = "      Tài khoản";
+            this.btn_TaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TaiKhoan.UseVisualStyleBackColor = true;
+            this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
+            // 
             // btn_ThuePhong
             // 
             this.btn_ThuePhong.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -128,21 +145,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Location = new System.Drawing.Point(76, 649);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(78, 68);
             this.panel1.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Thoát";
             // 
             // pictureBox3
             // 
@@ -150,7 +157,7 @@
             this.pictureBox3.Image = global::QuanLyKhachSan.Properties.Resources.icons8_exit_50;
             this.pictureBox3.Location = new System.Drawing.Point(17, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 53);
+            this.pictureBox3.Size = new System.Drawing.Size(41, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -217,24 +224,6 @@
             this.btn_NhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_NhanVien.UseVisualStyleBackColor = true;
             this.btn_NhanVien.Click += new System.EventHandler(this.btn_NhanVien_Click);
-            // 
-            // btn_TaiKhoan
-            // 
-            this.btn_TaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btn_TaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TaiKhoan.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btn_TaiKhoan.Image = global::QuanLyKhachSan.Properties.Resources.icons8_account_35;
-            this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(12, 533);
-            this.btn_TaiKhoan.Name = "btn_TaiKhoan";
-            this.btn_TaiKhoan.Size = new System.Drawing.Size(239, 52);
-            this.btn_TaiKhoan.TabIndex = 7;
-            this.btn_TaiKhoan.Text = "      Tài khoản";
-            this.btn_TaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TaiKhoan.UseVisualStyleBackColor = true;
-            this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
             // 
             // btn_KhachHang
             // 
@@ -611,7 +600,6 @@
             this.Load += new System.EventHandler(this.frm_TrangChu_Load);
             this.pnl_left.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_logo.ResumeLayout(false);
             this.pnl_logo.PerformLayout();
@@ -675,7 +663,6 @@
         private System.Windows.Forms.Button btn_Phong;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_ThuePhong;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
     }

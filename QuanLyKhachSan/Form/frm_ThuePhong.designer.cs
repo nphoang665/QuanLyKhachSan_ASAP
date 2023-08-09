@@ -109,7 +109,7 @@
             // 
             this.tabControl_ThongTin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl_ThongTin.Controls.Add(this.tabPage_ChiTiet);
-            this.tabControl_ThongTin.Location = new System.Drawing.Point(346, 5);
+            this.tabControl_ThongTin.Location = new System.Drawing.Point(382, 6);
             this.tabControl_ThongTin.Name = "tabControl_ThongTin";
             this.tabControl_ThongTin.SelectedIndex = 0;
             this.tabControl_ThongTin.Size = new System.Drawing.Size(557, 469);
@@ -205,7 +205,7 @@
             this.grp_PhongTrong.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grp_PhongTrong.Location = new System.Drawing.Point(17, 233);
             this.grp_PhongTrong.Name = "grp_PhongTrong";
-            this.grp_PhongTrong.Size = new System.Drawing.Size(310, 241);
+            this.grp_PhongTrong.Size = new System.Drawing.Size(334, 241);
             this.grp_PhongTrong.TabIndex = 1;
             this.grp_PhongTrong.TabStop = false;
             this.grp_PhongTrong.Text = "Danh sách phòng trống";
@@ -230,7 +230,7 @@
             this.dgv_PhongTrong.Name = "dgv_PhongTrong";
             this.dgv_PhongTrong.ReadOnly = true;
             this.dgv_PhongTrong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_PhongTrong.Size = new System.Drawing.Size(298, 191);
+            this.dgv_PhongTrong.Size = new System.Drawing.Size(322, 191);
             this.dgv_PhongTrong.TabIndex = 0;
             this.dgv_PhongTrong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhongTrong_CellClick);
             this.dgv_PhongTrong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PhongTrong_CellContentClick);
@@ -245,7 +245,7 @@
             this.grp_ThuePhong.Controls.Add(this.label8);
             this.grp_ThuePhong.Location = new System.Drawing.Point(17, 5);
             this.grp_ThuePhong.Name = "grp_ThuePhong";
-            this.grp_ThuePhong.Size = new System.Drawing.Size(309, 222);
+            this.grp_ThuePhong.Size = new System.Drawing.Size(333, 222);
             this.grp_ThuePhong.TabIndex = 0;
             this.grp_ThuePhong.TabStop = false;
             this.grp_ThuePhong.Text = "Phiếu thuê phòng";
