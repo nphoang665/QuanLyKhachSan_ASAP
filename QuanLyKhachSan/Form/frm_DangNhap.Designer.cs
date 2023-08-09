@@ -135,7 +135,7 @@
             // txt_MatKhau
             // 
             this.txt_MatKhau.BackColor = System.Drawing.Color.White;
-            this.txt_MatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_MatKhau.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_MatKhau.BorderSize = 2;
             this.txt_MatKhau.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,7 +153,7 @@
             // txt_TenDangNhap
             // 
             this.txt_TenDangNhap.BackColor = System.Drawing.Color.White;
-            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenDangNhap.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_TenDangNhap.BorderSize = 2;
             this.txt_TenDangNhap.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -11,13 +11,19 @@ namespace QuanLyKhachSan
     public partial class frm_DichVu : Form
     {
         BUS_DichVu bus;
+        
         public TabControl TabControl_DichVu_ADM
         {
             get { return tabControl_DichVu_ADM; }
+         
         }
         public TabPage TabPage_DichVu_ADM
         {
             get { return tabPage_DangKyDichVu; }
+        }
+        public TabPage TabPage_DichVu_ADM2
+        {
+            get { return tabPage_ThemDichVu; }
         }
         public frm_DichVu()
         {

@@ -19,14 +19,14 @@ namespace QuanLyKhachSan
         private void pic_Show_Click_1(object sender, EventArgs e)
         {
             pic_Show.Hide();
-            txt_MatKhauCu.UseSystemPasswordChar = false;
+            txt_MatKhauCu.PasswordChar = true;
             pic_Hide.Show();
         }
 
         private void pic_Hide_Click_1(object sender, EventArgs e)
         {
             pic_Hide.Hide();
-            txt_MatKhauCu.UseSystemPasswordChar = true;
+            txt_MatKhauCu.PasswordChar = false;
             pic_Show.Show();
         }
 
@@ -43,9 +43,9 @@ namespace QuanLyKhachSan
         {
             try
             {
-                string matKhauCu = txt_MatKhauCu.Text;
-                string matKhauMoi = txt_MatKhauMoi.Text;
-                string nhapLaiMK = txt_NhapLaiMatKhau.Text;
+                string matKhauCu = txt_MatKhauCu.Texts;
+                string matKhauMoi = txt_MatKhauMoi.Texts;
+                string nhapLaiMK = txt_NhapLaiMatKhau.Texts;
                 if (string.IsNullOrEmpty(matKhauCu))
                 {
                     lbl_mkmoi_chk.Text = "";
@@ -55,7 +55,7 @@ namespace QuanLyKhachSan
                 var laymk = bus.Laymk(_tk);
 
 
-                if (txt_MatKhauCu.Text != laymk.MatKhau)
+                if (txt_MatKhauCu.Texts != laymk.MatKhau)
                 {
                     lbl_mkmoi_chk.Text = "";
                     lbl_remkmoi_chk.Text = "";
@@ -84,7 +84,7 @@ namespace QuanLyKhachSan
                     lbl_mkcu_chk.Text = "";
                     lbl_mkmoi_chk.Text = "";
                     lbl_remkmoi_chk.Text = "";
-                    bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Text, txt_MatKhauMoi.Text);
+                    bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Texts, txt_MatKhauMoi.Texts);
 
                     frm_TrangChu.ViDu.Hide();
                     frm_DangNhap frm = new frm_DangNhap();
@@ -134,7 +134,17 @@ namespace QuanLyKhachSan
 
         private void pnl_thongtindangnhap_Paint(object sender, PaintEventArgs e)
         {
-            txt_TaiKhoan.Text = _tk;
+            txt_TaiKhoan.Texts = _tk;
+        }
+
+        private void frm_DoiMatKhau_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_DoiMatKhau_Load(object sender, EventArgs e)
+        {
+            txt_TaiKhoan.Enabled = false;
         }
     }
 }

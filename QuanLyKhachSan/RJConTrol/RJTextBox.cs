@@ -20,7 +20,7 @@ namespace CustormTextbox.RJConTrol
         //sự kiện
         public event EventHandler _TextChanged;
 
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public Color BorderColor
 
         {
@@ -33,7 +33,7 @@ namespace CustormTextbox.RJConTrol
                 borderColor = value; this.Invalidate();
             }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public int BorderSize
         {
             get
@@ -46,7 +46,7 @@ namespace CustormTextbox.RJConTrol
                 this.Invalidate();
             }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public bool UnderLineStyle
         {
             get
@@ -59,20 +59,20 @@ namespace CustormTextbox.RJConTrol
                 this.Invalidate();
             }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public bool PasswordChar
         {
             get { return textBox1.UseSystemPasswordChar; }
             set { textBox1.UseSystemPasswordChar = value; }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public bool Multiline
         {
             get { return textBox1.Multiline; }
             set { textBox1.Multiline = value; }
 
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public override Color BackColor
         {
             get
@@ -85,7 +85,7 @@ namespace CustormTextbox.RJConTrol
                 textBox1.BackColor = value;
             }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public override Color ForeColor
         {
             get { return base.ForeColor; }
@@ -96,7 +96,7 @@ namespace CustormTextbox.RJConTrol
                 textBox1.ForeColor = value;
             }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public override Font Font
         {
             get { return base.Font; }
@@ -111,13 +111,13 @@ namespace CustormTextbox.RJConTrol
                 }
             }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public string Texts
         {
             get { return textBox1.Text; }
             set { textBox1.Text = value; }
         }
-        [Category("RJ Code Advance")]
+        [Category("Nhựt đẹp trai")]
         public Color BorderFocusColor {
             get { return borderFocusColor; }
             set { borderFocusColor = value; }
