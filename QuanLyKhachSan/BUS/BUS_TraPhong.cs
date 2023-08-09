@@ -38,5 +38,9 @@ namespace QuanLyKhachSan.BUS
             return da.laySDT(makhachhang);
 
         }
+        public void XoaDichVuDaDangKyCuaPhong(string maPhong)
+        {
+            da.XoaDichVuDaDangKyCuaPhong(maPhong);
+        }
     }
 }
