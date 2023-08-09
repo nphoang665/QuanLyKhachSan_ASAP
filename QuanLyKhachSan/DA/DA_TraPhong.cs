@@ -24,7 +24,7 @@ namespace QuanLyKhachSan.DA
             float tongTienDichVu = 0;
             foreach (var dv in dichVu)
             {
-                tongTienDichVu = (float)(dv.SoLuong * dv.DonGia);
+                tongTienDichVu += (float)(dv.SoLuong * dv.DonGia);
             }
             return tongTienDichVu;
         }
@@ -54,6 +54,15 @@ namespace QuanLyKhachSan.DA
             }
 
             db.SaveChanges();
+        }
+        public void XoaThuePhong(string maPhong)
+        {
+            var thuePhong = db.ThuePhongs.FirstOrDefault(tp => tp.MaPhong == maPhong);
+            if (thuePhong != null)
+            {
+                db.ThuePhongs.Remove(thuePhong);
+                db.SaveChanges();
+            }
         }
 
     }

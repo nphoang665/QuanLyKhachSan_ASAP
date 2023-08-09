@@ -49,9 +49,7 @@
             this.cbo_MaKhachHang = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage_DanhSachDaThue = new System.Windows.Forms.TabPage();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_DanhSachKhachDaThue = new System.Windows.Forms.DataGridView();
             this.tabControl_ThuePhong.SuspendLayout();
             this.tabPage_ThuePhong.SuspendLayout();
             this.tabControl_ThongTin.SuspendLayout();
@@ -60,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhongTrong)).BeginInit();
             this.grp_ThuePhong.SuspendLayout();
             this.tabPage_DanhSachDaThue.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachDaThue)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_ThuePhong
@@ -295,56 +293,24 @@
             // 
             this.tabPage_DanhSachDaThue.BackColor = System.Drawing.Color.White;
             this.tabPage_DanhSachDaThue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_DanhSachDaThue.Controls.Add(this.btn_Xoa);
-            this.tabPage_DanhSachDaThue.Controls.Add(this.btn_Sua);
-            this.tabPage_DanhSachDaThue.Controls.Add(this.dataGridView1);
+            this.tabPage_DanhSachDaThue.Controls.Add(this.dgv_DanhSachKhachDaThue);
             this.tabPage_DanhSachDaThue.Location = new System.Drawing.Point(4, 26);
             this.tabPage_DanhSachDaThue.Name = "tabPage_DanhSachDaThue";
             this.tabPage_DanhSachDaThue.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_DanhSachDaThue.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_DanhSachDaThue.TabIndex = 1;
-            this.tabPage_DanhSachDaThue.Text = "Danh sách đã thuê";
+            this.tabPage_DanhSachDaThue.Text = "Danh sách khách đang thuê";
             // 
-            // btn_Xoa
+            // dgv_DanhSachKhachDaThue
             // 
-            this.btn_Xoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btn_Xoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Xoa.FlatAppearance.BorderSize = 0;
-            this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(900, 69);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(140, 43);
-            this.btn_Xoa.TabIndex = 42;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = false;
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.btn_Sua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sua.FlatAppearance.BorderSize = 0;
-            this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua.ForeColor = System.Drawing.Color.White;
-            this.btn_Sua.Location = new System.Drawing.Point(900, 15);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(140, 43);
-            this.btn_Sua.TabIndex = 41;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(64, 134);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(976, 328);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_DanhSachKhachDaThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DanhSachKhachDaThue.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv_DanhSachKhachDaThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DanhSachKhachDaThue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DanhSachKhachDaThue.Location = new System.Drawing.Point(3, 3);
+            this.dgv_DanhSachKhachDaThue.Name = "dgv_DanhSachKhachDaThue";
+            this.dgv_DanhSachKhachDaThue.Size = new System.Drawing.Size(1098, 473);
+            this.dgv_DanhSachKhachDaThue.TabIndex = 0;
             // 
             // frm_ThuePhong
             // 
@@ -371,7 +337,7 @@
             this.grp_ThuePhong.ResumeLayout(false);
             this.grp_ThuePhong.PerformLayout();
             this.tabPage_DanhSachDaThue.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachDaThue)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,9 +360,7 @@
         private System.Windows.Forms.ComboBox cbo_MaKhachHang;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage_DanhSachDaThue;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_DanhSachKhachDaThue;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView lsv_phongchon;

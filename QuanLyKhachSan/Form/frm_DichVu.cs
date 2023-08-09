@@ -222,10 +222,8 @@ namespace QuanLyKhachSan
 
                     // Gọi phương thức của form frm_ThongTinPhong để cập nhật thông tin dịch vụ đã đăng ký
                     frm_ThongTinPhong.Instance.UpdateDichVuDaSuDung(item.Clone() as ListViewItem); // Tạo bản sao của item và thêm vào ListView khác
-
-                    MessageBox.Show("Đăng ký dịch vụ thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
+                MessageBox.Show("Đăng ký dịch vụ thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Clear ListView sau khi đăng ký thành công
                 listView_DichVuDaDat.Items.Clear();
             }

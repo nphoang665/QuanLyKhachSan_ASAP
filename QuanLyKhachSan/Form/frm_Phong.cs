@@ -34,7 +34,6 @@ namespace QuanLyKhachSan
 
             MessageBox.Show("Sửa thông tin phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            dsp.LoadDsTk(dgv_phong1);
             dsp.LoadDsTk(dgv_phong2);
             dsp.LoadDsTk(dgv_phong3);
 
@@ -65,7 +64,6 @@ namespace QuanLyKhachSan
 
                     MessageBox.Show("Xóa phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    dsp.LoadDsTk(dgv_phong1);
                     dsp.LoadDsTk(dgv_phong2);
                     dsp.LoadDsTk(dgv_phong3);
 
@@ -96,35 +94,6 @@ namespace QuanLyKhachSan
             var kq = dsp.timphongbangmatinhtrang(timtinhtrang);
             dgv_phong2.DataSource = kq;
         }
-
-        private void btn_Them_Click(object sender, EventArgs e)
-        {
-            string maPhong = txt_maphong_them.Text;
-            string loaiPhong = cbo_loaiPhong_them.Text;
-            string tinhTrang = cbo_tinhTrang_them.Text;
-            float donGia;
-
-            KiemLoi.Clear();
-
-            if (string.IsNullOrWhiteSpace(maPhong) || maPhong.Any(c => !char.IsLetterOrDigit(c)))
-            {
-                KiemLoi.SetError(txt_maphong_them, "Mã phòng không được để trống và chỉ chấp nhận ký tự chữ và số.");
-                return;
-            }
-
-            if (!float.TryParse(txt_donGia_Them.Text, out donGia))
-            {
-                KiemLoi.SetError(txt_donGia_Them, "Đơn giá không được để trống và phải là một số hợp lệ.");
-                return;
-            }
-
-            dsp.ThemPhong(maPhong, loaiPhong, tinhTrang, donGia);
-
-            dsp.LoadDsTk(dgv_phong1);
-            dsp.LoadDsTk(dgv_phong2);
-            dsp.LoadDsTk(dgv_phong3);
-        }
-
         private void dgv_phong3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -141,7 +110,6 @@ namespace QuanLyKhachSan
 
         private void frm_Phong_Load(object sender, EventArgs e)
         {
-            dsp.LoadDsTk(dgv_phong1);
             dsp.LoadDsTk(dgv_phong2);
             dsp.LoadDsTk(dgv_phong3);
 
@@ -149,20 +117,15 @@ namespace QuanLyKhachSan
             txt_TimLoaiPhong.TextChanged += txt_TimLoaiPhong_TextChanged;
             txt_timtinhtrang.TextChanged += txt_timtinhtrang_TextChanged;
 
-            cbo_loaiPhong_them.Items.AddRange(new object[] {
-                "Phòng đơn",
-                "Phòng đôi",
-                "Phòng ba"
-            });
-            cbo_loaiPhong_them.SelectedIndex = 0;
-            cbo_loaiPhong_them.DropDownStyle = ComboBoxStyle.DropDownList;
+            dgv_phong2.Columns["MaPhong"].HeaderText = "Mã phòng";
+            dgv_phong2.Columns["LoaiPhong"].HeaderText = "Loại phòng";
+            dgv_phong2.Columns["TinhTrang"].HeaderText = "Tình trạng";
+            dgv_phong2.Columns["DonGia"].HeaderText = "Đơn giá";
 
-            cbo_tinhTrang_them.Items.Add("Trống");
-            if (cbo_tinhTrang_them.Items.Count > 0)
-            {
-                cbo_tinhTrang_them.SelectedIndex = 0;
-            }
-            cbo_tinhTrang_them.DropDownStyle = ComboBoxStyle.DropDownList;
+            dgv_phong3.Columns["MaPhong"].HeaderText = "Mã phòng";
+            dgv_phong3.Columns["LoaiPhong"].HeaderText = "Loại phòng";
+            dgv_phong3.Columns["TinhTrang"].HeaderText = "Tình trạng";
+            dgv_phong3.Columns["DonGia"].HeaderText = "Đơn giá";
         }
 
         private void txt_TimLoaiPhong_TextChanged(object sender, EventArgs e)

@@ -59,5 +59,26 @@ namespace QuanLyKhachSan.BUS
         {
             db.CapNhatTrangThaiPhong(maPhong, trangThai);
         }
+        public List<object> LayDanhSachKhachDaThue()
+        {
+            using (var db = new QuanLyKhachSanEntities())
+            {
+                var danhSachKhachThue = from tp in db.ThuePhongs
+                                        join kh in db.ThongTinKhachHangs on tp.MaKhachHang equals kh.MaKhachHang
+                                        select new
+                                        {
+                                            MaKhachHang = kh.MaKhachHang,
+                                            TenKhachHang = kh.TenKhachHang,
+                                            NgaySinh = kh.NgaySinh,
+                                            GioiTinh = kh.GioiTinh,
+                                            CMND = kh.CMND,
+                                            DiaChi = kh.DiaChi,
+                                            SoDienThoai = kh.SoDienThoai,
+                                            MaPhong = tp.MaPhong
+                                        };
+                return danhSachKhachThue.ToList<object>();
+            }
+        }
+
     }
 }

@@ -56,13 +56,12 @@ namespace QuanLyKhachSan
             lbl_KQSoNgayO.Text = soNgayO.TotalDays.ToString();
 
             lbl_KQGiaPhong.Text = datPhong.Phong.DonGia.ToString();
-
             var busTongTienDichvu = bus.layTongTienDichVu(phong);
             lbl_KQTongTienDichVu.Text = busTongTienDichvu.ToString();
 
-            float soNgay = float.Parse(lbl_KQSoNgayO.Text);
-            float giaPhong = float.Parse(lbl_KQGiaPhong.Text);
-            float tongTienDichVu = float.Parse(lbl_KQTongTienDichVu.Text);
+            double soNgay = double.Parse(lbl_KQSoNgayO.Text);
+            double giaPhong = double.Parse(lbl_KQGiaPhong.Text);
+            double tongTienDichVu = double.Parse(lbl_KQTongTienDichVu.Text);
             lbl_KQTongTien.Text = (soNgay * giaPhong + tongTienDichVu).ToString();
 
         }
@@ -75,15 +74,63 @@ namespace QuanLyKhachSan
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
+            /* try
+             {
+                 // Lấy thông tin từ giao diện
+                 string maHoaDon = lbl_kqmahoadon.Text;
+                 string maKhachHang = lbl_KQMaKhachHang.Text;
+                 string tenKhachHang = lbl_KQTenKhachHang.Text;
+                 string maPhong = lbl_KQPhong.Text;
+
+                 // Kiểm tra thông tin ngày đặt phòng hợp lệ
+                 DateTime ngayDatPhong;
+                 if (!DateTime.TryParseExact(lbl_KQNgayDatPhong.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayDatPhong))
+                 {
+                     MessageBox.Show("Ngày đặt phòng không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     return;
+                 }
+
+                 DateTime ngayTra = DateTime.Now.Date;
+                 double tongTien = double.Parse(lbl_KQTongTien.Text);
+
+                 // Tạo đối tượng ThanhToan
+                 HoaDon thanhToan = new HoaDon
+                 {
+                     MaHoaDon = maHoaDon,
+                     TenKhachHang = tenKhachHang,
+                     CMND = cccd,
+                     SoDienThoai = sdt,
+                     MaPhong = maPhong,
+                     NgayThue = ngayDatPhong,
+                     NgayTra = ngayTra,
+                     TongTienDichVu = double.Parse(lbl_KQTongTienDichVu.Text),
+                     TongTienThanhToan = tongTien
+                 };
+
+                 // Lưu thông tin thanh toán vào CSDL
+                 bus.LuuThongTinThanhToan(thanhToan);
+                 busPhong.CapNhatTrangThaiPhong(maPhong, "Trống");
+
+                 // Xóa các dịch vụ đã đăng ký cho phòng
+                 bus.XoaDichVuDaDangKyCuaPhong(maPhong);
+                 // Hiển thị thông báo thành công
+                 MessageBox.Show("Thanh toán thành công!");
+
+                 // Đóng form
+                 this.Close();
+             }
+             catch (Exception ex)
+             {
+                 // Hiển thị thông báo lỗi
+                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+             }*/
             try
             {
-                // Lấy thông tin từ giao diện
                 string maHoaDon = lbl_kqmahoadon.Text;
                 string maKhachHang = lbl_KQMaKhachHang.Text;
                 string tenKhachHang = lbl_KQTenKhachHang.Text;
                 string maPhong = lbl_KQPhong.Text;
 
-                // Kiểm tra thông tin ngày đặt phòng hợp lệ
                 DateTime ngayDatPhong;
                 if (!DateTime.TryParseExact(lbl_KQNgayDatPhong.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayDatPhong))
                 {
@@ -92,9 +139,8 @@ namespace QuanLyKhachSan
                 }
 
                 DateTime ngayTra = DateTime.Now.Date;
-                float tongTien = float.Parse(lbl_KQTongTien.Text);
+                double tongTien = double.Parse(lbl_KQTongTien.Text);
 
-                // Tạo đối tượng ThanhToan
                 HoaDon thanhToan = new HoaDon
                 {
                     MaHoaDon = maHoaDon,
@@ -104,7 +150,7 @@ namespace QuanLyKhachSan
                     MaPhong = maPhong,
                     NgayThue = ngayDatPhong,
                     NgayTra = ngayTra,
-                    TongTienDichVu = float.Parse(lbl_KQTongTienDichVu.Text),
+                    TongTienDichVu = double.Parse(lbl_KQTongTienDichVu.Text),
                     TongTienThanhToan = tongTien
                 };
 
@@ -114,16 +160,16 @@ namespace QuanLyKhachSan
 
                 // Xóa các dịch vụ đã đăng ký cho phòng
                 bus.XoaDichVuDaDangKyCuaPhong(maPhong);
-                // Hiển thị thông báo thành công
-                MessageBox.Show("Thanh toán thành công!");
 
-                // Đóng form
+                // Xóa thông tin đặt phòng trong bảng ThuePhong
+                bus.XoaThuePhong(maPhong);
+
+                MessageBox.Show("Thanh toán thành công!");
                 this.Close();
             }
             catch (Exception ex)
             {
-                // Hiển thị thông báo lỗi
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

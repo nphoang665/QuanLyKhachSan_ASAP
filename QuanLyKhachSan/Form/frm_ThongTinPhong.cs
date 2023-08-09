@@ -15,7 +15,7 @@ namespace QuanLyKhachSan
     public partial class frm_ThongTinPhong : Form
     {
         private static frm_ThongTinPhong instance;
-      
+          
         public static frm_ThongTinPhong Instance
         {
             get

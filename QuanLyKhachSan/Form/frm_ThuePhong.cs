@@ -42,8 +42,15 @@ namespace QuanLyKhachSan
             }
             var phongs = bus.LayThongTinPhongTrong();
             dgv_PhongTrong.DataSource = phongs;
-           
 
+            dgv_DanhSachKhachDaThue.Columns.Clear();
+
+            // Truy vấn dữ liệu từ cơ sở dữ liệu (bạn cần điều chỉnh truy vấn này dựa trên cấu trúc dữ liệu thực tế)
+            var data = bus.LayDanhSachKhachDaThue(); // Thay thế bằng phương thức thực tế lấy dữ liệu
+
+            // Điền dữ liệu vào DataGridView
+            var danhSachKhachDaThue = bus.LayDanhSachKhachDaThue();
+            dgv_DanhSachKhachDaThue.DataSource = danhSachKhachDaThue;
         }
      
         private void lstv_ChiTiet_SelectedIndexChanged(object sender, EventArgs e)

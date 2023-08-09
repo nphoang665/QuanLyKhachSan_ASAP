@@ -42,5 +42,9 @@ namespace QuanLyKhachSan.BUS
         {
             da.XoaDichVuDaDangKyCuaPhong(maPhong);
         }
+        public void XoaThuePhong(string maPhong)
+        {
+            da.XoaThuePhong(maPhong);
+        }
     }
 }
