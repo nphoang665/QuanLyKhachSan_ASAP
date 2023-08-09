@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl_DichVu_ADM = new System.Windows.Forms.TabControl();
             this.tabPage_ThemDichVu = new System.Windows.Forms.TabPage();
             this.txt_DonGia = new System.Windows.Forms.TextBox();
@@ -79,6 +80,7 @@
             this.lbl_MaPhong = new System.Windows.Forms.Label();
             this.lbl_DangKyDichVu = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl_DichVu_ADM.SuspendLayout();
             this.tabPage_ThemDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu)).BeginInit();
@@ -87,6 +89,7 @@
             this.tabPage_Sua_XoaDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu2)).BeginInit();
             this.tabPage_DangKyDichVu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_DichVu_ADM
@@ -532,7 +535,7 @@
             this.listView_DichVuDaDat.Location = new System.Drawing.Point(692, 254);
             this.listView_DichVuDaDat.Name = "listView_DichVuDaDat";
             this.listView_DichVuDaDat.Size = new System.Drawing.Size(386, 148);
-            this.listView_DichVuDaDat.TabIndex = 103;
+            this.listView_DichVuDaDat.TabIndex = 11;
             this.listView_DichVuDaDat.UseCompatibleStateImageBehavior = false;
             this.listView_DichVuDaDat.View = System.Windows.Forms.View.Details;
             // 
@@ -548,7 +551,7 @@
             this.btn_XoaDKDV.Location = new System.Drawing.Point(882, 187);
             this.btn_XoaDKDV.Name = "btn_XoaDKDV";
             this.btn_XoaDKDV.Size = new System.Drawing.Size(77, 29);
-            this.btn_XoaDKDV.TabIndex = 102;
+            this.btn_XoaDKDV.TabIndex = 10;
             this.btn_XoaDKDV.Text = "Xóa";
             this.btn_XoaDKDV.UseVisualStyleBackColor = false;
             this.btn_XoaDKDV.Click += new System.EventHandler(this.btn_XoaDKDV_Click);
@@ -565,18 +568,19 @@
             this.btn_Them_DKDV.Location = new System.Drawing.Point(794, 187);
             this.btn_Them_DKDV.Name = "btn_Them_DKDV";
             this.btn_Them_DKDV.Size = new System.Drawing.Size(77, 29);
-            this.btn_Them_DKDV.TabIndex = 101;
+            this.btn_Them_DKDV.TabIndex = 9;
             this.btn_Them_DKDV.Text = "Thêm";
             this.btn_Them_DKDV.UseVisualStyleBackColor = false;
             this.btn_Them_DKDV.Click += new System.EventHandler(this.btn_Them_DKDV_Click);
             // 
             // cbo_MaDichVu3
             // 
+            this.cbo_MaDichVu3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaDichVu3.FormattingEnabled = true;
             this.cbo_MaDichVu3.Location = new System.Drawing.Point(794, 118);
             this.cbo_MaDichVu3.Name = "cbo_MaDichVu3";
             this.cbo_MaDichVu3.Size = new System.Drawing.Size(164, 25);
-            this.cbo_MaDichVu3.TabIndex = 99;
+            this.cbo_MaDichVu3.TabIndex = 6;
             // 
             // label16
             // 
@@ -588,7 +592,7 @@
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 20);
-            this.label16.TabIndex = 98;
+            this.label16.TabIndex = 5;
             this.label16.Text = "Mã dịch vụ:";
             // 
             // listView_DanhSachDichVu
@@ -599,17 +603,19 @@
             this.listView_DanhSachDichVu.Location = new System.Drawing.Point(29, 83);
             this.listView_DanhSachDichVu.Name = "listView_DanhSachDichVu";
             this.listView_DanhSachDichVu.Size = new System.Drawing.Size(461, 258);
-            this.listView_DanhSachDichVu.TabIndex = 97;
+            this.listView_DanhSachDichVu.TabIndex = 1;
             this.listView_DanhSachDichVu.UseCompatibleStateImageBehavior = false;
             this.listView_DanhSachDichVu.View = System.Windows.Forms.View.Details;
+            this.listView_DanhSachDichVu.SelectedIndexChanged += new System.EventHandler(this.listView_DanhSachDichVu_SelectedIndexChanged);
             // 
             // cbo_MaPhong
             // 
+            this.cbo_MaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaPhong.FormattingEnabled = true;
             this.cbo_MaPhong.Location = new System.Drawing.Point(794, 83);
             this.cbo_MaPhong.Name = "cbo_MaPhong";
             this.cbo_MaPhong.Size = new System.Drawing.Size(164, 25);
-            this.cbo_MaPhong.TabIndex = 95;
+            this.cbo_MaPhong.TabIndex = 4;
             // 
             // label12
             // 
@@ -658,7 +664,7 @@
             this.btn_DangKyDV.Location = new System.Drawing.Point(846, 415);
             this.btn_DangKyDV.Name = "btn_DangKyDV";
             this.btn_DangKyDV.Size = new System.Drawing.Size(129, 43);
-            this.btn_DangKyDV.TabIndex = 90;
+            this.btn_DangKyDV.TabIndex = 12;
             this.btn_DangKyDV.Text = "Đăng ký";
             this.btn_DangKyDV.UseVisualStyleBackColor = false;
             this.btn_DangKyDV.Click += new System.EventHandler(this.btn_DangKyDV_Click);
@@ -670,7 +676,7 @@
             this.txt_SoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(164, 25);
-            this.txt_SoLuong.TabIndex = 88;
+            this.txt_SoLuong.TabIndex = 8;
             // 
             // lbl_SoLuong
             // 
@@ -682,7 +688,7 @@
             this.lbl_SoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SoLuong.Name = "lbl_SoLuong";
             this.lbl_SoLuong.Size = new System.Drawing.Size(75, 20);
-            this.lbl_SoLuong.TabIndex = 85;
+            this.lbl_SoLuong.TabIndex = 7;
             this.lbl_SoLuong.Text = "Số lượng:";
             // 
             // lbl_DanhSachDichVuDat
@@ -708,7 +714,7 @@
             this.lbl_MaPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_MaPhong.Name = "lbl_MaPhong";
             this.lbl_MaPhong.Size = new System.Drawing.Size(84, 20);
-            this.lbl_MaPhong.TabIndex = 80;
+            this.lbl_MaPhong.TabIndex = 3;
             this.lbl_MaPhong.Text = "Mã phòng:";
             // 
             // lbl_DangKyDichVu
@@ -720,7 +726,7 @@
             this.lbl_DangKyDichVu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_DangKyDichVu.Name = "lbl_DangKyDichVu";
             this.lbl_DangKyDichVu.Size = new System.Drawing.Size(256, 37);
-            this.lbl_DangKyDichVu.TabIndex = 79;
+            this.lbl_DangKyDichVu.TabIndex = 2;
             this.lbl_DangKyDichVu.Text = "ĐĂNG KÝ DỊCH VỤ";
             // 
             // label15
@@ -732,8 +738,12 @@
             this.label15.Location = new System.Drawing.Point(93, 21);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(363, 37);
-            this.label15.TabIndex = 77;
+            this.label15.TabIndex = 0;
             this.label15.Text = "DANH SÁCH CÁC DỊCH VỤ:";
+            // 
+            // KiemLoi
+            // 
+            this.KiemLoi.ContainerControl = this;
             // 
             // frm_DichVu
             // 
@@ -761,6 +771,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu2)).EndInit();
             this.tabPage_DangKyDichVu.ResumeLayout(false);
             this.tabPage_DangKyDichVu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -818,5 +829,6 @@
         private System.Windows.Forms.Button btn_XoaDKDV;
         private System.Windows.Forms.Button btn_Them_DKDV;
         private System.Windows.Forms.ListView listView_DichVuDaDat;
+        private System.Windows.Forms.ErrorProvider KiemLoi;
     }
 }

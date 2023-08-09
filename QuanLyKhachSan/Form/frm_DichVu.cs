@@ -11,7 +11,7 @@ namespace QuanLyKhachSan
     public partial class frm_DichVu : Form
     {
         BUS_DichVu bus;
-        
+
         public TabControl TabControl_DichVu_ADM
         {
             get { return tabControl_DichVu_ADM; }
@@ -50,12 +50,12 @@ namespace QuanLyKhachSan
             bus.LoadDichVu(dgv_DanhSachDichVu);
             LoadDichVu();
             CopyDataFromDataGridViewToListView(dgv_DanhSachDichVu, listView_DanhSachDichVu);
-            bus.LoadRoomIDs(cbo_MaPhong);
+            bus.LoadRentedRoomIDs(cbo_MaPhong);
 
             listView_DichVuDaDat.Columns.Add("TenDichVu", "Tên dịch vụ", 160);
             listView_DichVuDaDat.Columns.Add("SoLuong", "Số lượng", 100);
             listView_DichVuDaDat.Columns.Add("MaPhong", "Mã phòng", 100);
-            bus.hienthongtincbo_b(cbo_MaDichVu3);
+            bus.hienthongtincbo_b(cbo_MaDichVu3);          
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -149,28 +149,65 @@ namespace QuanLyKhachSan
 
         private void btn_Them_DKDV_Click(object sender, EventArgs e)
         {
-            string maPhong = cbo_MaPhong.SelectedItem.ToString();
-            string maDichVu = cbo_MaDichVu3.SelectedValue.ToString(); // Lấy mã dịch vụ từ giá trị đã chọn
-            int soLuong = int.Parse(txt_SoLuong.Text);
-
-            // Kiểm tra xem dịch vụ đã tồn tại trong ListView chưa
-            bool daTonTai = false;
-            foreach (ListViewItem existingItem in listView_DichVuDaDat.Items)
+            try
             {
-                if (existingItem.SubItems[0].Text == maDichVu && existingItem.SubItems[2].Text == maPhong)
+                bool hasError = false;
+                string errorMessage = "";
+                int soLuong=0;
+
+                if (string.IsNullOrWhiteSpace(txt_SoLuong.Text))
                 {
-                    // Cập nhật số lượng của dịch vụ đã tồn tại
-                    existingItem.SubItems[1].Text = (int.Parse(existingItem.SubItems[1].Text) + soLuong).ToString();
-                    daTonTai = true;
-                    break;
+                    hasError = true;
+                    errorMessage = "Vui lòng nhập số lượng.";
+                }
+                else if (!int.TryParse(txt_SoLuong.Text, out soLuong) || soLuong <= 0)
+                {
+                    hasError = true;
+                    errorMessage = "Số lượng không hợp lệ. Vui lòng nhập số lượng là một số nguyên dương.";
+                }
+                else if (cbo_MaPhong.SelectedItem == null)
+                {
+                    hasError = true;
+                    errorMessage = "Vui lòng chọn mã phòng.";
+                }
+                else if (cbo_MaDichVu3.SelectedItem == null)
+                {
+                    hasError = true;
+                    errorMessage = "Vui lòng chọn mã dịch vụ.";
+                }
+
+                if (hasError)
+                {
+                    MessageBox.Show(errorMessage, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string maPhong = cbo_MaPhong.SelectedItem.ToString();
+                string maDichVu = cbo_MaDichVu3.SelectedValue.ToString();
+
+                // Kiểm tra xem dịch vụ đã tồn tại trong ListView chưa
+                bool daTonTai = false;
+                foreach (ListViewItem existingItem in listView_DichVuDaDat.Items)
+                {
+                    if (existingItem.SubItems[0].Text == maDichVu && existingItem.SubItems[2].Text == maPhong)
+                    {
+                        // Cập nhật số lượng của dịch vụ đã tồn tại
+                        existingItem.SubItems[1].Text = (int.Parse(existingItem.SubItems[1].Text) + soLuong).ToString();
+                        daTonTai = true;
+                        break;
+                    }
+                }
+
+                if (!daTonTai)
+                {
+                    // Thêm thông tin vào ListView
+                    ListViewItem item = new ListViewItem(new string[] { maDichVu, soLuong.ToString(), maPhong });
+                    listView_DichVuDaDat.Items.Add(item);
                 }
             }
-
-            if (!daTonTai)
+            catch (Exception ex)
             {
-                // Thêm thông tin vào ListView
-                ListViewItem item = new ListViewItem(new string[] { maDichVu, soLuong.ToString(), maPhong });
-                listView_DichVuDaDat.Items.Add(item);
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -181,7 +218,21 @@ namespace QuanLyKhachSan
                 if (listView_DichVuDaDat.SelectedItems.Count > 0)
                 {
                     var selectedItem = listView_DichVuDaDat.SelectedItems[0];
-                    listView_DichVuDaDat.Items.Remove(selectedItem);
+                    string maDichVu = selectedItem.SubItems[0].Text;
+                    string maPhong = selectedItem.SubItems[2].Text;
+                    string tenDichVu = GetTenDichVuByMaDichVu(maDichVu);
+
+                    DialogResult dialogResult = MessageBox.Show($"Bạn có muốn xóa dịch vụ '{tenDichVu}' của phòng '{maPhong}' không?",
+                                                              "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        listView_DichVuDaDat.Items.Remove(selectedItem);
+                        MessageBox.Show("Xóa dịch vụ thành công!","Thông báo");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn dịch vụ cần xóa từ danh sách dịch vụ đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -189,11 +240,21 @@ namespace QuanLyKhachSan
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private string GetTenDichVuByMaDichVu(string tenDichVu)
+        {
+            // Gọi phương thức của bus để lấy tên dịch vụ từ mã dịch vụ
+            return bus.GetTenDichVuByMaDichVu(tenDichVu);
+        }
 
         private void btn_DangKyDV_Click(object sender, EventArgs e)
-        {        
+        {
             try
             {
+                if (listView_DichVuDaDat.Items.Count == 0)
+                {
+                    MessageBox.Show("Vui lòng thêm dịch vụ vào danh sách dịch vụ trước khi đăng ký!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 foreach (ListViewItem item in listView_DichVuDaDat.Items)
                 {
                     string tenDichVu = item.SubItems[0].Text; // Tên dịch vụ được lưu trong cột đầu tiên
@@ -242,6 +303,15 @@ namespace QuanLyKhachSan
         {
             // Gọi phương thức của bus để lấy mã dịch vụ từ tên dịch vụ
             return bus.GetMaDichVuByTenDichVu(tenDichVu);
-        }       
+        }
+
+        private void listView_DanhSachDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_DanhSachDichVu.SelectedItems.Count > 0)
+            {
+                int selectedIndex = listView_DanhSachDichVu.SelectedIndices[0];
+                cbo_MaDichVu3.SelectedIndex = selectedIndex;
+            }
+        }
     }
 }

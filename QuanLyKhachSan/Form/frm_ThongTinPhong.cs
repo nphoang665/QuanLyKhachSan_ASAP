@@ -78,16 +78,6 @@ namespace QuanLyKhachSan
 
         private void frm_ThongTinPhong_Load(object sender, EventArgs e)
         {
-            /* lbl_Phong.Text = maPhong;
-             var tt = bus.LoadThongTinPhong(maPhong);
-             maKhachHang = tt.MaKhachHang;
-
-             lbl_KQ_NgayThue.Text = tt.NgayThue?.ToShortDateString();
-             var thongtinkhachhang = bus.loadthongtinkhachhang(tt.MaKhachHang);
-             lbl_KQTenKhachHang.Text = thongtinkhachhang.TenKhachHang;
-             TenKhachHang = thongtinkhachhang.TenKhachHang;
-             lbl_KQCMND.Text = thongtinkhachhang.CMND;
-             lbl_KQDiaChi.Text = thongtinkhachhang.DiaChi;*/
             lbl_Phong.Text = maPhong;
             var tt = bus.LoadThongTinPhong(maPhong);
             maKhachHang = tt.MaKhachHang;
@@ -173,9 +163,6 @@ namespace QuanLyKhachSan
             {
                 MessageBox.Show("Không tìm thấy tabControl_DichVu_ADM trong frm_DichVu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            // Hiển thị form frm_DichVu
-            //dichVuForm.ShowDialog();
             this.Close();
             frm_TrangChu frm_TrangChu = new frm_TrangChu();
             frm_TrangChu.ViDu.OpenChildForm(dichVuForm);

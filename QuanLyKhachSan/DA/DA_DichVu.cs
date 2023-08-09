@@ -148,6 +148,26 @@ namespace QuanLyKhachSan.DA
 
             return maDangKyDV;
         }
+        public bool CheckPhongCoKhachThue(string maPhong)
+        {
+            return db.ThuePhongs.Any(tp => tp.MaPhong == maPhong);
+        }
+
+        public string GetMaDichVuByPhong(string maPhong)
+        {
+            var dangKyDV = db.DangKyDichVus.FirstOrDefault(dv => dv.MaPhong == maPhong);
+            if (dangKyDV != null)
+            {
+                return dangKyDV.MaDichVu;
+            }
+            return null;
+        }
+        public string GetTenDichVuByMaDichVu(string tenDichVu)
+        {
+            var tenDichVu1 = db.QuanLyDichVus.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.TenDichVu).FirstOrDefault();
+            return tenDichVu1;
+        }
+
 
     }
 }

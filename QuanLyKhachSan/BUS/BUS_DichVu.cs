@@ -95,6 +95,23 @@ namespace QuanLyKhachSan.BUS
         {
             return da.GetMaDangKyDVByDichVuPhong(maDichVu, maPhong);
         }
+        public bool CheckPhongCoKhachThue(string maPhong)
+        {
+            return da.CheckPhongCoKhachThue(maPhong);
+        }
+
+        public void LoadRentedRoomIDs(ComboBox cbo)
+        {
+            var rentedRoomIDs = da.GetRentedRoomIDs();
+            cbo.DataSource = rentedRoomIDs;
+        }
+        public string GetTenDichVuByMaDichVu(string tenDichVu)
+        {
+            return da.GetTenDichVuByMaDichVu(tenDichVu);
+        }
+
+
+
 
 
     }
