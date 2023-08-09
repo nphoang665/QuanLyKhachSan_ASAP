@@ -33,6 +33,7 @@
             this.grp_DichVuDaThue = new System.Windows.Forms.GroupBox();
             this.lstv_DichVuDaSuDung = new System.Windows.Forms.ListView();
             this.grp_ThôngTinKhachHang = new System.Windows.Forms.GroupBox();
+            this.lbl_KQ_NgayThue = new System.Windows.Forms.Label();
             this.lbl_KQDiaChi = new System.Windows.Forms.Label();
             this.lbl_KQCMND = new System.Windows.Forms.Label();
             this.lbl_KQTenKhachHang = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@
             this.lbl_CMND = new System.Windows.Forms.Label();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
-            this.lbl_KQ_NgayThue = new System.Windows.Forms.Label();
+            this.btn_DangKyDV = new System.Windows.Forms.Button();
             this.grp_DichVuDaThue.SuspendLayout();
             this.grp_ThôngTinKhachHang.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +96,7 @@
             this.lstv_DichVuDaSuDung.Size = new System.Drawing.Size(646, 301);
             this.lstv_DichVuDaSuDung.TabIndex = 0;
             this.lstv_DichVuDaSuDung.UseCompatibleStateImageBehavior = false;
+            this.lstv_DichVuDaSuDung.View = System.Windows.Forms.View.Details;
             // 
             // grp_ThôngTinKhachHang
             // 
@@ -115,6 +117,17 @@
             this.grp_ThôngTinKhachHang.TabIndex = 44;
             this.grp_ThôngTinKhachHang.TabStop = false;
             this.grp_ThôngTinKhachHang.Text = "Thông tin khách hàng";
+            // 
+            // lbl_KQ_NgayThue
+            // 
+            this.lbl_KQ_NgayThue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_KQ_NgayThue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_KQ_NgayThue.Location = new System.Drawing.Point(286, 107);
+            this.lbl_KQ_NgayThue.Name = "lbl_KQ_NgayThue";
+            this.lbl_KQ_NgayThue.Size = new System.Drawing.Size(192, 25);
+            this.lbl_KQ_NgayThue.TabIndex = 39;
+            this.lbl_KQ_NgayThue.Text = "---";
+            this.lbl_KQ_NgayThue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_KQDiaChi
             // 
@@ -235,16 +248,22 @@
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
-            // lbl_KQ_NgayThue
+            // btn_DangKyDV
             // 
-            this.lbl_KQ_NgayThue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_KQ_NgayThue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KQ_NgayThue.Location = new System.Drawing.Point(286, 107);
-            this.lbl_KQ_NgayThue.Name = "lbl_KQ_NgayThue";
-            this.lbl_KQ_NgayThue.Size = new System.Drawing.Size(192, 25);
-            this.lbl_KQ_NgayThue.TabIndex = 39;
-            this.lbl_KQ_NgayThue.Text = "---";
-            this.lbl_KQ_NgayThue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_DangKyDV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_DangKyDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_DangKyDV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_DangKyDV.FlatAppearance.BorderSize = 0;
+            this.btn_DangKyDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangKyDV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangKyDV.ForeColor = System.Drawing.Color.White;
+            this.btn_DangKyDV.Location = new System.Drawing.Point(12, 549);
+            this.btn_DangKyDV.Name = "btn_DangKyDV";
+            this.btn_DangKyDV.Size = new System.Drawing.Size(139, 40);
+            this.btn_DangKyDV.TabIndex = 52;
+            this.btn_DangKyDV.Text = "Đăng ký dịch vụ";
+            this.btn_DangKyDV.UseVisualStyleBackColor = false;
+            this.btn_DangKyDV.Click += new System.EventHandler(this.btn_DangKyDV_Click);
             // 
             // frm_ThongTinPhong
             // 
@@ -252,6 +271,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 604);
+            this.Controls.Add(this.btn_DangKyDV);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.lbl_Phong);
@@ -288,5 +308,6 @@
         private System.Windows.Forms.Label lbl_KQCMND;
         private System.Windows.Forms.Label lbl_KQTenKhachHang;
         private System.Windows.Forms.Label lbl_KQ_NgayThue;
+        private System.Windows.Forms.Button btn_DangKyDV;
     }
 }

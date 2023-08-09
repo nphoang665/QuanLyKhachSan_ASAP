@@ -34,11 +34,17 @@ namespace QuanLyKhachSan.DA
             db.QuanLyDichVus.Add(dichVu);
             db.SaveChanges();
         }
+        /* public dynamic hienthongtincbo_d()
+         {
+             var qr = db.QuanLyDichVus.Select(s => s.MaDichVu).ToList();
+             return qr;
+         }*/
         public dynamic hienthongtincbo_d()
         {
-            var qr = db.QuanLyDichVus.Select(s => s.MaDichVu).ToList();
+            var qr = db.QuanLyDichVus.Select(s => new { s.MaDichVu, s.TenDichVu }).ToList();
             return qr;
         }
+
         public List<QuanLyDichVu> timdichvu_d(string madv)
         {
             var qr = db.QuanLyDichVus.Where(s => s.MaDichVu == madv).ToList();
@@ -75,10 +81,11 @@ namespace QuanLyKhachSan.DA
 
             return roomIDs;
         }
-        public void InsertDangKyDichVu(string maDichVu, string maPhong, int soLuong, float donGia)
+        public void InsertDangKyDichVu(string maDangKyDV, string maDichVu, string maPhong, int soLuong, float donGia)
         {
             var dangKyDichVu = new DangKyDichVu
             {
+                MaDangKyDV = maDangKyDV,
                 MaDichVu = maDichVu,
                 MaPhong = maPhong,
                 SoLuong = soLuong,
@@ -87,6 +94,59 @@ namespace QuanLyKhachSan.DA
 
             db.DangKyDichVus.Add(dangKyDichVu);
             db.SaveChanges();
+        }
+
+        public List<string> GetRentedRoomIDs()
+        {
+            var rentedRoomIDs = db.ThuePhongs.Select(dkp => dkp.MaPhong).ToList();
+            return rentedRoomIDs;
+        }
+        public float GetDonGiaByMaDichVu(string maDichVu)
+        {
+            var quanLyDichVu = db.QuanLyDichVus.FirstOrDefault(qldv => qldv.MaDichVu == maDichVu);
+            if (quanLyDichVu != null)
+            {
+                return (float)quanLyDichVu.DonGia.Value;
+            }
+            return 0; // Hoặc giá trị mặc định khác tùy ý
+        }
+
+        public bool CheckDichVuDaTonTai(string maDichVu, string maPhong)
+        {
+            return db.DangKyDichVus.Any(d => d.MaDichVu == maDichVu && d.MaPhong == maPhong);
+        }
+
+        public void UpdateDangKyDichVu(string maDichVu, string maPhong, int soLuong)
+        {
+            var dangKyDichVu = db.DangKyDichVus.FirstOrDefault(d => d.MaDichVu == maDichVu && d.MaPhong == maPhong);
+            if (dangKyDichVu != null)
+            {
+                dangKyDichVu.SoLuong += soLuong;
+                db.SaveChanges();
+            }
+        }
+        public string GetMaDichVuByTenDichVu(string tenDichVu)
+        {
+            var maDichVu = db.QuanLyDichVus.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.MaDichVu).FirstOrDefault();
+            return maDichVu;
+        }
+        public bool CheckMaDangKyDVTonTai(string maDangKyDV)
+        {
+            return db.DangKyDichVus.Any(d => d.MaDangKyDV == maDangKyDV);
+        }
+
+        public string GetMaDangKyDVByDichVuPhong(string maDichVu, string maPhong)
+        {
+            string maDangKyDV = null;
+
+            var dangKyDV = db.DangKyDichVus.FirstOrDefault(dv => dv.MaDichVu == maDichVu && dv.MaPhong == maPhong);
+
+            if (dangKyDV != null)
+            {
+                maDangKyDV = dangKyDV.MaDangKyDV;
+            }
+
+            return maDangKyDV;
         }
 
     }

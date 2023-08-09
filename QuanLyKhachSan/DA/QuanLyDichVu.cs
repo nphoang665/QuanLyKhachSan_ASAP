@@ -14,11 +14,18 @@ namespace QuanLyKhachSan.DA
     
     public partial class QuanLyDichVu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public QuanLyDichVu()
+        {
+            this.DangKyDichVus = new HashSet<DangKyDichVu>();
+        }
+    
         public string MaDichVu { get; set; }
         public string TenDichVu { get; set; }
         public Nullable<double> DonGia { get; set; }
         public string DonViTinh { get; set; }
     
-        public virtual DangKyDichVu DangKyDichVu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DangKyDichVu> DangKyDichVus { get; set; }
     }
 }

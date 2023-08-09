@@ -22,12 +22,19 @@ namespace QuanLyKhachSan.BUS
         {
             da.ThemDichVu_d(madv, tendv, dongia, donvitinh);
         }
+        /* public void hienthongtincbo_b(ComboBox cbo)
+         {
+
+             cbo.DataSource = da.hienthongtincbo_d();
+             cbo.SelectedIndex = -1;
+
+         }*/
         public void hienthongtincbo_b(ComboBox cbo)
         {
-           
             cbo.DataSource = da.hienthongtincbo_d();
+            cbo.DisplayMember = "MaDichVu"; 
+            cbo.ValueMember = "TenDichVu";
             cbo.SelectedIndex = -1;
-            
         }
         public void TimMaDichVu_b(string madv,DataGridView dgv)
         {
@@ -53,16 +60,42 @@ namespace QuanLyKhachSan.BUS
         }
         public void LoadRoomIDs(ComboBox cbo)
         {
-            // Get the room IDs from the DA_Phong class
             var roomIDs = da.GetRoomIDs();
-
-            // Set the DataSource of the ComboBox to the list of room IDs
             cbo.DataSource = roomIDs;
         }
-        public void InsertDangKyDichVu(string maDichVu, string maPhong, int soLuong, float donGia)
+
+        public void InsertDangKyDichVu(string maDangKyDV, string maDichVu, string maPhong, int soLuong, float donGia)
         {
-            da.InsertDangKyDichVu(maDichVu, maPhong, soLuong, donGia);
+            da.InsertDangKyDichVu(maDangKyDV, maDichVu, maPhong, soLuong, donGia);
         }
+
+
+        public float GetDonGiaByMaDichVu(string maDichVu)
+        {
+            return da.GetDonGiaByMaDichVu(maDichVu);
+        }
+        public bool CheckDichVuDaTonTai(string maDichVu, string maPhong)
+        {
+            return da.CheckDichVuDaTonTai(maDichVu, maPhong);
+        }
+
+        public void UpdateDangKyDichVu(string maDichVu, string maPhong, int soLuong)
+        {
+            da.UpdateDangKyDichVu(maDichVu, maPhong, soLuong);
+        }
+        public string GetMaDichVuByTenDichVu(string tenDichVu)
+        {
+            return da.GetMaDichVuByTenDichVu(tenDichVu);
+        }
+        public bool CheckMaDangKyDVTonTai(string maDangKyDV)
+        {
+            return da.CheckMaDangKyDVTonTai(maDangKyDV);
+        }
+        public string GetMaDangKyDVByDichVuPhong(string maDichVu, string maPhong)
+        {
+            return da.GetMaDangKyDVByDichVuPhong(maDichVu, maPhong);
+        }
+
 
     }
 }

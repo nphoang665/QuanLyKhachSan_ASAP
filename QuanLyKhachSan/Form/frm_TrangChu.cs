@@ -20,7 +20,11 @@ namespace QuanLyKhachSan
         string _tk;
         public string ChucVu;
 
-        public frm_TrangChu(string tk)
+        public frm_TrangChu()
+        {
+            InitializeComponent();
+        }
+            public frm_TrangChu(string tk)
         {
             InitializeComponent();
             // Khởi tạo ViDu của frm_TrangChu

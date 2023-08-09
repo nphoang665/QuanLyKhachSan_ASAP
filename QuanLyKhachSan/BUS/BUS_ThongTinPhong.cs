@@ -23,5 +23,14 @@ namespace QuanLyKhachSan.BUS
         {
             return da.loadthongtinKhachHang(makhachhang);
         }
+        public List<DangKyDichVu> LoadDanhSachDangKyDichVu(string maPhong)
+        {
+            return da.LoadDanhSachDangKyDichVu(maPhong);
+        }
+        public string GetTenDichVuByMaDichVu(string maDichVu)
+        {
+            return da.GetTenDichVuByMaDichVu(maDichVu);
+        }
+
     }
 }

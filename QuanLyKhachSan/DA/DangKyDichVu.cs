@@ -14,12 +14,13 @@ namespace QuanLyKhachSan.DA
     
     public partial class DangKyDichVu
     {
+        public string MaDangKyDV { get; set; }
         public string MaDichVu { get; set; }
         public string MaPhong { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> DonGia { get; set; }
     
-        public virtual Phong Phong { get; set; }
         public virtual QuanLyDichVu QuanLyDichVu { get; set; }
+        public virtual Phong Phong { get; set; }
     }
 }
