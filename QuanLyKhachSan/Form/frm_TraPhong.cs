@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace QuanLyKhachSan
     {
         BUS_Phong busPhong;
         BUS_TraPhong bus;
+        BUS_DichVu busDichVu;
         string phong;
         string mkh;
         string tkh;
@@ -62,6 +64,7 @@ namespace QuanLyKhachSan
             float giaPhong = float.Parse(lbl_KQGiaPhong.Text);
             float tongTienDichVu = float.Parse(lbl_KQTongTienDichVu.Text);
             lbl_KQTongTien.Text = (soNgay * giaPhong + tongTienDichVu).ToString();
+
         }
 
 
@@ -109,6 +112,8 @@ namespace QuanLyKhachSan
                 bus.LuuThongTinThanhToan(thanhToan);
                 busPhong.CapNhatTrangThaiPhong(maPhong, "Trống");
 
+                // Xóa các dịch vụ đã đăng ký cho phòng
+                bus.XoaDichVuDaDangKyCuaPhong(maPhong);
                 // Hiển thị thông báo thành công
                 MessageBox.Show("Thanh toán thành công!");
 

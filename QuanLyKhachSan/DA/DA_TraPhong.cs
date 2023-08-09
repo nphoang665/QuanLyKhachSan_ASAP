@@ -44,7 +44,17 @@ namespace QuanLyKhachSan.DA
             var sdt = db.ThongTinKhachHangs.FirstOrDefault(x => x.MaKhachHang == makhachhang).SoDienThoai;
             return sdt;
         }
+        public void XoaDichVuDaDangKyCuaPhong(string maPhong)
+        {
+            var danhSachDangKyDichVu = db.DangKyDichVus.Where(dk => dk.MaPhong == maPhong).ToList();
 
+            foreach (var dangKyDichVu in danhSachDangKyDichVu)
+            {
+                db.DangKyDichVus.Remove(dangKyDichVu);
+            }
+
+            db.SaveChanges();
+        }
 
     }
 }
