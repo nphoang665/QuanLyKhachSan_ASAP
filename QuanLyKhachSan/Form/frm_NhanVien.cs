@@ -92,7 +92,7 @@ namespace QuanLyKhachSan
                 return;
             DialogResult result = MessageBox.Show("Bạn có muốn sủa nhân sự này không?", "Sửa", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
-                bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text);
+                bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text,pic_anh);
             bus.LoadDsNv(dgv2_NhanSu);
         }
 
@@ -214,10 +214,8 @@ namespace QuanLyKhachSan
 
         private void txt_SoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
-            }
         }
 
         private void txt_sdt_tim_KeyPress(object sender, KeyPressEventArgs e)
@@ -237,6 +235,14 @@ namespace QuanLyKhachSan
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pic_anhnhanvien.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void btn_mo_sua_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pic_anh.Image = Image.FromFile(openFileDialog1.FileName);
             }
         }
     }

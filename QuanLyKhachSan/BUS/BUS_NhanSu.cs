@@ -1,5 +1,6 @@
 ﻿using QuanLyKhachSan.DA;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan.BUS
@@ -19,9 +20,9 @@ namespace QuanLyKhachSan.BUS
         {
             da_NhanSu.ThemNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu,pi);
         }
-        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu)
+        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pic)
         {
-            da_NhanSu.SuaNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu);
+            da_NhanSu.SuaNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu, pic);
         }
         public void XoaNhanSu(string mans)
         {

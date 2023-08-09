@@ -67,21 +67,27 @@ namespace QuanLyKhachSan.DA
             db.SaveChanges();
             }
         }
-        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu)
+        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pi)
         {
-            var nhanSu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
-            if (nhanSu != null)
+            using (MemoryStream steam = new MemoryStream())
             {
-                nhanSu.TenNhanSu = tenvn;
-                nhanSu.GioiTinh = gioitinh;
-                nhanSu.DiaChi = diachi;
-                nhanSu.SoDienThoai = sdt;
-                nhanSu.NgaySinh = ngaysinh;
-                nhanSu.NgayVaoLam = ngayvaolam;
-                nhanSu.ChucVu = chucvu;
-                db.SaveChanges();
+                pi.Image.Save(steam, ImageFormat.Jpeg);
+                var nhanSu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
+                if (nhanSu != null)
+                {
+                    nhanSu.TenNhanSu = tenvn;
+                    nhanSu.GioiTinh = gioitinh;
+                    nhanSu.DiaChi = diachi;
+                    nhanSu.SoDienThoai = sdt;
+                    nhanSu.NgaySinh = ngaysinh;
+                    nhanSu.NgayVaoLam = ngayvaolam;
+                    nhanSu.ChucVu = chucvu;
+                    nhanSu.AnhNhanVien = steam.ToArray();
+                    db.SaveChanges();
+                }
             }
         }
+
         public void XoaNhanSu(string mans)
         {
             var nhansu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
@@ -174,7 +180,6 @@ namespace QuanLyKhachSan.DA
                 row.Cells[4].Value = ns.NgaySinh;
                 row.Cells[5].Value = ns.NgayVaoLam;
                 row.Cells[6].Value = ns.DiaChi;
-
                 row.Cells[7].Value = ns.SoDienThoai;
 
             }
