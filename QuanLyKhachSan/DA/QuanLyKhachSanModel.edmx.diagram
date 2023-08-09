@@ -7,14 +7,14 @@
       <Diagram DiagramId="66dfcda0ec95439d9c65978726fe08f5" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyKhachSanModel.DangKyDichVu" Width="1.5" PointX="3" PointY="5" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="3" PointY="10.75" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="10.25" PointY="4.625" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="10.25" PointY="1.75" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.NhanSu" Width="1.5" PointX="5.75" PointY="2.375" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.Phong" Width="1.5" PointX="0.75" PointY="5" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.QuanLyDichVu" Width="1.5" PointX="0.75" PointY="8.125" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="8" PointY="4.375" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="8" PointY="1.5" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.ThongTinKhachHang" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="3" PointY="2" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="8" PointY="1.5" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="8" PointY="4.375" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__DangKyDic__MaDic__3F466844" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__DangKyDic__MaPho__403A8C7D" />
         <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A" />

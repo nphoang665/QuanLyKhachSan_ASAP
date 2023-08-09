@@ -60,21 +60,15 @@ namespace QuanLyKhachSan
         {
             if (ChucVu == "Nhân viên")
             {
-                btn_NhanVien.Visible = false;
-                quảnLýToolStripMenuItem.Enabled = false;
-                btn_TaiKhoan.Visible = false;
+                // Khởi tạo form frm_DichVu
+                // Lấy tham chiếu đến tabControl_DichVu_ADM trong frm_DichVu
+             
 
-                btn_NhanVien.ForeColor = Color.Gray;
-                quảnLýToolStripMenuItem.ForeColor = Color.Gray;
-                btn_TaiKhoan.ForeColor = Color.Gray;
 
-                btn_NhanVien.Click += (s, e) => MessageBox.Show("Chức năng này chỉ dành cho quản lý");
-                quảnLýToolStripMenuItem.Click += (s, e) => MessageBox.Show("Chức năng này chỉ dành cho quản lý");
-                btn_TaiKhoan.Click += (s, e) => MessageBox.Show("Chức năng này chỉ dành cho quản lý");
             }
             else if (ChucVu == "Quản lý")
             {
-                btn_NhanVien.Enabled = true;
+                //btn_NhanVien.Enabled = true;
             }
         }
 

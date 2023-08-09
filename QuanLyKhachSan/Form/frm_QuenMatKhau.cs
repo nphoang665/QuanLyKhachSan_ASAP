@@ -12,6 +12,7 @@ namespace QuanLyKhachSan
             InitializeComponent();
             bus = new BUS_QuenMatKhau();
             pnl_dmk.Visible = false;
+
         }
 
         private void lbl_DangNhap_Click(object sender, EventArgs e)

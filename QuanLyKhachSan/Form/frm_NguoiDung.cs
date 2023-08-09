@@ -27,7 +27,7 @@ namespace QuanLyKhachSan
 
         private void txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
-            string timKiem = txt_TimKiem.Text;
+            string timKiem = txt_TimKiem.Texts;
 
             var ketqua = dstk.TimTaiKhoan(timKiem);
 
@@ -43,9 +43,9 @@ namespace QuanLyKhachSan
                 var taiKhoan = dstk.LayTaiKhoan(tendangnhap);
 
                 txt_tk_Sua.Text = taiKhoan.TenDangNhap;
-                txt_mk_Sua.Text = taiKhoan.MatKhau;
+                txt_mk_Sua.Texts = taiKhoan.MatKhau;
                 cbo_phanquyen_sua.SelectedItem = taiKhoan.PhanQuyen;
-                txt_manhansu_sua.Text = taiKhoan.MaNhanSu;
+                txt_manhansu_sua.Texts = taiKhoan.MaNhanSu;
             }
         }
 
@@ -53,9 +53,9 @@ namespace QuanLyKhachSan
         {
             try
             {
-                string tenDangNhap = txt_TenDangNhap.Text;
-                string matKhau = txt_MatKhau.Text;
-                string manhansu = txt_manhansu_them.Text;
+                string tenDangNhap = txt_TenDangNhap.Texts;
+                string matKhau = txt_MatKhau.Texts;
+                string manhansu = txt_manhansu_them.Texts;
                 if (string.IsNullOrEmpty(tenDangNhap))
                 {
                     lbl_mkthem_chk.Text = "";
@@ -155,6 +155,7 @@ namespace QuanLyKhachSan
 
         private void frm_NguoiDung_Load(object sender, EventArgs e)
         {
+          
             dstk.LoadDsTk(dgv_DanhSachNguoiDung);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung1);
             dstk.LoadDsTk(dgv_DanhSachNguoiDung2);
@@ -162,6 +163,21 @@ namespace QuanLyKhachSan
             cbo_phanquen_them.Items.Add("Quản lý");
             cbo_phanquyen_sua.Items.Add("Nhân viên");
             cbo_phanquyen_sua.Items.Add("Quản lý");
+            dgv_DanhSachNguoiDung.Columns[0].HeaderCell.Value = "Tên đăng nhập";
+            dgv_DanhSachNguoiDung.Columns[1].HeaderCell.Value = "Mật khẩu";
+            dgv_DanhSachNguoiDung.Columns[2].HeaderCell.Value = "Phân quyền";
+            dgv_DanhSachNguoiDung.Columns[3].HeaderCell.Value = "Mã nhân sự";
+
+            dgv_DanhSachNguoiDung1.Columns[0].HeaderCell.Value = "Tên đăng nhập";
+            dgv_DanhSachNguoiDung1.Columns[1].HeaderCell.Value = "Mật khẩu";
+            dgv_DanhSachNguoiDung1.Columns[2].HeaderCell.Value = "Phân quyền";
+            dgv_DanhSachNguoiDung1.Columns[3].HeaderCell.Value = "Mã nhân sự";
+
+            dgv_DanhSachNguoiDung2.Columns[0].HeaderCell.Value = "Tên đăng nhập";
+            dgv_DanhSachNguoiDung2.Columns[1].HeaderCell.Value = "Mật khẩu";
+            dgv_DanhSachNguoiDung2.Columns[2].HeaderCell.Value = "Phân quyền";
+            dgv_DanhSachNguoiDung2.Columns[3].HeaderCell.Value = "Mã nhân sự";
+
 
 
         }
@@ -170,9 +186,9 @@ namespace QuanLyKhachSan
         {
             try
             {
-                string tenDangNhap = txt_tk_Sua.Text;
-                string matKhau = txt_mk_Sua.Text;
-                string manhansu = txt_manhansu_sua.Text;
+                string tenDangNhap = txt_tk_Sua.Texts;
+                string matKhau = txt_mk_Sua.Texts;
+                string manhansu = txt_manhansu_sua.Texts;
                 if (string.IsNullOrEmpty(tenDangNhap))
                 {
                     lbl_mksua_Chk.Text = "";
@@ -250,7 +266,7 @@ namespace QuanLyKhachSan
                     lbl_tksua_chk.Text = ex.Message;
                 }
 
-                else if (ex.Message.Contains("Lỗi. Chưa nhập mật khẩu!"))
+                else if (ex.Message==("Lỗi. Chưa nhập mật khẩu!"))
                 {
                     lbl_mksua_Chk.Visible = true;
                     lbl_mksua_Chk.ForeColor = Color.Red;
@@ -277,7 +293,7 @@ namespace QuanLyKhachSan
         private void btn_Xoa_Click_1(object sender, EventArgs e)
         {
 
-            string tenDangNhap = txt_tk_Sua.Text;
+            string tenDangNhap = txt_tk_Sua.Texts;
 
             dstk.XoaTaiKhoan(tenDangNhap);
 
@@ -312,6 +328,25 @@ namespace QuanLyKhachSan
         }
 
         private void lbl_pqthem_chk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TimKiem__TextChanged(object sender, EventArgs e)
+        {
+            string timKiem = txt_TimKiem.Texts;
+
+            var ketqua = dstk.TimTaiKhoan(timKiem);
+
+            dgv_DanhSachNguoiDung1.DataSource = ketqua;
+        }
+
+        private void lbl_pqsua_chk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_PhanQuyen_Sua_Click(object sender, EventArgs e)
         {
 
         }
