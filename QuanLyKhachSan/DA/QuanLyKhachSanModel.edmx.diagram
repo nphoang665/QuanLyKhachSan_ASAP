@@ -5,24 +5,24 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="59045c419c014eee90e5132668a745a4" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.DangKyDichVu" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="10.25" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.NhanSu" Width="1.5" PointX="5.75" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.Phong" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.QuanLyDichVu" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="8" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThongTinKhachHang" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="8" PointY="12.375" IsExpanded="true" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__DangKyDic__MaDic__3F466844" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__DangKyDic__MaPho__403A8C7D" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3A81B327" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.DangKyDichVu" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.HoaDon" Width="1.5" PointX="3" PointY="10.75" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.LuuMatKhau" Width="1.5" PointX="10.25" PointY="1.75" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.NhanSu" Width="1.5" PointX="5.75" PointY="2.375" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.Phong" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.QuanLyDichVu" Width="1.5" PointX="0.75" PointY="8.125" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.TaiKhoan" Width="1.5" PointX="8" PointY="1.5" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThongTinKhachHang" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.ThuePhong" Width="1.5" PointX="3" PointY="2" />
+        <EntityTypeShape EntityType="QuanLyKhachSanModel.VatTu" Width="1.5" PointX="8" PointY="4.375" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__DangKyDic__MaDic__3F466844" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__DangKyDic__MaPho__403A8C7D" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__HoaDon__MaPhong__35BCFE0A" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__VatTu__NguoiQuan__3A81B327" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F" />
+        <AssociationConnector Association="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

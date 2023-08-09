@@ -224,10 +224,10 @@
             this.dgv_DanhSachVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachVatTu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachVatTu.Location = new System.Drawing.Point(49, 224);
+            this.dgv_DanhSachVatTu.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachVatTu.Name = "dgv_DanhSachVatTu";
             this.dgv_DanhSachVatTu.ReadOnly = true;
-            this.dgv_DanhSachVatTu.Size = new System.Drawing.Size(1005, 235);
+            this.dgv_DanhSachVatTu.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu.TabIndex = 14;
             // 
             // btn_Them
@@ -360,10 +360,10 @@
             this.dgv_DanhSachVatTu1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachVatTu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachVatTu1.Location = new System.Drawing.Point(49, 224);
+            this.dgv_DanhSachVatTu1.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachVatTu1.Name = "dgv_DanhSachVatTu1";
             this.dgv_DanhSachVatTu1.ReadOnly = true;
-            this.dgv_DanhSachVatTu1.Size = new System.Drawing.Size(1005, 235);
+            this.dgv_DanhSachVatTu1.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu1.TabIndex = 7;
             // 
             // label9
@@ -534,10 +534,10 @@
             this.dgv_DanhSachVatTu2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachVatTu2.Location = new System.Drawing.Point(49, 224);
+            this.dgv_DanhSachVatTu2.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachVatTu2.Name = "dgv_DanhSachVatTu2";
             this.dgv_DanhSachVatTu2.ReadOnly = true;
-            this.dgv_DanhSachVatTu2.Size = new System.Drawing.Size(1005, 235);
+            this.dgv_DanhSachVatTu2.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu2.TabIndex = 11;
             // 
             // label15

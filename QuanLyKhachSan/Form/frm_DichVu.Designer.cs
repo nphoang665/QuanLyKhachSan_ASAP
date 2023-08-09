@@ -190,10 +190,10 @@
             this.dgv_DanhSachDichVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachDichVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachDichVu.Location = new System.Drawing.Point(50, 225);
+            this.dgv_DanhSachDichVu.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachDichVu.Name = "dgv_DanhSachDichVu";
             this.dgv_DanhSachDichVu.ReadOnly = true;
-            this.dgv_DanhSachDichVu.Size = new System.Drawing.Size(1005, 235);
+            this.dgv_DanhSachDichVu.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachDichVu.TabIndex = 41;
             // 
             // btn_Them
@@ -303,10 +303,10 @@
             this.dgv_DanhSachDichVu1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachDichVu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachDichVu1.Location = new System.Drawing.Point(50, 225);
+            this.dgv_DanhSachDichVu1.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachDichVu1.Name = "dgv_DanhSachDichVu1";
             this.dgv_DanhSachDichVu1.ReadOnly = true;
-            this.dgv_DanhSachDichVu1.Size = new System.Drawing.Size(1005, 235);
+            this.dgv_DanhSachDichVu1.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachDichVu1.TabIndex = 49;
             // 
             // label9
@@ -466,10 +466,10 @@
             this.dgv_DanhSachDichVu2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DanhSachDichVu2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachDichVu2.Location = new System.Drawing.Point(50, 225);
+            this.dgv_DanhSachDichVu2.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachDichVu2.Name = "dgv_DanhSachDichVu2";
             this.dgv_DanhSachDichVu2.ReadOnly = true;
-            this.dgv_DanhSachDichVu2.Size = new System.Drawing.Size(1005, 235);
+            this.dgv_DanhSachDichVu2.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachDichVu2.TabIndex = 51;
             this.dgv_DanhSachDichVu2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachDichVu2_CellClick);
             // 

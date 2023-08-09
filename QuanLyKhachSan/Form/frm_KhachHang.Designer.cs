@@ -44,6 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_DanhSachKhachHang = new System.Windows.Forms.DataGridView();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Them = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -96,13 +103,6 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl_KhachHang.SuspendLayout();
             this.tabPage_ThemKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachHang)).BeginInit();
@@ -304,11 +304,53 @@
             this.diachi,
             this.sdt,
             this.cccd});
-            this.dgv_DanhSachKhachHang.Location = new System.Drawing.Point(6, 235);
+            this.dgv_DanhSachKhachHang.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachKhachHang.Name = "dgv_DanhSachKhachHang";
             this.dgv_DanhSachKhachHang.ReadOnly = true;
-            this.dgv_DanhSachKhachHang.Size = new System.Drawing.Size(1092, 235);
+            this.dgv_DanhSachKhachHang.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachKhachHang.TabIndex = 35;
+            // 
+            // makh
+            // 
+            this.makh.HeaderText = "Mã Khách Hàng";
+            this.makh.Name = "makh";
+            this.makh.ReadOnly = true;
+            // 
+            // tenkh
+            // 
+            this.tenkh.HeaderText = "Tên Khách Hàng";
+            this.tenkh.Name = "tenkh";
+            this.tenkh.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.HeaderText = "GióiTinh";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.HeaderText = "Địa Chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.HeaderText = "Số Điện Thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // cccd
+            // 
+            this.cccd.HeaderText = "CMND/CCCD";
+            this.cccd.Name = "cccd";
+            this.cccd.ReadOnly = true;
             // 
             // btn_Them
             // 
@@ -757,10 +799,10 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.dgv_DanhSachKhachHang2.Location = new System.Drawing.Point(7, 231);
+            this.dgv_DanhSachKhachHang2.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachKhachHang2.Name = "dgv_DanhSachKhachHang2";
             this.dgv_DanhSachKhachHang2.ReadOnly = true;
-            this.dgv_DanhSachKhachHang2.Size = new System.Drawing.Size(1092, 235);
+            this.dgv_DanhSachKhachHang2.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachKhachHang2.TabIndex = 50;
             this.dgv_DanhSachKhachHang2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachKhachHang2_CellClick);
             // 
@@ -827,7 +869,7 @@
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(760, 144);
+            this.btn_Xoa.Location = new System.Drawing.Point(760, 127);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(153, 43);
             this.btn_Xoa.TabIndex = 49;
@@ -844,7 +886,7 @@
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
-            this.btn_Sua.Location = new System.Drawing.Point(935, 143);
+            this.btn_Sua.Location = new System.Drawing.Point(935, 126);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(153, 43);
             this.btn_Sua.TabIndex = 48;
@@ -863,48 +905,6 @@
             this.label19.Size = new System.Drawing.Size(277, 20);
             this.label19.TabIndex = 47;
             this.label19.Text = "SỬA, XÓA THÔNG TIN KHÁCH HÀNG:";
-            // 
-            // makh
-            // 
-            this.makh.HeaderText = "Mã Khách Hàng";
-            this.makh.Name = "makh";
-            this.makh.ReadOnly = true;
-            // 
-            // tenkh
-            // 
-            this.tenkh.HeaderText = "Tên Khách Hàng";
-            this.tenkh.Name = "tenkh";
-            this.tenkh.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.HeaderText = "GióiTinh";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.HeaderText = "Địa Chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // sdt
-            // 
-            this.sdt.HeaderText = "Số Điện Thoại";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            // 
-            // cccd
-            // 
-            this.cccd.HeaderText = "CMND/CCCD";
-            this.cccd.Name = "cccd";
-            this.cccd.ReadOnly = true;
             // 
             // frm_KhachHang
             // 
