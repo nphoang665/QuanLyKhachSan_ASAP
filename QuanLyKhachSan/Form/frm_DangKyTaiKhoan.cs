@@ -38,7 +38,7 @@ namespace QuanLyKhachSan
                     lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Không có nhân sự nào có mã căn cước công dân như này");
                 }
-                //
+
                 else if (tk == "")
                 {
                     lbl_cccd_chkerr.Text = "";
@@ -79,16 +79,16 @@ namespace QuanLyKhachSan
                     DialogResult result = MessageBox.Show("Bạn có muốn đăng ký với những thông tin bạn đã nhập chưa ?", "Thông báo xác nhận", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
-                       
+
 
                         phanQuyen = tt.ChucVu;
-                    Manhansu = tt.MaNhanSu;
+                        Manhansu = tt.MaNhanSu;
 
-                    bus.ThemTK(tk, mk, phanQuyen, Manhansu);
-                    txt_cccd.Enabled = false;
-                    txt_TenDangNhap.Enabled = false;
-                    txt_MatKhau.Enabled = false;
-                    lbl_notice_successfull.Visible = true; 
+                        bus.ThemTK(tk, mk, phanQuyen, Manhansu);
+                        txt_cccd.Enabled = false;
+                        txt_TenDangNhap.Enabled = false;
+                        txt_MatKhau.Enabled = false;
+                        lbl_notice_successfull.Visible = true;
                     }
                 }
 
@@ -141,7 +141,7 @@ namespace QuanLyKhachSan
         private void frm_DangKyTaiKhoan_Load(object sender, EventArgs e)
         {
 
-        
+
         }
     }
 }

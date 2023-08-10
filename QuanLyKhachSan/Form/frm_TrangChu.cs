@@ -257,5 +257,10 @@ namespace QuanLyKhachSan
             }
             OpenChildForm(dichVuForm);
         }
+
+        private void xácThựcTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_XacThucTaiKhoan());
+        }
     }
 }

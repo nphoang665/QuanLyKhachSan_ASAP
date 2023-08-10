@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public QuanLyDichVu()
         {
-            this.DangKyDichVu = new HashSet<DangKyDichVu>();
+            this.DangKyDichVus = new HashSet<DangKyDichVu>();
         }
     
         public string MaDichVu { get; set; }
@@ -26,6 +26,6 @@ namespace QuanLyKhachSan.DA
         public string DonViTinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DangKyDichVu> DangKyDichVu { get; set; }
+        public virtual ICollection<DangKyDichVu> DangKyDichVus { get; set; }
     }
 }

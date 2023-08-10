@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DA
         public void LayHoaDon(DataGridView dtgv)
         {
             dtgv.Rows.Clear();
-            var ds = db.HoaDon.Select(s => new
+            var ds = db.HoaDons.Select(s => new
             {
                 s.MaHoaDon,
                 s.TenKhachHang,

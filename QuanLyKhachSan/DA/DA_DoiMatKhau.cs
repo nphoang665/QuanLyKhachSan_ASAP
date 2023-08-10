@@ -11,12 +11,12 @@ namespace QuanLyKhachSan.DA
         }
         public TaiKhoan LayMatKhau(string tk)
         {
-            return db.TaiKhoan.FirstOrDefault(s => s.TenDangNhap == tk);
+            return db.TaiKhoans.FirstOrDefault(s => s.TenDangNhap == tk);
         }
         public bool DoiMatKhau(string tk, string mk, string mkmoi)
         {
             bool frag = false;
-            var dmk = db.TaiKhoan.FirstOrDefault(t => t.TenDangNhap == tk && t.MatKhau == mk);
+            var dmk = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tk && t.MatKhau == mk);
             if (dmk != null)
             {
                 dmk.MatKhau = mkmoi;

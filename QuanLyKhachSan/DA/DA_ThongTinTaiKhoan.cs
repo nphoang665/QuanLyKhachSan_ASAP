@@ -16,15 +16,15 @@ namespace QuanLyKhachSan.DA
         }
         public TaiKhoan layThongTinTaiKhoan(string TenDangNhap)
         {
-            return db.TaiKhoan.FirstOrDefault(s=> s.TenDangNhap==TenDangNhap);
+            return db.TaiKhoans.FirstOrDefault(s=> s.TenDangNhap==TenDangNhap);
         }
         public NhanSu laythongTinNhanSu(string manhansu)
         {
-            return db.NhanSu.FirstOrDefault(s => s.MaNhanSu == manhansu);
+            return db.NhanSus.FirstOrDefault(s => s.MaNhanSu == manhansu);
         }
         public void layanhNV(string manv, PictureBox pic)
         {
-            var sv = db.NhanSu.FirstOrDefault(a => a.MaNhanSu == manv);
+            var sv = db.NhanSus.FirstOrDefault(a => a.MaNhanSu == manv);
             if (sv == null)
             {
                 MessageBox.Show("Không có");
@@ -37,7 +37,7 @@ namespace QuanLyKhachSan.DA
         }
         public void LuuAnhNhanVien(string manhansu, Image anh)
         {
-            var nhansu = db.NhanSu.FirstOrDefault(s => s.MaNhanSu == manhansu);
+            var nhansu = db.NhanSus.FirstOrDefault(s => s.MaNhanSu == manhansu);
             if (nhansu != null)
             {
                 using (var stream = new MemoryStream())

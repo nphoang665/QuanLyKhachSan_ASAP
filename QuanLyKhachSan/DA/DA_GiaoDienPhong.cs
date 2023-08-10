@@ -15,11 +15,11 @@ namespace QuanLyKhachSan.DA
         }
         public Phong LayTrangThai(string maphong)
         {
-            return db.Phong.FirstOrDefault(s => s.MaPhong == maphong);
+            return db.Phongs.FirstOrDefault(s => s.MaPhong == maphong);
         }
         public ThuePhong LayThongTinThuePhong(string maPhong)
         {
-            return db.ThuePhong.FirstOrDefault(tp => tp.MaPhong == maPhong);
+            return db.ThuePhongs.FirstOrDefault(tp => tp.MaPhong == maPhong);
         }
 
 

@@ -25,15 +25,15 @@ namespace QuanLyKhachSan.DA
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<DangKyDichVu> DangKyDichVu { get; set; }
-        public virtual DbSet<HoaDon> HoaDon { get; set; }
-        public virtual DbSet<LuuMatKhau> LuuMatKhau { get; set; }
-        public virtual DbSet<NhanSu> NhanSu { get; set; }
-        public virtual DbSet<Phong> Phong { get; set; }
-        public virtual DbSet<QuanLyDichVu> QuanLyDichVu { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
-        public virtual DbSet<ThongTinKhachHang> ThongTinKhachHang { get; set; }
-        public virtual DbSet<ThuePhong> ThuePhong { get; set; }
-        public virtual DbSet<VatTu> VatTu { get; set; }
+        public virtual DbSet<DangKyDichVu> DangKyDichVus { get; set; }
+        public virtual DbSet<HoaDon> HoaDons { get; set; }
+        public virtual DbSet<LuuMatKhau> LuuMatKhaus { get; set; }
+        public virtual DbSet<NhanSu> NhanSus { get; set; }
+        public virtual DbSet<Phong> Phongs { get; set; }
+        public virtual DbSet<QuanLyDichVu> QuanLyDichVus { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<ThongTinKhachHang> ThongTinKhachHangs { get; set; }
+        public virtual DbSet<ThuePhong> ThuePhongs { get; set; }
+        public virtual DbSet<VatTu> VatTus { get; set; }
     }
 }

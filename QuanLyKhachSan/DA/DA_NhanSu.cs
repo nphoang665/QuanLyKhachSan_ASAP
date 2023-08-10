@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DA
         public void LayNhanVien(DataGridView dtgv)
         {
             dtgv.Rows.Clear();
-            var ds = db.NhanSu.Select(s => new
+            var ds = db.NhanSus.Select(s => new
             {
                 s.MaNhanSu,
                 s.TenNhanSu,
@@ -63,7 +63,7 @@ namespace QuanLyKhachSan.DA
                     AnhNhanVien=steam.ToArray(),
                     
                 };
-            db.NhanSu.Add(nhansu);
+            db.NhanSus.Add(nhansu);
             db.SaveChanges();
             }
         }
@@ -72,7 +72,7 @@ namespace QuanLyKhachSan.DA
             using (MemoryStream steam = new MemoryStream())
             {
                 pi.Image.Save(steam, ImageFormat.Jpeg);
-                var nhanSu = db.NhanSu.FirstOrDefault(ns => ns.MaNhanSu == mans);
+                var nhanSu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
                 if (nhanSu != null)
                 {
                     nhanSu.TenNhanSu = tenvn;
@@ -90,16 +90,16 @@ namespace QuanLyKhachSan.DA
 
         public void XoaNhanSu(string mans)
         {
-            var nhansu = db.NhanSu.FirstOrDefault(ns => ns.MaNhanSu == mans);
+            var nhansu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
             if (nhansu != null)
             {
-                db.NhanSu.Remove(nhansu);
+                db.NhanSus.Remove(nhansu);
                 db.SaveChanges();
             }
         }
         public void TimTheoTenNhanSu(string hoten, DataGridView dtgv)
         {
-            var ds = db.NhanSu.Where(ns => ns. TenNhanSu.Contains(hoten)).ToList();
+            var ds = db.NhanSus.Where(ns => ns. TenNhanSu.Contains(hoten)).ToList();
             dtgv.Rows.Clear();
             foreach (var ns in ds)
             {
@@ -121,7 +121,7 @@ namespace QuanLyKhachSan.DA
         }
         public void TimTheoChucVuNhanSu(string chucvu, DataGridView dtgv)
         {
-            var ds = db.NhanSu.Where(ns => ns.ChucVu.Contains(chucvu)).ToList();
+            var ds = db.NhanSus.Where(ns => ns.ChucVu.Contains(chucvu)).ToList();
             dtgv.Rows.Clear();
             foreach (var ns in ds)
             {
@@ -143,7 +143,7 @@ namespace QuanLyKhachSan.DA
         }
         public void TimTheoGioiTinhNhanSu(string gioitinh, DataGridView dtgv)
         {
-            var ds = db.NhanSu.Where(ns => ns.GioiTinh == gioitinh).ToList();
+            var ds = db.NhanSus.Where(ns => ns.GioiTinh == gioitinh).ToList();
             dtgv.Rows.Clear();
             foreach (var ns in ds)
             {
@@ -165,7 +165,7 @@ namespace QuanLyKhachSan.DA
         }
         public void TimTheosdtNhanSu(string sdt, DataGridView dtgv)
         {
-            var ds = db.NhanSu.Where(ns => ns.SoDienThoai.Contains(sdt)).ToList();
+            var ds = db.NhanSus.Where(ns => ns.SoDienThoai.Contains(sdt)).ToList();
             dtgv.Rows.Clear();
             foreach (var ns in ds)
             {
@@ -187,7 +187,7 @@ namespace QuanLyKhachSan.DA
         }
         public void layanhNV(string manv,PictureBox pic)
         {
-            var sv = db.NhanSu.FirstOrDefault(a => a.MaNhanSu == manv);
+            var sv = db.NhanSus.FirstOrDefault(a => a.MaNhanSu == manv);
             if (sv == null)
             {
                 MessageBox.Show("Không có");
@@ -201,7 +201,7 @@ namespace QuanLyKhachSan.DA
 
         public bool KiemTraKhoa(string manhansu)
         {
-            var nhansu=db.NhanSu.Any(ns => ns.MaNhanSu == manhansu);
+            var nhansu=db.NhanSus.Any(ns => ns.MaNhanSu == manhansu);
             if (nhansu)
             {
                 MessageBox.Show("Trùng mã nhân sự!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

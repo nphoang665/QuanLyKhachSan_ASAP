@@ -1,17 +1,7 @@
 ﻿using QuanLyKhachSan.BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QuanLyKhachSan
 {
@@ -50,32 +40,32 @@ namespace QuanLyKhachSan
             pic_Hide.Hide();
             pic_Show.Show();
         }
-      
+
         private void lbl_QuenMatKhau_Click(object sender, EventArgs e)
         {
             this.Hide();
             frm_QuenMatKhau frm_QuenMatKhau = new frm_QuenMatKhau();
-           
+
             frm_QuenMatKhau.ShowDialog();
-           
-         
+
+
         }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txt_TenDangNhap.Texts)) 
+                if (string.IsNullOrEmpty(txt_TenDangNhap.Texts))
                 {
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Vui lòng nhập tên đăng nhập.");
                 }
-                else if(txt_TenDangNhap.Texts.Length <5 || txt_TenDangNhap.Texts.Length > 20)
+                else if (txt_TenDangNhap.Texts.Length < 5 || txt_TenDangNhap.Texts.Length > 20)
                 {
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if ( string.IsNullOrEmpty(txt_MatKhau.Texts))
+                else if (string.IsNullOrEmpty(txt_MatKhau.Texts))
                 {
                     lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Vui lòng nhập mật khẩu.");
@@ -87,66 +77,79 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
-                  
-                    if (chk_ghiNhoDangNhap.Checked)
-                {
-                    string username = txt_TenDangNhap.Texts;
-                    string password = txt_MatKhau.Texts;
 
-                    var savedLoginInfo = bus.LayThongTinDaLuu();
-                    if (savedLoginInfo != null)
+                    if (chk_ghiNhoDangNhap.Checked)
                     {
-                        bus.CapNhapThongTin(username, password);
+                        string username = txt_TenDangNhap.Texts;
+                        string password = txt_MatKhau.Texts;
+
+                        var savedLoginInfo = bus.LayThongTinDaLuu();
+                        if (savedLoginInfo != null)
+                        {
+                            bus.CapNhapThongTin(username, password);
+                        }
+                        else
+                        {
+                            bus.LuuThongTinDangNhap(username, password);
+                        }
                     }
                     else
                     {
-                        bus.LuuThongTinDangNhap(username, password);
+                        bus.XoaThongTinDaLuu();
                     }
-                }
-                else
-                {
-                    bus.XoaThongTinDaLuu();
-                }
 
                     //đăng nhập
                     string tk = txt_TenDangNhap.Texts;
                     string mk = txt_MatKhau.Texts;
 
-
-
-
-                    bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
-                    if (dangnhap)
+                    string tinhTrang = bus.KiemTraTinhTrang(tk);
+                    if (tinhTrang == "ThanhCong")
                     {
-                        // Change border color to green
-                        
 
-                        this.Hide();
-                        frm_TrangChu frm = new frm_TrangChu(tk);
-                        frm.ShowDialog();
-                        this.Close();
+
+
+
+                        bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
+                        if (dangnhap)
+                        {
+                            // Change border color to green
+
+
+                            this.Hide();
+                            frm_TrangChu frm = new frm_TrangChu(tk);
+                            frm.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            // Change border color to red
+
+
+                            lbl_chk_TenDangNhap.Text = "";
+                            throw new Exception("Tên đăng nhập, mật khẩu không chính xác");
+                        }
+                    }
+                    else if (tinhTrang == "ThatBai")
+                    {
+                        string lydo = bus.LayLyDo(tk);
+                        MessageBox.Show("Đăng nhập thất bại. Lý do: " + lydo);
                     }
                     else
                     {
-                        // Change border color to red
-                     
-
-                        lbl_chk_TenDangNhap.Text = "";
-                        throw new Exception("Tên đăng nhập, mật khẩu không chính xác");
+                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi thêm giây lát");
                     }
-
 
                 }
             }
             catch (Exception ex)
             {
-                if (ex.Message==("Vui lòng nhập tên đăng nhập."))
+                if (ex.Message == ("Vui lòng nhập tên đăng nhập."))
                 {
                     lbl_chk_TenDangNhap.Visible = true;
                     lbl_chk_TenDangNhap.ForeColor = Color.Red;
                     lbl_chk_TenDangNhap.Text = ex.Message;
                 }
-               else if (ex.Message == ("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                else if (ex.Message == ("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
                 {
                     lbl_chk_TenDangNhap.Visible = true;
                     lbl_chk_TenDangNhap.ForeColor = Color.Red;
@@ -158,13 +161,13 @@ namespace QuanLyKhachSan
                     lbl_chk_MatKhau.ForeColor = Color.Red;
                     lbl_chk_MatKhau.Text = ex.Message;
                 }
-                else if (ex.Message==("Vui lòng nhập mật khẩu."))
+                else if (ex.Message == ("Vui lòng nhập mật khẩu."))
                 {
                     lbl_chk_MatKhau.Visible = true;
                     lbl_chk_MatKhau.ForeColor = Color.Red;
                     lbl_chk_MatKhau.Text = ex.Message;
                 }
-                else if (ex.Message==("Tên đăng nhập, mật khẩu không chính xác"))
+                else if (ex.Message == ("Tên đăng nhập, mật khẩu không chính xác"))
                 {
                     lbl_chk_MatKhau.Visible = true;
                     lbl_chk_MatKhau.ForeColor = Color.Red;
@@ -176,7 +179,7 @@ namespace QuanLyKhachSan
 
         private void chk_ghiNhoDangNhap_CheckedChanged(object sender, EventArgs e)
         {
-          
+
         }
         void loadNhomk()
         {
@@ -192,7 +195,7 @@ namespace QuanLyKhachSan
         {
             if (bus.kiemtraluumk() == true)
             {
-                chk_ghiNhoDangNhap.Checked=true;
+                chk_ghiNhoDangNhap.Checked = true;
 
             }
             else

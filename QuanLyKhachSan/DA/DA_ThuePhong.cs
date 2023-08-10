@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.DA
         }
         public dynamic ThongTinKhachHang()
         {
-            var qr = db.ThongTinKhachHang.Select(s => new
+            var qr = db.ThongTinKhachHangs.Select(s => new
             {
                 s.MaKhachHang,
             }).ToList();
@@ -25,7 +25,7 @@ namespace QuanLyKhachSan.DA
 
         public dynamic LayThongTinKhachHangVaDatPhong(string maKhachHang)
         {
-            var qr = from kh in db.ThongTinKhachHang
+            var qr = from kh in db.ThongTinKhachHangs
                      where kh.MaKhachHang == maKhachHang
                      select new
                      {
@@ -43,7 +43,7 @@ namespace QuanLyKhachSan.DA
 
         public dynamic LayThongTinPhongTrong()
         {
-            var qr = from p in db.Phong
+            var qr = from p in db.Phongs
                      where p.TinhTrang == "Trống"
                      select new
                      {
@@ -56,7 +56,7 @@ namespace QuanLyKhachSan.DA
         }
         public int LayThuePhongCount()
         {
-            return db.ThuePhong.Count();
+            return db.ThuePhongs.Count();
         }
         public void ThemThuePhong(string maThuePhong, string maKhachHang, string maPhong, DateTime ngayThue)
         {
@@ -67,12 +67,12 @@ namespace QuanLyKhachSan.DA
                 MaPhong = maPhong,
                 NgayThue = ngayThue
             };
-            db.ThuePhong.Add(thuePhong);
+            db.ThuePhongs.Add(thuePhong);
             db.SaveChanges();
         }
         public void CapNhatTrangThaiPhong(string maPhong, string trangThai)
         {
-            Phong phong = db.Phong.FirstOrDefault(p => p.MaPhong == maPhong);
+            Phong phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
                 phong.TinhTrang = trangThai;

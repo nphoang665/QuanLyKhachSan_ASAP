@@ -10,8 +10,9 @@ namespace QuanLyKhachSan.BUS
     public class BUS_DangKy
     {
         DA_DangKy da;
-        public BUS_DangKy() { 
-        da= new DA_DangKy();
+        public BUS_DangKy()
+        {
+            da = new DA_DangKy();
         }
         public NhanSu KiemTraTTNS(string cccd)
         {
@@ -19,11 +20,11 @@ namespace QuanLyKhachSan.BUS
         }
         public void ThemTK(string tk, string mk, string kq, string mns)
         {
-             da.themaccount(tk, mk, kq, mns);
+            da.themaccount(tk, mk, kq, mns);
         }
         public bool kiemTraTk(string tk)
         {
-           return da.KiemTraTaiKhoan(tk);
+            return da.KiemTraTaiKhoan(tk);
         }
     }
 }

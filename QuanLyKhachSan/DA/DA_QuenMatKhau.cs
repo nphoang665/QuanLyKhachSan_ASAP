@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.DA
         }
         public TaiKhoan layTaiKhoan(string tenDangNhap)
         {
-            return db.TaiKhoan.FirstOrDefault(s => s.TenDangNhap == tenDangNhap);
+            return db.TaiKhoans.FirstOrDefault(s => s.TenDangNhap == tenDangNhap);
         }
         public void capNhatMatKhau(string tenDangNhap, string matKhauMoi)
         {

@@ -42,6 +42,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -77,6 +78,7 @@
     <Compile Include="BUS\BUS_TraPhong.cs" />
     <Compile Include="BUS\BUS_VatTu.cs" />
     <Compile Include="BUS\BUS_ThongKe.cs" />
+    <Compile Include="BUS\BUS_XacThucTaiKhoan.cs" />
     <Compile Include="DA\DangKyDichVu.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
@@ -98,6 +100,7 @@
     <Compile Include="DA\DA_TrangChu.cs" />
     <Compile Include="DA\DA_TraPhong.cs" />
     <Compile Include="DA\DA_VatTu.cs" />
+    <Compile Include="DA\DA_XacThucTaiKhoan.cs" />
     <Compile Include="DA\DTO_DoanhThuTheoNgay.cs" />
     <Compile Include="DA\DTO_DoanhThuTheoThang.cs" />
     <Compile Include="DA\HoaDon.cs">
@@ -251,6 +254,12 @@
     <Compile Include="Form\frm_DangKyTaiKhoan.Designer.cs">
       <DependentUpon>frm_DangKyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\frm_XacThucTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_XacThucTaiKhoan.designer.cs">
+      <DependentUpon>frm_XacThucTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RJConTrol\RJComboBox.cs">
@@ -318,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_ThuePhong.resx">
       <DependentUpon>frm_ThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_XacThucTaiKhoan.resx">
+      <DependentUpon>frm_XacThucTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

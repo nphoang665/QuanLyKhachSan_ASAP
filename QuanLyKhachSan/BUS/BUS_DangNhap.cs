@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.BUS
         public bool DangNhapTaiKhoan(string tk, string mk)
         {
             bool kq = da_dangnhap.DangNhap(tk, mk);
-           
+
             return kq;
         }
 
@@ -42,6 +42,14 @@ namespace QuanLyKhachSan.BUS
         public bool kiemtraluumk()
         {
             return da_dangnhap.kiemtraluumk();
+        }
+        public string KiemTraTinhTrang(string tk)
+        {
+            return da_dangnhap.KiemTraTinhTrang(tk);
+        }
+        public string LayLyDo(string tk)
+        {
+            return da_dangnhap.LayLyDo(tk);
         }
     }
 }

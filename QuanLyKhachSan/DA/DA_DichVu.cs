@@ -14,7 +14,7 @@ namespace QuanLyKhachSan.DA
         }
         public dynamic LoadDichVu()
         {
-            var qr = db.QuanLyDichVu.Select(s => new
+            var qr = db.QuanLyDichVus.Select(s => new
             {
                 s.MaDichVu,
                 s.TenDichVu,
@@ -32,7 +32,7 @@ namespace QuanLyKhachSan.DA
                 DonGia = dongia,
                 DonViTinh = donvitinh
             };
-            db.QuanLyDichVu.Add(dichVu);
+            db.QuanLyDichVus.Add(dichVu);
             db.SaveChanges();
         }
         /* public dynamic hienthongtincbo_d()
@@ -42,23 +42,23 @@ namespace QuanLyKhachSan.DA
          }*/
         public dynamic hienthongtincbo_d()
         {
-            var qr = db.QuanLyDichVu.Select(s => new { s.MaDichVu, s.TenDichVu }).ToList();
+            var qr = db.QuanLyDichVus.Select(s => new { s.MaDichVu, s.TenDichVu }).ToList();
             return qr;
         }
 
         public List<QuanLyDichVu> timdichvu_d(string madv)
         {
-            var qr = db.QuanLyDichVu.Where(s => s.MaDichVu == madv).ToList();
+            var qr = db.QuanLyDichVus.Where(s => s.MaDichVu == madv).ToList();
             return qr;
         }
         public List<QuanLyDichVu> timtendichvu_d(string tendichvu)
         {
-            var qr = db.QuanLyDichVu.Where(s => s.TenDichVu.StartsWith(tendichvu)).ToList();
+            var qr = db.QuanLyDichVus.Where(s => s.TenDichVu.StartsWith(tendichvu)).ToList();
             return qr;
         }
         public void SuaDichVu_d(string madv, string tendv, float dongia, string donvitinh)
         {
-            var qr = db.QuanLyDichVu.Single(s => s.MaDichVu == madv);
+            var qr = db.QuanLyDichVus.Single(s => s.MaDichVu == madv);
 
             qr.TenDichVu = tendv;
             qr.DonGia = dongia;
@@ -67,18 +67,18 @@ namespace QuanLyKhachSan.DA
         }
        public void XoaDichVu_d(string madv)
         {
-            var qr = db.QuanLyDichVu.FirstOrDefault(s => s.MaDichVu == madv);
+            var qr = db.QuanLyDichVus.FirstOrDefault(s => s.MaDichVu == madv);
            
-            db.QuanLyDichVu.Remove(qr);
+            db.QuanLyDichVus.Remove(qr);
             db.SaveChanges();
         }
         public QuanLyDichVu laydichvu(string madv)
         {
-            return db.QuanLyDichVu.FirstOrDefault(t => t.MaDichVu == madv);
+            return db.QuanLyDichVus.FirstOrDefault(t => t.MaDichVu == madv);
         }
         public List<string> GetRoomIDs()
         {
-            var roomIDs = db.Phong.Select(p => p.MaPhong).ToList();
+            var roomIDs = db.Phongs.Select(p => p.MaPhong).ToList();
 
             return roomIDs;
         }
@@ -93,18 +93,18 @@ namespace QuanLyKhachSan.DA
                 DonGia = donGia
             };
 
-            db.DangKyDichVu.Add(dangKyDichVu);
+            db.DangKyDichVus.Add(dangKyDichVu);
             db.SaveChanges();
         }
 
         public List<string> GetRentedRoomIDs()
         {
-            var rentedRoomIDs = db.ThuePhong.Select(dkp => dkp.MaPhong).ToList();
+            var rentedRoomIDs = db.ThuePhongs.Select(dkp => dkp.MaPhong).ToList();
             return rentedRoomIDs;
         }
         public float GetDonGiaByMaDichVu(string maDichVu)
         {
-            var quanLyDichVu = db.QuanLyDichVu.FirstOrDefault(qldv => qldv.MaDichVu == maDichVu);
+            var quanLyDichVu = db.QuanLyDichVus.FirstOrDefault(qldv => qldv.MaDichVu == maDichVu);
             if (quanLyDichVu != null)
             {
                 return (float)quanLyDichVu.DonGia.Value;
@@ -114,12 +114,12 @@ namespace QuanLyKhachSan.DA
 
         public bool CheckDichVuDaTonTai(string maDichVu, string maPhong)
         {
-            return db.DangKyDichVu.Any(d => d.MaDichVu == maDichVu && d.MaPhong == maPhong);
+            return db.DangKyDichVus.Any(d => d.MaDichVu == maDichVu && d.MaPhong == maPhong);
         }
 
         public void UpdateDangKyDichVu(string maDichVu, string maPhong, int soLuong)
         {
-            var dangKyDichVu = db.DangKyDichVu.FirstOrDefault(d => d.MaDichVu == maDichVu && d.MaPhong == maPhong);
+            var dangKyDichVu = db.DangKyDichVus.FirstOrDefault(d => d.MaDichVu == maDichVu && d.MaPhong == maPhong);
             if (dangKyDichVu != null)
             {
                 dangKyDichVu.SoLuong += soLuong;
@@ -128,19 +128,19 @@ namespace QuanLyKhachSan.DA
         }
         public string GetMaDichVuByTenDichVu(string tenDichVu)
         {
-            var maDichVu = db.QuanLyDichVu.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.MaDichVu).FirstOrDefault();
+            var maDichVu = db.QuanLyDichVus.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.MaDichVu).FirstOrDefault();
             return maDichVu;
         }
         public bool CheckMaDangKyDVTonTai(string maDangKyDV)
         {
-            return db.DangKyDichVu.Any(d => d.MaDangKyDV == maDangKyDV);
+            return db.DangKyDichVus.Any(d => d.MaDangKyDV == maDangKyDV);
         }
 
         public string GetMaDangKyDVByDichVuPhong(string maDichVu, string maPhong)
         {
             string maDangKyDV = null;
 
-            var dangKyDV = db.DangKyDichVu.FirstOrDefault(dv => dv.MaDichVu == maDichVu && dv.MaPhong == maPhong);
+            var dangKyDV = db.DangKyDichVus.FirstOrDefault(dv => dv.MaDichVu == maDichVu && dv.MaPhong == maPhong);
 
             if (dangKyDV != null)
             {
@@ -151,12 +151,12 @@ namespace QuanLyKhachSan.DA
         }
         public bool CheckPhongCoKhachThue(string maPhong)
         {
-            return db.ThuePhong.Any(tp => tp.MaPhong == maPhong);
+            return db.ThuePhongs.Any(tp => tp.MaPhong == maPhong);
         }
 
         public string GetMaDichVuByPhong(string maPhong)
         {
-            var dangKyDV = db.DangKyDichVu.FirstOrDefault(dv => dv.MaPhong == maPhong);
+            var dangKyDV = db.DangKyDichVus.FirstOrDefault(dv => dv.MaPhong == maPhong);
             if (dangKyDV != null)
             {
                 return dangKyDV.MaDichVu;
@@ -165,12 +165,12 @@ namespace QuanLyKhachSan.DA
         }
         public string GetTenDichVuByMaDichVu(string tenDichVu)
         {
-            var tenDichVu1 = db.QuanLyDichVu.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.TenDichVu).FirstOrDefault();
+            var tenDichVu1 = db.QuanLyDichVus.Where(qldv => qldv.TenDichVu == tenDichVu).Select(qldv => qldv.TenDichVu).FirstOrDefault();
             return tenDichVu1;
         }
         public IList timDV(string tenDV)
         {
-            var qr = db.QuanLyDichVu
+            var qr = db.QuanLyDichVus
                 .Where(s => s.TenDichVu.Contains(tenDV))
                 .Select(select => new
                 {

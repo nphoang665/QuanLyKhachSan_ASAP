@@ -19,7 +19,7 @@ namespace QuanLyKhachSan.DA
         public void LayKhachHang(DataGridView dtgv)
         {
             dtgv.Rows.Clear();
-            var ds = db.ThongTinKhachHang.Select(s => new
+            var ds = db.ThongTinKhachHangs.Select(s => new
             {
                 s.MaKhachHang,
                 s.TenKhachHang,
@@ -58,12 +58,12 @@ namespace QuanLyKhachSan.DA
                 SoDienThoai = sdt,
                 CMND = cccd
             };
-            db.ThongTinKhachHang.Add(kh);
+            db.ThongTinKhachHangs.Add(kh);
             db.SaveChanges();
         }
         public void SuaKH(string makh, string tenkh, string gioitinh, DateTime ngaysinh, string diachi, string sdt, string ccccd)
         {
-            var kh = db.ThongTinKhachHang.FirstOrDefault(a => a.MaKhachHang == makh);
+            var kh = db.ThongTinKhachHangs.FirstOrDefault(a => a.MaKhachHang == makh);
             if (kh != null)
             {
                 kh.TenKhachHang = tenkh;
@@ -78,16 +78,16 @@ namespace QuanLyKhachSan.DA
         }
         public void Xoakh(string makh)
         {
-            var kh = db.ThongTinKhachHang.FirstOrDefault(a => a.MaKhachHang == makh);
+            var kh = db.ThongTinKhachHangs.FirstOrDefault(a => a.MaKhachHang == makh);
             if (kh != null)
             {
-                db.ThongTinKhachHang.Remove(kh);
+                db.ThongTinKhachHangs.Remove(kh);
                 db.SaveChanges();
             }
         }
         public void TimTheoTenKh(string hoten, DataGridView dtgv)
         {
-            var ds = db.ThongTinKhachHang.Where(a => a.TenKhachHang.Contains(hoten)).ToList();
+            var ds = db.ThongTinKhachHangs.Where(a => a.TenKhachHang.Contains(hoten)).ToList();
             dtgv.Rows.Clear();
             foreach (var kh in ds)
             {
@@ -109,7 +109,7 @@ namespace QuanLyKhachSan.DA
       
         public void TimTheoGioiTinhKH(string gioitinh, DataGridView dtgv)
         {
-            var ds = db.ThongTinKhachHang.Where(a => a.GioiTinh == gioitinh).ToList();
+            var ds = db.ThongTinKhachHangs.Where(a => a.GioiTinh == gioitinh).ToList();
             dtgv.Rows.Clear();
             foreach (var kh in ds)
             {
@@ -130,7 +130,7 @@ namespace QuanLyKhachSan.DA
         }
         public void TimTheocccdKH(string cccd, DataGridView dtgv)
         {
-            var ds = db.ThongTinKhachHang.Where(a => a.CMND.Contains(cccd)).ToList();
+            var ds = db.ThongTinKhachHangs.Where(a => a.CMND.Contains(cccd)).ToList();
             dtgv.Rows.Clear();
             foreach (var kh in ds)
             {
@@ -152,7 +152,7 @@ namespace QuanLyKhachSan.DA
  
         public List<string> laytenkh()
         {
-            var data=db.ThongTinKhachHang.Select(x => x.TenKhachHang).ToList();
+            var data=db.ThongTinKhachHangs.Select(x => x.TenKhachHang).ToList();
             return data;
         }
         //public bool khdatphong(string mkh)
@@ -170,7 +170,7 @@ namespace QuanLyKhachSan.DA
         //}
         public bool checkkhoa(string makh)
         {
-            var data = db.ThongTinKhachHang.Any(ns => ns.MaKhachHang == makh);
+            var data = db.ThongTinKhachHangs.Any(ns => ns.MaKhachHang == makh);
             if (data)
             {
                 MessageBox.Show("Trùng mã khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

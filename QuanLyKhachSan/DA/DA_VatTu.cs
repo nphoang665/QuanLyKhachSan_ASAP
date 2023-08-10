@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.DA
         }
         public dynamic LayVatTu()
         {
-            var ds = db.VatTu.Select(s =>
+            var ds = db.VatTus.Select(s =>
             new
             {
                 s.MaVatTu,
@@ -37,12 +37,12 @@ namespace QuanLyKhachSan.DA
                 NguoiQuanLy = nguoiQuanLy,
                 GhiChu = ghiChu
             };
-            db.VatTu.Add(vatTu);
+            db.VatTus.Add(vatTu);
             db.SaveChanges();
         }
         public dynamic LayNhanSu()
         {
-            var ds = db.NhanSu.Select(s =>
+            var ds = db.NhanSus.Select(s =>
             new
             {
                 s.MaNhanSu,
@@ -53,7 +53,7 @@ namespace QuanLyKhachSan.DA
         }
         public void SuaVatTu(string maVatTu, string tenVatTu, string nhaCungCap, string nguoiQuanLy, string ghiChu)
         {
-            var vatTu = db.VatTu.FirstOrDefault(p => p.MaVatTu == maVatTu);
+            var vatTu = db.VatTus.FirstOrDefault(p => p.MaVatTu == maVatTu);
             if (vatTu != null)
             {
                 vatTu.TenVatTu = tenVatTu;
@@ -66,16 +66,16 @@ namespace QuanLyKhachSan.DA
 
         public void XoaVatTu(string maVatTu)
         {
-            var vatTu = db.VatTu.FirstOrDefault(p => p.MaVatTu == maVatTu);
+            var vatTu = db.VatTus.FirstOrDefault(p => p.MaVatTu == maVatTu);
             if (vatTu != null)
             {
-                db.VatTu.Remove(vatTu);
+                db.VatTus.Remove(vatTu);
                 db.SaveChanges();
             }
         }
         public dynamic TimVatTuTheoMa(string maVatTu)
         {
-            var ds = db.VatTu.Where(v => v.MaVatTu == maVatTu).Select(s =>
+            var ds = db.VatTus.Where(v => v.MaVatTu == maVatTu).Select(s =>
             new
             {
                 s.MaVatTu,
@@ -90,7 +90,7 @@ namespace QuanLyKhachSan.DA
 
         public dynamic TimVatTuTheoTen(string tenVatTu)
         {
-            var ds = db.VatTu.Where(v => v.TenVatTu.Contains(tenVatTu)).Select(s =>
+            var ds = db.VatTus.Where(v => v.TenVatTu.Contains(tenVatTu)).Select(s =>
             new
             {
                 s.MaVatTu,
@@ -105,7 +105,7 @@ namespace QuanLyKhachSan.DA
 
         public dynamic TimVatTuTheoNguoiQuanLy(string nguoiQuanLy)
         {
-            var ds = db.VatTu.Where(v => v.NguoiQuanLy == nguoiQuanLy).Select(s =>
+            var ds = db.VatTus.Where(v => v.NguoiQuanLy == nguoiQuanLy).Select(s =>
             new
             {
                 s.MaVatTu,

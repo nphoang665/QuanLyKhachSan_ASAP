@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ThongTinKhachHang()
         {
-            this.ThuePhong = new HashSet<ThuePhong>();
+            this.ThuePhongs = new HashSet<ThuePhong>();
         }
     
         public string MaKhachHang { get; set; }
@@ -30,6 +30,6 @@ namespace QuanLyKhachSan.DA
         public string GhiChu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThuePhong> ThuePhong { get; set; }
+        public virtual ICollection<ThuePhong> ThuePhongs { get; set; }
     }
 }

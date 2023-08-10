@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DA
         {
             var months = Enumerable.Range(1, 11);
             var query = from month in months
-                        join hd in db.HoaDon.Where(hd => hd.NgayThue.Value.Year == nam)
+                        join hd in db.HoaDons.Where(hd => hd.NgayThue.Value.Year == nam)
                         on month equals hd.NgayThue.Value.Month into g
                         select new DTO_DoanhThuTheoThang
                         {
@@ -34,7 +34,7 @@ namespace QuanLyKhachSan.DA
             int daysInMonth = DateTime.DaysInMonth(nam, thang);
             var days = Enumerable.Range(1, daysInMonth);
             var query = from day in days
-                        join hd in db.HoaDon.Where(hd => hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang)
+                        join hd in db.HoaDons.Where(hd => hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang)
                         on day equals hd.NgayThue.Value.Day into g
                         select new DTO_DoanhThuTheoNgay
                         {

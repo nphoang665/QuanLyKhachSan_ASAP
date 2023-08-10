@@ -17,8 +17,8 @@ namespace QuanLyKhachSan.DA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanSu()
         {
-            this.TaiKhoan = new HashSet<TaiKhoan>();
-            this.VatTu = new HashSet<VatTu>();
+            this.TaiKhoans = new HashSet<TaiKhoan>();
+            this.VatTus = new HashSet<VatTu>();
         }
     
         public string MaNhanSu { get; set; }
@@ -33,8 +33,8 @@ namespace QuanLyKhachSan.DA
         public byte[] AnhNhanVien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TaiKhoan> TaiKhoan { get; set; }
+        public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VatTu> VatTu { get; set; }
+        public virtual ICollection<VatTu> VatTus { get; set; }
     }
 }

@@ -18,6 +18,8 @@ namespace QuanLyKhachSan.DA
         public string MatKhau { get; set; }
         public string PhanQuyen { get; set; }
         public string MaNhanSu { get; set; }
+        public string TinhTrang { get; set; }
+        public string LyDo { get; set; }
     
         public virtual LuuMatKhau LuuMatKhau { get; set; }
         public virtual NhanSu NhanSu { get; set; }

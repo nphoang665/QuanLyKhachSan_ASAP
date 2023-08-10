@@ -63,8 +63,8 @@ namespace QuanLyKhachSan.BUS
         {
             using (var db = new QuanLyKhachSanEntities())
             {
-                var danhSachKhachThue = from tp in db.ThuePhong
-                                        join kh in db.ThongTinKhachHang on tp.MaKhachHang equals kh.MaKhachHang
+                var danhSachKhachThue = from tp in db.ThuePhongs
+                                        join kh in db.ThongTinKhachHangs on tp.MaKhachHang equals kh.MaKhachHang
                                         select new
                                         {
                                             MaKhachHang = kh.MaKhachHang,
