@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyKhachSan.DA
 {
@@ -29,20 +30,21 @@ namespace QuanLyKhachSan.DA
 
         public List<DTO_DoanhThuTheoNgay> ThongKeDoanhThuTheoNgay(int nam, int thang)
         {
-            //int daysInMonth = DateTime.DaysInMonth(nam, thang);
-            //var days = Enumerable.Range(1, daysInMonth);
-            //var query = from day in days
-            //            join hd in db.HoaDons.Where(hd => hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang)
-            //            on day equals hd.NgayThue.Value.Day into g
-            //            from hd in g.DefaultIfEmpty()
-            //            group hd by day into g
-            //            select new DTO_DoanhThuTheoNgay
-            //            {
-            //                ngay = g.Key,
-            //                doanhthu = g.Sum(hd => hd.TongTienThanhToan)
-            //            };
-            //return query.ToList();
-            return null;
+
+            int daysInMonth = DateTime.DaysInMonth(nam, thang);
+            var days = Enumerable.Range(1, daysInMonth);
+            var query = from day in days
+                        join hd in db.HoaDon.Where(hd => hd.NgayThue.Value.Year == nam && hd.NgayThue.Value.Month == thang)
+                        on day equals hd.NgayThue.Value.Day into g
+                        select new DTO_DoanhThuTheoNgay
+                        {
+                            ngay = day,
+                            doanhthu = g.Sum(hd => hd.TongTienThanhToan)
+                        };
+            return query.ToList();
+
+
+
         }
 
 
