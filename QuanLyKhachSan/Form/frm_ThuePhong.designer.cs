@@ -271,6 +271,7 @@
             // 
             // cbo_MaKhachHang
             // 
+            this.cbo_MaKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_MaKhachHang.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbo_MaKhachHang.FormattingEnabled = true;
             this.cbo_MaKhachHang.Location = new System.Drawing.Point(114, 48);

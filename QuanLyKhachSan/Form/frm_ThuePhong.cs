@@ -125,29 +125,49 @@ namespace QuanLyKhachSan
 
         private void btn_ThuePhong_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem có chọn khách hàng và phòng trống chưa
-            if (cbo_MaKhachHang.SelectedItem == null || lsv_phongchon.Items.Count == 0)
+
+
+            // Kiểm tra xem đã chọn khách hàng
+            if (cbo_MaKhachHang.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn khách hàng và phòng trống trước khi thuê.");
+                MessageBox.Show("Vui lòng chọn khách hàng trước khi thuê.", "Thông báo");
                 return;
             }
 
-            // Lấy thông tin khách hàng và phòng trống
-            string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
-            string maPhong = lsv_phongchon.Items[0].Text.Replace("Mã phòng: ", "");
-
-            // Lấy ngày thuê phòng từ DateTimePicker
-            DateTime ngayThue = dtp_NgayThue.Value;
-            if (ngayThue.Date > DateTime.Now.Date)
+            // Kiểm tra xem đã chọn phòng trống từ danh sách dgv_PhongTrong
+            if (dgv_PhongTrong.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Ngày thuê không được lớn hơn ngày hiện tại.");
+                MessageBox.Show("Vui lòng chọn ít nhất một phòng trống từ danh sách.", "Thông báo");
+                return;
+            }
+
+            // Lấy thông tin khách hàng
+            string maKhachHang = cbo_MaKhachHang.SelectedItem.ToString();
+
+            // Lấy thông tin phòng trống từ DataGridView
+            DataGridViewRow selectedRow = dgv_PhongTrong.SelectedRows[0];
+            string maPhong = selectedRow.Cells["MaPhong"].Value.ToString();
+
+            // Kiểm tra ngày thuê không lớn hơn ngày hiện tại
+            DateTime ngayThue = dtp_NgayThue.Value.Date;
+            if (ngayThue > DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày thuê không được lớn hơn ngày hiện tại.", "Thông báo");
+                return;
+            }
+
+            // Kiểm tra đã chọn phòng từ dgv_PhongTrong và đã hiển thị trong lsv_phongchon
+            bool isPhongChon = lsv_phongchon.Items.Cast<ListViewItem>().Any(item => item.Text.Equals("Mã phòng: " + maPhong));
+            if (!isPhongChon)
+            {
+                MessageBox.Show("Vui lòng chọn phòng từ danh sách trước khi thuê.", "Thông báo");
                 return;
             }
 
             // Thêm thông tin thuê phòng vào cơ sở dữ liệu
             try
             {
-                // Tạo mã thuê phòng bằng cách lấy số lượng dòng trong bảng ThuePhong + 1
+                // Thêm thông tin thuê phòng
                 int nextId = bus.LayThuePhongCount() + 1;
                 string maThuePhong = "TP" + nextId.ToString().PadLeft(4, '0');
 
@@ -157,7 +177,7 @@ namespace QuanLyKhachSan
                 bus.CapNhatTrangThaiPhong(maPhong, "Đã thuê");
 
                 // Hiển thị thông báo thành công
-                MessageBox.Show("Thuê phòng thành công.");
+                MessageBox.Show("Thuê phòng thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Cập nhật lại danh sách phòng trống sau khi đã thuê phòng
                 var phongs = bus.LayThongTinPhongTrong();
@@ -170,7 +190,7 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi thuê phòng: " + ex.Message);
+                MessageBox.Show("Lỗi khi thuê phòng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void TenDGV()
