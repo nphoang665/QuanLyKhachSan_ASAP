@@ -173,7 +173,7 @@ namespace QuanLyKhachSan.DA
             var data = db.ThongTinKhachHang.Any(ns => ns.MaKhachHang == makh);
             if (data)
             {
-                MessageBox.Show("Lỗi.Trùng mã khách hàng");
+                MessageBox.Show("Trùng mã khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

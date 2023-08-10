@@ -204,7 +204,7 @@ namespace QuanLyKhachSan.DA
             var nhansu=db.NhanSu.Any(ns => ns.MaNhanSu == manhansu);
             if (nhansu)
             {
-                MessageBox.Show("Lỗi.Trùng mã nhân sự");
+                MessageBox.Show("Trùng mã nhân sự!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

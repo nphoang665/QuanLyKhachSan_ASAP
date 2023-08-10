@@ -81,7 +81,8 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    
             }
 
         }
@@ -109,19 +110,26 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
             }
 
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa nhân sự này không?", "Xoát", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
-                bus.XoaNhanSu(txt_manv_sua.Text);
-            bus.LoadDsNv(dgv_nhansu);
-            bus.LoadDsNv(dgv2_NhanSu);
-            bus.LoadDsNv(dgv1_NhanSu);
+            try {
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa nhân sự này không?", "Xoát", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                    bus.XoaNhanSu(txt_manv_sua.Text);
+                bus.LoadDsNv(dgv_nhansu);
+                bus.LoadDsNv(dgv2_NhanSu);
+                bus.LoadDsNv(dgv1_NhanSu);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void txt_timten_TextChanged(object sender, EventArgs e)
@@ -132,27 +140,31 @@ namespace QuanLyKhachSan
 
         private void dgv2_NhanSu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try {
+                txt_manv_sua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_TenNhanVien2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string gioitinh = dgv2_NhanSu.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txt_chucvu2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string ngaysinh2 = dgv2_NhanSu.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string ngayvaolam2 = dgv2_NhanSu.Rows[e.RowIndex].Cells[5].Value.ToString();
+                dtp_NgaySinh2.Value = DateTime.Parse(ngaysinh2);
+                dtp_NgayVaoLam2.Value = DateTime.Parse(ngayvaolam2);
+                txt_DiaChi2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txt_SoDienThoai2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[7].Value.ToString();
+                if (gioitinh == "Nam")
+                {
+                    rda_Nam2.Checked = true;
+                }
+                else
+                {
+                    rda_Nu2.Checked = true;
+                }
+                bus.layanhNV(txt_manv_sua.Text, pic_anh);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-           
-            txt_manv_sua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txt_TenNhanVien2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string gioitinh = dgv2_NhanSu.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txt_chucvu2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[3].Value.ToString();
-            string ngaysinh2= dgv2_NhanSu.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string ngayvaolam2 = dgv2_NhanSu.Rows[e.RowIndex].Cells[5].Value.ToString();
-            dtp_NgaySinh2.Value = DateTime.Parse(ngaysinh2);
-            dtp_NgayVaoLam2.Value=DateTime.Parse(ngayvaolam2);
-            txt_DiaChi2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txt_SoDienThoai2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[7].Value.ToString();
-            if (gioitinh == "Nam")
-            {
-                rda_Nam2.Checked = true;
-            }
-            else
-            {
-                rda_Nu2.Checked = true;
-            }
-            bus.layanhNV(txt_manv_sua.Text, pic_anh);
         }
 
         private void tabPage_TimNhanVien_Click(object sender, EventArgs e)
