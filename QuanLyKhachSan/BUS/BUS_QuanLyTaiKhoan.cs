@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,6 +58,33 @@ namespace QuanLyKhachSan.BUS
         {
             return DA_.KiemTraMaNhanSu(maNhanSu);
         }
+        public DataTable LoadDsTkData()
+        {
+            return DA_.LayDsTkData();
+        }
+        public void CapNhatDsTk(DataTable dataTable)
+        {
+            DA_.CapNhatDsTk(dataTable);
+        }
+        public void LoadDsTk_Data(DataGridView dgv)
+        {
+            dgv.DataSource = DA_.LayDsTk_Data();
+        }
 
+        public void ThemTaiKhoan_Data(string tenDangNhap, string matKhau, string phanQuyen, string maNhanSu)
+        {
+            TaiKhoan taiKhoan = new TaiKhoan
+            {
+                TenDangNhap = tenDangNhap,
+                MatKhau = matKhau,
+                PhanQuyen = phanQuyen,
+                MaNhanSu = maNhanSu
+            };
+            DA_.ThemTaiKhoan_Data(taiKhoan);
+        }
+        public string LayPhanQuyen (string mns)
+        {
+            return DA_.LayPhanQuyen(mns);
+        }
     }
 }

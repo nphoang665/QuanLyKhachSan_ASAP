@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.DA
         }
         public dynamic LayPhong()
         {
-            var ds = db.Phongs.Select(s =>
+            var ds = db.Phong.Select(s =>
             new
             {
                 s.MaPhong,
@@ -36,13 +36,13 @@ namespace QuanLyKhachSan.DA
                 TinhTrang = tinhTrang,
                 DonGia = donGia
             };
-            db.Phongs.Add(phong);
+            db.Phong.Add(phong);
             db.SaveChanges();
         }
 
         public void SuaPhong(string maPhong, string loaiPhong, string tinhTrang, float donGia)
         {
-            var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
+            var phong = db.Phong.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
                
@@ -55,20 +55,20 @@ namespace QuanLyKhachSan.DA
 
         public void XoaPhong(string maPhong)
         {
-            var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
+            var phong = db.Phong.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
-                db.Phongs.Remove(phong);
+                db.Phong.Remove(phong);
                 db.SaveChanges();
             }
         }
         public Phong LayPhong(string id)
         {
-            return db.Phongs.FirstOrDefault(t => t.MaPhong == id);
+            return db.Phong.FirstOrDefault(t => t.MaPhong == id);
         }
         public IList TimPhongBangMaPhong(string timkiem)
         {
-            var qr = db.Phongs
+            var qr = db.Phong
                 .Where(s => s.MaPhong.Contains(timkiem))
                 .Select(select => new
                 {
@@ -81,7 +81,7 @@ namespace QuanLyKhachSan.DA
         }
         public IList TimPhongBangTinhTrang(string tinhTrang)
         {
-            var qr = db.Phongs
+            var qr = db.Phong
                 .Where(s => s.TinhTrang.Contains(tinhTrang)) 
                 .Select(select => new
                 {
@@ -95,7 +95,7 @@ namespace QuanLyKhachSan.DA
 
         public IList TimPhongBangLoaiPhong(string loaiPhong)
         {
-            var qr = db.Phongs
+            var qr = db.Phong
                 .Where(s => s.LoaiPhong.Contains(loaiPhong))
                 .Select(select => new
                 {
@@ -109,11 +109,11 @@ namespace QuanLyKhachSan.DA
 
         public bool KiemTraPhongDaCoKhachThue(string maPhong)
         {
-            return db.ThuePhongs.Any(d => d.MaPhong == maPhong);
+            return db.ThuePhong.Any(d => d.MaPhong == maPhong);
         }
         public void CapNhatTrangThaiPhong(string maPhong, string tinhTrang)
         {
-            var phong = db.Phongs.FirstOrDefault(p => p.MaPhong == maPhong);
+            var phong = db.Phong.FirstOrDefault(p => p.MaPhong == maPhong);
             if (phong != null)
             {
                 phong.TinhTrang = tinhTrang;

@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.DA
         }
         public NhanSu KiemTraThongTinNhanSu(string cccd)
         {
-            return db.NhanSus.FirstOrDefault(s => s.CCCD == cccd);
+            return db.NhanSu.FirstOrDefault(s => s.CCCD == cccd);
         }
         public void themaccount(string tk,string mk, string pq, string mns)
         {
@@ -27,13 +27,13 @@ namespace QuanLyKhachSan.DA
                 PhanQuyen = pq,
                 MaNhanSu = mns
             };
-            db.TaiKhoans.Add(taikhoan);
+            db.TaiKhoan.Add(taikhoan);
             db.SaveChanges();
         }
         public bool KiemTraTaiKhoan(string tk)
         {
             bool kiemtra=false;
-            var s=  db.TaiKhoans.FirstOrDefault(kt => kt.TenDangNhap == tk);
+            var s=  db.TaiKhoan.FirstOrDefault(kt => kt.TenDangNhap == tk);
             if (s!= null)
             {
                 kiemtra = true;

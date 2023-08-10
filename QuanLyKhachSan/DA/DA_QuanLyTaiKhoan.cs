@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace QuanLyKhachSan.DA
         }
         public dynamic LayDsTk()
         {
-            var ds = db.TaiKhoans.Select(s =>
+            var ds = db.TaiKhoan.Select(s =>
             new
             {
            
@@ -41,13 +42,13 @@ namespace QuanLyKhachSan.DA
                 MaNhanSu = manhansu
                
             };
-            db.TaiKhoans.Add(taiKhoan);
+            db.TaiKhoan.Add(taiKhoan);
             db.SaveChanges();
         }
 
         public void SuaTaiKhoan( string tenDangNhap, string matKhau, string phanQuyen,string manhansu)
         {
-            var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
+            var taiKhoan = db.TaiKhoan.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
             if (taiKhoan != null)
             {
                 taiKhoan.TenDangNhap = tenDangNhap;
@@ -60,17 +61,17 @@ namespace QuanLyKhachSan.DA
 
         public void XoaTaiKhoan(string tendangnhap)
         {
-            var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tendangnhap);
+            var taiKhoan = db.TaiKhoan.FirstOrDefault(t => t.TenDangNhap == tendangnhap);
             if (taiKhoan != null)
             {
-                db.TaiKhoans.Remove(taiKhoan);
+                db.TaiKhoan.Remove(taiKhoan);
                 db.SaveChanges();
             }
         }
 
         public IList TimTaiKhoan(string timKiem)
         {
-            var qr = db.TaiKhoans
+            var qr = db.TaiKhoan
                 .Where(t => t.TenDangNhap.StartsWith(timKiem))
                 .Select(t => new
                 {
@@ -86,7 +87,7 @@ namespace QuanLyKhachSan.DA
         public bool KiemTraPhanQuyen(string MaNhanSu,string PhanQuyen)
         {
             bool kiemTra = false;
-            var PQ = db.NhanSus.FirstOrDefault(s => s.MaNhanSu == MaNhanSu);
+            var PQ = db.NhanSu.FirstOrDefault(s => s.MaNhanSu == MaNhanSu);
             if( PhanQuyen==PQ.ChucVu)
             {
                 kiemTra = true;
@@ -104,21 +105,130 @@ namespace QuanLyKhachSan.DA
 
         public TaiKhoan LayTaiKhoan(string tendangnhap)
         {
-            return db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tendangnhap);
+            return db.TaiKhoan.FirstOrDefault(t => t.TenDangNhap == tendangnhap);
         }
         public bool KiemTraTenDangNhap(string tenDangNhap)
         {
             // Query the database to see if a record with the given username already exists
-            var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
+            var taiKhoan = db.TaiKhoan.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
             return taiKhoan != null;
         }
 
         public bool KiemTraMaNhanSu(string maNhanSu)
         {
             // Query the employee table to see if a record with the given employee code already exists
-            var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
+            var nhanSu = db.NhanSu.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
             return nhanSu != null;
         }
+        public DataTable LayDsTkData()
+        {
+            using (var context = new QuanLyKhachSanEntities())
+            {
+                var data = from tk in context.TaiKhoan
+                           select new
+                           {
+                               tk.TenDangNhap,
+                               tk.MatKhau,
+                               tk.PhanQuyen,
+                               tk.MaNhanSu
+                           };
+
+                // Convert the query result to a DataTable
+                var dataTable = new DataTable();
+                dataTable.Columns.Add("TenDangNhap");
+                dataTable.Columns.Add("MatKhau");
+dataTable.Columns.Add("MaNhanSu");
+                dataTable.Columns.Add("PhanQuyen");
+                
+
+                foreach (var item in data)
+                {
+                    var row = dataTable.NewRow();
+                    row["TenDangNhap"] = item.TenDangNhap;
+                    row["MatKhau"] = item.MatKhau;
+row["MaNhanSu"] = item.MaNhanSu;
+                    row["PhanQuyen"] = item.PhanQuyen;
+                    
+                    dataTable.Rows.Add(row);
+                }
+
+                return dataTable;
+            }
+        }
+        public void CapNhatDsTk(DataTable dataTable)
+        {
+            using (var context = new QuanLyKhachSanEntities())
+            {
+                // Loop through the rows of the DataTable
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // Get the values from the row
+                    string tenDangNhap = row["TenDangNhap"].ToString();
+                    string matKhau = row["MatKhau"].ToString();
+                    string maNhanSu = row["MaNhanSu"].ToString();
+
+                    // Get the employee record from the database
+                    var nhanSu = context.NhanSu.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
+                    if (nhanSu == null)
+                    {
+                        MessageBox.Show("Mã nhân sự không tồn tại: " + maNhanSu);
+                        return;
+                    }
+
+                    // Get the role from the employee record
+                    string phanQuyen = nhanSu.ChucVu;
+
+                    // Check if the user account already exists in the database
+                    var taiKhoan = context.TaiKhoan.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
+                    if (taiKhoan != null)
+                    {
+                        // Update the existing user account
+                        taiKhoan.MatKhau = matKhau;
+                        taiKhoan.PhanQuyen = phanQuyen;
+                        taiKhoan.MaNhanSu = maNhanSu;
+                    }
+                    else
+                    {
+                        // Add a new user account
+                        taiKhoan = new TaiKhoan
+                        {
+                            TenDangNhap = tenDangNhap,
+                            MatKhau = matKhau,
+                            PhanQuyen = phanQuyen,
+                            MaNhanSu = maNhanSu
+                        };
+                        context.TaiKhoan.Add(taiKhoan);
+                    }
+                }
+
+                // Save changes to the database
+                context.SaveChanges();
+                MessageBox.Show("Lưu thông tin thành công");
+            }
+        }
+        public List<TaiKhoan> LayDsTk_Data()
+        {
+            return db.TaiKhoan.ToList();
+        }
+
+        public void ThemTaiKhoan_Data(TaiKhoan taiKhoan)
+        {
+            db.TaiKhoan.Add(taiKhoan);
+            db.SaveChanges();
+        }
+        public string LayPhanQuyen(string maNhanSu)
+        {
+            // Get the NhanSu record from the database
+            var nhanSu = db.NhanSu.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
+            if (nhanSu == null)
+                return null;
+
+            // Get the PhanQuyen value from the NhanSu record
+            string phanQuyen = nhanSu.ChucVu;
+
+            return phanQuyen;
+        }
+
 
     }
 }

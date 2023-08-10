@@ -16,14 +16,14 @@ namespace QuanLyKhachSan.DA
         }
         public string LayTenTk(string tk)
         {
-           var qr = db.TaiKhoans.FirstOrDefault(x => x.TenDangNhap ==tk);
-            var qrnhasu = db.NhanSus.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
+           var qr = db.TaiKhoan.FirstOrDefault(x => x.TenDangNhap ==tk);
+            var qrnhasu = db.NhanSu.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
             return qrnhasu.TenNhanSu;
         }
         public string LayChucVu(string tk)
         {
-            var qr = db.TaiKhoans.FirstOrDefault(x => x.TenDangNhap == tk);
-            var qrnhasu = db.NhanSus.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
+            var qr = db.TaiKhoan.FirstOrDefault(x => x.TenDangNhap == tk);
+            var qrnhasu = db.NhanSu.FirstOrDefault(y => y.MaNhanSu == qr.MaNhanSu);
             return qrnhasu.ChucVu;
         }
 

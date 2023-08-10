@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.DA
         {
             string tks="";
             bool frag = false;
-            var qr = db.TaiKhoans.Where(s => s.TenDangNhap == tk && s.MatKhau == mk);
+            var qr = db.TaiKhoan.Where(s => s.TenDangNhap == tk && s.MatKhau == mk);
             if (qr.Count() > 0)
             {
                 frag = true;
@@ -37,14 +37,14 @@ namespace QuanLyKhachSan.DA
                     MatKhau = password
                 };
 
-                db.LuuMatKhaus.Add(luuMatKhau);
+                db.LuuMatKhau.Add(luuMatKhau);
                 db.SaveChanges();
             }
         }
 
         public LuuMatKhau da_LayThongTinDaLuu()
         {
-            var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
+            var savedLoginInfo = db.LuuMatKhau.FirstOrDefault();
 
             return savedLoginInfo;
         }
@@ -52,11 +52,11 @@ namespace QuanLyKhachSan.DA
         {
             if (DangNhap(username, password))
             {
-                var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
+                var savedLoginInfo = db.LuuMatKhau.FirstOrDefault();
 
                 if (savedLoginInfo != null)
                 {
-                    db.LuuMatKhaus.Remove(savedLoginInfo);
+                    db.LuuMatKhau.Remove(savedLoginInfo);
                 }
 
                 var newSavedLoginInfo = new LuuMatKhau
@@ -64,7 +64,7 @@ namespace QuanLyKhachSan.DA
                     TaiKhoan = username,
                     MatKhau = password
                 };
-                db.LuuMatKhaus.Add(newSavedLoginInfo);
+                db.LuuMatKhau.Add(newSavedLoginInfo);
                 db.SaveChanges();
             }
         }
@@ -75,7 +75,7 @@ namespace QuanLyKhachSan.DA
         }
         public bool kiemtraluumk()
         {
-            var qr = db.LuuMatKhaus.Select(s => new { s.TaiKhoan });
+            var qr = db.LuuMatKhau.Select(s => new { s.TaiKhoan });
             return qr.Any();
         }
 
