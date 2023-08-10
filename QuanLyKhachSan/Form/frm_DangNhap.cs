@@ -112,7 +112,6 @@ namespace QuanLyKhachSan
                         bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
                         if (dangnhap)
                         {
-                            // Change border color to green
 
 
                             this.Hide();
@@ -122,7 +121,6 @@ namespace QuanLyKhachSan
                         }
                         else
                         {
-                            // Change border color to red
 
 
                             lbl_chk_TenDangNhap.Text = "";
@@ -136,7 +134,7 @@ namespace QuanLyKhachSan
                     }
                     else
                     {
-                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi thêm giây lát");
+                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin thêm giây lát");
                     }
 
                 }

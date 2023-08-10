@@ -33,11 +33,9 @@
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pic_Show = new System.Windows.Forms.PictureBox();
-            this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_DangKy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_TenDangNhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,13 +44,15 @@
             this.lbl_tk_checkerr = new System.Windows.Forms.Label();
             this.lbl_cccd_chkerr = new System.Windows.Forms.Label();
             this.lbl_DangNhap = new System.Windows.Forms.Label();
-            this.txt_cccd = new System.Windows.Forms.TextBox();
             this.lbl_cccd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_notice_successfull = new System.Windows.Forms.Label();
+            this.txt_MatKhau = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_cccd = new CustormTextbox.RJConTrol.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
@@ -68,25 +68,15 @@
             // pic_Show
             // 
             this.pic_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_Show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Show.Image = global::QuanLyKhachSan.Properties.Resources.icons8_eye_60;
-            this.pic_Show.Location = new System.Drawing.Point(358, 222);
+            this.pic_Show.Location = new System.Drawing.Point(390, 212);
             this.pic_Show.Name = "pic_Show";
-            this.pic_Show.Size = new System.Drawing.Size(32, 20);
+            this.pic_Show.Size = new System.Drawing.Size(32, 31);
             this.pic_Show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Show.TabIndex = 4;
             this.pic_Show.TabStop = false;
-            // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MatKhau.Location = new System.Drawing.Point(94, 222);
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Size = new System.Drawing.Size(265, 20);
-            this.txt_MatKhau.TabIndex = 2;
-            this.txt_MatKhau.UseSystemPasswordChar = true;
+            this.pic_Show.Click += new System.EventHandler(this.pic_Show_Click);
             // 
             // panel2
             // 
@@ -125,15 +115,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật khẩu:";
             // 
-            // txt_TenDangNhap
-            // 
-            this.txt_TenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_TenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(94, 150);
-            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
-            this.txt_TenDangNhap.Size = new System.Drawing.Size(296, 20);
-            this.txt_TenDangNhap.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -148,15 +129,15 @@
             // pic_Hide
             // 
             this.pic_Hide.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_Hide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Hide.Image = global::QuanLyKhachSan.Properties.Resources._3844443_disable_eye_inactive_see_show_view_watch_110296;
-            this.pic_Hide.Location = new System.Drawing.Point(358, 222);
+            this.pic_Hide.Location = new System.Drawing.Point(390, 212);
             this.pic_Hide.Name = "pic_Hide";
-            this.pic_Hide.Size = new System.Drawing.Size(32, 20);
+            this.pic_Hide.Size = new System.Drawing.Size(32, 31);
             this.pic_Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Hide.TabIndex = 4;
             this.pic_Hide.TabStop = false;
+            this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
             // label1
             // 
@@ -170,17 +151,17 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.txt_MatKhau);
+            this.groupBox1.Controls.Add(this.txt_TenDangNhap);
+            this.groupBox1.Controls.Add(this.txt_cccd);
             this.groupBox1.Controls.Add(this.lbl_mk_chkerr);
             this.groupBox1.Controls.Add(this.lbl_tk_checkerr);
             this.groupBox1.Controls.Add(this.lbl_cccd_chkerr);
             this.groupBox1.Controls.Add(this.lbl_DangNhap);
-            this.groupBox1.Controls.Add(this.txt_cccd);
             this.groupBox1.Controls.Add(this.lbl_cccd);
             this.groupBox1.Controls.Add(this.pic_Show);
-            this.groupBox1.Controls.Add(this.txt_MatKhau);
             this.groupBox1.Controls.Add(this.btn_DangKy);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txt_TenDangNhap);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pic_Hide);
             this.groupBox1.Location = new System.Drawing.Point(44, 113);
@@ -239,15 +220,6 @@
             this.lbl_DangNhap.TabIndex = 7;
             this.lbl_DangNhap.Text = "Đăng nhập";
             this.lbl_DangNhap.Click += new System.EventHandler(this.lbl_DangNhap_Click);
-            // 
-            // txt_cccd
-            // 
-            this.txt_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cccd.Location = new System.Drawing.Point(94, 67);
-            this.txt_cccd.Name = "txt_cccd";
-            this.txt_cccd.Size = new System.Drawing.Size(296, 20);
-            this.txt_cccd.TabIndex = 6;
             // 
             // lbl_cccd
             // 
@@ -317,6 +289,54 @@
             this.lbl_notice_successfull.Text = "Đăng ký thành công";
             this.lbl_notice_successfull.Visible = false;
             // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_MatKhau.BorderSize = 2;
+            this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
+            this.txt_MatKhau.Location = new System.Drawing.Point(94, 212);
+            this.txt_MatKhau.Multiline = false;
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_MatKhau.PasswordChar = false;
+            this.txt_MatKhau.Size = new System.Drawing.Size(296, 31);
+            this.txt_MatKhau.TabIndex = 13;
+            this.txt_MatKhau.Texts = "";
+            this.txt_MatKhau.UnderLineStyle = true;
+            // 
+            // txt_TenDangNhap
+            // 
+            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenDangNhap.BorderSize = 2;
+            this.txt_TenDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(96, 139);
+            this.txt_TenDangNhap.Multiline = false;
+            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
+            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_TenDangNhap.PasswordChar = false;
+            this.txt_TenDangNhap.Size = new System.Drawing.Size(294, 31);
+            this.txt_TenDangNhap.TabIndex = 12;
+            this.txt_TenDangNhap.Texts = "";
+            this.txt_TenDangNhap.UnderLineStyle = true;
+            // 
+            // txt_cccd
+            // 
+            this.txt_cccd.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_cccd.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_cccd.BorderSize = 2;
+            this.txt_cccd.ForeColor = System.Drawing.Color.Black;
+            this.txt_cccd.Location = new System.Drawing.Point(96, 57);
+            this.txt_cccd.Multiline = false;
+            this.txt_cccd.Name = "txt_cccd";
+            this.txt_cccd.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_cccd.PasswordChar = false;
+            this.txt_cccd.Size = new System.Drawing.Size(294, 31);
+            this.txt_cccd.TabIndex = 11;
+            this.txt_cccd.Texts = "";
+            this.txt_cccd.UnderLineStyle = true;
+            // 
             // frm_DangKyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,10 +375,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pic_Show;
-        private System.Windows.Forms.TextBox txt_MatKhau;
         private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_TenDangNhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pic_Hide;
         private System.Windows.Forms.Panel panel1;
@@ -367,12 +385,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txt_cccd;
         private System.Windows.Forms.Label lbl_cccd;
         private System.Windows.Forms.Label lbl_DangNhap;
         private System.Windows.Forms.Label lbl_tk_checkerr;
         private System.Windows.Forms.Label lbl_cccd_chkerr;
         private System.Windows.Forms.Label lbl_mk_chkerr;
         private System.Windows.Forms.Label lbl_notice_successfull;
+        private CustormTextbox.RJConTrol.RJTextBox txt_cccd;
+        private CustormTextbox.RJConTrol.RJTextBox txt_TenDangNhap;
+        private CustormTextbox.RJConTrol.RJTextBox txt_MatKhau;
     }
 }

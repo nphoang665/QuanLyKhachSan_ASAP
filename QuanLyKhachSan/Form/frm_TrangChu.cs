@@ -62,13 +62,17 @@ namespace QuanLyKhachSan
             {
                 // Khởi tạo form frm_DichVu
                 // Lấy tham chiếu đến tabControl_DichVu_ADM trong frm_DichVu
-             
 
+                xácThựcTàiKhoảnToolStripMenuItem.Enabled = false;
+                btn_Phong.Visible = false;
+                btn_NhanVien.Visible = false;
+                btn_TaiKhoan.Visible = false;
+                quảnLýToolStripMenuItem.Enabled=false;
 
             }
             else if (ChucVu == "Quản lý")
             {
-                //btn_NhanVien.Enabled = true;
+                
             }
         }
 

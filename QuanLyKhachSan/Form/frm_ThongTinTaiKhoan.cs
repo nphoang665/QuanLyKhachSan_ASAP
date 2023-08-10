@@ -38,9 +38,7 @@ namespace QuanLyKhachSan
             
             var thongtintaikhoan = bus.LayttTaiKhoan(_tk);
             txt_TenDangNhap.Texts = thongtintaikhoan.TenDangNhap;
-            //lấy mã nhân viên
             Manhansu = thongtintaikhoan.MaNhanSu;
-            //điền thông tin nhân sự
             var thongtinnhansu = bus.LayTTNhanSu(Manhansu);
             txt_cmnd.Texts = thongtinnhansu.CCCD;
             txt_TenNhanVien.Texts = thongtinnhansu.TenNhanSu;

@@ -52,6 +52,7 @@
             this.menu_Top = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xácThựcTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +73,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_Main = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.xácThựcTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_left.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -89,11 +89,11 @@
             // pnl_left
             // 
             this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.pnl_left.Controls.Add(this.btn_Phong);
             this.pnl_left.Controls.Add(this.btn_DangKyDichVu);
             this.pnl_left.Controls.Add(this.btn_TaiKhoan);
             this.pnl_left.Controls.Add(this.btn_ThuePhong);
             this.pnl_left.Controls.Add(this.panel1);
-            this.pnl_left.Controls.Add(this.btn_Phong);
             this.pnl_left.Controls.Add(this.btn_HoaDon);
             this.pnl_left.Controls.Add(this.pnl_Slide);
             this.pnl_left.Controls.Add(this.btn_NhanVien);
@@ -116,7 +116,7 @@
             this.btn_DangKyDichVu.ForeColor = System.Drawing.Color.White;
             this.btn_DangKyDichVu.Image = global::QuanLyKhachSan.Properties.Resources.icons8_service_35;
             this.btn_DangKyDichVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DangKyDichVu.Location = new System.Drawing.Point(12, 417);
+            this.btn_DangKyDichVu.Location = new System.Drawing.Point(12, 359);
             this.btn_DangKyDichVu.Name = "btn_DangKyDichVu";
             this.btn_DangKyDichVu.Size = new System.Drawing.Size(239, 52);
             this.btn_DangKyDichVu.TabIndex = 12;
@@ -134,7 +134,7 @@
             this.btn_TaiKhoan.ForeColor = System.Drawing.Color.White;
             this.btn_TaiKhoan.Image = global::QuanLyKhachSan.Properties.Resources.icons8_account_35;
             this.btn_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(12, 591);
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(15, 591);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             this.btn_TaiKhoan.Size = new System.Drawing.Size(239, 52);
             this.btn_TaiKhoan.TabIndex = 7;
@@ -152,7 +152,7 @@
             this.btn_ThuePhong.ForeColor = System.Drawing.Color.White;
             this.btn_ThuePhong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bedroom_35;
             this.btn_ThuePhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThuePhong.Location = new System.Drawing.Point(12, 359);
+            this.btn_ThuePhong.Location = new System.Drawing.Point(15, 301);
             this.btn_ThuePhong.Name = "btn_ThuePhong";
             this.btn_ThuePhong.Size = new System.Drawing.Size(236, 52);
             this.btn_ThuePhong.TabIndex = 11;
@@ -190,7 +190,7 @@
             this.btn_Phong.ForeColor = System.Drawing.Color.White;
             this.btn_Phong.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bedroom_35;
             this.btn_Phong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Phong.Location = new System.Drawing.Point(12, 243);
+            this.btn_Phong.Location = new System.Drawing.Point(12, 475);
             this.btn_Phong.Name = "btn_Phong";
             this.btn_Phong.Size = new System.Drawing.Size(239, 52);
             this.btn_Phong.TabIndex = 8;
@@ -208,7 +208,7 @@
             this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
             this.btn_HoaDon.Image = global::QuanLyKhachSan.Properties.Resources.icons8_bill_35;
             this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDon.Location = new System.Drawing.Point(12, 475);
+            this.btn_HoaDon.Location = new System.Drawing.Point(15, 417);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Size = new System.Drawing.Size(239, 52);
             this.btn_HoaDon.TabIndex = 6;
@@ -234,7 +234,7 @@
             this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_NhanVien.Image = global::QuanLyKhachSan.Properties.Resources.icons8_staff_35;
             this.btn_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NhanVien.Location = new System.Drawing.Point(12, 533);
+            this.btn_NhanVien.Location = new System.Drawing.Point(15, 533);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(239, 52);
             this.btn_NhanVien.TabIndex = 5;
@@ -252,7 +252,7 @@
             this.btn_KhachHang.ForeColor = System.Drawing.Color.White;
             this.btn_KhachHang.Image = global::QuanLyKhachSan.Properties.Resources.icons8_client_35;
             this.btn_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_KhachHang.Location = new System.Drawing.Point(12, 301);
+            this.btn_KhachHang.Location = new System.Drawing.Point(12, 243);
             this.btn_KhachHang.Name = "btn_KhachHang";
             this.btn_KhachHang.Size = new System.Drawing.Size(239, 52);
             this.btn_KhachHang.TabIndex = 4;
@@ -388,6 +388,13 @@
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
+            // xácThựcTàiKhoảnToolStripMenuItem
+            // 
+            this.xácThựcTàiKhoảnToolStripMenuItem.Name = "xácThựcTàiKhoảnToolStripMenuItem";
+            this.xácThựcTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
+            this.xácThựcTàiKhoảnToolStripMenuItem.Text = "Xác thực tài khoản";
+            this.xácThựcTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.xácThựcTàiKhoảnToolStripMenuItem_Click);
+            // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
@@ -427,35 +434,35 @@
             // phòngToolStripMenuItem
             // 
             this.phòngToolStripMenuItem.Name = "phòngToolStripMenuItem";
-            this.phòngToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.phòngToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.phòngToolStripMenuItem.Text = "Phòng";
             this.phòngToolStripMenuItem.Click += new System.EventHandler(this.phòngToolStripMenuItem_Click);
             // 
             // vậtTưToolStripMenuItem
             // 
             this.vậtTưToolStripMenuItem.Name = "vậtTưToolStripMenuItem";
-            this.vậtTưToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.vậtTưToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.vậtTưToolStripMenuItem.Text = "Vật tư";
             this.vậtTưToolStripMenuItem.Click += new System.EventHandler(this.vậtTưToolStripMenuItem_Click);
             // 
             // dịchVụToolStripMenuItem
             // 
             this.dịchVụToolStripMenuItem.Name = "dịchVụToolStripMenuItem";
-            this.dịchVụToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.dịchVụToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.dịchVụToolStripMenuItem.Text = "Dịch vụ";
             this.dịchVụToolStripMenuItem.Click += new System.EventHandler(this.dịchVụToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
@@ -573,13 +580,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // xácThựcTàiKhoảnToolStripMenuItem
-            // 
-            this.xácThựcTàiKhoảnToolStripMenuItem.Name = "xácThựcTàiKhoảnToolStripMenuItem";
-            this.xácThựcTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
-            this.xácThựcTàiKhoảnToolStripMenuItem.Text = "Xác thực tài khoản";
-            this.xácThựcTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.xácThựcTàiKhoảnToolStripMenuItem_Click);
             // 
             // frm_TrangChu
             // 

@@ -72,7 +72,7 @@ namespace QuanLyKhachSan.DA
         public IList TimTaiKhoan(string timKiem)
         {
             var qr = db.TaiKhoans
-                .Where(t => t.TenDangNhap.Contains(timKiem) || t.MaNhanSu.Contains(timKiem))
+                .Where(t => t.TenDangNhap.Contains(timKiem) || t.MaNhanSu.Contains(timKiem)||t.PhanQuyen.Contains(timKiem))
                 .Select(t => new
                 {
                     TenDangNhap = t.TenDangNhap,
@@ -109,14 +109,12 @@ namespace QuanLyKhachSan.DA
         }
         public bool KiemTraTenDangNhap(string tenDangNhap)
         {
-            // Query the database to see if a record with the given username already exists
             var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
             return taiKhoan != null;
         }
 
         public bool KiemTraMaNhanSu(string maNhanSu)
         {
-            // Query the employee table to see if a record with the given employee code already exists
             var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
             return nhanSu != null;
         }
@@ -133,7 +131,6 @@ namespace QuanLyKhachSan.DA
                                tk.MaNhanSu
                            };
 
-                // Convert the query result to a DataTable
                 var dataTable = new DataTable();
                 dataTable.Columns.Add("TenDangNhap");
                 dataTable.Columns.Add("MatKhau");
@@ -159,15 +156,12 @@ row["MaNhanSu"] = item.MaNhanSu;
         {
             using (var context = new QuanLyKhachSanEntities())
             {
-                // Loop through the rows of the DataTable
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    // Get the values from the row
                     string tenDangNhap = row["TenDangNhap"].ToString();
                     string matKhau = row["MatKhau"].ToString();
                     string maNhanSu = row["MaNhanSu"].ToString();
 
-                    // Get the employee record from the database
                     var nhanSu = context.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
                     if (nhanSu == null)
                     {
@@ -175,21 +169,17 @@ row["MaNhanSu"] = item.MaNhanSu;
                         return;
                     }
 
-                    // Get the role from the employee record
                     string phanQuyen = nhanSu.ChucVu;
 
-                    // Check if the user account already exists in the database
                     var taiKhoan = context.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
                     if (taiKhoan != null)
                     {
-                        // Update the existing user account
                         taiKhoan.MatKhau = matKhau;
                         taiKhoan.PhanQuyen = phanQuyen;
                         taiKhoan.MaNhanSu = maNhanSu;
                     }
                     else
                     {
-                        // Add a new user account
                         taiKhoan = new TaiKhoan
                         {
                             TenDangNhap = tenDangNhap,
@@ -201,7 +191,6 @@ row["MaNhanSu"] = item.MaNhanSu;
                     }
                 }
 
-                // Save changes to the database
                 context.SaveChanges();
                 MessageBox.Show("Lưu thông tin thành công");
             }
@@ -218,12 +207,10 @@ row["MaNhanSu"] = item.MaNhanSu;
         }
         public string LayPhanQuyen(string maNhanSu)
         {
-            // Get the NhanSu record from the database
             var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
             if (nhanSu == null)
                 return null;
 
-            // Get the PhanQuyen value from the NhanSu record
             string phanQuyen = nhanSu.ChucVu;
 
             return phanQuyen;

@@ -21,12 +21,12 @@ namespace QuanLyKhachSan
         {
             try
             {
-                string tk = txt_TenDangNhap.Text;
-                string mk = txt_MatKhau.Text;
-                var tt = bus.KiemTraTTNS(txt_cccd.Text);
+                string tk = txt_TenDangNhap.Texts;
+                string mk = txt_MatKhau.Texts;
+                var tt = bus.KiemTraTTNS(txt_cccd.Texts);
                 bool ktTaiKhoan = bus.kiemTraTk(tk);
 
-                if (txt_cccd.Text == "")
+                if (txt_cccd.Texts == "")
                 {
                     lbl_tk_checkerr.Text = "";
                     lbl_mk_chkerr.Text = "";
@@ -142,6 +142,20 @@ namespace QuanLyKhachSan
         {
 
 
+        }
+
+        private void pic_Show_Click(object sender, EventArgs e)
+        {
+            txt_MatKhau.PasswordChar = false;
+            pic_Show.Hide();
+            pic_Hide.Show();
+        }
+
+        private void pic_Hide_Click(object sender, EventArgs e)
+        {
+            txt_MatKhau.PasswordChar=true;
+            pic_Hide.Hide();
+            pic_Show.Show();
         }
     }
 }
