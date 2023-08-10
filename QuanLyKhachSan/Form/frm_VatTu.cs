@@ -21,37 +21,80 @@ namespace QuanLyKhachSan
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            //thêm
             string maVatTu = txt_MaVatTu.Text;
             string tenVatTu = txt_TenVatTu.Text;
             string nhaCungCap = txt_NhaCungCap.Text;
             string nguoiQuanLy = cbo_NguoiQuanLy.SelectedValue.ToString();
             string ghiChu = txt_GhiChu.Text;
 
-            bus.ThemVatTu(maVatTu, tenVatTu, nhaCungCap, nguoiQuanLy, ghiChu);
-            frm_VatTu_Load(sender, e);
+            if (string.IsNullOrEmpty(maVatTu) || string.IsNullOrEmpty(tenVatTu) || string.IsNullOrEmpty(nhaCungCap) || string.IsNullOrEmpty(nguoiQuanLy))
+            {
+                MessageBox.Show("Error: Vui lòng nhập đầy đủ thông tin.");
+                return;
+            }
+
+            try
+            {
+                bus.ThemVatTu(maVatTu, tenVatTu, nhaCungCap, nguoiQuanLy, ghiChu);
+                frm_VatTu_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            //sửa
+            // Get input values
             string maVatTu = txt_MaVatTu.Text;
             string tenVatTu = txt_TenVatTu.Text;
             string nhaCungCap = txt_NhaCungCap.Text;
             string nguoiQuanLy = cbo_NguoiQuanLy.SelectedValue.ToString();
             string ghiChu = txt_GhiChu.Text;
 
-            bus.SuaVatTu(maVatTu, tenVatTu, nhaCungCap, nguoiQuanLy, ghiChu);
-            frm_VatTu_Load(sender, e);
+            // Validate input values
+            if (string.IsNullOrEmpty(maVatTu) || string.IsNullOrEmpty(tenVatTu) || string.IsNullOrEmpty(nhaCungCap) || string.IsNullOrEmpty(nguoiQuanLy))
+            {
+                MessageBox.Show("Error: Vui lòng nhập đầy đủ thông tin.");
+                return;
+            }
+
+            // Update record
+            try
+            {
+                bus.SuaVatTu(maVatTu, tenVatTu, nhaCungCap, nguoiQuanLy, ghiChu);
+                frm_VatTu_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            //xóa
+            // Get input value
             string maVatTu = txt_MaVatTu.Text;
 
-            bus.XoaVatTu(maVatTu);
-            frm_VatTu_Load(sender, e);
+            // Validate input value
+            if (string.IsNullOrEmpty(maVatTu))
+            {
+                MessageBox.Show("Error: Vui lòng nhập mã vật tư.");
+                return;
+            }
+
+            // Delete record
+            try
+            {
+                bus.XoaVatTu(maVatTu);
+                frm_VatTu_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void frm_VatTu_Load(object sender, EventArgs e)

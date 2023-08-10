@@ -30,9 +30,9 @@
         {
             this.dgv_tkChuaXacThuc = new System.Windows.Forms.DataGridView();
             this.dgv_TaiKhoanDaDuocXacThuc = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_titlemain = new System.Windows.Forms.Label();
+            this.lbl_tkchuaxacthuc = new System.Windows.Forms.Label();
+            this.lbl_tk_xacthuc = new System.Windows.Forms.Label();
             this.btn_DongY = new System.Windows.Forms.Button();
             this.btn_Huy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tkChuaXacThuc)).BeginInit();
@@ -58,58 +58,61 @@
             this.dgv_TaiKhoanDaDuocXacThuc.Size = new System.Drawing.Size(332, 215);
             this.dgv_TaiKhoanDaDuocXacThuc.TabIndex = 1;
             // 
-            // label1
+            // lbl_titlemain
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(261, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "XÁC THỰC TÀI KHOẢN";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_titlemain.AutoSize = true;
+            this.lbl_titlemain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titlemain.Location = new System.Drawing.Point(261, 19);
+            this.lbl_titlemain.Name = "lbl_titlemain";
+            this.lbl_titlemain.Size = new System.Drawing.Size(308, 31);
+            this.lbl_titlemain.TabIndex = 2;
+            this.lbl_titlemain.Text = "XÁC THỰC TÀI KHOẢN";
+            this.lbl_titlemain.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label2
+            // lbl_tkchuaxacthuc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tài khoản chưa được xác thực";
+            this.lbl_tkchuaxacthuc.AutoSize = true;
+            this.lbl_tkchuaxacthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tkchuaxacthuc.Location = new System.Drawing.Point(49, 114);
+            this.lbl_tkchuaxacthuc.Name = "lbl_tkchuaxacthuc";
+            this.lbl_tkchuaxacthuc.Size = new System.Drawing.Size(250, 22);
+            this.lbl_tkchuaxacthuc.TabIndex = 3;
+            this.lbl_tkchuaxacthuc.Text = "Tài khoản chưa được xác thực";
             // 
-            // label3
+            // lbl_tk_xacthuc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(518, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 22);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tài khoản đã được xác thực";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lbl_tk_xacthuc.AutoSize = true;
+            this.lbl_tk_xacthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tk_xacthuc.Location = new System.Drawing.Point(518, 114);
+            this.lbl_tk_xacthuc.Name = "lbl_tk_xacthuc";
+            this.lbl_tk_xacthuc.Size = new System.Drawing.Size(231, 22);
+            this.lbl_tk_xacthuc.TabIndex = 4;
+            this.lbl_tk_xacthuc.Text = "Tài khoản đã được xác thực";
+            this.lbl_tk_xacthuc.Click += new System.EventHandler(this.label3_Click);
             // 
             // btn_DongY
             // 
+            this.btn_DongY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_DongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DongY.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_DongY.Location = new System.Drawing.Point(362, 162);
             this.btn_DongY.Name = "btn_DongY";
             this.btn_DongY.Size = new System.Drawing.Size(102, 85);
             this.btn_DongY.TabIndex = 5;
             this.btn_DongY.Text = "Đồng Ý";
-            this.btn_DongY.UseVisualStyleBackColor = true;
+            this.btn_DongY.UseVisualStyleBackColor = false;
             this.btn_DongY.Click += new System.EventHandler(this.btn_DongY_Click);
             // 
             // btn_Huy
             // 
+            this.btn_Huy.BackColor = System.Drawing.Color.Red;
             this.btn_Huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Huy.Location = new System.Drawing.Point(362, 292);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(102, 85);
             this.btn_Huy.TabIndex = 6;
             this.btn_Huy.Text = "Hủy";
-            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.UseVisualStyleBackColor = false;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // frm_XacThucTaiKhoan
@@ -119,9 +122,9 @@
             this.ClientSize = new System.Drawing.Size(823, 462);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.btn_DongY);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_tk_xacthuc);
+            this.Controls.Add(this.lbl_tkchuaxacthuc);
+            this.Controls.Add(this.lbl_titlemain);
             this.Controls.Add(this.dgv_TaiKhoanDaDuocXacThuc);
             this.Controls.Add(this.dgv_tkChuaXacThuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -139,9 +142,9 @@
 
         private System.Windows.Forms.DataGridView dgv_tkChuaXacThuc;
         private System.Windows.Forms.DataGridView dgv_TaiKhoanDaDuocXacThuc;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_titlemain;
+        private System.Windows.Forms.Label lbl_tkchuaxacthuc;
+        private System.Windows.Forms.Label lbl_tk_xacthuc;
         private System.Windows.Forms.Button btn_DongY;
         private System.Windows.Forms.Button btn_Huy;
     }
