@@ -1,4 +1,5 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.BUS;
 using QuanLyKhachSan.DA;
 using System;
 using System.Collections.Generic;
@@ -121,7 +122,7 @@ namespace QuanLyKhachSan
             {
                 // Lấy tên dịch vụ từ mã dịch vụ
                 string tenDichVu = bus.GetTenDichVuByMaDichVu(dangKyDichVu.MaDichVu);
-                float tongTien = (int)dangKyDichVu.SoLuong * (float)dangKyDichVu.DonGia;
+                double tongTien = (int)dangKyDichVu.SoLuong * (double)dangKyDichVu.DonGia;
 
 
                 ListViewItem item = new ListViewItem(new string[]

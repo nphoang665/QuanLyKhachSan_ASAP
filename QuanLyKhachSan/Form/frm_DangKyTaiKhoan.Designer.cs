@@ -35,30 +35,30 @@
             this.pic_Show = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_DangKy = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_mk = new System.Windows.Forms.Label();
+            this.lbl_Tendn = new System.Windows.Forms.Label();
             this.pic_Hide = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_MatKhau = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_cccd = new CustormTextbox.RJConTrol.RJTextBox();
             this.lbl_mk_chkerr = new System.Windows.Forms.Label();
             this.lbl_tk_checkerr = new System.Windows.Forms.Label();
             this.lbl_cccd_chkerr = new System.Windows.Forms.Label();
             this.lbl_DangNhap = new System.Windows.Forms.Label();
             this.lbl_cccd = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_keo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_khachsan = new System.Windows.Forms.PictureBox();
             this.lbl_notice_successfull = new System.Windows.Forms.Label();
-            this.txt_MatKhau = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_cccd = new CustormTextbox.RJConTrol.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.KiemLoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Show)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_keo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_khachsan)).BeginInit();
             this.SuspendLayout();
             // 
             // KiemLoi
@@ -104,27 +104,27 @@
             this.btn_DangKy.UseVisualStyleBackColor = false;
             this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
-            // label3
+            // lbl_mk
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(91, 190);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mật khẩu:";
+            this.lbl_mk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_mk.AutoSize = true;
+            this.lbl_mk.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mk.Location = new System.Drawing.Point(91, 190);
+            this.lbl_mk.Name = "lbl_mk";
+            this.lbl_mk.Size = new System.Drawing.Size(79, 18);
+            this.lbl_mk.TabIndex = 0;
+            this.lbl_mk.Text = "Mật khẩu:";
             // 
-            // label2
+            // lbl_Tendn
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên đăng nhập:";
+            this.lbl_Tendn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Tendn.AutoSize = true;
+            this.lbl_Tendn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tendn.Location = new System.Drawing.Point(91, 118);
+            this.lbl_Tendn.Name = "lbl_Tendn";
+            this.lbl_Tendn.Size = new System.Drawing.Size(121, 18);
+            this.lbl_Tendn.TabIndex = 0;
+            this.lbl_Tendn.Text = "Tên đăng nhập:";
             // 
             // pic_Hide
             // 
@@ -139,14 +139,14 @@
             this.pic_Hide.TabStop = false;
             this.pic_Hide.Click += new System.EventHandler(this.pic_Hide_Click);
             // 
-            // label1
+            // lbl_title
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hệ thống quản lý khách sạn A$AP";
+            this.lbl_title.AutoSize = true;
+            this.lbl_title.Location = new System.Drawing.Point(3, 14);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(171, 13);
+            this.lbl_title.TabIndex = 0;
+            this.lbl_title.Text = "Hệ thống quản lý khách sạn A$AP";
             // 
             // groupBox1
             // 
@@ -161,8 +161,8 @@
             this.groupBox1.Controls.Add(this.lbl_cccd);
             this.groupBox1.Controls.Add(this.pic_Show);
             this.groupBox1.Controls.Add(this.btn_DangKy);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lbl_mk);
+            this.groupBox1.Controls.Add(this.lbl_Tendn);
             this.groupBox1.Controls.Add(this.pic_Hide);
             this.groupBox1.Location = new System.Drawing.Point(44, 113);
             this.groupBox1.Name = "groupBox1";
@@ -170,6 +170,54 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng Ký";
+            // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_MatKhau.BorderSize = 2;
+            this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
+            this.txt_MatKhau.Location = new System.Drawing.Point(94, 212);
+            this.txt_MatKhau.Multiline = false;
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_MatKhau.PasswordChar = false;
+            this.txt_MatKhau.Size = new System.Drawing.Size(296, 31);
+            this.txt_MatKhau.TabIndex = 13;
+            this.txt_MatKhau.Texts = "";
+            this.txt_MatKhau.UnderLineStyle = true;
+            // 
+            // txt_TenDangNhap
+            // 
+            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenDangNhap.BorderSize = 2;
+            this.txt_TenDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(96, 139);
+            this.txt_TenDangNhap.Multiline = false;
+            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
+            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_TenDangNhap.PasswordChar = false;
+            this.txt_TenDangNhap.Size = new System.Drawing.Size(294, 31);
+            this.txt_TenDangNhap.TabIndex = 12;
+            this.txt_TenDangNhap.Texts = "";
+            this.txt_TenDangNhap.UnderLineStyle = true;
+            // 
+            // txt_cccd
+            // 
+            this.txt_cccd.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_cccd.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_cccd.BorderSize = 2;
+            this.txt_cccd.ForeColor = System.Drawing.Color.Black;
+            this.txt_cccd.Location = new System.Drawing.Point(96, 57);
+            this.txt_cccd.Multiline = false;
+            this.txt_cccd.Name = "txt_cccd";
+            this.txt_cccd.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_cccd.PasswordChar = false;
+            this.txt_cccd.Size = new System.Drawing.Size(294, 31);
+            this.txt_cccd.TabIndex = 11;
+            this.txt_cccd.Texts = "";
+            this.txt_cccd.UnderLineStyle = true;
             // 
             // lbl_mk_chkerr
             // 
@@ -232,14 +280,14 @@
             this.lbl_cccd.TabIndex = 5;
             this.lbl_cccd.Text = "Căn cước công dân";
             // 
-            // panel1
+            // pnl_keo
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 545);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1132, 41);
-            this.panel1.TabIndex = 9;
+            this.pnl_keo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnl_keo.Controls.Add(this.lbl_title);
+            this.pnl_keo.Location = new System.Drawing.Point(0, 545);
+            this.pnl_keo.Name = "pnl_keo";
+            this.pnl_keo.Size = new System.Drawing.Size(1132, 41);
+            this.pnl_keo.TabIndex = 9;
             // 
             // label6
             // 
@@ -265,16 +313,16 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Hệ thống quản lý khách sạn";
             // 
-            // pictureBox1
+            // pic_khachsan
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::QuanLyKhachSan.Properties.Resources.hotel_building_isolated_city_street_vector_illustration_flat_cartoon_101884_680;
-            this.pictureBox1.Location = new System.Drawing.Point(615, 93);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(517, 390);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.pic_khachsan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_khachsan.Image = global::QuanLyKhachSan.Properties.Resources.hotel_building_isolated_city_street_vector_illustration_flat_cartoon_101884_680;
+            this.pic_khachsan.Location = new System.Drawing.Point(615, 93);
+            this.pic_khachsan.Name = "pic_khachsan";
+            this.pic_khachsan.Size = new System.Drawing.Size(517, 390);
+            this.pic_khachsan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_khachsan.TabIndex = 12;
+            this.pic_khachsan.TabStop = false;
             // 
             // lbl_notice_successfull
             // 
@@ -289,54 +337,6 @@
             this.lbl_notice_successfull.Text = "Đăng ký thành công";
             this.lbl_notice_successfull.Visible = false;
             // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_MatKhau.BorderSize = 2;
-            this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
-            this.txt_MatKhau.Location = new System.Drawing.Point(94, 212);
-            this.txt_MatKhau.Multiline = false;
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_MatKhau.PasswordChar = false;
-            this.txt_MatKhau.Size = new System.Drawing.Size(296, 31);
-            this.txt_MatKhau.TabIndex = 13;
-            this.txt_MatKhau.Texts = "";
-            this.txt_MatKhau.UnderLineStyle = true;
-            // 
-            // txt_TenDangNhap
-            // 
-            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_TenDangNhap.BorderSize = 2;
-            this.txt_TenDangNhap.ForeColor = System.Drawing.Color.Black;
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(96, 139);
-            this.txt_TenDangNhap.Multiline = false;
-            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
-            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_TenDangNhap.PasswordChar = false;
-            this.txt_TenDangNhap.Size = new System.Drawing.Size(294, 31);
-            this.txt_TenDangNhap.TabIndex = 12;
-            this.txt_TenDangNhap.Texts = "";
-            this.txt_TenDangNhap.UnderLineStyle = true;
-            // 
-            // txt_cccd
-            // 
-            this.txt_cccd.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_cccd.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_cccd.BorderSize = 2;
-            this.txt_cccd.ForeColor = System.Drawing.Color.Black;
-            this.txt_cccd.Location = new System.Drawing.Point(96, 57);
-            this.txt_cccd.Multiline = false;
-            this.txt_cccd.Name = "txt_cccd";
-            this.txt_cccd.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_cccd.PasswordChar = false;
-            this.txt_cccd.Size = new System.Drawing.Size(294, 31);
-            this.txt_cccd.TabIndex = 11;
-            this.txt_cccd.Texts = "";
-            this.txt_cccd.UnderLineStyle = true;
-            // 
             // frm_DangKyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,10 +346,10 @@
             this.Controls.Add(this.lbl_notice_successfull);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_khachsan);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_keo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_DangKyTaiKhoan";
@@ -361,9 +361,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Hide)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_keo.ResumeLayout(false);
+            this.pnl_keo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_khachsan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,15 +376,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pic_Show;
         private System.Windows.Forms.Button btn_DangKy;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_mk;
+        private System.Windows.Forms.Label lbl_Tendn;
         private System.Windows.Forms.PictureBox pic_Hide;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnl_keo;
+        private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_khachsan;
         private System.Windows.Forms.Label lbl_cccd;
         private System.Windows.Forms.Label lbl_DangNhap;
         private System.Windows.Forms.Label lbl_tk_checkerr;

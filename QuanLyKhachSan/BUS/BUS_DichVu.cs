@@ -65,7 +65,7 @@ namespace QuanLyKhachSan.BUS
             cbo.DataSource = roomIDs;
         }
 
-        public void InsertDangKyDichVu(string maDangKyDV, string maDichVu, string maPhong, int soLuong, float donGia)
+        public void InsertDangKyDichVu(string maDangKyDV, string maDichVu, string maPhong, int soLuong, double donGia)
         {
             da.InsertDangKyDichVu(maDangKyDV, maDichVu, maPhong, soLuong, donGia);
         }

@@ -30,9 +30,6 @@
         {
             this.tabControl_HoaDon = new System.Windows.Forms.TabControl();
             this.tabPage_HoaDon = new System.Windows.Forms.TabPage();
-            this.lbl_thanhtoan = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lbl_KQTienDichVu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_KQSDT = new System.Windows.Forms.Label();
@@ -60,9 +57,14 @@
             this.TongTienThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_tenkhachhang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_thanhtoan = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl_HoaDon.SuspendLayout();
             this.tabPage_HoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_HoaDon
@@ -79,9 +81,8 @@
             // 
             this.tabPage_HoaDon.BackColor = System.Drawing.Color.White;
             this.tabPage_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_HoaDon.Controls.Add(this.lbl_thanhtoan);
+            this.tabPage_HoaDon.Controls.Add(this.groupBox1);
             this.tabPage_HoaDon.Controls.Add(this.label2);
-            this.tabPage_HoaDon.Controls.Add(this.label7);
             this.tabPage_HoaDon.Controls.Add(this.lbl_KQTienDichVu);
             this.tabPage_HoaDon.Controls.Add(this.label3);
             this.tabPage_HoaDon.Controls.Add(this.lbl_KQSDT);
@@ -107,39 +108,6 @@
             this.tabPage_HoaDon.TabIndex = 0;
             this.tabPage_HoaDon.Text = "Hóa đơn";
             this.tabPage_HoaDon.Click += new System.EventHandler(this.tabPage_HoaDon_Click);
-            // 
-            // lbl_thanhtoan
-            // 
-            this.lbl_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_thanhtoan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_thanhtoan.Location = new System.Drawing.Point(857, 102);
-            this.lbl_thanhtoan.Name = "lbl_thanhtoan";
-            this.lbl_thanhtoan.Size = new System.Drawing.Size(197, 22);
-            this.lbl_thanhtoan.TabIndex = 31;
-            this.lbl_thanhtoan.Text = "---";
-            this.lbl_thanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1017, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 22);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "---";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(838, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 20);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Thanh Toán";
             // 
             // lbl_KQTienDichVu
             // 
@@ -395,7 +363,7 @@
             this.lbl_tenkhachhang.Name = "lbl_tenkhachhang";
             this.lbl_tenkhachhang.Size = new System.Drawing.Size(126, 20);
             this.lbl_tenkhachhang.TabIndex = 7;
-            this.lbl_tenkhachhang.Text = "Tên Khách Hâng:";
+            this.lbl_tenkhachhang.Text = "Tên Khách Hàng:";
             // 
             // label1
             // 
@@ -408,6 +376,51 @@
             this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "HÓA ĐƠN:";
+            // 
+            // lbl_thanhtoan
+            // 
+            this.lbl_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_thanhtoan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_thanhtoan.Location = new System.Drawing.Point(26, 80);
+            this.lbl_thanhtoan.Name = "lbl_thanhtoan";
+            this.lbl_thanhtoan.Size = new System.Drawing.Size(197, 22);
+            this.lbl_thanhtoan.TabIndex = 31;
+            this.lbl_thanhtoan.Text = "---";
+            this.lbl_thanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(74, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Thanh Toán";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbl_thanhtoan);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(836, 38);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(241, 138);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tổng tiền";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1017, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "---";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frm_HoaDon
             // 
@@ -427,6 +440,8 @@
             this.tabPage_HoaDon.ResumeLayout(false);
             this.tabPage_HoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -460,10 +475,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTienDichVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTienThanhToan;
-        private System.Windows.Forms.Label lbl_thanhtoan;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_KQTienDichVu;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_thanhtoan;
+        private System.Windows.Forms.Label label2;
     }
 }

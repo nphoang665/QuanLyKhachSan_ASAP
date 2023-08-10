@@ -37,10 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_DonGia = new System.Windows.Forms.TextBox();
             this.txt_TenVatTu = new System.Windows.Forms.TextBox();
             this.txt_MaVatTu = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgv_DanhSachVatTu = new System.Windows.Forms.DataGridView();
             this.btn_Them = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,15 +58,15 @@
             this.txt_NhaCungCap2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txt_DonGia2 = new System.Windows.Forms.TextBox();
             this.txt_TenVatTu2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.dgv_DanhSachVatTu2 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txt_MaVatTu2 = new System.Windows.Forms.TextBox();
+            this.lbl_mavattu2 = new System.Windows.Forms.Label();
             this.tabControl_VatTu.SuspendLayout();
             this.tabPage_ThemVatTu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachVatTu)).BeginInit();
@@ -101,10 +99,8 @@
             this.tabPage_ThemVatTu.Controls.Add(this.label3);
             this.tabPage_ThemVatTu.Controls.Add(this.label4);
             this.tabPage_ThemVatTu.Controls.Add(this.label8);
-            this.tabPage_ThemVatTu.Controls.Add(this.txt_DonGia);
             this.tabPage_ThemVatTu.Controls.Add(this.txt_TenVatTu);
             this.tabPage_ThemVatTu.Controls.Add(this.txt_MaVatTu);
-            this.tabPage_ThemVatTu.Controls.Add(this.label5);
             this.tabPage_ThemVatTu.Controls.Add(this.dgv_DanhSachVatTu);
             this.tabPage_ThemVatTu.Controls.Add(this.btn_Them);
             this.tabPage_ThemVatTu.Controls.Add(this.label6);
@@ -178,15 +174,6 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Nhà cung cấp:";
             // 
-            // txt_DonGia
-            // 
-            this.txt_DonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_DonGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_DonGia.Location = new System.Drawing.Point(198, 153);
-            this.txt_DonGia.Name = "txt_DonGia";
-            this.txt_DonGia.Size = new System.Drawing.Size(193, 25);
-            this.txt_DonGia.TabIndex = 6;
-            // 
             // txt_TenVatTu
             // 
             this.txt_TenVatTu.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -204,17 +191,6 @@
             this.txt_MaVatTu.Name = "txt_MaVatTu";
             this.txt_MaVatTu.Size = new System.Drawing.Size(193, 25);
             this.txt_MaVatTu.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Đơn giá:";
             // 
             // dgv_DanhSachVatTu
             // 
@@ -367,6 +343,8 @@
             this.dgv_DanhSachVatTu1.ReadOnly = true;
             this.dgv_DanhSachVatTu1.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu1.TabIndex = 7;
+            this.dgv_DanhSachVatTu1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachVatTu1_CellClick);
+            this.dgv_DanhSachVatTu1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachVatTu1_CellContentClick);
             // 
             // label9
             // 
@@ -395,13 +373,13 @@
             // 
             this.tabPage_Sua_XoaPhong.BackColor = System.Drawing.Color.White;
             this.tabPage_Sua_XoaPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_MaVatTu2);
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_mavattu2);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.cbo_NguoiQuanLy2);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_NhaCungCap2);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.label14);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.label16);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_DonGia2);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_TenVatTu2);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.label12);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.label13);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Xoa);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Sua);
@@ -413,6 +391,7 @@
             this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_Sua_XoaPhong.TabIndex = 2;
             this.tabPage_Sua_XoaPhong.Text = "Sửa, Xóa vật tư";
+            this.tabPage_Sua_XoaPhong.Click += new System.EventHandler(this.tabPage_Sua_XoaPhong_Click);
             // 
             // cbo_NguoiQuanLy2
             // 
@@ -422,6 +401,7 @@
             this.cbo_NguoiQuanLy2.Name = "cbo_NguoiQuanLy2";
             this.cbo_NguoiQuanLy2.Size = new System.Drawing.Size(193, 25);
             this.cbo_NguoiQuanLy2.TabIndex = 8;
+            this.cbo_NguoiQuanLy2.SelectedIndexChanged += new System.EventHandler(this.cbo_NguoiQuanLy2_SelectedIndexChanged);
             // 
             // txt_NhaCungCap2
             // 
@@ -454,41 +434,21 @@
             this.label16.TabIndex = 5;
             this.label16.Text = "Nhà cung cấp:";
             // 
-            // txt_DonGia2
-            // 
-            this.txt_DonGia2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_DonGia2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_DonGia2.Location = new System.Drawing.Point(411, 94);
-            this.txt_DonGia2.Name = "txt_DonGia2";
-            this.txt_DonGia2.Size = new System.Drawing.Size(193, 25);
-            this.txt_DonGia2.TabIndex = 4;
-            // 
             // txt_TenVatTu2
             // 
             this.txt_TenVatTu2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_TenVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenVatTu2.Location = new System.Drawing.Point(411, 53);
+            this.txt_TenVatTu2.Location = new System.Drawing.Point(411, 95);
             this.txt_TenVatTu2.Name = "txt_TenVatTu2";
             this.txt_TenVatTu2.Size = new System.Drawing.Size(193, 25);
             this.txt_TenVatTu2.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(264, 95);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 20);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Đơn giá:";
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(264, 53);
+            this.label13.Location = new System.Drawing.Point(264, 95);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(84, 20);
             this.label13.TabIndex = 1;
@@ -537,11 +497,12 @@
             this.dgv_DanhSachVatTu2.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachVatTu2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachVatTu2.Location = new System.Drawing.Point(7, 207);
+            this.dgv_DanhSachVatTu2.Location = new System.Drawing.Point(8, 202);
             this.dgv_DanhSachVatTu2.Name = "dgv_DanhSachVatTu2";
             this.dgv_DanhSachVatTu2.ReadOnly = true;
             this.dgv_DanhSachVatTu2.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu2.TabIndex = 11;
+            this.dgv_DanhSachVatTu2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachVatTu2_CellClick);
             // 
             // label15
             // 
@@ -554,6 +515,26 @@
             this.label15.Size = new System.Drawing.Size(143, 20);
             this.label15.TabIndex = 0;
             this.label15.Text = "SỬA, XÓA VẬT TƯ:";
+            // 
+            // txt_MaVatTu2
+            // 
+            this.txt_MaVatTu2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_MaVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_MaVatTu2.Location = new System.Drawing.Point(411, 53);
+            this.txt_MaVatTu2.Name = "txt_MaVatTu2";
+            this.txt_MaVatTu2.Size = new System.Drawing.Size(193, 25);
+            this.txt_MaVatTu2.TabIndex = 13;
+            // 
+            // lbl_mavattu2
+            // 
+            this.lbl_mavattu2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_mavattu2.AutoSize = true;
+            this.lbl_mavattu2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mavattu2.Location = new System.Drawing.Point(264, 53);
+            this.lbl_mavattu2.Name = "lbl_mavattu2";
+            this.lbl_mavattu2.Size = new System.Drawing.Size(81, 20);
+            this.lbl_mavattu2.TabIndex = 12;
+            this.lbl_mavattu2.Text = "Mã vật tư:";
             // 
             // frm_VatTu
             // 
@@ -594,10 +575,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_DonGia;
         private System.Windows.Forms.TextBox txt_TenVatTu;
         private System.Windows.Forms.TextBox txt_MaVatTu;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_DanhSachVatTu;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Label label6;
@@ -617,14 +596,14 @@
         private System.Windows.Forms.TextBox txt_NhaCungCap2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txt_DonGia2;
         private System.Windows.Forms.TextBox txt_TenVatTu2;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.DataGridView dgv_DanhSachVatTu2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.TextBox txt_MaVatTu2;
+        private System.Windows.Forms.Label lbl_mavattu2;
     }
 }

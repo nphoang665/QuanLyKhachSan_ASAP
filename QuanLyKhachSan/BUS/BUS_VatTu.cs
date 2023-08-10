@@ -18,6 +18,13 @@ public class BUS_VatTu
         cbo.DisplayMember = "TenNhanVien";
         cbo.ValueMember = "MaNhanSu";
     }
+    public void LoadVatTu(ComboBox cbo)
+    {
+        cbo.DataSource = DA_.LayVatTu1();
+        cbo.DisplayMember = "MaVatTu";
+        cbo.ValueMember = "TenVatTu"; 
+    }
+
     public void ThemVatTu(string maVatTu, string tenVatTu, string nhaCungCap, string nguoiQuanLy, string ghiChu)
     {
         DA_.ThemVatTu(maVatTu, tenVatTu, nhaCungCap, nguoiQuanLy, ghiChu);

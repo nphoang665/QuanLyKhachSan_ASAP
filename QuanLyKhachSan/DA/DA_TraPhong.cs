@@ -18,13 +18,13 @@ namespace QuanLyKhachSan.DA
         {
             return db.ThuePhongs.FirstOrDefault(s => s.MaPhong == maphong);
         }
-        public float layTongTienDichVu(string maphong)
+        public double layTongTienDichVu(string maphong)
         {
             var dichVu = db.DangKyDichVus.Where(s => s.MaPhong == maphong);
-            float tongTienDichVu = 0;
+            double tongTienDichVu = 0;
             foreach (var dv in dichVu)
             {
-                tongTienDichVu += (float)(dv.SoLuong * dv.DonGia);
+                tongTienDichVu += (double)(dv.SoLuong * dv.DonGia);
             }
             return tongTienDichVu;
         }

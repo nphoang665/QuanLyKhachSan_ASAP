@@ -19,7 +19,7 @@ namespace QuanLyKhachSan.BUS
         {
             return da.layphong(maphong);
         }
-        public float layTongTienDichVu(string maphong)
+        public double layTongTienDichVu(string maphong)
         {
             return da.layTongTienDichVu(maphong);
         }

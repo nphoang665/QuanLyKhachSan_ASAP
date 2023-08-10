@@ -82,7 +82,7 @@ namespace QuanLyKhachSan.DA
 
             return roomIDs;
         }
-        public void InsertDangKyDichVu(string maDangKyDV, string maDichVu, string maPhong, int soLuong, float donGia)
+        public void InsertDangKyDichVu(string maDangKyDV, string maDichVu, string maPhong, int soLuong, double donGia)
         {
             var dangKyDichVu = new DangKyDichVu
             {

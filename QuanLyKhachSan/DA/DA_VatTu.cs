@@ -51,6 +51,18 @@ namespace QuanLyKhachSan.DA
             ).ToList();
             return ds;
         }
+        public dynamic LayVatTu1()
+        {
+            var ds = db.VatTus.Select(s =>
+            new
+            {
+                s.MaVatTu,
+                s.TenVatTu,
+                
+            }
+            ).ToList();
+            return ds;
+        }
         public void SuaVatTu(string maVatTu, string tenVatTu, string nhaCungCap, string nguoiQuanLy, string ghiChu)
         {
             var vatTu = db.VatTus.FirstOrDefault(p => p.MaVatTu == maVatTu);

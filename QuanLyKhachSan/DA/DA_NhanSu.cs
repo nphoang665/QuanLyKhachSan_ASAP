@@ -69,9 +69,8 @@ namespace QuanLyKhachSan.DA
         }
         public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pi)
         {
-            using (MemoryStream steam = new MemoryStream())
-            {
-                pi.Image.Save(steam, ImageFormat.Jpeg);
+      
+             
                 var nhanSu = db.NhanSus.FirstOrDefault(ns => ns.MaNhanSu == mans);
                 if (nhanSu != null)
                 {
@@ -82,10 +81,10 @@ namespace QuanLyKhachSan.DA
                     nhanSu.NgaySinh = ngaysinh;
                     nhanSu.NgayVaoLam = ngayvaolam;
                     nhanSu.ChucVu = chucvu;
-                    nhanSu.AnhNhanVien = steam.ToArray();
+                
                     db.SaveChanges();
                 }
-            }
+            
         }
 
         public void XoaNhanSu(string mans)
