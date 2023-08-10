@@ -24,7 +24,6 @@ namespace QuanLyKhachSan
         private void pic_Show_Click(object sender, EventArgs e)
         {
             pic_Show.Hide();
-            //txt_MatKhau.UseSystemPasswordChar = false;
             txt_MatKhau.PasswordChar = false;
             pic_Hide.Show();
         }
@@ -80,6 +79,11 @@ namespace QuanLyKhachSan
                    
                     throw new Exception("Bạn chưa nhập tên đăng nhập");
                 }
+                else if (tenDangNhap.Length < 5 || tenDangNhap.Length > 20)
+                {
+                 
+                    throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
+                }
                 else if (!bus.kiemTraTenDangNhap(tenDangNhap))
                 {
 
@@ -91,8 +95,6 @@ namespace QuanLyKhachSan
                     pnl_dmk.Visible = true;
                     txt_TenDangNhap.Enabled = false;
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -108,7 +110,12 @@ namespace QuanLyKhachSan
                     lbl_tendangnhap_chk.ForeColor = Color.Red;
                     lbl_tendangnhap_chk.Text = ex.Message;
                 }
-
+                else if (ex.Message == ("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                {
+                    lbl_tendangnhap_chk.Visible = true;
+                    lbl_tendangnhap_chk.ForeColor = Color.Red;
+                    lbl_tendangnhap_chk.Text = ex.Message;
+                }
 
             }
         }
@@ -130,16 +137,31 @@ namespace QuanLyKhachSan
                     lbl_rematkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu");
                 }
+                else if (txt_MatKhau.Texts.Length < 5 || txt_MatKhau.Texts.Length > 20)
+                {   
+                    lbl_rematkhaumoi_chk.Text = "";
+
+                throw new Exception("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự");
+                }
+
+
                 else if (txt_NhapLaiMK.Texts == "")
                 {
                     lbl_matkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập xác nhận lại mật khẩu");
+                }
+                else if (txt_NhapLaiMK.Texts.Length < 5 || txt_NhapLaiMK.Texts.Length > 20)
+                {
+                    lbl_matkhaumoi_chk.Text = "";
+
+                    throw new Exception("Mật khẩu nhập lại không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
                 else if(matKhauMoi!= nhapLaiMK)
                 {
                     lbl_matkhaumoi_chk.Text = "";
                     throw new Exception("Lỗi. Mật khẩu không trùng nhau");
                 }
+              
                 else
                 {
                     lbl_matkhaumoi_chk.Text = "";
@@ -157,7 +179,19 @@ namespace QuanLyKhachSan
                     lbl_matkhaumoi_chk.ForeColor = Color.Red;
                     lbl_matkhaumoi_chk.Text = ex.Message;
                 }
+                else if (ex.Message == ("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                {
+                    lbl_matkhaumoi_chk.Visible = true;
+                    lbl_matkhaumoi_chk.ForeColor = Color.Red;
+                    lbl_matkhaumoi_chk.Text = ex.Message;
+                }
                 else if (ex.Message == ("Lỗi. Mật khẩu không trùng nhau"))
+                {
+                    lbl_rematkhaumoi_chk.Visible = true;
+                    lbl_rematkhaumoi_chk.ForeColor = Color.Red;
+                    lbl_rematkhaumoi_chk.Text = ex.Message;
+                }
+                else if (ex.Message == ("Mật khẩu nhập lại không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
                 {
                     lbl_rematkhaumoi_chk.Visible = true;
                     lbl_rematkhaumoi_chk.ForeColor = Color.Red;

@@ -70,11 +70,20 @@ namespace QuanLyKhachSan
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Vui lòng nhập tên đăng nhập.");
                 }
-
+                else if(txt_TenDangNhap.Texts.Length <5 || txt_TenDangNhap.Texts.Length > 20)
+                {
+                    lbl_chk_MatKhau.Text = "";
+                    throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
+                }
                 else if ( string.IsNullOrEmpty(txt_MatKhau.Texts))
                 {
                     lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Vui lòng nhập mật khẩu.");
+                }
+                else if (txt_MatKhau.Texts.Length < 5 || txt_MatKhau.Texts.Length > 20)
+                {
+                    lbl_chk_TenDangNhap.Text = "";
+                    throw new Exception("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
                 else
                 {
@@ -136,6 +145,18 @@ namespace QuanLyKhachSan
                     lbl_chk_TenDangNhap.Visible = true;
                     lbl_chk_TenDangNhap.ForeColor = Color.Red;
                     lbl_chk_TenDangNhap.Text = ex.Message;
+                }
+               else if (ex.Message == ("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                {
+                    lbl_chk_TenDangNhap.Visible = true;
+                    lbl_chk_TenDangNhap.ForeColor = Color.Red;
+                    lbl_chk_TenDangNhap.Text = ex.Message;
+                }
+                else if (ex.Message == ("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                {
+                    lbl_chk_MatKhau.Visible = true;
+                    lbl_chk_MatKhau.ForeColor = Color.Red;
+                    lbl_chk_MatKhau.Text = ex.Message;
                 }
                 else if (ex.Message==("Vui lòng nhập mật khẩu."))
                 {

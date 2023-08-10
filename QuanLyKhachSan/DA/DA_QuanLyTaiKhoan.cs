@@ -72,7 +72,7 @@ namespace QuanLyKhachSan.DA
         public IList TimTaiKhoan(string timKiem)
         {
             var qr = db.TaiKhoan
-                .Where(t => t.TenDangNhap.StartsWith(timKiem))
+                .Where(t => t.TenDangNhap.Contains(timKiem) || t.MaNhanSu.Contains(timKiem))
                 .Select(t => new
                 {
                     TenDangNhap = t.TenDangNhap,

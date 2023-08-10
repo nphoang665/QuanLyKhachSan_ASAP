@@ -38,11 +38,19 @@ namespace QuanLyKhachSan
                     lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Không có nhân sự nào có mã căn cước công dân như này");
                 }
+                //
                 else if (tk == "")
                 {
                     lbl_cccd_chkerr.Text = "";
                     lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Bạn chưa nhập thông tin tài khoản");
+                }
+                else if (tk.Length < 5 || tk.Length > 20)
+                {
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
+
+                    throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
                 else if (ktTaiKhoan)
                 {
@@ -55,6 +63,13 @@ namespace QuanLyKhachSan
                     lbl_cccd_chkerr.Text = "";
                     lbl_tk_checkerr.Text = "";
                     throw new Exception("*Lỗi. Bạn chưa nhập mật khẩu");
+                }
+                else if (mk.Length < 5 || mk.Length > 20)
+                {
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_tk_checkerr.Text = "";
+
+                    throw new Exception("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
                 else
                 {
@@ -92,7 +107,19 @@ namespace QuanLyKhachSan
                     lbl_tk_checkerr.ForeColor = Color.Red;
                     lbl_tk_checkerr.Text = ex.Message;
                 }
+                else if (ex.Message.Contains("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                {
+                    lbl_tk_checkerr.Visible = true;
+                    lbl_tk_checkerr.ForeColor = Color.Red;
+                    lbl_tk_checkerr.Text = ex.Message;
+                }
                 else if (ex.Message.Contains("mật khẩu"))
+                {
+                    lbl_mk_chkerr.Visible = true;
+                    lbl_mk_chkerr.ForeColor = Color.Red;
+                    lbl_mk_chkerr.Text = ex.Message;
+                }
+                else if (ex.Message.Contains("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
                 {
                     lbl_mk_chkerr.Visible = true;
                     lbl_mk_chkerr.ForeColor = Color.Red;
