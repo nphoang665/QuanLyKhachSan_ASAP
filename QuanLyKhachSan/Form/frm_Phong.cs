@@ -19,62 +19,77 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
             dsp = new BUS_Phong();
+            cbo_loaiphong_sua.Items.Add("Phòng đơn");
+            cbo_loaiphong_sua.Items.Add("Phòng đôi");
+            cbo_loaiphong_sua.Items.Add("Phòng ba");
 
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            string maPhong = lbl_KQPhong.Text;
-            string loaiPhong = txt_loaiphong_sua.Text;
-            string tinhTrang = lbl_KQTinhTrang.Text;
-            float donGia = float.Parse(txt_dongia_sua.Text);
-
-            BUS_Phong busPhong = new BUS_Phong();
-            busPhong.SuaPhong(maPhong, loaiPhong, tinhTrang, donGia);
-
-            MessageBox.Show("Sửa thông tin phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            dsp.LoadDsTk(dgv_phong2);
-            dsp.LoadDsTk(dgv_phong3);
-
-            lbl_KQPhong.Text = string.Empty;
-            txt_loaiphong_sua.Text = string.Empty;
-            lbl_KQTinhTrang.Text = string.Empty;
-            txt_dongia_sua.Text = string.Empty;
-        }
-
-        private void btn_Xoa_Click(object sender, EventArgs e)
-        {
-            string maPhong = lbl_KQPhong.Text;
-
-            BUS_Phong busPhong = new BUS_Phong();
-            bool phongDaThue = busPhong.KiemTraPhongDaCoKhachThue(maPhong);
-
-            if (phongDaThue)
+            try
             {
-                MessageBox.Show("Phòng đang có khách thuê. Bạn không thể xóa phòng này.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                DialogResult result = MessageBox.Show("Bạn có muốn xóa phòng " + maPhong + " không?", "Xác nhận xóa phòng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                string maPhong = lbl_KQPhong.Text;
+                string tinhTrang = lbl_KQTinhTrang.Text;
 
+                // Kiểm tra nếu lbl_KQPhong rỗng, yêu cầu chọn phòng từ dgv_phong3
+                if (string.IsNullOrEmpty(maPhong))
+                {
+                    if (dgv_phong3.SelectedRows.Count == 1)
+                    {
+                        DataGridViewRow selectedRow = dgv_phong3.SelectedRows[0];
+                        maPhong = selectedRow.Cells["MaPhongColumnName"].Value.ToString();
+                        lbl_KQPhong.Text = maPhong;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn một phòng từ danh sách phòng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Kiểm tra ComboBox loại phòng đã chọn hay chưa
+                string loaiPhong = cbo_loaiphong_sua.Text;
+                if (string.IsNullOrEmpty(loaiPhong))
+                {
+                    MessageBox.Show("Vui lòng chọn loại phòng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Kiểm tra và chuyển đổi giá trị từ txt_dongia_sua thành số thực (float)
+                if (!float.TryParse(txt_dongia_sua.Text, out float donGia) || donGia < 0)
+                {
+                    MessageBox.Show("Đơn giá không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Dừng xử lý nếu đơn giá không hợp lệ
+                }
+
+                // Xác nhận trước khi thực hiện sửa
+                DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin phòng " + maPhong + " không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    busPhong.XoaPhong(maPhong);
+                    // Tiến hành cập nhật thông tin phòng
+                    BUS_Phong busPhong = new BUS_Phong();
+                    busPhong.SuaPhong(maPhong, loaiPhong, tinhTrang, donGia);
 
-                    MessageBox.Show("Xóa phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sửa thông tin phòng " + maPhong + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    // Cập nhật danh sách phòng trên DataGridViews
                     dsp.LoadDsTk(dgv_phong2);
                     dsp.LoadDsTk(dgv_phong3);
 
+                    // Xóa các thông tin sau khi sửa xong
                     lbl_KQPhong.Text = string.Empty;
-                    txt_loaiphong_sua.Text = string.Empty;
+                    cbo_loaiphong_sua.Text = string.Empty;
                     lbl_KQTinhTrang.Text = string.Empty;
                     txt_dongia_sua.Text = string.Empty;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
+        
         private void txt_timphong_TextChanged(object sender, EventArgs e)
         {
             txt_TimLoaiPhong.Text = string.Empty; 
@@ -102,7 +117,7 @@ namespace QuanLyKhachSan
                 string id = dgv_phong3.Rows[e.RowIndex].Cells["MaPhong"].Value.ToString();
                 var taiKhoan = dsp.LayPhong(id);
                 lbl_KQPhong.Text = taiKhoan.MaPhong;
-                txt_loaiphong_sua.Text = taiKhoan.LoaiPhong;
+                cbo_loaiphong_sua.Text = taiKhoan.LoaiPhong;
                 lbl_KQTinhTrang.Text = taiKhoan.TinhTrang;
                 txt_dongia_sua.Text = taiKhoan.DonGia.ToString();
             }

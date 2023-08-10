@@ -43,16 +43,15 @@
             this.lbl_KQTinhTrang = new System.Windows.Forms.Label();
             this.lbl_KQPhong = new System.Windows.Forms.Label();
             this.lbl_maphong_sua = new System.Windows.Forms.Label();
-            this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.txt_dongia_sua = new System.Windows.Forms.TextBox();
-            this.txt_loaiphong_sua = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgv_phong3 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbo_loaiphong_sua = new System.Windows.Forms.ComboBox();
             this.tabControl_Phong.SuspendLayout();
             this.tabPage_TimPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phong2)).BeginInit();
@@ -154,7 +153,6 @@
             this.dgv_phong2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_phong2.Location = new System.Drawing.Point(7, 207);
             this.dgv_phong2.Name = "dgv_phong2";
-            this.dgv_phong2.ReadOnly = true;
             this.dgv_phong2.Size = new System.Drawing.Size(1090, 252);
             this.dgv_phong2.TabIndex = 59;
             // 
@@ -185,13 +183,12 @@
             // 
             this.tabPage_Sua_XoaPhong.BackColor = System.Drawing.Color.White;
             this.tabPage_Sua_XoaPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_Sua_XoaPhong.Controls.Add(this.cbo_loaiphong_sua);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_KQTinhTrang);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_KQPhong);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.lbl_maphong_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Xoa);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Sua);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_dongia_sua);
-            this.tabPage_Sua_XoaPhong.Controls.Add(this.txt_loaiphong_sua);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.label3);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.label8);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.dgv_phong3);
@@ -212,7 +209,7 @@
             this.lbl_KQTinhTrang.Name = "lbl_KQTinhTrang";
             this.lbl_KQTinhTrang.Size = new System.Drawing.Size(193, 25);
             this.lbl_KQTinhTrang.TabIndex = 91;
-            this.lbl_KQTinhTrang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_KQTinhTrang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_KQPhong
             // 
@@ -222,7 +219,7 @@
             this.lbl_KQPhong.Name = "lbl_KQPhong";
             this.lbl_KQPhong.Size = new System.Drawing.Size(193, 25);
             this.lbl_KQPhong.TabIndex = 90;
-            this.lbl_KQPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_KQPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_maphong_sua
             // 
@@ -235,23 +232,6 @@
             this.lbl_maphong_sua.TabIndex = 88;
             this.lbl_maphong_sua.Text = "Mã phòng:";
             // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btn_Xoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Xoa.FlatAppearance.BorderSize = 0;
-            this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(751, 119);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(108, 43);
-            this.btn_Xoa.TabIndex = 86;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = false;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
             // btn_Sua
             // 
             this.btn_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -263,7 +243,7 @@
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
             this.btn_Sua.Location = new System.Drawing.Point(751, 45);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(108, 43);
+            this.btn_Sua.Size = new System.Drawing.Size(153, 43);
             this.btn_Sua.TabIndex = 85;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = false;
@@ -277,17 +257,6 @@
             this.txt_dongia_sua.Name = "txt_dongia_sua";
             this.txt_dongia_sua.Size = new System.Drawing.Size(193, 29);
             this.txt_dongia_sua.TabIndex = 84;
-            this.txt_dongia_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_loaiphong_sua
-            // 
-            this.txt_loaiphong_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_loaiphong_sua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_loaiphong_sua.Location = new System.Drawing.Point(425, 66);
-            this.txt_loaiphong_sua.Name = "txt_loaiphong_sua";
-            this.txt_loaiphong_sua.Size = new System.Drawing.Size(193, 29);
-            this.txt_loaiphong_sua.TabIndex = 80;
-            this.txt_loaiphong_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -354,6 +323,16 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
+            // cbo_loaiphong_sua
+            // 
+            this.cbo_loaiphong_sua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_loaiphong_sua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_loaiphong_sua.FormattingEnabled = true;
+            this.cbo_loaiphong_sua.Location = new System.Drawing.Point(425, 65);
+            this.cbo_loaiphong_sua.Name = "cbo_loaiphong_sua";
+            this.cbo_loaiphong_sua.Size = new System.Drawing.Size(193, 29);
+            this.cbo_loaiphong_sua.TabIndex = 95;
+            // 
             // frm_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -392,10 +371,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbl_maphong_sua;
-        private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.TextBox txt_dongia_sua;
-        private System.Windows.Forms.TextBox txt_loaiphong_sua;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgv_phong3;
@@ -406,5 +383,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_KQPhong;
         private System.Windows.Forms.Label lbl_KQTinhTrang;
+        private System.Windows.Forms.ComboBox cbo_loaiphong_sua;
     }
 }
