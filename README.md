@@ -5,5 +5,5 @@ Hoàng:Giao diện,Thuê phòng,Phòng Thanh toán(Trả phòng), Đăng ký d�
 Thành: thống kê doanh thu,quản lý hoá đơn,quản lý nhân viên,quản lý khách hàng
 Thiên:quản lý dịch vụ,vật tư
 Chạy: Build và kết nối csdl trước khi chạy
-file ảnh trong file .SQL thay đổi đường dẫn tới ảnh 
+link github: https://github.com/nphoang665/QuanLyKhachSan_ASAP
 HẾT.
