@@ -112,7 +112,7 @@
           <Property Name="NguoiQuanLy" Type="varchar" MaxLength="6" />
           <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
         </EntityType>
-        <Association Name="FK__DangKyDic__MaDic__5DCAEF64">
+        <Association Name="FK__DangKyDic__MaDic__3F466844">
           <End Role="QuanLyDichVu" Type="Self.QuanLyDichVu" Multiplicity="0..1" />
           <End Role="DangKyDichVu" Type="Self.DangKyDichVu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -124,7 +124,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DangKyDic__MaPho__5EBF139D">
+        <Association Name="FK__DangKyDic__MaPho__403A8C7D">
           <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
           <End Role="DangKyDichVu" Type="Self.DangKyDichVu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -136,7 +136,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HoaDon__MaPhong__5441852A">
+        <Association Name="FK__HoaDon__MaPhong__35BCFE0A">
           <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
@@ -148,7 +148,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LuuMatKha__TaiKh__49C3F6B7">
+        <Association Name="FK__LuuMatKha__TaiKh__2B3F6F97">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
           <End Role="LuuMatKhau" Type="Self.LuuMatKhau" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -160,7 +160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TaiKhoan__MaNhan__46E78A0C">
+        <Association Name="FK__TaiKhoan__MaNhan__286302EC">
           <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="0..1" />
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -172,7 +172,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThuePhong__MaKha__4F7CD00D">
+        <Association Name="FK__ThuePhong__MaKha__30F848ED">
           <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="0..1" />
           <End Role="ThuePhong" Type="Self.ThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,7 +184,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThuePhong__MaPho__5165187F">
+        <Association Name="FK__ThuePhong__MaPho__32E0915F">
           <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
           <End Role="ThuePhong" Type="Self.ThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -196,7 +196,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VatTu__NguoiQuan__59063A47">
+        <Association Name="FK__VatTu__NguoiQuan__3A81B327">
           <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="0..1" />
           <End Role="VatTu" Type="Self.VatTu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -219,35 +219,35 @@
           <EntitySet Name="ThongTinKhachHang" EntityType="Self.ThongTinKhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThuePhong" EntityType="Self.ThuePhong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VatTu" EntityType="Self.VatTu" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__DangKyDic__MaDic__5DCAEF64" Association="Self.FK__DangKyDic__MaDic__5DCAEF64">
+          <AssociationSet Name="FK__DangKyDic__MaDic__3F466844" Association="Self.FK__DangKyDic__MaDic__3F466844">
             <End Role="QuanLyDichVu" EntitySet="QuanLyDichVu" />
             <End Role="DangKyDichVu" EntitySet="DangKyDichVu" />
           </AssociationSet>
-          <AssociationSet Name="FK__DangKyDic__MaPho__5EBF139D" Association="Self.FK__DangKyDic__MaPho__5EBF139D">
+          <AssociationSet Name="FK__DangKyDic__MaPho__403A8C7D" Association="Self.FK__DangKyDic__MaPho__403A8C7D">
             <End Role="Phong" EntitySet="Phong" />
             <End Role="DangKyDichVu" EntitySet="DangKyDichVu" />
           </AssociationSet>
-          <AssociationSet Name="FK__HoaDon__MaPhong__5441852A" Association="Self.FK__HoaDon__MaPhong__5441852A">
+          <AssociationSet Name="FK__HoaDon__MaPhong__35BCFE0A" Association="Self.FK__HoaDon__MaPhong__35BCFE0A">
             <End Role="Phong" EntitySet="Phong" />
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
-          <AssociationSet Name="FK__LuuMatKha__TaiKh__49C3F6B7" Association="Self.FK__LuuMatKha__TaiKh__49C3F6B7">
+          <AssociationSet Name="FK__LuuMatKha__TaiKh__2B3F6F97" Association="Self.FK__LuuMatKha__TaiKh__2B3F6F97">
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="LuuMatKhau" EntitySet="LuuMatKhau" />
           </AssociationSet>
-          <AssociationSet Name="FK__TaiKhoan__MaNhan__46E78A0C" Association="Self.FK__TaiKhoan__MaNhan__46E78A0C">
+          <AssociationSet Name="FK__TaiKhoan__MaNhan__286302EC" Association="Self.FK__TaiKhoan__MaNhan__286302EC">
             <End Role="NhanSu" EntitySet="NhanSu" />
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThuePhong__MaKha__4F7CD00D" Association="Self.FK__ThuePhong__MaKha__4F7CD00D">
+          <AssociationSet Name="FK__ThuePhong__MaKha__30F848ED" Association="Self.FK__ThuePhong__MaKha__30F848ED">
             <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHang" />
             <End Role="ThuePhong" EntitySet="ThuePhong" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThuePhong__MaPho__5165187F" Association="Self.FK__ThuePhong__MaPho__5165187F">
+          <AssociationSet Name="FK__ThuePhong__MaPho__32E0915F" Association="Self.FK__ThuePhong__MaPho__32E0915F">
             <End Role="Phong" EntitySet="Phong" />
             <End Role="ThuePhong" EntitySet="ThuePhong" />
           </AssociationSet>
-          <AssociationSet Name="FK__VatTu__NguoiQuan__59063A47" Association="Self.FK__VatTu__NguoiQuan__59063A47">
+          <AssociationSet Name="FK__VatTu__NguoiQuan__3A81B327" Association="Self.FK__VatTu__NguoiQuan__3A81B327">
             <End Role="NhanSu" EntitySet="NhanSu" />
             <End Role="VatTu" EntitySet="VatTu" />
           </AssociationSet>
