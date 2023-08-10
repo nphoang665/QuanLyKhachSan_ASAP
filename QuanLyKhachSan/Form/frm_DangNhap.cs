@@ -134,7 +134,7 @@ namespace QuanLyKhachSan
                     }
                     else
                     {
-                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin thêm giây lát");
+                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin xác thực");
                     }
 
                 }
