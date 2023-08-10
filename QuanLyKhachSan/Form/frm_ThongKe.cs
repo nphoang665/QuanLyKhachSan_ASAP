@@ -30,8 +30,6 @@ namespace QuanLyKhachSan
         }
         private void UpdateChart()
         {
-
-
             chart_doanhthu.Series.Clear();
             chart_doanhthu.Titles.Clear();
             chart_doanhthu.Titles.Add("Doanh Thu Theo Tháng");
@@ -73,6 +71,11 @@ namespace QuanLyKhachSan
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             doanhthungay();
+        }
+
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            UpdateChart();
         }
     }
 }

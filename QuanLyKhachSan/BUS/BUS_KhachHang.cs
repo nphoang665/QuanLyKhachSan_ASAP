@@ -51,9 +51,9 @@ namespace QuanLyKhachSan.BUS
         //{
         //  return  da.khdatphong(mkh);
         //}
-        //public bool ktkhoa(string makh)
-        //{
-        //   return da.checkkhoa(makh);
-        //}
+        public bool ktkhoa(string makh)
+        {
+            return da.checkkhoa(makh);
+        }
     }
 }

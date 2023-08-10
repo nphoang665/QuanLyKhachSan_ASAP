@@ -56,23 +56,33 @@ namespace QuanLyKhachSan
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            string gioitinh;
-            if (rda_Nam.Checked)
+            try
             {
-                gioitinh = "Nam";
+                string gioitinh;
+                if (rda_Nam.Checked)
+                {
+                    gioitinh = "Nam";
+                }
+                else
+                {
+                    gioitinh = "Nữ";
+                }
+                bool isValid = batloi(txt_manv_them.Text, txt_TenNhanVien.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_chucvu1.Text);
+                if (!isValid)
+                    return;
+                bool khoaching = bus.KiemTraKhoa(txt_manv_them.Text);
+                if(!khoaching)
+                    return;
+                bus.ThemNhanSu(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text, pic_anhnhanvien);
+
+                bus.LoadDsNv(dgv_nhansu);
+                bus.LoadDsNv(dgv1_NhanSu);
+                bus.LoadDsNv(dgv2_NhanSu);
             }
-            else
+            catch (Exception ex)
             {
-                gioitinh = "Nữ";
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
-            bool isValid = batloi(txt_manv_them.Text, txt_TenNhanVien.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_chucvu1.Text);
-            if (!isValid)
-                return;
-            bus.ThemNhanSu(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text, pic_anhnhanvien);
-           
-            bus.LoadDsNv(dgv_nhansu);
-            bus.LoadDsNv(dgv1_NhanSu);
-            bus.LoadDsNv(dgv2_NhanSu);
 
         }
 
@@ -90,10 +100,18 @@ namespace QuanLyKhachSan
             bool isValid = batloi(txt_manv_sua.Text, txt_TenNhanVien2.Text, txt_DiaChi2.Text, txt_SoDienThoai2.Text, txt_chucvu2.Text);
             if (!isValid)
                 return;
-            DialogResult result = MessageBox.Show("Bạn có muốn sủa nhân sự này không?", "Sửa", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
-                bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text,pic_anh);
-            bus.LoadDsNv(dgv2_NhanSu);
+            try
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn sủa nhân sự này không?", "Sửa", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                    bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text, pic_anh);
+                bus.LoadDsNv(dgv2_NhanSu);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
+
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -140,7 +158,10 @@ namespace QuanLyKhachSan
         private void tabPage_TimNhanVien_Click(object sender, EventArgs e)
         {
             bus.TimNhanSuTheoChucVu(txt_timchuvu.Text, dgv1_NhanSu);
-
+            if (txt_timchuvu.Text == null)
+            {
+                bus.LoadDsNv(dgv2_NhanSu);
+            }
         }
 
         private void rdb_namtim_CheckedChanged(object sender, EventArgs e)
@@ -152,7 +173,10 @@ namespace QuanLyKhachSan
         private void txt_sdt_tim_TextChanged(object sender, EventArgs e)
         {
             bus.TimNhanSuTheosdt(txt_sdt_tim.Text, dgv1_NhanSu);
-
+            if (txt_sdt_tim.Text == null)
+            {
+                bus.LoadDsNv(dgv2_NhanSu);
+            }
         }
 
         private void rdb_nutim_CheckedChanged(object sender, EventArgs e)
@@ -177,7 +201,11 @@ namespace QuanLyKhachSan
 
         private void txt_timchuvu_TextChanged(object sender, EventArgs e)
         {
-          
+            bus.TimNhanSuTheoChucVu(txt_chucvu2.Text, dgv2_NhanSu);
+            if (txt_chucvu2.Text == null)
+            {
+                bus.LoadDsNv(dgv2_NhanSu);
+            }
         }
 
         private void txt_timchuvu_KeyPress(object sender, KeyPressEventArgs e)

@@ -39,8 +39,8 @@ namespace QuanLyKhachSan.DA
                 row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
-                row.Cells[4].Value = ns.NgaySinh;
-                row.Cells[5].Value = ns.NgayVaoLam;
+                row.Cells[4].Value = ns.NgaySinh.Value.ToShortDateString();
+                row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
 
@@ -111,8 +111,8 @@ namespace QuanLyKhachSan.DA
                 row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
-                row.Cells[4].Value = ns.NgaySinh;
-                row.Cells[5].Value = ns.NgayVaoLam;
+                row.Cells[4].Value = ns.NgaySinh.Value.ToShortDateString();
+                row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
 
@@ -133,8 +133,8 @@ namespace QuanLyKhachSan.DA
                 row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
-                row.Cells[4].Value = ns.NgaySinh;
-                row.Cells[5].Value = ns.NgayVaoLam;
+                row.Cells[4].Value = ns.NgaySinh.Value.ToShortDateString();
+                row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
 
@@ -155,8 +155,8 @@ namespace QuanLyKhachSan.DA
                 row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
-                row.Cells[4].Value = ns.NgaySinh;
-                row.Cells[5].Value = ns.NgayVaoLam;
+                row.Cells[4].Value = ns.NgaySinh.Value.ToShortDateString();
+                row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
 
@@ -177,8 +177,8 @@ namespace QuanLyKhachSan.DA
                 row.Cells[1].Value = ns.TenNhanSu;
                 row.Cells[2].Value = ns.GioiTinh;
                 row.Cells[3].Value = ns.ChucVu;
-                row.Cells[4].Value = ns.NgaySinh;
-                row.Cells[5].Value = ns.NgayVaoLam;
+                row.Cells[4].Value = ns.NgaySinh.Value.ToShortDateString();
+                row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
 
@@ -199,6 +199,15 @@ namespace QuanLyKhachSan.DA
             }
         }
 
-
+        public bool KiemTraKhoa(string manhansu)
+        {
+            var nhansu=db.NhanSu.Any(ns => ns.MaNhanSu == manhansu);
+            if (nhansu)
+            {
+                MessageBox.Show("Lỗi.Trùng mã nhân sự");
+                return false;
+            }
+            return true;
+        }
     }
 }

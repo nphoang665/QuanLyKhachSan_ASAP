@@ -168,17 +168,15 @@ namespace QuanLyKhachSan.DA
         //        return true;
         //    }
         //}
-        //public bool checkkhoa(string makh)
-        //{
-        //    var data = db.ThongTinKhachHangs.FirstOrDefault(x => x.MaKhachHang == makh);
-        //    if (data != null)
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        return true;
-        //    }
-        //}
+        public bool checkkhoa(string makh)
+        {
+            var data = db.ThongTinKhachHang.Any(ns => ns.MaKhachHang == makh);
+            if (data)
+            {
+                MessageBox.Show("Lỗi.Trùng mã khách hàng");
+                return false;
+            }
+            return true;
+        }
     }
 }

@@ -48,5 +48,9 @@ namespace QuanLyKhachSan.BUS
         {
             da_NhanSu.layanhNV(manv, pic);
         }
+        public bool KiemTraKhoa(string manhansu)
+        {
+            return da_NhanSu.KiemTraKhoa(manhansu);
+        }
     }
 }

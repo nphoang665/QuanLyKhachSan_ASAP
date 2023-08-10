@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart_doanhthu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbl_nam = new System.Windows.Forms.Label();
             this.lbl_thang = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbl_ngaybatdau = new System.Windows.Forms.Label();
+            this.btn_load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart_doanhthu)).BeginInit();
             this.SuspendLayout();
             // 
             // chart_doanhthu
             // 
             this.chart_doanhthu.BorderlineColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea2.Name = "ChartArea1";
-            this.chart_doanhthu.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_doanhthu.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart_doanhthu.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_doanhthu.Legends.Add(legend1);
             this.chart_doanhthu.Location = new System.Drawing.Point(62, 63);
             this.chart_doanhthu.Margin = new System.Windows.Forms.Padding(4);
             this.chart_doanhthu.Name = "chart_doanhthu";
             this.chart_doanhthu.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart_doanhthu.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_doanhthu.Series.Add(series1);
             this.chart_doanhthu.Size = new System.Drawing.Size(1004, 424);
             this.chart_doanhthu.TabIndex = 0;
             this.chart_doanhthu.Text = "chart1";
@@ -102,12 +103,23 @@
             this.lbl_ngaybatdau.TabIndex = 12;
             this.lbl_ngaybatdau.Text = "Bắt Đầu:";
             // 
+            // btn_load
+            // 
+            this.btn_load.Location = new System.Drawing.Point(695, 30);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(75, 23);
+            this.btn_load.TabIndex = 13;
+            this.btn_load.Text = "Load";
+            this.btn_load.UseVisualStyleBackColor = true;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            // 
             // frm_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 511);
+            this.Controls.Add(this.btn_load);
             this.Controls.Add(this.lbl_ngaybatdau);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbl_thang);
@@ -132,5 +144,6 @@
         private System.Windows.Forms.Label lbl_thang;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbl_ngaybatdau;
+        private System.Windows.Forms.Button btn_load;
     }
 }
