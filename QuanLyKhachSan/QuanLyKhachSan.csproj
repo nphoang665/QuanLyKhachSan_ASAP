@@ -382,6 +382,7 @@
     </Content>
     <Content Include="Resources\calendarDark.png" />
     <Content Include="Resources\calendarWhite.png" />
+    <None Include="Resources\icons8-service-35.png" />
     <None Include="Resources\Female_Information.png" />
     <None Include="Resources\male_information.png" />
     <None Include="Resources\house-key %281%29.png" />

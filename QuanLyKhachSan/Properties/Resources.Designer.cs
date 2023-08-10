@@ -10,9 +10,8 @@
 
 namespace QuanLyKhachSan.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -24,8 +23,7 @@ namespace QuanLyKhachSan.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        internal static Image calendarWhite;
-        internal static Image calendarDark;
+        
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -258,6 +256,16 @@ namespace QuanLyKhachSan.Properties {
         internal static System.Drawing.Bitmap icons8_rent_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-rent-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_service_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-service-35", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

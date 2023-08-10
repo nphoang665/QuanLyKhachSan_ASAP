@@ -75,7 +75,7 @@
           </Key>
           <Property Name="TenDangNhap" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="MatKhau" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="PhanQuyen" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PhanQuyen" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="MaNhanSu" Type="varchar" MaxLength="6" />
         </EntityType>
         <EntityType Name="ThongTinKhachHang">
@@ -378,7 +378,7 @@
           </Key>
           <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="PhanQuyen" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PhanQuyen" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="MaNhanSu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="LuuMatKhau" Relationship="QuanLyKhachSanModel.FK__LuuMatKha__TaiKh__2B3F6F97" FromRole="TaiKhoan" ToRole="LuuMatKhau" />
           <NavigationProperty Name="NhanSu" Relationship="QuanLyKhachSanModel.FK__TaiKhoan__MaNhan__286302EC" FromRole="TaiKhoan" ToRole="NhanSu" />
@@ -515,7 +515,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

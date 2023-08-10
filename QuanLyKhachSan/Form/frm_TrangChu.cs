@@ -244,5 +244,18 @@ namespace QuanLyKhachSan
         {
             OpenChildForm(new frm_HoaDon());
         }
+
+        private void btn_DangKyDichVu_Click(object sender, EventArgs e)
+        {
+            DiChuyenPanel(btn_DangKyDichVu);
+            frm_DichVu dichVuForm = new frm_DichVu();
+
+            TabControl tabControl_DichVu_ADM = dichVuForm.TabControl_DichVu_ADM;
+            if (tabControl_DichVu_ADM != null)
+            {
+                tabControl_DichVu_ADM.SelectedTab = dichVuForm.TabPage_DichVu_ADM;
+            }
+            OpenChildForm(dichVuForm);
+        }
     }
 }
