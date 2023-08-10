@@ -239,5 +239,10 @@ namespace QuanLyKhachSan
 
             OpenChildForm(new frm_ThongTinTaiKhoan(_tk));
         }
+
+        private void hóaĐơnToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_HoaDon());
+        }
     }
 }
