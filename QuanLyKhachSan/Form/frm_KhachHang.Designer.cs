@@ -56,6 +56,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_DanhSachKhachHang = new System.Windows.Forms.TabPage();
+            this.txt_tenkh_tim = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbo_TenKhachHang = new System.Windows.Forms.ComboBox();
             this.txt_CMND1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -408,11 +408,11 @@
             // 
             this.tabPage_DanhSachKhachHang.BackColor = System.Drawing.Color.White;
             this.tabPage_DanhSachKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_DanhSachKhachHang.Controls.Add(this.txt_tenkh_tim);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.radioButton1);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.radioButton2);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.label8);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.dgv_DanhSachKhachHang1);
-            this.tabPage_DanhSachKhachHang.Controls.Add(this.cbo_TenKhachHang);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.txt_CMND1);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.label11);
             this.tabPage_DanhSachKhachHang.Controls.Add(this.label10);
@@ -423,6 +423,16 @@
             this.tabPage_DanhSachKhachHang.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_DanhSachKhachHang.TabIndex = 1;
             this.tabPage_DanhSachKhachHang.Text = "Danh sách khách hàng";
+            // 
+            // txt_tenkh_tim
+            // 
+            this.txt_tenkh_tim.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_tenkh_tim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_tenkh_tim.Location = new System.Drawing.Point(290, 67);
+            this.txt_tenkh_tim.Name = "txt_tenkh_tim";
+            this.txt_tenkh_tim.Size = new System.Drawing.Size(211, 25);
+            this.txt_tenkh_tim.TabIndex = 42;
+            this.txt_tenkh_tim.TextChanged += new System.EventHandler(this.txt_tenkh_tim_TextChanged);
             // 
             // radioButton1
             // 
@@ -539,15 +549,6 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Ngày Thuê";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // cbo_TenKhachHang
-            // 
-            this.cbo_TenKhachHang.FormattingEnabled = true;
-            this.cbo_TenKhachHang.Location = new System.Drawing.Point(290, 66);
-            this.cbo_TenKhachHang.Name = "cbo_TenKhachHang";
-            this.cbo_TenKhachHang.Size = new System.Drawing.Size(211, 25);
-            this.cbo_TenKhachHang.TabIndex = 37;
-            this.cbo_TenKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbo_TenKhachHang_SelectedIndexChanged);
             // 
             // txt_CMND1
             // 
@@ -973,7 +974,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.ComboBox cbo_TenKhachHang;
         private System.Windows.Forms.TextBox txt_CMND1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -1013,5 +1013,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn cccd;
+        private System.Windows.Forms.TextBox txt_tenkh_tim;
     }
 }

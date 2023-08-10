@@ -29,8 +29,7 @@ namespace QuanLyKhachSan
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
             var data2 = bus.laykhachhang();
-            cbo_TenKhachHang.DataSource = data2;
-            cbo_TenKhachHang.SelectedIndex = -1;
+            
         }
 
         private void dgv_DanhSachKhachHang2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -161,14 +160,16 @@ namespace QuanLyKhachSan
 
         private void cbo_TenKhachHang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bus.TimKHTheoTen(cbo_TenKhachHang.Text, dgv_DanhSachKhachHang1);
-
+           
         }
 
         private void txt_CMND1_TextChanged(object sender, EventArgs e)
         {
             bus.TimTheocccdKH(txt_CMND1.Text, dgv_DanhSachKhachHang1);
-
+            if (txt_CMND1.Text == null)
+            {
+                bus.LoadDsKh(dgv_DanhSachKhachHang1);
+            }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -228,6 +229,16 @@ namespace QuanLyKhachSan
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void txt_tenkh_tim_TextChanged(object sender, EventArgs e)
+        {
+            bus.TimKHTheoTen(txt_tenkh_tim.Text, dgv_DanhSachKhachHang1);
+            if (txt_tenkh_tim.Text == null)
+            {
+                bus.LoadDsKh(dgv_DanhSachKhachHang1);
+            }
+
         }
     }
 }
