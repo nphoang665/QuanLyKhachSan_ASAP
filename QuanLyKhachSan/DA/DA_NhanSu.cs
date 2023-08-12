@@ -26,7 +26,8 @@ namespace QuanLyKhachSan.DA
                 s.SoDienThoai,
                 s.NgaySinh,
                 s.NgayVaoLam,
-                s.ChucVu
+                s.ChucVu,
+                s.CCCD
 
             }).ToList();
             foreach (var ns in ds)
@@ -43,10 +44,11 @@ namespace QuanLyKhachSan.DA
                 row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
+                row.Cells[8].Value = ns.CCCD;
 
             }
         }
-        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu,PictureBox pi)
+        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu,PictureBox pi,string cccd)
         {
             using (MemoryStream steam =new MemoryStream()) { 
                 pi.Image.Save(steam, ImageFormat.Jpeg);
@@ -61,13 +63,14 @@ namespace QuanLyKhachSan.DA
                     NgayVaoLam = ngayvaolam,
                     ChucVu = chucvu,
                     AnhNhanVien=steam.ToArray(),
+                    CCCD=cccd
                     
                 };
             db.NhanSus.Add(nhansu);
             db.SaveChanges();
             }
         }
-        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pi)
+        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pi,string cccd)
         {
       
              
@@ -81,7 +84,7 @@ namespace QuanLyKhachSan.DA
                     nhanSu.NgaySinh = ngaysinh;
                     nhanSu.NgayVaoLam = ngayvaolam;
                     nhanSu.ChucVu = chucvu;
-                
+                    nhanSu.CCCD=cccd;
                     db.SaveChanges();
                 }
             
@@ -114,6 +117,7 @@ namespace QuanLyKhachSan.DA
                 row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
+                row.Cells[8].Value = ns.CCCD;
 
             }
 
@@ -136,6 +140,7 @@ namespace QuanLyKhachSan.DA
                 row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
+                row.Cells[8].Value = ns.CCCD;
 
             }
 
@@ -158,6 +163,7 @@ namespace QuanLyKhachSan.DA
                 row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
+                row.Cells[8].Value = ns.CCCD;
 
             }
 
@@ -180,6 +186,7 @@ namespace QuanLyKhachSan.DA
                 row.Cells[5].Value = ns.NgayVaoLam.Value.ToShortDateString();
                 row.Cells[6].Value = ns.DiaChi;
                 row.Cells[7].Value = ns.SoDienThoai;
+                row.Cells[8].Value = ns.CCCD;
 
             }
 
@@ -207,6 +214,34 @@ namespace QuanLyKhachSan.DA
                 return false;
             }
             return true;
+        }
+        public bool checksdt(string sdt)
+        {
+            var data = db.NhanSus.Any(ns => ns.SoDienThoai == sdt);
+            if (data)
+            {
+                MessageBox.Show("Số điện thoại này đã được sử dụng!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        public bool checkcccd(string cccd)
+        {
+            var data = db.NhanSus.Any(ns => ns.CCCD == cccd);
+            if (data)
+            {
+                MessageBox.Show("Số căn cước công dân đã được sử dụng", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
     }
 }

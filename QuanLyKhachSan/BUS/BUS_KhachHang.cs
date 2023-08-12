@@ -55,5 +55,13 @@ namespace QuanLyKhachSan.BUS
         {
             return da.checkkhoa(makh);
         }
+        public bool ktsdt(string sdt)
+        {
+            return da.checksdt(sdt);
+        }
+        public bool ktcccd(string cccd)
+        {
+            return da.checkcccd(cccd);
+        }
     }
 }

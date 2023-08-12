@@ -1,14 +1,6 @@
 ﻿using QuanLyKhachSan.BUS;
-using QuanLyKhachSan.DA;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan
@@ -16,7 +8,7 @@ namespace QuanLyKhachSan
     public partial class frm_NhanVien : Form
     {
         BUS_NhanSu bus;
-        
+
         public frm_NhanVien()
         {
             InitializeComponent();
@@ -30,7 +22,7 @@ namespace QuanLyKhachSan
             bus.LoadDsNv(dgv2_NhanSu);
             bus.LoadDsNv(dgv1_NhanSu);
         }
-        public bool batloi(string mans, string tennv, string diachi, string sdt, string chucvu)
+        public bool batloi(string mans, string tennv, string diachi, string sdt, string chucvu, string gioitinh, string cccd)
         {
             try
             {
@@ -44,6 +36,10 @@ namespace QuanLyKhachSan
                     throw new Exception("Chưa nhập số điện thoại");
                 if (string.IsNullOrEmpty(chucvu))
                     throw new Exception("Chưa nhập chức vụ");
+                if (string.IsNullOrEmpty(gioitinh))
+                    throw new Exception("Chưa nhập giới tính");
+                if (string.IsNullOrEmpty(cccd))
+                    throw new Exception("Chưa nhập căn cước công dân");
             }
             catch (Exception ex)
             {
@@ -63,17 +59,27 @@ namespace QuanLyKhachSan
                 {
                     gioitinh = "Nam";
                 }
-                else
+                else if (rda_Nu.Checked)
                 {
                     gioitinh = "Nữ";
                 }
-                bool isValid = batloi(txt_manv_them.Text, txt_TenNhanVien.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_chucvu1.Text);
+                else
+                {
+                    gioitinh = null;
+                }
+                bool isValid = batloi(txt_manv_them.Text, txt_TenNhanVien.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_chucvu1.Text, gioitinh, txt_cccd.Text);
                 if (!isValid)
                     return;
                 bool khoaching = bus.KiemTraKhoa(txt_manv_them.Text);
-                if(!khoaching)
+                if (!khoaching)
                     return;
-                bus.ThemNhanSu(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text, pic_anhnhanvien);
+                bool ktsdt = bus.KiemTraSDT(txt_SoDienThoai.Text); 
+                if (!ktsdt)
+                    return;
+                bool ktcccd = bus.KiemTraCCCD(txt_cccd.Text);
+                if (!ktcccd)
+                    return;
+                bus.ThemNhanSu(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text, pic_anhnhanvien, txt_cccd.Text);
 
                 bus.LoadDsNv(dgv_nhansu);
                 bus.LoadDsNv(dgv1_NhanSu);
@@ -82,8 +88,9 @@ namespace QuanLyKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    
+
             }
+            MessageBox.Show("Đã thêm thông tin nhân viên " + txt_TenNhanVien.Text);
 
         }
 
@@ -98,38 +105,44 @@ namespace QuanLyKhachSan
             {
                 gioitinh = "Nữ";
             }
-            bool isValid = batloi(txt_manv_sua.Text, txt_TenNhanVien2.Text, txt_DiaChi2.Text, txt_SoDienThoai2.Text, txt_chucvu2.Text);
+            bool isValid = batloi(txt_manv_sua.Text, txt_TenNhanVien2.Text, txt_DiaChi2.Text, txt_SoDienThoai2.Text, txt_chucvu2.Text, gioitinh, txt_cccd_sua.Text);
             if (!isValid)
                 return;
             try
             {
                 DialogResult result = MessageBox.Show("Bạn có muốn sủa nhân sự này không?", "Sửa", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
-                    bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text, pic_anh);
+                    bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text, pic_anh, txt_cccd_sua.Text);
                 bus.LoadDsNv(dgv2_NhanSu);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
+
             }
+            MessageBox.Show("Đã sửa thông tin nhân viên " + txt_TenNhanVien2.Text);
+            txt_manv_sua.Enabled = true;
 
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 DialogResult result = MessageBox.Show("Bạn có muốn xóa nhân sự này không?", "Xoát", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                     bus.XoaNhanSu(txt_manv_sua.Text);
                 bus.LoadDsNv(dgv_nhansu);
                 bus.LoadDsNv(dgv2_NhanSu);
                 bus.LoadDsNv(dgv1_NhanSu);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            MessageBox.Show("Đã xóa thông tin nhân viên " + txt_TenNhanVien2.Text);
+            txt_manv_sua.Enabled = true;
+
         }
 
         private void txt_timten_TextChanged(object sender, EventArgs e)
@@ -140,7 +153,9 @@ namespace QuanLyKhachSan
 
         private void dgv2_NhanSu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try {
+            txt_manv_sua.Enabled = false;
+            try
+            {
                 txt_manv_sua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txt_TenNhanVien2.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string gioitinh = dgv2_NhanSu.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -160,11 +175,13 @@ namespace QuanLyKhachSan
                     rda_Nu2.Checked = true;
                 }
                 bus.layanhNV(txt_manv_sua.Text, pic_anh);
-            }catch(Exception ex)
+                txt_cccd_sua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[7].Value.ToString();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void tabPage_TimNhanVien_Click(object sender, EventArgs e)

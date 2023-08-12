@@ -33,7 +33,7 @@ namespace QuanLyKhachSan
         }
 
         private void dgv_DanhSachKhachHang2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {   txt_makh_sua.Enabled = false;
             txt_makh_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[0].Value.ToString();
             txt_tenkh_sua.Text = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[1].Value.ToString();
             string gioitinh = dgv_DanhSachKhachHang2.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -51,6 +51,7 @@ namespace QuanLyKhachSan
             {
                 rdb_nu_sua.Checked = true;
             }
+
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -60,9 +61,13 @@ namespace QuanLyKhachSan
             {
                 gioitinh = "Nam";
             }
-            else
+            else if(rda_Nu.Checked)
             {
                 gioitinh = "Nữ";
+            }
+            else
+            {
+                gioitinh = null;
             }
 
             bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, gioitinh);
@@ -73,7 +78,14 @@ namespace QuanLyKhachSan
                 var data = bus.ktkhoa(txt_makh.Text);
                 if (!data)
                     return;
+                var ckhSdt=bus.ktsdt(txt_SoDienThoai.Text);
+                if (!ckhSdt)
+                    return;
+                var chkCccd=bus.ktcccd(txt_CMND.Text);
+                if (!chkCccd)  
+                    return;
                 bus.ThemKH(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text);
+                MessageBox.Show("Đã thêm thông tin khách hàng " + txt_TenKhachHang.Text);
                 bus.LoadDsKh(dgv_DanhSachKhachHang2);
                 bus.LoadDsKh(dgv_DanhSachKhachHang);
                 bus.LoadDsKh(dgv_DanhSachKhachHang1);
@@ -83,6 +95,8 @@ namespace QuanLyKhachSan
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        
+            
 
         }
 
@@ -98,10 +112,11 @@ namespace QuanLyKhachSan
 
                 bus.XoaKH(txt_makh_sua.Text);
             }
-
+            MessageBox.Show("Đã xóa thông tin khách hàng "+txt_tenkh_sua.Text);
             bus.LoadDsKh(dgv_DanhSachKhachHang2);
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
+            txt_makh_sua.Enabled = true;
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -123,6 +138,7 @@ namespace QuanLyKhachSan
                 DialogResult result = MessageBox.Show("Bạn có muốn sủa thông tin khách hàng này không?", "Sửa", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                     bus.SuaKH(txt_makh_sua.Text, txt_tenkh_sua.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_diachi_sua.Text, txt_sdt_sua.Text, txt_cccd_sua.Text);
+                MessageBox.Show("Đã sửa thông tin khách hàng " + txt_tenkh_sua.Text);
                 bus.LoadDsKh(dgv_DanhSachKhachHang2);
                 bus.LoadDsKh(dgv_DanhSachKhachHang);
                 bus.LoadDsKh(dgv_DanhSachKhachHang1);
@@ -131,6 +147,7 @@ namespace QuanLyKhachSan
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            txt_makh_sua.Enabled = true;
 
         }
         public bool batloi(string makh, string tenkh, string diachi, string sdt, string cccd, string gioitinh)

@@ -16,13 +16,13 @@ namespace QuanLyKhachSan.BUS
         {
             da_NhanSu.LayNhanVien(dgv);
         }
-        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu,PictureBox pi)
+        public void ThemNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu,PictureBox pi,string cccd)
         {
-            da_NhanSu.ThemNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu,pi);
+            da_NhanSu.ThemNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu,pi,cccd);
         }
-        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pic)
+        public void SuaNhanSu(string mans, string tenvn, string gioitinh, string diachi, string sdt, DateTime ngaysinh, DateTime ngayvaolam, string chucvu, PictureBox pic, string cccd)
         {
-            da_NhanSu.SuaNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu, pic);
+            da_NhanSu.SuaNhanSu(mans, tenvn, gioitinh, diachi, sdt, ngaysinh, ngayvaolam, chucvu, pic, cccd);
         }
         public void XoaNhanSu(string mans)
         {
@@ -51,6 +51,14 @@ namespace QuanLyKhachSan.BUS
         public bool KiemTraKhoa(string manhansu)
         {
             return da_NhanSu.KiemTraKhoa(manhansu);
+        }
+        public bool KiemTraSDT(string sdt)
+        {
+            return da_NhanSu.checksdt(sdt);
+        }
+        public bool KiemTraCCCD(string cccd)
+        {
+            return da_NhanSu.checkcccd(cccd);
         }
     }
 }

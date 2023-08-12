@@ -5,6 +5,7 @@ using System.ComponentModel.Design;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan.DA
@@ -173,10 +174,43 @@ namespace QuanLyKhachSan.DA
             var data = db.ThongTinKhachHangs.Any(ns => ns.MaKhachHang == makh);
             if (data)
             {
-                MessageBox.Show("Trùng mã khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Trùng mã khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            return true;
+            else
+            {
+                return true;
+            }
+           
         }
+        public bool checksdt(string sdt)
+        {
+            var data = db.ThongTinKhachHangs.Any(ns => ns.SoDienThoai == sdt);
+            if (data)
+            {
+                MessageBox.Show("Số điện thoại này đã được sử dụng!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        public bool checkcccd(string cccd)
+        {
+            var data = db.ThongTinKhachHangs.Any(ns => ns.CMND == cccd);
+            if (data)
+            {
+                MessageBox.Show("Khách đã đăng ký căn cước công dân", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
     }
 }
