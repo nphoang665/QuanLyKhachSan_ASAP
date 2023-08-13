@@ -30,6 +30,8 @@
         {
             this.tabControl_NhanVien = new System.Windows.Forms.TabControl();
             this.tabPage_ThemNhanVien = new System.Windows.Forms.TabPage();
+            this.txt_cccd = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btn_mo = new System.Windows.Forms.Button();
             this.pic_anhnhanvien = new System.Windows.Forms.PictureBox();
             this.txt_chucvu1 = new System.Windows.Forms.TextBox();
@@ -57,6 +59,7 @@
             this.NgayVaoLam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cccdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Them = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,6 +74,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_sdt_tim = new System.Windows.Forms.TextBox();
             this.lbl_sdt = new System.Windows.Forms.Label();
             this.rdb_nutim = new System.Windows.Forms.RadioButton();
@@ -82,6 +86,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage_Sua_XoaNhanVien = new System.Windows.Forms.TabPage();
+            this.txt_cccd_sua = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.btn_mo_sua = new System.Windows.Forms.Button();
             this.pic_anh = new System.Windows.Forms.PictureBox();
             this.dgv2_NhanSu = new System.Windows.Forms.DataGridView();
@@ -93,6 +99,7 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ccccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_chucvu2 = new System.Windows.Forms.TextBox();
             this.lbl_chuvu = new System.Windows.Forms.Label();
             this.txt_manv_sua = new System.Windows.Forms.TextBox();
@@ -114,13 +121,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_cccd = new System.Windows.Forms.TextBox();
-            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ccccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_cccd_sua = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cccdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl_NhanVien.SuspendLayout();
             this.tabPage_ThemNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_anhnhanvien)).BeginInit();
@@ -178,6 +178,26 @@
             this.tabPage_ThemNhanVien.TabIndex = 0;
             this.tabPage_ThemNhanVien.Text = "Thêm nhân viên";
             this.tabPage_ThemNhanVien.UseVisualStyleBackColor = true;
+            // 
+            // txt_cccd
+            // 
+            this.txt_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cccd.Location = new System.Drawing.Point(546, 7);
+            this.txt_cccd.Name = "txt_cccd";
+            this.txt_cccd.Size = new System.Drawing.Size(193, 25);
+            this.txt_cccd.TabIndex = 48;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(399, 12);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 20);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "CCCD:";
             // 
             // btn_mo
             // 
@@ -440,6 +460,12 @@
             this.sodienthoai.Name = "sodienthoai";
             this.sodienthoai.ReadOnly = true;
             // 
+            // cccdd
+            // 
+            this.cccdd.HeaderText = "CCCD";
+            this.cccdd.Name = "cccdd";
+            this.cccdd.ReadOnly = true;
+            // 
             // btn_Them
             // 
             this.btn_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -594,6 +620,12 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
+            // cccd
+            // 
+            this.cccd.HeaderText = "CCCD";
+            this.cccd.Name = "cccd";
+            this.cccd.ReadOnly = true;
+            // 
             // txt_sdt_tim
             // 
             this.txt_sdt_tim.Location = new System.Drawing.Point(696, 129);
@@ -739,6 +771,26 @@
             this.tabPage_Sua_XoaNhanVien.TabIndex = 2;
             this.tabPage_Sua_XoaNhanVien.Text = "Sửa, Xóa nhân viên:";
             // 
+            // txt_cccd_sua
+            // 
+            this.txt_cccd_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_cccd_sua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cccd_sua.Location = new System.Drawing.Point(533, 15);
+            this.txt_cccd_sua.Name = "txt_cccd_sua";
+            this.txt_cccd_sua.Size = new System.Drawing.Size(193, 25);
+            this.txt_cccd_sua.TabIndex = 50;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(386, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 20);
+            this.label15.TabIndex = 49;
+            this.label15.Text = "CCCD:";
+            // 
             // btn_mo_sua
             // 
             this.btn_mo_sua.Location = new System.Drawing.Point(799, 122);
@@ -831,6 +883,12 @@
             this.dataGridViewTextBoxColumn16.HeaderText = "Số Điện Thoại";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // ccccd
+            // 
+            this.ccccd.HeaderText = "CCCD";
+            this.ccccd.Name = "ccccd";
+            this.ccccd.ReadOnly = true;
             // 
             // txt_chucvu2
             // 
@@ -1060,64 +1118,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(399, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 20);
-            this.label11.TabIndex = 47;
-            this.label11.Text = "CCCD:";
-            // 
-            // txt_cccd
-            // 
-            this.txt_cccd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cccd.Location = new System.Drawing.Point(546, 7);
-            this.txt_cccd.Name = "txt_cccd";
-            this.txt_cccd.Size = new System.Drawing.Size(193, 25);
-            this.txt_cccd.TabIndex = 48;
-            // 
-            // cccd
-            // 
-            this.cccd.HeaderText = "CCCD";
-            this.cccd.Name = "cccd";
-            this.cccd.ReadOnly = true;
-            // 
-            // ccccd
-            // 
-            this.ccccd.HeaderText = "CCCD";
-            this.ccccd.Name = "ccccd";
-            this.ccccd.ReadOnly = true;
-            // 
-            // txt_cccd_sua
-            // 
-            this.txt_cccd_sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_cccd_sua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cccd_sua.Location = new System.Drawing.Point(533, 15);
-            this.txt_cccd_sua.Name = "txt_cccd_sua";
-            this.txt_cccd_sua.Size = new System.Drawing.Size(193, 25);
-            this.txt_cccd_sua.TabIndex = 50;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(386, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 20);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "CCCD:";
-            // 
-            // cccdd
-            // 
-            this.cccdd.HeaderText = "CCCD";
-            this.cccdd.Name = "cccdd";
-            this.cccdd.ReadOnly = true;
             // 
             // frm_NhanVien
             // 

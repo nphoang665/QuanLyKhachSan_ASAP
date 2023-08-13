@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.IO;
 namespace QuanLyKhachSan
 {
     public partial class frm_NhanVien : Form
@@ -112,17 +112,19 @@ namespace QuanLyKhachSan
             {
                 DialogResult result = MessageBox.Show("Bạn có muốn sủa nhân sự này không?", "Sửa", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
+
                     bus.SuaNhanSu(txt_manv_sua.Text, txt_TenNhanVien2.Text, gioitinh, txt_DiaChi2.Text, txt_SoDienThoai2.Text, dtp_NgaySinh2.Value.Date, dtp_NgayVaoLam2.Value.Date, txt_chucvu2.Text, pic_anh, txt_cccd_sua.Text);
-                bus.LoadDsNv(dgv2_NhanSu);
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                File.AppendAllText("error.log", ex.ToString() + Environment.NewLine);
             }
             MessageBox.Show("Đã sửa thông tin nhân viên " + txt_TenNhanVien2.Text);
             txt_manv_sua.Enabled = true;
-
+            bus.LoadDsNv(dgv_nhansu);
+            bus.LoadDsNv(dgv1_NhanSu);
+            bus.LoadDsNv(dgv2_NhanSu);
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
