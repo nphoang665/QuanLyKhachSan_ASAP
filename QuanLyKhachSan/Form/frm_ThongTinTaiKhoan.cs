@@ -46,8 +46,6 @@ namespace QuanLyKhachSan
             txt_gioitinh.Texts = thongtinnhansu.GioiTinh;
             txt_NgaySinh.Texts = thongtinnhansu.NgaySinh?.ToShortDateString(); 
             txt_NgayVaoLam.Texts = thongtinnhansu.NgayVaoLam?.ToShortDateString();
-
-
             txt_sdt.Texts = thongtinnhansu.SoDienThoai;
             txt_diaChi.Texts = thongtinnhansu.DiaChi;
             if (txt_gioitinh.Texts == "Nam")

@@ -28,10 +28,6 @@ namespace QuanLyKhachSan.DA
                 frag = false;
             }
             return frag;
-
-
-
-
         }
     }
 

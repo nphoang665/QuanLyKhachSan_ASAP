@@ -16,30 +16,18 @@ namespace QuanLyKhachSan
             dstk = new BUS_QuanLyTaiKhoan();
 
         }
-
         private void dgv_DanhSachNguoiDung2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
-
-
-
-
-
         private void txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
             string timKiem = txt_TimKiem.Texts;
-
             var ketqua = dstk.TimTaiKhoan(timKiem);
-
             dgv_DanhSachNguoiDung1.DataSource = ketqua;
         }
-
         private void dgv_DanhSachNguoiDung2_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
             txt_tk_Sua.Enabled = false;
-           
             if (e.RowIndex >= 0)
             {
                 string tdn = dgv_DanhSachNguoiDung2.Rows[e.RowIndex].Cells["TenDangNhap"].Value.ToString();
@@ -63,7 +51,7 @@ namespace QuanLyKhachSan
                 {
                     lbl_mkthem_chk.Text = "";
                     lbl_pqthem_chk.Text = "";
-                    lbl_mnsthem_chk.Text = "";  
+                    lbl_mnsthem_chk.Text = "";
                     throw new Exception("Lỗi. Chưa nhập tên đăng nhập!");
                 }
                 else if (dstk.KiemTraTenDangNhap(tenDangNhap))
@@ -129,35 +117,17 @@ namespace QuanLyKhachSan
                     }
                     else
                     {
-                        
-                            lbl_tdnthem_chk.Text = "";
-                            lbl_mkthem_chk.Text = "";
-                            lbl_pqthem_chk.Text = "";
-                            lbl_mnsthem_chk.Text = "";
-                            dstk.ThemTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
-                            var data = dstk.LoadDsTkData();
-                            dgv_DanhSachNguoiDung.DataSource = data;
 
-                            dgv_DanhSachNguoiDung1.DataSource = data;
+                        lbl_tdnthem_chk.Text = "";
+                        lbl_mkthem_chk.Text = "";
+                        lbl_pqthem_chk.Text = "";
+                        lbl_mnsthem_chk.Text = "";
+                        dstk.ThemTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
+                        loadThongTin();
 
-                            dgv_DanhSachNguoiDung2.DataSource = data;
-                            dgv_DanhSachNguoiDung.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                            dgv_DanhSachNguoiDung.Columns[1].HeaderCell.Value = "Mật khẩu";
-                            dgv_DanhSachNguoiDung.Columns[3].HeaderCell.Value = "Phân quyền";
-                            dgv_DanhSachNguoiDung.Columns[2].HeaderCell.Value = "Mã nhân sự";
-
-                            dgv_DanhSachNguoiDung1.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                            dgv_DanhSachNguoiDung1.Columns[1].HeaderCell.Value = "Mật khẩu";
-                            dgv_DanhSachNguoiDung1.Columns[3].HeaderCell.Value = "Phân quyền";
-                            dgv_DanhSachNguoiDung1.Columns[2].HeaderCell.Value = "Mã nhân sự";
-
-                            dgv_DanhSachNguoiDung2.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                            dgv_DanhSachNguoiDung2.Columns[1].HeaderCell.Value = "Mật khẩu";
-                            dgv_DanhSachNguoiDung2.Columns[2].HeaderCell.Value = "Mã nhân sự";
-                            dgv_DanhSachNguoiDung2.Columns[3].HeaderCell.Value = "Phân quyền";
-                        }
                     }
-                
+                }
+
             }
             catch (Exception ex)
             {
@@ -167,7 +137,7 @@ namespace QuanLyKhachSan
                     lbl_tdnthem_chk.ForeColor = Color.Red;
                     lbl_tdnthem_chk.Text = ex.Message;
                 }
-                if (ex.Message==("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                if (ex.Message == ("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
                 {
                     lbl_tdnthem_chk.Visible = true;
                     lbl_tdnthem_chk.ForeColor = Color.Red;
@@ -199,8 +169,8 @@ namespace QuanLyKhachSan
                 }
             }
         }
-        private void frm_NguoiDung_Load(object sender, EventArgs e)
-        {
+        void loadThongTin() {
+
             var data = dstk.LoadDsTkData();
             dgv_DanhSachNguoiDung.DataSource = data;
             dgv_DanhSachNguoiDung1.DataSource = data;
@@ -224,6 +194,11 @@ namespace QuanLyKhachSan
             dgv_DanhSachNguoiDung2.Columns["TenDangNhap"].ReadOnly = true;
             dgv_DanhSachNguoiDung2.Columns["Phanquyen"].ReadOnly = true;
         }
+        private void frm_NguoiDung_Load(object sender, EventArgs e)
+        {
+            loadThongTin();
+        } 
+
 
         private void btn_Sua_Click_1(object sender, EventArgs e)
         {
@@ -311,16 +286,8 @@ namespace QuanLyKhachSan
                             lbl_mnssua_chk.Text = "";
                             lbl_pqsua_chk.Text = "";
                             dstk.SuaTaiKhoan(tenDangNhap, matKhau, phanQuyen, manhansu);
-                            var data = dstk.LoadDsTkData();
-                            dgv_DanhSachNguoiDung.DataSource = data;
+                            loadThongTin();
 
-                            dgv_DanhSachNguoiDung1.DataSource = data;
-
-                            dgv_DanhSachNguoiDung2.DataSource = data;
-                            dgv_DanhSachNguoiDung2.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                            dgv_DanhSachNguoiDung2.Columns[1].HeaderCell.Value = "Mật khẩu";
-                            dgv_DanhSachNguoiDung2.Columns[2].HeaderCell.Value = "Mã nhân sự";
-                            dgv_DanhSachNguoiDung2.Columns[3].HeaderCell.Value = "Phân quyền";
                         }
                     }
                 }
@@ -380,16 +347,8 @@ namespace QuanLyKhachSan
                 string tenDangNhap = txt_tk_Sua.Texts;
 
                 dstk.XoaTaiKhoan(tenDangNhap);
-                var data = dstk.LoadDsTkData();
-                dgv_DanhSachNguoiDung.DataSource = data;
-                dgv_DanhSachNguoiDung1.DataSource = data;
+                loadThongTin();
 
-
-                dgv_DanhSachNguoiDung2.DataSource = data;
-                dgv_DanhSachNguoiDung2.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                dgv_DanhSachNguoiDung2.Columns[1].HeaderCell.Value = "Mật khẩu";
-                dgv_DanhSachNguoiDung2.Columns[2].HeaderCell.Value = "Mã nhân sự";
-                dgv_DanhSachNguoiDung2.Columns[3].HeaderCell.Value = "Phân quyền";
             }
         }
 
@@ -480,12 +439,8 @@ namespace QuanLyKhachSan
                 var bus = new BUS_QuanLyTaiKhoan();
 
                 bus.CapNhatDsTk(dataTable);
-                var data = dstk.LoadDsTkData();
-                dgv_DanhSachNguoiDung2.DataSource = data;
-                dgv_DanhSachNguoiDung2.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                dgv_DanhSachNguoiDung2.Columns[1].HeaderCell.Value = "Mật khẩu";
-                dgv_DanhSachNguoiDung2.Columns[2].HeaderCell.Value = "Mã nhân sự";
-                dgv_DanhSachNguoiDung2.Columns[3].HeaderCell.Value = "Phân quyền";
+                loadThongTin();
+
             }
             catch (Exception ex)
             {
@@ -520,15 +475,8 @@ namespace QuanLyKhachSan
 
                         bus.ThemTaiKhoan_Data(tenDangNhap, matKhau, phanQuyen, maNhanSu);
                         MessageBox.Show("Thêm thành công");
-                        var data = dstk.LoadDsTkData();
-                        dgv_DanhSachNguoiDung.DataSource = data;
-                        dgv_DanhSachNguoiDung1.DataSource = data;
+                        loadThongTin();
 
-                        dgv_DanhSachNguoiDung2.DataSource = data;
-                        dgv_DanhSachNguoiDung2.Columns[0].HeaderCell.Value = "Tên đăng nhập";
-                        dgv_DanhSachNguoiDung2.Columns[1].HeaderCell.Value = "Mật khẩu";
-                        dgv_DanhSachNguoiDung2.Columns[2].HeaderCell.Value = "Mã nhân sự";
-                        dgv_DanhSachNguoiDung2.Columns[3].HeaderCell.Value = "Phân quyền";
                     }
                     catch (Exception ex)
                     {

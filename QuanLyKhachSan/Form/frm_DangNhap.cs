@@ -53,24 +53,26 @@ namespace QuanLyKhachSan
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            string username = txt_TenDangNhap.Texts;
+            string password = txt_MatKhau.Texts;
             try
             {
-                if (string.IsNullOrEmpty(txt_TenDangNhap.Texts))
+                if (string.IsNullOrEmpty(username))
                 {
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Vui lòng nhập tên đăng nhập.");
                 }
-                else if (txt_TenDangNhap.Texts.Length < 5 || txt_TenDangNhap.Texts.Length > 20)
+                else if (username.Length < 5 || username.Length > 20)
                 {
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if (string.IsNullOrEmpty(txt_MatKhau.Texts))
+                else if (string.IsNullOrEmpty(password))
                 {
                     lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Vui lòng nhập mật khẩu.");
                 }
-                else if (txt_MatKhau.Texts.Length < 5 || txt_MatKhau.Texts.Length > 20)
+                else if (password.Length < 5 || password.Length > 20)
                 {
                     lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự");
@@ -80,8 +82,7 @@ namespace QuanLyKhachSan
 
                     if (chk_ghiNhoDangNhap.Checked)
                     {
-                        string username = txt_TenDangNhap.Texts;
-                        string password = txt_MatKhau.Texts;
+                      
 
                         var savedLoginInfo = bus.LayThongTinDaLuu();
                         if (savedLoginInfo != null)
@@ -98,24 +99,21 @@ namespace QuanLyKhachSan
                         bus.XoaThongTinDaLuu();
                     }
 
-                    //đăng nhập
-                    string tk = txt_TenDangNhap.Texts;
-                    string mk = txt_MatKhau.Texts;
-
-                    string tinhTrang = bus.KiemTraTinhTrang(tk);
+                  
+                    string tinhTrang = bus.KiemTraTinhTrang(username);
                     if (tinhTrang == "ThanhCong")
                     {
 
 
 
 
-                        bool dangnhap = bus.DangNhapTaiKhoan(tk, mk);
+                        bool dangnhap = bus.DangNhapTaiKhoan(username, password);
                         if (dangnhap)
                         {
 
 
                             this.Hide();
-                            frm_TrangChu frm = new frm_TrangChu(tk);
+                            frm_TrangChu frm = new frm_TrangChu(username);
                             frm.ShowDialog();
                             this.Close();
                         }
@@ -129,7 +127,7 @@ namespace QuanLyKhachSan
                     }
                     else if (tinhTrang == "ThatBai")
                     {
-                        string lydo = bus.LayLyDo(tk);
+                        string lydo = bus.LayLyDo(username);
                         MessageBox.Show("Đăng nhập thất bại. Lý do: " + lydo);
                     }
                     else

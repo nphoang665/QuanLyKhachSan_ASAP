@@ -29,7 +29,6 @@ namespace QuanLyKhachSan.DA
                 s.TenDangNhap,
                 s.MatKhau,
                 s.TinhTrang,
-                s.LyDo
             }).Where(a => a.TinhTrang == "ThanhCong").ToList();
             return qr;
         }

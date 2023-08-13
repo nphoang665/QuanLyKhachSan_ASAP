@@ -52,6 +52,7 @@
             // dgv_TaiKhoanDaDuocXacThuc
             // 
             this.dgv_TaiKhoanDaDuocXacThuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TaiKhoanDaDuocXacThuc.Enabled = false;
             this.dgv_TaiKhoanDaDuocXacThuc.Location = new System.Drawing.Point(479, 162);
             this.dgv_TaiKhoanDaDuocXacThuc.Name = "dgv_TaiKhoanDaDuocXacThuc";
             this.dgv_TaiKhoanDaDuocXacThuc.ReadOnly = true;
@@ -73,7 +74,7 @@
             // 
             this.lbl_tkchuaxacthuc.AutoSize = true;
             this.lbl_tkchuaxacthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tkchuaxacthuc.Location = new System.Drawing.Point(49, 114);
+            this.lbl_tkchuaxacthuc.Location = new System.Drawing.Point(60, 125);
             this.lbl_tkchuaxacthuc.Name = "lbl_tkchuaxacthuc";
             this.lbl_tkchuaxacthuc.Size = new System.Drawing.Size(250, 22);
             this.lbl_tkchuaxacthuc.TabIndex = 3;
@@ -83,7 +84,7 @@
             // 
             this.lbl_tk_xacthuc.AutoSize = true;
             this.lbl_tk_xacthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tk_xacthuc.Location = new System.Drawing.Point(518, 114);
+            this.lbl_tk_xacthuc.Location = new System.Drawing.Point(541, 125);
             this.lbl_tk_xacthuc.Name = "lbl_tk_xacthuc";
             this.lbl_tk_xacthuc.Size = new System.Drawing.Size(231, 22);
             this.lbl_tk_xacthuc.TabIndex = 4;

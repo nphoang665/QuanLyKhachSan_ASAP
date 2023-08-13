@@ -31,16 +31,20 @@ namespace QuanLyKhachSan
             {
                 bus.CapNhatTinhTrangVaLyDoTaiKhoan(taiKhoan, "ThatBai", reason);
 
-                bus.LayTaiKhoanChuaXuLy(dgv_tkChuaXacThuc);
-                bus.LayTaiKhoanThanhCong(dgv_TaiKhoanDaDuocXacThuc);
+                loadDuLieu();
+
             }
 
         }
-
+        void loadDuLieu()
+        {
+  bus.LayTaiKhoanChuaXuLy(dgv_tkChuaXacThuc);
+            bus.LayTaiKhoanThanhCong(dgv_TaiKhoanDaDuocXacThuc);
+        }
         private void frm_XacThucTaiKhoan_Load(object sender, EventArgs e)
         {
-            bus.LayTaiKhoanChuaXuLy(dgv_tkChuaXacThuc);
-            bus.LayTaiKhoanThanhCong(dgv_TaiKhoanDaDuocXacThuc);
+            loadDuLieu();
+          
         }
 
         private void btn_DongY_Click(object sender, EventArgs e)
@@ -50,8 +54,9 @@ namespace QuanLyKhachSan
             {
                 bus.CapNhatTinhTrangTaiKhoan(taiKhoan, "ThanhCong");
 
-                bus.LayTaiKhoanChuaXuLy(dgv_tkChuaXacThuc);
-                bus.LayTaiKhoanThanhCong(dgv_TaiKhoanDaDuocXacThuc);
+
+                loadDuLieu();
+
             }
         }
         int viTri;

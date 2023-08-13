@@ -1,16 +1,12 @@
-﻿
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan.DA
 {
-    public  class DA_QuanLyTaiKhoan
+    public class DA_QuanLyTaiKhoan
     {
         QuanLyKhachSanEntities db;
         public DA_QuanLyTaiKhoan()
@@ -22,7 +18,7 @@ namespace QuanLyKhachSan.DA
             var ds = db.TaiKhoans.Select(s =>
             new
             {
-           
+
                 s.TenDangNhap,
                 s.MatKhau,
                 s.PhanQuyen,
@@ -31,7 +27,7 @@ namespace QuanLyKhachSan.DA
             ).ToList();
             return ds;
         }
-        public void ThemTaiKhoan( string tenDangNhap, string matKhau, string phanQuyen,string manhansu)
+        public void ThemTaiKhoan(string tenDangNhap, string matKhau, string phanQuyen, string manhansu)
         {
             var taiKhoan = new TaiKhoan
             {
@@ -40,13 +36,13 @@ namespace QuanLyKhachSan.DA
                 MatKhau = matKhau,
                 PhanQuyen = phanQuyen,
                 MaNhanSu = manhansu
-               
+
             };
             db.TaiKhoans.Add(taiKhoan);
             db.SaveChanges();
         }
 
-        public void SuaTaiKhoan( string tenDangNhap, string matKhau, string phanQuyen,string manhansu)
+        public void SuaTaiKhoan(string tenDangNhap, string matKhau, string phanQuyen, string manhansu)
         {
             var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
             if (taiKhoan != null)
@@ -72,7 +68,7 @@ namespace QuanLyKhachSan.DA
         public IList TimTaiKhoan(string timKiem)
         {
             var qr = db.TaiKhoans
-                .Where(t => t.TenDangNhap.Contains(timKiem) || t.MaNhanSu.Contains(timKiem)||t.PhanQuyen.Contains(timKiem))
+                .Where(t => t.TenDangNhap.Contains(timKiem) || t.MaNhanSu.Contains(timKiem) || t.PhanQuyen.Contains(timKiem))
                 .Select(t => new
                 {
                     TenDangNhap = t.TenDangNhap,
@@ -84,11 +80,11 @@ namespace QuanLyKhachSan.DA
             return qr;
         }
 
-        public bool KiemTraPhanQuyen(string MaNhanSu,string PhanQuyen)
+        public bool KiemTraPhanQuyen(string MaNhanSu, string PhanQuyen)
         {
             bool kiemTra = false;
             var PQ = db.NhanSus.FirstOrDefault(s => s.MaNhanSu == MaNhanSu);
-            if( PhanQuyen==PQ.ChucVu)
+            if (PhanQuyen == PQ.ChucVu)
             {
                 kiemTra = true;
 
@@ -134,18 +130,18 @@ namespace QuanLyKhachSan.DA
                 var dataTable = new DataTable();
                 dataTable.Columns.Add("TenDangNhap");
                 dataTable.Columns.Add("MatKhau");
-dataTable.Columns.Add("MaNhanSu");
+                dataTable.Columns.Add("MaNhanSu");
                 dataTable.Columns.Add("PhanQuyen");
-                
+
 
                 foreach (var item in data)
                 {
                     var row = dataTable.NewRow();
                     row["TenDangNhap"] = item.TenDangNhap;
                     row["MatKhau"] = item.MatKhau;
-row["MaNhanSu"] = item.MaNhanSu;
+                    row["MaNhanSu"] = item.MaNhanSu;
                     row["PhanQuyen"] = item.PhanQuyen;
-                    
+
                     dataTable.Rows.Add(row);
                 }
 
@@ -154,15 +150,14 @@ row["MaNhanSu"] = item.MaNhanSu;
         }
         public void CapNhatDsTk(DataTable dataTable)
         {
-            using (var context = new QuanLyKhachSanEntities())
-            {
+        
                 foreach (DataRow row in dataTable.Rows)
                 {
                     string tenDangNhap = row["TenDangNhap"].ToString();
                     string matKhau = row["MatKhau"].ToString();
                     string maNhanSu = row["MaNhanSu"].ToString();
 
-                    var nhanSu = context.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
+                    var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
                     if (nhanSu == null)
                     {
                         MessageBox.Show("Mã nhân sự không tồn tại: " + maNhanSu);
@@ -171,7 +166,7 @@ row["MaNhanSu"] = item.MaNhanSu;
 
                     string phanQuyen = nhanSu.ChucVu;
 
-                    var taiKhoan = context.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
+                    var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
                     if (taiKhoan != null)
                     {
                         taiKhoan.MatKhau = matKhau;
@@ -187,13 +182,13 @@ row["MaNhanSu"] = item.MaNhanSu;
                             PhanQuyen = phanQuyen,
                             MaNhanSu = maNhanSu
                         };
-                        context.TaiKhoans.Add(taiKhoan);
+                        db.TaiKhoans.Add(taiKhoan);
                     }
                 }
 
-                context.SaveChanges();
+                db.SaveChanges();
                 MessageBox.Show("Lưu thông tin thành công");
-            }
+            
         }
         public List<TaiKhoan> LayDsTk_Data()
         {
@@ -210,9 +205,7 @@ row["MaNhanSu"] = item.MaNhanSu;
             var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
             if (nhanSu == null)
                 return null;
-
             string phanQuyen = nhanSu.ChucVu;
-
             return phanQuyen;
         }
 

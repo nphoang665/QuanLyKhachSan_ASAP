@@ -55,7 +55,7 @@ namespace QuanLyKhachSan
                 var laymk = bus.Laymk(_tk);
 
 
-                if (txt_MatKhauCu.Texts != laymk.MatKhau)
+                if (matKhauCu != laymk.MatKhau)
                 {
                     lbl_mkmoi_chk.Text = "";
                     lbl_remkmoi_chk.Text = "";
@@ -84,7 +84,7 @@ namespace QuanLyKhachSan
                     lbl_mkcu_chk.Text = "";
                     lbl_mkmoi_chk.Text = "";
                     lbl_remkmoi_chk.Text = "";
-                    bool doimk = bus.DoiMatKhau(_tk, txt_MatKhauCu.Texts, txt_MatKhauMoi.Texts);
+                    bool doimk = bus.DoiMatKhau(_tk, matKhauCu, matKhauMoi);
 
                     frm_TrangChu.ViDu.Hide();
                     frm_DangNhap frm = new frm_DangNhap();
