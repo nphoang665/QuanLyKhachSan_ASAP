@@ -99,7 +99,7 @@
           </Key>
           <Property Name="MaThuePhong" Type="varchar" MaxLength="6" Nullable="false" />
           <Property Name="MaKhachHang" Type="varchar" MaxLength="6" />
-          <Property Name="NgayThue" Type="datetime" />
+          <Property Name="NgayThue" Type="date" />
           <Property Name="MaPhong" Type="varchar" MaxLength="6" />
         </EntityType>
         <EntityType Name="VatTu">
@@ -172,7 +172,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThuePhong__MaKha__49C3F6B7">
+        <Association Name="FK__ThuePhong__MaKha__30F848ED">
           <End Role="ThongTinKhachHang" Type="Self.ThongTinKhachHang" Multiplicity="0..1" />
           <End Role="ThuePhong" Type="Self.ThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,7 +184,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ThuePhong__MaPho__4BAC3F29">
+        <Association Name="FK__ThuePhong__MaPho__32E0915F">
           <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
           <End Role="ThuePhong" Type="Self.ThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -239,11 +239,11 @@
             <End Role="NhanSu" EntitySet="NhanSu" />
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThuePhong__MaKha__49C3F6B7" Association="Self.FK__ThuePhong__MaKha__49C3F6B7">
+          <AssociationSet Name="FK__ThuePhong__MaKha__30F848ED" Association="Self.FK__ThuePhong__MaKha__30F848ED">
             <End Role="ThongTinKhachHang" EntitySet="ThongTinKhachHang" />
             <End Role="ThuePhong" EntitySet="ThuePhong" />
           </AssociationSet>
-          <AssociationSet Name="FK__ThuePhong__MaPho__4BAC3F29" Association="Self.FK__ThuePhong__MaPho__4BAC3F29">
+          <AssociationSet Name="FK__ThuePhong__MaPho__32E0915F" Association="Self.FK__ThuePhong__MaPho__32E0915F">
             <End Role="Phong" EntitySet="Phong" />
             <End Role="ThuePhong" EntitySet="ThuePhong" />
           </AssociationSet>
@@ -407,7 +407,7 @@
           </Key>
           <Property Name="MaThuePhong" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="MaKhachHang" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <Property Name="NgayThue" Type="DateTime" Precision="3" />
+          <Property Name="NgayThue" Type="DateTime" Precision="0" />
           <Property Name="MaPhong" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Phong" Relationship="QuanLyKhachSanModel.FK__ThuePhong__MaPho__32E0915F" FromRole="ThuePhong" ToRole="Phong" />
           <NavigationProperty Name="ThongTinKhachHang" Relationship="QuanLyKhachSanModel.FK__ThuePhong__MaKha__30F848ED" FromRole="ThuePhong" ToRole="ThongTinKhachHang" />

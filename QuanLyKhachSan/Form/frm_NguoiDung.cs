@@ -16,9 +16,7 @@ namespace QuanLyKhachSan
             dstk = new BUS_QuanLyTaiKhoan();
 
         }
-        private void dgv_DanhSachNguoiDung2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
+        private int initialRowCount;
         private void txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
             string timKiem = txt_TimKiem.Texts;
@@ -169,7 +167,8 @@ namespace QuanLyKhachSan
                 }
             }
         }
-        void loadThongTin() {
+        void loadThongTin()
+        {
 
             var data = dstk.LoadDsTkData();
             dgv_DanhSachNguoiDung.DataSource = data;
@@ -196,8 +195,11 @@ namespace QuanLyKhachSan
         }
         private void frm_NguoiDung_Load(object sender, EventArgs e)
         {
+
             loadThongTin();
-        } 
+            initialRowCount = dgv_DanhSachNguoiDung.Rows.Count;
+
+        }
 
 
         private void btn_Sua_Click_1(object sender, EventArgs e)
@@ -306,7 +308,7 @@ namespace QuanLyKhachSan
                     lbl_tksua_chk.ForeColor = Color.Red;
                     lbl_tksua_chk.Text = ex.Message;
                 }
-                else if (ex.Message==("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
+                else if (ex.Message == ("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự"))
                 {
                     lbl_mksua_Chk.Visible = true;
                     lbl_mksua_Chk.ForeColor = Color.Red;
@@ -408,13 +410,22 @@ namespace QuanLyKhachSan
 
         private void dgv_DanhSachNguoiDung2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-           
+            if (e.ColumnIndex == dgv_DanhSachNguoiDung.Columns["MaNhanSu"].Index)
+            {
+                string maNhanSu = dgv_DanhSachNguoiDung.Rows[e.RowIndex].Cells["MaNhanSu"].Value.ToString();
+
+                BUS_QuanLyTaiKhoan bus = new BUS_QuanLyTaiKhoan();
+
+
+                if (bus.KiemTraMaNhanSu(maNhanSu))
+                {
+                    string phanQuyen = bus.LayPhanQuyen(maNhanSu);
+
+                    dgv_DanhSachNguoiDung.Rows[e.RowIndex].Cells["PhanQuyen"].Value = phanQuyen;
+                }
               
-
-
-
+                         }
         }
-
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             try
@@ -451,70 +462,39 @@ namespace QuanLyKhachSan
         private void btn_ThemTuBang_Click(object sender, EventArgs e)
         {
 
-            BUS_QuanLyTaiKhoan bus = new BUS_QuanLyTaiKhoan();
-
+            XoaHangTrong();
+            dstk.SaveData(dgv_DanhSachNguoiDung);
+            //loadThongTin();
+        }
+        private void XoaHangTrong()
+        {
             for (int i = 0; i < dgv_DanhSachNguoiDung.Rows.Count - 1; i++)
             {
-                DataGridViewRow row = dgv_DanhSachNguoiDung.Rows[i];
-
-                if (row.Cells["TenDangNhap"].Value == null || row.Cells["MatKhau"].Value == null || row.Cells["MaNhanSu"].Value == null)
+                if (dgv_DanhSachNguoiDung.Rows[i].Cells[0].Value.ToString() == "")
                 {
-                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin cho tất cả các ô!");
-                    return;
+                    dgv_DanhSachNguoiDung.Rows.RemoveAt(i);
+                    i--;
                 }
-
-                string tenDangNhap = row.Cells["TenDangNhap"].Value.ToString();
-
-                if (!bus.KiemTraTenDangNhap(tenDangNhap))
-                {
-                    try
-                    {
-                        string matKhau = row.Cells["MatKhau"].Value.ToString();
-                        string phanQuyen = row.Cells["PhanQuyen"].Value.ToString();
-                        string maNhanSu = row.Cells["MaNhanSu"].Value.ToString();
-
-                        bus.ThemTaiKhoan_Data(tenDangNhap, matKhau, phanQuyen, maNhanSu);
-                        MessageBox.Show("Thêm thành công");
-                        loadThongTin();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Đã xảy ra lỗi khi thêm tài khoản mới: " + ex.Message);
-                    }
-                }
-
             }
         }
-
-
-
-
         private void dgv_DanhSachNguoiDung_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        { 
-            if (e.ColumnIndex == dgv_DanhSachNguoiDung.Columns["MaNhanSu"].Index)
-            {
-                string maNhanSu = dgv_DanhSachNguoiDung.Rows[e.RowIndex].Cells["MaNhanSu"].Value.ToString();
-
-                BUS_QuanLyTaiKhoan bus = new BUS_QuanLyTaiKhoan();
-
-                string tenDangNhap = dgv_DanhSachNguoiDung.Rows[e.RowIndex].Cells["TenDangNhap"].Value.ToString();
-                if (!bus.KiemTraTenDangNhap(tenDangNhap))
-                {
-                    if (bus.KiemTraMaNhanSu(maNhanSu))
-                    {
-                        string phanQuyen = bus.LayPhanQuyen(maNhanSu);
-
-                        dgv_DanhSachNguoiDung.Rows[e.RowIndex].Cells["PhanQuyen"].Value = phanQuyen;
-                    }
-                }
-            }
+        {
+         
         }
-
         private void btn_InDuLieu_Click(object sender, EventArgs e)
         {
             frm_ReportQuanLyTaiKhoan frm = new frm_ReportQuanLyTaiKhoan();
             frm.ShowDialog();
+        }
+
+        private void dgv_DanhSachNguoiDung_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        {
+         
+        }
+
+        private void dgv_DanhSachNguoiDung_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+        
         }
     }
 }

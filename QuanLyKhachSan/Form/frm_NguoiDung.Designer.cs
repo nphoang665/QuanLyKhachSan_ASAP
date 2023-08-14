@@ -66,10 +66,10 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbo_phanquyen_sua = new CustormTextbox.RJConTrol.RJComboBox();
             this.txt_manhansu_sua = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_mk_Sua = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_tk_Sua = new CustormTextbox.RJConTrol.RJTextBox();
+            this.cbo_phanquyen_sua = new CustormTextbox.RJConTrol.RJComboBox();
             this.tabControl_NguoiDung.SuspendLayout();
             this.tabPage_ThemNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachNguoiDung)).BeginInit();
@@ -211,7 +211,7 @@
             this.lbl_mnsthem_chk.AutoSize = true;
             this.lbl_mnsthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_mnsthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_mnsthem_chk.Location = new System.Drawing.Point(616, 97);
+            this.lbl_mnsthem_chk.Location = new System.Drawing.Point(617, 98);
             this.lbl_mnsthem_chk.Name = "lbl_mnsthem_chk";
             this.lbl_mnsthem_chk.Size = new System.Drawing.Size(13, 17);
             this.lbl_mnsthem_chk.TabIndex = 47;
@@ -224,7 +224,7 @@
             this.lbl_pqthem_chk.AutoSize = true;
             this.lbl_pqthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_pqthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_pqthem_chk.Location = new System.Drawing.Point(617, 158);
+            this.lbl_pqthem_chk.Location = new System.Drawing.Point(618, 157);
             this.lbl_pqthem_chk.Name = "lbl_pqthem_chk";
             this.lbl_pqthem_chk.Size = new System.Drawing.Size(13, 17);
             this.lbl_pqthem_chk.TabIndex = 46;
@@ -237,7 +237,7 @@
             this.lbl_mkthem_chk.AutoSize = true;
             this.lbl_mkthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_mkthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_mkthem_chk.Location = new System.Drawing.Point(170, 158);
+            this.lbl_mkthem_chk.Location = new System.Drawing.Point(170, 152);
             this.lbl_mkthem_chk.Name = "lbl_mkthem_chk";
             this.lbl_mkthem_chk.Size = new System.Drawing.Size(13, 17);
             this.lbl_mkthem_chk.TabIndex = 45;
@@ -250,7 +250,7 @@
             this.lbl_tdnthem_chk.AutoSize = true;
             this.lbl_tdnthem_chk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tdnthem_chk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_tdnthem_chk.Location = new System.Drawing.Point(170, 93);
+            this.lbl_tdnthem_chk.Location = new System.Drawing.Point(170, 98);
             this.lbl_tdnthem_chk.Name = "lbl_tdnthem_chk";
             this.lbl_tdnthem_chk.Size = new System.Drawing.Size(13, 17);
             this.lbl_tdnthem_chk.TabIndex = 44;
@@ -293,7 +293,9 @@
             this.dgv_DanhSachNguoiDung.RowHeadersWidth = 51;
             this.dgv_DanhSachNguoiDung.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachNguoiDung.TabIndex = 38;
-            this.dgv_DanhSachNguoiDung.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachNguoiDung_CellEndEdit);
+            this.dgv_DanhSachNguoiDung.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachNguoiDung2_CellEndEdit);
+            this.dgv_DanhSachNguoiDung.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgv_DanhSachNguoiDung_CellValidating);
+            this.dgv_DanhSachNguoiDung.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgv_DanhSachNguoiDung_RowValidating);
             // 
             // btn_Them
             // 
@@ -451,10 +453,10 @@
             this.tabPage_CapNhat_Xoa.Controls.Add(this.btn_Xoa);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.btn_Sua);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.label8);
-            this.tabPage_CapNhat_Xoa.Controls.Add(this.cbo_phanquyen_sua);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.txt_manhansu_sua);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.txt_mk_Sua);
             this.tabPage_CapNhat_Xoa.Controls.Add(this.txt_tk_Sua);
+            this.tabPage_CapNhat_Xoa.Controls.Add(this.cbo_phanquyen_sua);
             this.tabPage_CapNhat_Xoa.Location = new System.Drawing.Point(4, 26);
             this.tabPage_CapNhat_Xoa.Name = "tabPage_CapNhat_Xoa";
             this.tabPage_CapNhat_Xoa.Padding = new System.Windows.Forms.Padding(3);
@@ -637,25 +639,6 @@
             this.label8.TabIndex = 45;
             this.label8.Text = "SỬA XÓA TÀI KHOẢN";
             // 
-            // cbo_phanquyen_sua
-            // 
-            this.cbo_phanquyen_sua.BackColor = System.Drawing.Color.White;
-            this.cbo_phanquyen_sua.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbo_phanquyen_sua.BorderSize = 2;
-            this.cbo_phanquyen_sua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_phanquyen_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbo_phanquyen_sua.ForeColor = System.Drawing.Color.Black;
-            this.cbo_phanquyen_sua.IconColor = System.Drawing.Color.Red;
-            this.cbo_phanquyen_sua.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.cbo_phanquyen_sua.ListTextColor = System.Drawing.Color.Black;
-            this.cbo_phanquyen_sua.Location = new System.Drawing.Point(624, 124);
-            this.cbo_phanquyen_sua.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbo_phanquyen_sua.Name = "cbo_phanquyen_sua";
-            this.cbo_phanquyen_sua.Padding = new System.Windows.Forms.Padding(2);
-            this.cbo_phanquyen_sua.Size = new System.Drawing.Size(252, 30);
-            this.cbo_phanquyen_sua.TabIndex = 65;
-            this.cbo_phanquyen_sua.Texts = "";
-            // 
             // txt_manhansu_sua
             // 
             this.txt_manhansu_sua.BorderColor = System.Drawing.Color.MediumSlateBlue;
@@ -703,6 +686,25 @@
             this.txt_tk_Sua.TabIndex = 62;
             this.txt_tk_Sua.Texts = "";
             this.txt_tk_Sua.UnderLineStyle = false;
+            // 
+            // cbo_phanquyen_sua
+            // 
+            this.cbo_phanquyen_sua.BackColor = System.Drawing.Color.White;
+            this.cbo_phanquyen_sua.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbo_phanquyen_sua.BorderSize = 2;
+            this.cbo_phanquyen_sua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_phanquyen_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbo_phanquyen_sua.ForeColor = System.Drawing.Color.Black;
+            this.cbo_phanquyen_sua.IconColor = System.Drawing.Color.Red;
+            this.cbo_phanquyen_sua.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.cbo_phanquyen_sua.ListTextColor = System.Drawing.Color.Black;
+            this.cbo_phanquyen_sua.Location = new System.Drawing.Point(624, 124);
+            this.cbo_phanquyen_sua.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbo_phanquyen_sua.Name = "cbo_phanquyen_sua";
+            this.cbo_phanquyen_sua.Padding = new System.Windows.Forms.Padding(2);
+            this.cbo_phanquyen_sua.Size = new System.Drawing.Size(252, 30);
+            this.cbo_phanquyen_sua.TabIndex = 65;
+            this.cbo_phanquyen_sua.Texts = "";
             // 
             // frm_NguoiDung
             // 

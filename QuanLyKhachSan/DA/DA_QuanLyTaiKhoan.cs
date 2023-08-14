@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -150,56 +153,82 @@ namespace QuanLyKhachSan.DA
         }
         public void CapNhatDsTk(DataTable dataTable)
         {
-        
-                foreach (DataRow row in dataTable.Rows)
+            foreach (DataRow row in dataTable.Rows)
+            {
+                string tenDangNhap = row["TenDangNhap"].ToString();
+                string matKhau = row["MatKhau"].ToString();
+                string maNhanSu = row["MaNhanSu"].ToString();
+
+                if (matKhau == "")
                 {
-                    string tenDangNhap = row["TenDangNhap"].ToString();
-                    string matKhau = row["MatKhau"].ToString();
-                    string maNhanSu = row["MaNhanSu"].ToString();
-
-                    var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
-                    if (nhanSu == null)
-                    {
-                        MessageBox.Show("Mã nhân sự không tồn tại: " + maNhanSu);
-                        return;
-                    }
-
-                    string phanQuyen = nhanSu.ChucVu;
-
-                    var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
-                    if (taiKhoan != null)
-                    {
-                        taiKhoan.MatKhau = matKhau;
-                        taiKhoan.PhanQuyen = phanQuyen;
-                        taiKhoan.MaNhanSu = maNhanSu;
-                    }
-                    else
-                    {
-                        taiKhoan = new TaiKhoan
-                        {
-                            TenDangNhap = tenDangNhap,
-                            MatKhau = matKhau,
-                            PhanQuyen = phanQuyen,
-                            MaNhanSu = maNhanSu
-                        };
-                        db.TaiKhoans.Add(taiKhoan);
-                    }
+                    MessageBox.Show("Bạn chưa nhập mật khẩu cho tài khoản: " + tenDangNhap);
+                    return;
+                }
+                if (matKhau.Length < 5 || matKhau.Length > 20)
+                {
+                    MessageBox.Show("Mật khẩu phải có độ dài từ 5 đến 20 ký tự! Tài khoản: " + tenDangNhap);
+                    return;
+                }
+                if (maNhanSu == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã nhân sự cho tài khoản: " + tenDangNhap);
+                    return;
                 }
 
-                db.SaveChanges();
-                MessageBox.Show("Lưu thông tin thành công");
-            
+                var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
+                if (nhanSu == null)
+                {
+                    MessageBox.Show("Mã nhân sự không tồn tại: " + maNhanSu);
+                    return;
+                }
+
+                string phanQuyen = nhanSu.ChucVu;
+
+                var taiKhoan = db.TaiKhoans.FirstOrDefault(t => t.TenDangNhap == tenDangNhap);
+                if (taiKhoan != null)
+                {
+                    taiKhoan.MatKhau = matKhau;
+                    taiKhoan.PhanQuyen = phanQuyen;
+                    taiKhoan.MaNhanSu = maNhanSu;
+                }
+                else
+                {
+                    taiKhoan = new TaiKhoan
+                    {
+                        TenDangNhap = tenDangNhap,
+                        MatKhau = matKhau,
+                        PhanQuyen = phanQuyen,
+                        MaNhanSu = maNhanSu
+                    };
+                    db.TaiKhoans.Add(taiKhoan);
+                }
+            }
+
+            db.SaveChanges();
+            MessageBox.Show("Lưu thông tin thành công");
         }
+
         public List<TaiKhoan> LayDsTk_Data()
         {
             return db.TaiKhoans.ToList();
         }
 
+     
         public void ThemTaiKhoan_Data(TaiKhoan taiKhoan)
         {
-            db.TaiKhoans.Add(taiKhoan);
-            db.SaveChanges();
-        }
+          
+                var existingTaiKhoan = db.TaiKhoans.Find(taiKhoan.TenDangNhap);
+                if (existingTaiKhoan == null)
+                {
+                    db.TaiKhoans.Add(taiKhoan);
+                    db.SaveChanges();
+                }
+                else
+                {
+                
+                }
+            }
+        
         public string LayPhanQuyen(string maNhanSu)
         {
             var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
@@ -209,6 +238,45 @@ namespace QuanLyKhachSan.DA
             return phanQuyen;
         }
 
+        public void SaveData(List<TaiKhoan> taiKhoans)
+        {
+            using (QuanLyKhachSanEntities db = new QuanLyKhachSanEntities())
+            {
+                foreach (TaiKhoan taiKhoan in taiKhoans)
+                {
+                    TaiKhoan existingTaiKhoan = db.TaiKhoans.Find(taiKhoan.TenDangNhap);
+                    if (existingTaiKhoan == null)
+                    {
+                        db.TaiKhoans.Add(taiKhoan);
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
+        public bool CheckTenDangNhap(string tenDangNhap)
+        {
+            using (QuanLyKhachSanEntities db = new QuanLyKhachSanEntities())
+            {
+                TaiKhoan existingTaiKhoan = db.TaiKhoans.Find(tenDangNhap);
+                if (existingTaiKhoan != null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool CheckMaNhanSu(string maNhanSu)
+        {
+            using (QuanLyKhachSanEntities db = new QuanLyKhachSanEntities())
+            {
+                NhanSu existingNhanSu = db.NhanSus.Find(maNhanSu);
+                if (existingNhanSu == null)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
     }
 }

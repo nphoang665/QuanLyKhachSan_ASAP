@@ -1,12 +1,9 @@
-﻿using System;
+﻿using QuanLyKhachSan.DA;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyKhachSan.DA;
 
 namespace QuanLyKhachSan.BUS
 {
@@ -21,14 +18,14 @@ namespace QuanLyKhachSan.BUS
         {
             dgv.DataSource = DA_.LayDsTk();
         }
-        public void ThemTaiKhoan( string tenDangNhap, string matKhau, string phanQuyen,string maNhanSu)
+        public void ThemTaiKhoan(string tenDangNhap, string matKhau, string phanQuyen, string maNhanSu)
         {
             DA_.ThemTaiKhoan(tenDangNhap, matKhau, phanQuyen, maNhanSu);
         }
 
-        public void SuaTaiKhoan( string tenDangNhap, string matKhau, string phanQuyen, string maNhanSu)
+        public void SuaTaiKhoan(string tenDangNhap, string matKhau, string phanQuyen, string maNhanSu)
         {
-            DA_.SuaTaiKhoan( tenDangNhap, matKhau, phanQuyen, maNhanSu);
+            DA_.SuaTaiKhoan(tenDangNhap, matKhau, phanQuyen, maNhanSu);
         }
 
         public void XoaTaiKhoan(string id)
@@ -45,7 +42,7 @@ namespace QuanLyKhachSan.BUS
         {
             return DA_.LayTaiKhoan(id);
         }
-        public bool KiemTraPhanQuyen(string MaNhanSu,string PhanQuyen)
+        public bool KiemTraPhanQuyen(string MaNhanSu, string PhanQuyen)
         {
             return DA_.KiemTraPhanQuyen(MaNhanSu, PhanQuyen);
         }
@@ -81,10 +78,120 @@ namespace QuanLyKhachSan.BUS
                 MaNhanSu = maNhanSu
             };
             DA_.ThemTaiKhoan_Data(taiKhoan);
+            MessageBox.Show(taiKhoan.ToString());
         }
-        public string LayPhanQuyen (string mns)
+        public string LayPhanQuyen(string mns)
         {
             return DA_.LayPhanQuyen(mns);
+        }
+        string tk;
+        public void SaveData(DataGridView dataGridView)
+        {
+            bool frag = true;
+            List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
+            HashSet<string> tenDangNhapSet = new HashSet<string>();
+            bool hasDuplicateTenDangNhap = false;
+            bool maNhanSuNotExists = false;
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    string tenDangNhap = row.Cells["TenDangNhap"].Value.ToString();
+                    string matKhau = row.Cells["MatKhau"].Value.ToString();
+                    string phanQuyen = row.Cells["PhanQuyen"].Value.ToString();
+                    string maNhanSu = row.Cells["MaNhanSu"].Value.ToString();
+                    tk = tenDangNhap;
+                    if (tenDangNhap == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: TenDangNhap");
+                        frag = false;
+                        break;
+                    }
+                    if (matKhau == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: MatKhau");
+                        frag = false;
+                        break;
+                    }
+                    if (tenDangNhap.Length < 5 || tenDangNhap.Length > 20)
+                    {
+                        MessageBox.Show("Tên đăng nhập phải có độ dài từ 5 đến 20 ký tự! Dòng: " + (row.Index + 1) + ", cột: TenDangNhap");
+                        frag = false;
+                        break;
+                    }
+                    if (matKhau.Length < 5 || matKhau.Length > 20)
+                    {
+                        MessageBox.Show("Mật khẩu phải có độ dài từ 5 đến 20 ký tự! Dòng: " + (row.Index + 1) + ", cột: MatKhau");
+                        frag = false;
+                        break;
+                    }
+                    if (maNhanSu == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: MaNhanSu");
+                        frag = false;
+                        break;
+                    }
+
+                    if (!tenDangNhapSet.Add(tenDangNhap))
+                    {
+                        hasDuplicateTenDangNhap = true;
+                        frag = false;
+                        break;
+                    }
+
+                    if (!DA_.CheckMaNhanSu(maNhanSu))
+                    {
+                        maNhanSuNotExists = true;
+                        frag = false;
+                        break;
+                    }
+
+                    TaiKhoan taiKhoan = new TaiKhoan
+                    {
+                        TenDangNhap = tenDangNhap,
+                        MatKhau = matKhau,
+                        PhanQuyen = phanQuyen,
+                        MaNhanSu = maNhanSu
+                    };
+                    taiKhoans.Add(taiKhoan);
+                }
+            }
+
+            try
+            {
+                if (hasDuplicateTenDangNhap)
+                {
+                    throw new Exception("Hệ thông đã tồn tại tài khoản này: " + tk);
+                }
+                else if (maNhanSuNotExists)
+                {
+                    throw new Exception("Mã nhân sự không tồn tại");
+                }
+                else if (frag == true)
+                {
+                    DA_.SaveData(taiKhoans);
+                    MessageBox.Show("Lưu thành công");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
+
+
+
+
+        public bool checkmanhansu(string Manhansu)
+        {
+            return DA_.CheckMaNhanSu(Manhansu);
+
+        }
+        public bool checktendangnhap(string TenDangNhap)
+        {
+            return DA_.CheckTenDangNhap(TenDangNhap);
+
         }
     }
 }
