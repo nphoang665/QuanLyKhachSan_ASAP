@@ -93,7 +93,7 @@ namespace QuanLyKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
         
             
@@ -116,7 +116,7 @@ namespace QuanLyKhachSan
             bus.LoadDsKh(dgv_DanhSachKhachHang2);
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
-            txt_makh_sua.Enabled = true;
+            
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -146,8 +146,9 @@ namespace QuanLyKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            txt_makh_sua.Enabled = true;
+    
 
         }
         public bool batloi(string makh, string tenkh, string diachi, string sdt, string cccd, string gioitinh)

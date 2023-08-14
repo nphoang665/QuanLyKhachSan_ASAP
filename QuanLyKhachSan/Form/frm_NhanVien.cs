@@ -88,7 +88,7 @@ namespace QuanLyKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
             MessageBox.Show("Đã thêm thông tin nhân viên " + txt_TenNhanVien.Text);
 
@@ -119,6 +119,7 @@ namespace QuanLyKhachSan
             catch (Exception ex)
             {
                 File.AppendAllText("error.log", ex.ToString() + Environment.NewLine);
+                return;
             }
             MessageBox.Show("Đã sửa thông tin nhân viên " + txt_TenNhanVien2.Text);
             txt_manv_sua.Enabled = true;
@@ -141,6 +142,7 @@ namespace QuanLyKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             MessageBox.Show("Đã xóa thông tin nhân viên " + txt_TenNhanVien2.Text);
             txt_manv_sua.Enabled = true;
