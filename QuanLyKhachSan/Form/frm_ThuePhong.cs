@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.Reporting.WinForms;
 using QuanLyKhachSan.DA;
 
 
@@ -49,8 +49,32 @@ namespace QuanLyKhachSan
             var danhSachKhachDaThue = bus.LayDanhSachKhachDaThue();
             dgv_DanhSachKhachDaThue.DataSource = danhSachKhachDaThue;
             TenDGV();
+            this.reportViewer1.RefreshReport();
+            //// làm report
+            using (var db = new QuanLyKhachSanEntities())
+            {
+                var thuephong = db.ThuePhongs.ToList();
+                var dt = new DataTable();
+                dt.Columns.Add("MaThuePhong");
+                dt.Columns.Add("MaKhachHang");
+                dt.Columns.Add("NgayThue");
+                dt.Columns.Add("MaPhong");
+             
+
+
+
+                foreach (var a in thuephong)
+                {
+                    dt.Rows.Add(a.MaThuePhong, a.MaKhachHang, a.NgayThue.Value.ToShortDateString(), a.MaPhong);
+                }
+                this.reportViewer1.LocalReport.ReportPath = "Report_KhachThue.rdlc";
+                var soucre = new ReportDataSource("ds_khachThue", dt);
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(soucre);
+                this.reportViewer1.RefreshReport();
+            }
         }
-     
+
         private void lstv_ChiTiet_SelectedIndexChanged(object sender, EventArgs e)
         {
            

@@ -60,5 +60,13 @@ namespace QuanLyKhachSan.BUS
         {
             return da_NhanSu.checkcccd(cccd);
         }
+        public bool dodaiccd(string cccd)
+        {
+            return da_NhanSu.dodaicccd(cccd);
+        }
+        public bool dodaisdt(string sdt)
+        {
+            return da_NhanSu.checkcccd(sdt);
+        }
     }
 }

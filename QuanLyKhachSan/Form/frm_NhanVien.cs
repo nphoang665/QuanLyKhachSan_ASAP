@@ -21,6 +21,7 @@ namespace QuanLyKhachSan
             bus.LoadDsNv(dgv_nhansu);
             bus.LoadDsNv(dgv2_NhanSu);
             bus.LoadDsNv(dgv1_NhanSu);
+            
         }
         public bool batloi(string mans, string tennv, string diachi, string sdt, string chucvu, string gioitinh, string cccd)
         {
@@ -73,6 +74,10 @@ namespace QuanLyKhachSan
                 bool khoaching = bus.KiemTraKhoa(txt_manv_them.Text);
                 if (!khoaching)
                     return;
+                bool leSdt = bus.dodaisdt(txt_SoDienThoai.Text);
+                if (!leSdt) return;
+                bool lecccd = bus.dodaiccd(txt_cccd.Text);
+                if (!lecccd) return;
                 bool ktsdt = bus.KiemTraSDT(txt_SoDienThoai.Text); 
                 if (!ktsdt)
                     return;
@@ -305,6 +310,17 @@ namespace QuanLyKhachSan
             {
                 pic_anh.Image = Image.FromFile(openFileDialog1.FileName);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_reportNhanVien frm = new frm_reportNhanVien();
+            frm.ShowDialog();
+        }
+
+        private void lb_manv_them_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

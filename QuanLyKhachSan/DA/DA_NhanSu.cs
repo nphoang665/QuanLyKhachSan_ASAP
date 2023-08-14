@@ -266,5 +266,33 @@ namespace QuanLyKhachSan.DA
         }
 
     }
-}
+        public bool dodaicccd(string cccd)
+        {
+
+            if (cccd.Length != 12)
+            {
+                MessageBox.Show("Căn cước công dân không hợp lệ", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        public bool dodaisdt(string cccd)
+        {
+
+            if (cccd.Length < 10 || cccd.Length > 11)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+    }
 }

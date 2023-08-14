@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage_DanhSachDaThue = new System.Windows.Forms.TabPage();
             this.dgv_DanhSachKhachDaThue = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabControl_ThuePhong.SuspendLayout();
             this.tabPage_ThuePhong.SuspendLayout();
             this.tabControl_ThongTin.SuspendLayout();
@@ -59,12 +61,14 @@
             this.grp_ThuePhong.SuspendLayout();
             this.tabPage_DanhSachDaThue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachDaThue)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_ThuePhong
             // 
             this.tabControl_ThuePhong.Controls.Add(this.tabPage_ThuePhong);
             this.tabControl_ThuePhong.Controls.Add(this.tabPage_DanhSachDaThue);
+            this.tabControl_ThuePhong.Controls.Add(this.tabPage1);
             this.tabControl_ThuePhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_ThuePhong.Location = new System.Drawing.Point(0, 0);
             this.tabControl_ThuePhong.Name = "tabControl_ThuePhong";
@@ -313,6 +317,26 @@
             this.dgv_DanhSachKhachDaThue.Size = new System.Drawing.Size(1098, 473);
             this.dgv_DanhSachKhachDaThue.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.reportViewer1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1100, 475);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // frm_ThuePhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -339,6 +363,7 @@
             this.grp_ThuePhong.PerformLayout();
             this.tabPage_DanhSachDaThue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachDaThue)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,5 +392,7 @@
         private System.Windows.Forms.ListView lsv_phongchon;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

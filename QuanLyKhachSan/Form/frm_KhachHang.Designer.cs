@@ -44,6 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_DanhSachKhachHang = new System.Windows.Forms.DataGridView();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Them = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +61,13 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.dgv_DanhSachKhachHang1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_CMND1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,23 +89,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.dgv_DanhSachKhachHang2 = new System.Windows.Forms.DataGridView();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cccd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +96,10 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Xoa = new System.Windows.Forms.Button();
+            this.btn_Sua = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl_KhachHang.SuspendLayout();
             this.tabPage_ThemKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachHang)).BeginInit();
@@ -124,6 +125,7 @@
             // 
             this.tabPage_ThemKhachHang.BackColor = System.Drawing.Color.White;
             this.tabPage_ThemKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_ThemKhachHang.Controls.Add(this.button1);
             this.tabPage_ThemKhachHang.Controls.Add(this.txt_makh);
             this.tabPage_ThemKhachHang.Controls.Add(this.lbl_makh);
             this.tabPage_ThemKhachHang.Controls.Add(this.dtp_NgaySinh);
@@ -307,6 +309,48 @@
             this.dgv_DanhSachKhachHang.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachKhachHang.TabIndex = 35;
             // 
+            // makh
+            // 
+            this.makh.HeaderText = "Mã Khách Hàng";
+            this.makh.Name = "makh";
+            this.makh.ReadOnly = true;
+            // 
+            // tenkh
+            // 
+            this.tenkh.HeaderText = "Tên Khách Hàng";
+            this.tenkh.Name = "tenkh";
+            this.tenkh.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.HeaderText = "Giới Tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.HeaderText = "Địa Chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.HeaderText = "Số Điện Thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // cccd
+            // 
+            this.cccd.HeaderText = "CMND/CCCD";
+            this.cccd.Name = "cccd";
+            this.cccd.ReadOnly = true;
+            // 
             // btn_Them
             // 
             this.btn_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -316,7 +360,7 @@
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(887, 127);
+            this.btn_Them.Location = new System.Drawing.Point(940, 127);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(139, 43);
             this.btn_Them.TabIndex = 40;
@@ -447,6 +491,48 @@
             this.dgv_DanhSachKhachHang1.ReadOnly = true;
             this.dgv_DanhSachKhachHang1.Size = new System.Drawing.Size(1092, 235);
             this.dgv_DanhSachKhachHang1.TabIndex = 38;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Khách Hàng";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Khách Hàng";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Địa Chỉ";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Số Điện Thoại";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "CMND/CCCD";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // txt_CMND1
             // 
@@ -706,6 +792,48 @@
             this.dgv_DanhSachKhachHang2.TabIndex = 50;
             this.dgv_DanhSachKhachHang2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachKhachHang2_CellClick);
             // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Mã Khách Hàng";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Tên Khách Hàng";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Giới Tính";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Ngày Sinh";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Địa Chỉ";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Số Điện Thoại";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "CMND/CCCD";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
             // btn_Xoa
             // 
             this.btn_Xoa.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -752,131 +880,22 @@
             this.label19.TabIndex = 47;
             this.label19.Text = "SỬA, XÓA THÔNG TIN KHÁCH HÀNG:";
             // 
-            // dataGridViewTextBoxColumn1
+            // button1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Khách Hàng";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Khách Hàng";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Địa Chỉ";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Số Điện Thoại";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "CMND/CCCD";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // makh
-            // 
-            this.makh.HeaderText = "Mã Khách Hàng";
-            this.makh.Name = "makh";
-            this.makh.ReadOnly = true;
-            // 
-            // tenkh
-            // 
-            this.tenkh.HeaderText = "Tên Khách Hàng";
-            this.tenkh.Name = "tenkh";
-            this.tenkh.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.HeaderText = "Giới Tính";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.HeaderText = "Địa Chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // sdt
-            // 
-            this.sdt.HeaderText = "Số Điện Thoại";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            // 
-            // cccd
-            // 
-            this.cccd.HeaderText = "CMND/CCCD";
-            this.cccd.Name = "cccd";
-            this.cccd.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Mã Khách Hàng";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Tên Khách Hàng";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Giới Tính";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Ngày Sinh";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Địa Chỉ";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Số Điện Thoại";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "CMND/CCCD";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(775, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 43);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Report";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_KhachHang
             // 
@@ -978,5 +997,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.Button button1;
     }
 }

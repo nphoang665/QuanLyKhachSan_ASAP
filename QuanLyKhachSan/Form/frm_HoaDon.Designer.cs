@@ -30,6 +30,10 @@
         {
             this.tabControl_HoaDon = new System.Windows.Forms.TabControl();
             this.tabPage_HoaDon = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_thanhtoan = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lbl_KQTienDichVu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_KQSDT = new System.Windows.Forms.Label();
@@ -57,14 +61,11 @@
             this.TongTienThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_tenkhachhang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_thanhtoan = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl_HoaDon.SuspendLayout();
             this.tabPage_HoaDon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_HoaDon
@@ -81,6 +82,7 @@
             // 
             this.tabPage_HoaDon.BackColor = System.Drawing.Color.White;
             this.tabPage_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_HoaDon.Controls.Add(this.button1);
             this.tabPage_HoaDon.Controls.Add(this.groupBox1);
             this.tabPage_HoaDon.Controls.Add(this.label2);
             this.tabPage_HoaDon.Controls.Add(this.lbl_KQTienDichVu);
@@ -108,6 +110,51 @@
             this.tabPage_HoaDon.TabIndex = 0;
             this.tabPage_HoaDon.Text = "Hóa đơn";
             this.tabPage_HoaDon.Click += new System.EventHandler(this.tabPage_HoaDon_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbl_thanhtoan);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(839, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(241, 138);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tổng tiền";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(74, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Thanh Toán";
+            // 
+            // lbl_thanhtoan
+            // 
+            this.lbl_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_thanhtoan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_thanhtoan.Location = new System.Drawing.Point(26, 80);
+            this.lbl_thanhtoan.Name = "lbl_thanhtoan";
+            this.lbl_thanhtoan.Size = new System.Drawing.Size(197, 22);
+            this.lbl_thanhtoan.TabIndex = 31;
+            this.lbl_thanhtoan.Text = "---";
+            this.lbl_thanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1017, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "---";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_KQTienDichVu
             // 
@@ -377,50 +424,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HÓA ĐƠN:";
             // 
-            // lbl_thanhtoan
+            // button1
             // 
-            this.lbl_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_thanhtoan.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_thanhtoan.Location = new System.Drawing.Point(26, 80);
-            this.lbl_thanhtoan.Name = "lbl_thanhtoan";
-            this.lbl_thanhtoan.Size = new System.Drawing.Size(197, 22);
-            this.lbl_thanhtoan.TabIndex = 31;
-            this.lbl_thanhtoan.Text = "---";
-            this.lbl_thanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 20);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Thanh Toán";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.lbl_thanhtoan);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(836, 38);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 138);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tổng tiền";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1017, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 22);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "---";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(888, 158);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 43);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "Report";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_HoaDon
             // 
@@ -439,9 +458,9 @@
             this.tabControl_HoaDon.ResumeLayout(false);
             this.tabPage_HoaDon.ResumeLayout(false);
             this.tabPage_HoaDon.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +500,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_thanhtoan;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

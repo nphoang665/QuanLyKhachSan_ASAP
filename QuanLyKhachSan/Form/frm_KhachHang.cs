@@ -69,7 +69,7 @@ namespace QuanLyKhachSan
             {
                 gioitinh = null;
             }
-
+            
             bool isValid = batloi(txt_makh.Text, txt_TenKhachHang.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text, gioitinh);
             if (!isValid)
                 return;
@@ -78,6 +78,10 @@ namespace QuanLyKhachSan
                 var data = bus.ktkhoa(txt_makh.Text);
                 if (!data)
                     return;
+                bool leSdt = bus.dodaisdt(txt_SoDienThoai.Text);
+                if (!leSdt) return;
+                bool lecccd = bus.dodaiccd(txt_CMND.Text);
+                if (!lecccd) return;
                 var ckhSdt=bus.ktsdt(txt_SoDienThoai.Text);
                 if (!ckhSdt)
                     return;
@@ -258,6 +262,12 @@ namespace QuanLyKhachSan
                 bus.LoadDsKh(dgv_DanhSachKhachHang1);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_ReportKhachHang frm=new frm_ReportKhachHang();
+            frm.ShowDialog();
         }
     }
 }

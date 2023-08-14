@@ -287,6 +287,44 @@
     <Compile Include="Form\frm_XacThucTaiKhoan.designer.cs">
       <DependentUpon>frm_XacThucTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhachSanDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSanDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_reportHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_reportHoaDon.Designer.cs">
+      <DependentUpon>frm_reportHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSanDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_ReportKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_ReportKhachHang.Designer.cs">
+      <DependentUpon>frm_ReportKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_reportNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_reportNhanVien.Designer.cs">
+      <DependentUpon>frm_reportNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachSanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\frm_ReportQuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +402,15 @@
     <EmbeddedResource Include="Form\frm_XacThucTaiKhoan.resx">
       <DependentUpon>frm_XacThucTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_reportHoaDon.resx">
+      <DependentUpon>frm_reportHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_ReportKhachHang.resx">
+      <DependentUpon>frm_ReportKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_reportNhanVien.resx">
+      <DependentUpon>frm_reportNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -377,6 +424,18 @@
     <EmbeddedResource Include="ReportQuanLyTaiKhoan.rdlc" />
     <EmbeddedResource Include="Report\frm_ReportQuanLyTaiKhoan.resx">
       <DependentUpon>frm_ReportQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_HoaDon.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_KhachHang.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_KhachThue.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repor_Nhanvien.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="RJConTrol\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
@@ -414,6 +473,50 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyKhachSanDataSet.xsc">
+      <DependentUpon>QuanLyKhachSanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSanDataSet.xss">
+      <DependentUpon>QuanLyKhachSanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet1.xsc">
+      <DependentUpon>QuanLyKhachSanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSanDataSet1.xss">
+      <DependentUpon>QuanLyKhachSanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet2.xsc">
+      <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSanDataSet2.xss">
+      <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet3.xsc">
+      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSanDataSet3.xss">
+      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Resources\hotel-building-isolated-city-street-vector-illustration-flat-cartoon_101884-680.png" />
   </ItemGroup>
   <ItemGroup>

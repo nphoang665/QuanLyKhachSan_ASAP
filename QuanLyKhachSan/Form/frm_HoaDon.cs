@@ -60,5 +60,11 @@ namespace QuanLyKhachSan
             lbl_KQTienDichVu.Text= dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[7].Value.ToString();
             lbl_thanhtoan.Text = dgv_DanhSachHoaDon.Rows[e.RowIndex].Cells[8].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_reportHoaDon frm=new frm_reportHoaDon();    
+            frm.ShowDialog();
+        }
     }
 }
