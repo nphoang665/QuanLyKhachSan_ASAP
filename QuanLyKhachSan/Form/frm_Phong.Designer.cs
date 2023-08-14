@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl_Phong = new System.Windows.Forms.TabControl();
             this.tabPage_TimPhong = new System.Windows.Forms.TabPage();
+            this.btn_Report = new System.Windows.Forms.Button();
             this.txt_TimLoaiPhong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_timtinhtrang = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage_Sua_XoaPhong = new System.Windows.Forms.TabPage();
+            this.cbo_loaiphong_sua = new System.Windows.Forms.ComboBox();
             this.lbl_KQTinhTrang = new System.Windows.Forms.Label();
             this.lbl_KQPhong = new System.Windows.Forms.Label();
             this.lbl_maphong_sua = new System.Windows.Forms.Label();
@@ -51,7 +53,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbo_loaiphong_sua = new System.Windows.Forms.ComboBox();
             this.tabControl_Phong.SuspendLayout();
             this.tabPage_TimPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phong2)).BeginInit();
@@ -75,6 +76,7 @@
             // 
             this.tabPage_TimPhong.BackColor = System.Drawing.Color.White;
             this.tabPage_TimPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_TimPhong.Controls.Add(this.btn_Report);
             this.tabPage_TimPhong.Controls.Add(this.txt_TimLoaiPhong);
             this.tabPage_TimPhong.Controls.Add(this.label5);
             this.tabPage_TimPhong.Controls.Add(this.txt_timtinhtrang);
@@ -89,6 +91,23 @@
             this.tabPage_TimPhong.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_TimPhong.TabIndex = 1;
             this.tabPage_TimPhong.Text = "Tìm phòng";
+            // 
+            // btn_Report
+            // 
+            this.btn_Report.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Report.FlatAppearance.BorderSize = 0;
+            this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Report.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Report.ForeColor = System.Drawing.Color.White;
+            this.btn_Report.Location = new System.Drawing.Point(843, 84);
+            this.btn_Report.Name = "btn_Report";
+            this.btn_Report.Size = new System.Drawing.Size(134, 43);
+            this.btn_Report.TabIndex = 64;
+            this.btn_Report.Text = "Report";
+            this.btn_Report.UseVisualStyleBackColor = false;
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // txt_TimLoaiPhong
             // 
@@ -200,6 +219,16 @@
             this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_Sua_XoaPhong.TabIndex = 2;
             this.tabPage_Sua_XoaPhong.Text = "Sửa, Xóa phòng";
+            // 
+            // cbo_loaiphong_sua
+            // 
+            this.cbo_loaiphong_sua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_loaiphong_sua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_loaiphong_sua.FormattingEnabled = true;
+            this.cbo_loaiphong_sua.Location = new System.Drawing.Point(425, 65);
+            this.cbo_loaiphong_sua.Name = "cbo_loaiphong_sua";
+            this.cbo_loaiphong_sua.Size = new System.Drawing.Size(193, 29);
+            this.cbo_loaiphong_sua.TabIndex = 95;
             // 
             // lbl_KQTinhTrang
             // 
@@ -323,16 +352,6 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
-            // cbo_loaiphong_sua
-            // 
-            this.cbo_loaiphong_sua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_loaiphong_sua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_loaiphong_sua.FormattingEnabled = true;
-            this.cbo_loaiphong_sua.Location = new System.Drawing.Point(425, 65);
-            this.cbo_loaiphong_sua.Name = "cbo_loaiphong_sua";
-            this.cbo_loaiphong_sua.Size = new System.Drawing.Size(193, 29);
-            this.cbo_loaiphong_sua.TabIndex = 95;
-            // 
             // frm_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -384,5 +403,6 @@
         private System.Windows.Forms.Label lbl_KQPhong;
         private System.Windows.Forms.Label lbl_KQTinhTrang;
         private System.Windows.Forms.ComboBox cbo_loaiphong_sua;
+        private System.Windows.Forms.Button btn_Report;
     }
 }

@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_DanhSachNguoiDung = new System.Windows.Forms.TabPage();
+            this.btn_InDuLieu = new System.Windows.Forms.Button();
             this.txt_TimKiem = new CustormTextbox.RJConTrol.RJTextBox();
             this.lbl_timkiem = new System.Windows.Forms.Label();
             this.dgv_DanhSachNguoiDung1 = new System.Windows.Forms.DataGridView();
@@ -69,7 +70,6 @@
             this.txt_manhansu_sua = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_mk_Sua = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_tk_Sua = new CustormTextbox.RJConTrol.RJTextBox();
-            this.btn_InDuLieu = new System.Windows.Forms.Button();
             this.tabControl_NguoiDung.SuspendLayout();
             this.tabPage_ThemNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachNguoiDung)).BeginInit();
@@ -361,6 +361,21 @@
             this.tabPage_DanhSachNguoiDung.Size = new System.Drawing.Size(1106, 481);
             this.tabPage_DanhSachNguoiDung.TabIndex = 1;
             this.tabPage_DanhSachNguoiDung.Text = "Danh sách tài khoản";
+            // 
+            // btn_InDuLieu
+            // 
+            this.btn_InDuLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_InDuLieu.FlatAppearance.BorderSize = 0;
+            this.btn_InDuLieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InDuLieu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_InDuLieu.ForeColor = System.Drawing.Color.White;
+            this.btn_InDuLieu.Location = new System.Drawing.Point(843, 70);
+            this.btn_InDuLieu.Name = "btn_InDuLieu";
+            this.btn_InDuLieu.Size = new System.Drawing.Size(118, 60);
+            this.btn_InDuLieu.TabIndex = 20;
+            this.btn_InDuLieu.Text = "Report";
+            this.btn_InDuLieu.UseVisualStyleBackColor = false;
+            this.btn_InDuLieu.Click += new System.EventHandler(this.btn_InDuLieu_Click);
             // 
             // txt_TimKiem
             // 
@@ -688,21 +703,6 @@
             this.txt_tk_Sua.TabIndex = 62;
             this.txt_tk_Sua.Texts = "";
             this.txt_tk_Sua.UnderLineStyle = false;
-            // 
-            // btn_InDuLieu
-            // 
-            this.btn_InDuLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.btn_InDuLieu.FlatAppearance.BorderSize = 0;
-            this.btn_InDuLieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InDuLieu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_InDuLieu.ForeColor = System.Drawing.Color.White;
-            this.btn_InDuLieu.Location = new System.Drawing.Point(843, 70);
-            this.btn_InDuLieu.Name = "btn_InDuLieu";
-            this.btn_InDuLieu.Size = new System.Drawing.Size(118, 60);
-            this.btn_InDuLieu.TabIndex = 20;
-            this.btn_InDuLieu.Text = "In Dữ Liệu";
-            this.btn_InDuLieu.UseVisualStyleBackColor = false;
-            this.btn_InDuLieu.Click += new System.EventHandler(this.btn_InDuLieu_Click);
             // 
             // frm_NguoiDung
             // 

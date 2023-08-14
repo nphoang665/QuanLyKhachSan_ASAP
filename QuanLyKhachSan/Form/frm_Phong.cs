@@ -152,5 +152,11 @@ namespace QuanLyKhachSan
             var kq = dsp.TimPhongBangLoaiPhong(loaiPhong);
             dgv_phong2.DataSource = kq;
         }
+
+        private void btn_Report_Click(object sender, EventArgs e)
+        {
+            frm_ReportPhong frm_ReportPhong = new frm_ReportPhong();
+            frm_ReportPhong.ShowDialog();
+        }
     }
 }

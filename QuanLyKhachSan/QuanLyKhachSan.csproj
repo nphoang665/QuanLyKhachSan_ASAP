@@ -65,7 +65,9 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -287,6 +289,17 @@
     <Compile Include="Form\frm_XacThucTaiKhoan.designer.cs">
       <DependentUpon>frm_XacThucTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhachSanDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_ReportPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_ReportPhong.Designer.cs">
+      <DependentUpon>frm_ReportPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyKhachSanDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -422,6 +435,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReportQuanLyTaiKhoan.rdlc" />
+    <EmbeddedResource Include="Report\frm_ReportPhong.resx">
+      <DependentUpon>frm_ReportPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\frm_ReportQuanLyTaiKhoan.resx">
       <DependentUpon>frm_ReportQuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +448,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_KhachThue.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Phong.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="repor_Nhanvien.rdlc">
@@ -516,6 +535,17 @@
     </None>
     <None Include="QuanLyKhachSanDataSet3.xss">
       <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet4.xsc">
+      <DependentUpon>QuanLyKhachSanDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSanDataSet4.xss">
+      <DependentUpon>QuanLyKhachSanDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Resources\hotel-building-isolated-city-street-vector-illustration-flat-cartoon_101884-680.png" />
   </ItemGroup>
