@@ -1,5 +1,5 @@
 ﻿using QuanLyKhachSan.BUS;
-using QuanLyKhachSan.BUS;
+
 using QuanLyKhachSan.DA;
 using System;
 using System.Collections.Generic;

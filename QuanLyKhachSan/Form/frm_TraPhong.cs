@@ -18,7 +18,7 @@ namespace QuanLyKhachSan
     {
         BUS_Phong busPhong;
         BUS_TraPhong bus;
-        BUS_DichVu busDichVu;
+    
         string phong;
         string mkh;
         string tkh;

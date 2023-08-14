@@ -69,6 +69,7 @@
             this.txt_manhansu_sua = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_mk_Sua = new CustormTextbox.RJConTrol.RJTextBox();
             this.txt_tk_Sua = new CustormTextbox.RJConTrol.RJTextBox();
+            this.btn_InDuLieu = new System.Windows.Forms.Button();
             this.tabControl_NguoiDung.SuspendLayout();
             this.tabPage_ThemNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachNguoiDung)).BeginInit();
@@ -349,6 +350,7 @@
             // 
             this.tabPage_DanhSachNguoiDung.BackColor = System.Drawing.Color.White;
             this.tabPage_DanhSachNguoiDung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage_DanhSachNguoiDung.Controls.Add(this.btn_InDuLieu);
             this.tabPage_DanhSachNguoiDung.Controls.Add(this.txt_TimKiem);
             this.tabPage_DanhSachNguoiDung.Controls.Add(this.lbl_timkiem);
             this.tabPage_DanhSachNguoiDung.Controls.Add(this.dgv_DanhSachNguoiDung1);
@@ -366,7 +368,7 @@
             this.txt_TimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_TimKiem.BorderSize = 2;
             this.txt_TimKiem.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_TimKiem.Location = new System.Drawing.Point(507, 90);
+            this.txt_TimKiem.Location = new System.Drawing.Point(439, 99);
             this.txt_TimKiem.Multiline = false;
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.Padding = new System.Windows.Forms.Padding(7);
@@ -382,7 +384,7 @@
             this.lbl_timkiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_timkiem.AutoSize = true;
             this.lbl_timkiem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_timkiem.Location = new System.Drawing.Point(305, 96);
+            this.lbl_timkiem.Location = new System.Drawing.Point(237, 105);
             this.lbl_timkiem.Name = "lbl_timkiem";
             this.lbl_timkiem.Size = new System.Drawing.Size(176, 20);
             this.lbl_timkiem.TabIndex = 17;
@@ -687,6 +689,21 @@
             this.txt_tk_Sua.Texts = "";
             this.txt_tk_Sua.UnderLineStyle = false;
             // 
+            // btn_InDuLieu
+            // 
+            this.btn_InDuLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_InDuLieu.FlatAppearance.BorderSize = 0;
+            this.btn_InDuLieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InDuLieu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_InDuLieu.ForeColor = System.Drawing.Color.White;
+            this.btn_InDuLieu.Location = new System.Drawing.Point(843, 70);
+            this.btn_InDuLieu.Name = "btn_InDuLieu";
+            this.btn_InDuLieu.Size = new System.Drawing.Size(118, 60);
+            this.btn_InDuLieu.TabIndex = 20;
+            this.btn_InDuLieu.Text = "In Dữ Liệu";
+            this.btn_InDuLieu.UseVisualStyleBackColor = false;
+            this.btn_InDuLieu.Click += new System.EventHandler(this.btn_InDuLieu_Click);
+            // 
             // frm_NguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -757,5 +774,6 @@
         private CustormTextbox.RJConTrol.RJComboBox cbo_phanquyen_sua;
         private System.Windows.Forms.Button btn_Luu;
         private System.Windows.Forms.Button btn_ThemTuBang;
+        private System.Windows.Forms.Button btn_InDuLieu;
     }
 }

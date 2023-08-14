@@ -163,6 +163,11 @@
     <Compile Include="DA\VatTu.cs">
       <DependentUpon>QuanLyKhachSanModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="dsQuanLyTaiKhoan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQuanLyTaiKhoan.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form\frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +283,12 @@
     <Compile Include="Form\frm_XacThucTaiKhoan.designer.cs">
       <DependentUpon>frm_XacThucTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\frm_ReportQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_ReportQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>frm_ReportQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RJConTrol\RJComboBox.cs">
@@ -360,6 +371,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportQuanLyTaiKhoan.rdlc" />
+    <EmbeddedResource Include="Report\frm_ReportQuanLyTaiKhoan.resx">
+      <DependentUpon>frm_ReportQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RJConTrol\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +384,17 @@
     </EntityDeploy>
     <None Include="DA\QuanLyKhachSanModel.edmx.diagram">
       <DependentUpon>QuanLyKhachSanModel.edmx</DependentUpon>
+    </None>
+    <None Include="dsQuanLyTaiKhoan.xsc">
+      <DependentUpon>dsQuanLyTaiKhoan.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuanLyTaiKhoan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQuanLyTaiKhoan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsQuanLyTaiKhoan.xss">
+      <DependentUpon>dsQuanLyTaiKhoan.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -449,5 +475,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

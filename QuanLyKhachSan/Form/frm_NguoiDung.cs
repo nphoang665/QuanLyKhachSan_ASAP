@@ -510,5 +510,11 @@ namespace QuanLyKhachSan
                 }
             }
         }
+
+        private void btn_InDuLieu_Click(object sender, EventArgs e)
+        {
+            frm_ReportQuanLyTaiKhoan frm = new frm_ReportQuanLyTaiKhoan();
+            frm.ShowDialog();
+        }
     }
 }
