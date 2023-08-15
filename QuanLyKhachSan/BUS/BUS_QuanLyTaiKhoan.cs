@@ -151,7 +151,8 @@ namespace QuanLyKhachSan.BUS
                         TenDangNhap = tenDangNhap,
                         MatKhau = matKhau,
                         PhanQuyen = phanQuyen,
-                        MaNhanSu = maNhanSu
+                        MaNhanSu = maNhanSu,
+                        TinhTrang = "ThanhCong"
                     };
                     taiKhoans.Add(taiKhoan);
                 }
