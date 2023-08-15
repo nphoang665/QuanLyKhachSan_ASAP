@@ -54,6 +54,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage_Sua_XoaPhong = new System.Windows.Forms.TabPage();
+            this.txt_MaVatTu2 = new System.Windows.Forms.TextBox();
+            this.lbl_mavattu2 = new System.Windows.Forms.Label();
             this.cbo_NguoiQuanLy2 = new System.Windows.Forms.ComboBox();
             this.txt_NhaCungCap2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -65,8 +67,6 @@
             this.dgv_DanhSachVatTu2 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.txt_MaVatTu2 = new System.Windows.Forms.TextBox();
-            this.lbl_mavattu2 = new System.Windows.Forms.Label();
             this.tabControl_VatTu.SuspendLayout();
             this.tabPage_ThemVatTu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachVatTu)).BeginInit();
@@ -106,10 +106,10 @@
             this.tabPage_ThemVatTu.Controls.Add(this.label6);
             this.tabPage_ThemVatTu.Controls.Add(this.label2);
             this.tabPage_ThemVatTu.Controls.Add(this.label1);
-            this.tabPage_ThemVatTu.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_ThemVatTu.Location = new System.Drawing.Point(4, 30);
             this.tabPage_ThemVatTu.Name = "tabPage_ThemVatTu";
             this.tabPage_ThemVatTu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ThemVatTu.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_ThemVatTu.Size = new System.Drawing.Size(1106, 477);
             this.tabPage_ThemVatTu.TabIndex = 0;
             this.tabPage_ThemVatTu.Text = "Thêm vật tư:";
             // 
@@ -119,7 +119,7 @@
             this.cbo_NguoiQuanLy.FormattingEnabled = true;
             this.cbo_NguoiQuanLy.Location = new System.Drawing.Point(698, 113);
             this.cbo_NguoiQuanLy.Name = "cbo_NguoiQuanLy";
-            this.cbo_NguoiQuanLy.Size = new System.Drawing.Size(193, 25);
+            this.cbo_NguoiQuanLy.Size = new System.Drawing.Size(193, 29);
             this.cbo_NguoiQuanLy.TabIndex = 10;
             // 
             // txt_GhiChu
@@ -138,7 +138,7 @@
             this.txt_NhaCungCap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_NhaCungCap.Location = new System.Drawing.Point(698, 73);
             this.txt_NhaCungCap.Name = "txt_NhaCungCap";
-            this.txt_NhaCungCap.Size = new System.Drawing.Size(193, 25);
+            this.txt_NhaCungCap.Size = new System.Drawing.Size(193, 29);
             this.txt_NhaCungCap.TabIndex = 8;
             // 
             // label3
@@ -148,7 +148,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(551, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.Size = new System.Drawing.Size(84, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "Ghi chú:";
             // 
@@ -159,7 +159,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(551, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 20);
+            this.label4.Size = new System.Drawing.Size(145, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Người quản lý:";
             // 
@@ -170,7 +170,7 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(551, 75);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 20);
+            this.label8.Size = new System.Drawing.Size(139, 25);
             this.label8.TabIndex = 7;
             this.label8.Text = "Nhà cung cấp:";
             // 
@@ -180,7 +180,7 @@
             this.txt_TenVatTu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_TenVatTu.Location = new System.Drawing.Point(198, 113);
             this.txt_TenVatTu.Name = "txt_TenVatTu";
-            this.txt_TenVatTu.Size = new System.Drawing.Size(193, 25);
+            this.txt_TenVatTu.Size = new System.Drawing.Size(193, 29);
             this.txt_TenVatTu.TabIndex = 4;
             // 
             // txt_MaVatTu
@@ -189,7 +189,7 @@
             this.txt_MaVatTu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_MaVatTu.Location = new System.Drawing.Point(198, 73);
             this.txt_MaVatTu.Name = "txt_MaVatTu";
-            this.txt_MaVatTu.Size = new System.Drawing.Size(193, 25);
+            this.txt_MaVatTu.Size = new System.Drawing.Size(193, 29);
             this.txt_MaVatTu.TabIndex = 2;
             // 
             // dgv_DanhSachVatTu
@@ -204,6 +204,7 @@
             this.dgv_DanhSachVatTu.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachVatTu.Name = "dgv_DanhSachVatTu";
             this.dgv_DanhSachVatTu.ReadOnly = true;
+            this.dgv_DanhSachVatTu.RowHeadersWidth = 51;
             this.dgv_DanhSachVatTu.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu.TabIndex = 14;
             // 
@@ -231,7 +232,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(68, 115);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
+            this.label6.Size = new System.Drawing.Size(105, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Tên vật tư:";
             // 
@@ -242,7 +243,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(68, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã vật tư:";
             // 
@@ -254,7 +255,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label1.Location = new System.Drawing.Point(39, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.Size = new System.Drawing.Size(144, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÊM VẬT TƯ:";
             // 
@@ -270,10 +271,10 @@
             this.tabPage_TimVatTu.Controls.Add(this.dgv_DanhSachVatTu1);
             this.tabPage_TimVatTu.Controls.Add(this.label9);
             this.tabPage_TimVatTu.Controls.Add(this.label10);
-            this.tabPage_TimVatTu.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_TimVatTu.Location = new System.Drawing.Point(4, 30);
             this.tabPage_TimVatTu.Name = "tabPage_TimVatTu";
             this.tabPage_TimVatTu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TimVatTu.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_TimVatTu.Size = new System.Drawing.Size(1106, 477);
             this.tabPage_TimVatTu.TabIndex = 1;
             this.tabPage_TimVatTu.Text = "Tìm vật tư";
             // 
@@ -283,7 +284,7 @@
             this.cbo_NguoiQuanLy1.FormattingEnabled = true;
             this.cbo_NguoiQuanLy1.Location = new System.Drawing.Point(529, 149);
             this.cbo_NguoiQuanLy1.Name = "cbo_NguoiQuanLy1";
-            this.cbo_NguoiQuanLy1.Size = new System.Drawing.Size(193, 25);
+            this.cbo_NguoiQuanLy1.Size = new System.Drawing.Size(193, 29);
             this.cbo_NguoiQuanLy1.TabIndex = 6;
             this.cbo_NguoiQuanLy1.SelectedIndexChanged += new System.EventHandler(this.cbo_NguoiQuanLy1_SelectedIndexChanged);
             // 
@@ -294,7 +295,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(382, 151);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 20);
+            this.label11.Size = new System.Drawing.Size(145, 25);
             this.label11.TabIndex = 5;
             this.label11.Text = "Người quản lý:";
             // 
@@ -304,7 +305,7 @@
             this.cbo_MaVatTu1.FormattingEnabled = true;
             this.cbo_MaVatTu1.Location = new System.Drawing.Point(529, 63);
             this.cbo_MaVatTu1.Name = "cbo_MaVatTu1";
-            this.cbo_MaVatTu1.Size = new System.Drawing.Size(193, 25);
+            this.cbo_MaVatTu1.Size = new System.Drawing.Size(193, 29);
             this.cbo_MaVatTu1.TabIndex = 2;
             this.cbo_MaVatTu1.SelectedIndexChanged += new System.EventHandler(this.cbo_MaVatTu1_SelectedIndexChanged);
             // 
@@ -314,7 +315,7 @@
             this.txt_TenVatTu1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_TenVatTu1.Location = new System.Drawing.Point(529, 106);
             this.txt_TenVatTu1.Name = "txt_TenVatTu1";
-            this.txt_TenVatTu1.Size = new System.Drawing.Size(193, 25);
+            this.txt_TenVatTu1.Size = new System.Drawing.Size(193, 29);
             this.txt_TenVatTu1.TabIndex = 4;
             this.txt_TenVatTu1.TextChanged += new System.EventHandler(this.txt_TenVatTu1_TextChanged);
             // 
@@ -325,7 +326,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(382, 107);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 20);
+            this.label7.Size = new System.Drawing.Size(105, 25);
             this.label7.TabIndex = 3;
             this.label7.Text = "Tên vật tư:";
             // 
@@ -341,6 +342,7 @@
             this.dgv_DanhSachVatTu1.Location = new System.Drawing.Point(7, 207);
             this.dgv_DanhSachVatTu1.Name = "dgv_DanhSachVatTu1";
             this.dgv_DanhSachVatTu1.ReadOnly = true;
+            this.dgv_DanhSachVatTu1.RowHeadersWidth = 51;
             this.dgv_DanhSachVatTu1.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu1.TabIndex = 7;
             this.dgv_DanhSachVatTu1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachVatTu1_CellClick);
@@ -353,7 +355,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(382, 63);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 20);
+            this.label9.Size = new System.Drawing.Size(102, 25);
             this.label9.TabIndex = 1;
             this.label9.Text = "Mã vật tư:";
             // 
@@ -365,7 +367,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label10.Location = new System.Drawing.Point(39, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 20);
+            this.label10.Size = new System.Drawing.Size(125, 25);
             this.label10.TabIndex = 0;
             this.label10.Text = "TÌM VẬT TƯ:";
             // 
@@ -385,13 +387,33 @@
             this.tabPage_Sua_XoaPhong.Controls.Add(this.btn_Sua);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.dgv_DanhSachVatTu2);
             this.tabPage_Sua_XoaPhong.Controls.Add(this.label15);
-            this.tabPage_Sua_XoaPhong.Location = new System.Drawing.Point(4, 26);
+            this.tabPage_Sua_XoaPhong.Location = new System.Drawing.Point(4, 30);
             this.tabPage_Sua_XoaPhong.Name = "tabPage_Sua_XoaPhong";
             this.tabPage_Sua_XoaPhong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 481);
+            this.tabPage_Sua_XoaPhong.Size = new System.Drawing.Size(1106, 477);
             this.tabPage_Sua_XoaPhong.TabIndex = 2;
             this.tabPage_Sua_XoaPhong.Text = "Sửa, Xóa vật tư";
             this.tabPage_Sua_XoaPhong.Click += new System.EventHandler(this.tabPage_Sua_XoaPhong_Click);
+            // 
+            // txt_MaVatTu2
+            // 
+            this.txt_MaVatTu2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_MaVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_MaVatTu2.Location = new System.Drawing.Point(411, 53);
+            this.txt_MaVatTu2.Name = "txt_MaVatTu2";
+            this.txt_MaVatTu2.Size = new System.Drawing.Size(193, 29);
+            this.txt_MaVatTu2.TabIndex = 13;
+            // 
+            // lbl_mavattu2
+            // 
+            this.lbl_mavattu2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_mavattu2.AutoSize = true;
+            this.lbl_mavattu2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mavattu2.Location = new System.Drawing.Point(264, 53);
+            this.lbl_mavattu2.Name = "lbl_mavattu2";
+            this.lbl_mavattu2.Size = new System.Drawing.Size(102, 25);
+            this.lbl_mavattu2.TabIndex = 12;
+            this.lbl_mavattu2.Text = "Mã vật tư:";
             // 
             // cbo_NguoiQuanLy2
             // 
@@ -399,7 +421,7 @@
             this.cbo_NguoiQuanLy2.FormattingEnabled = true;
             this.cbo_NguoiQuanLy2.Location = new System.Drawing.Point(411, 176);
             this.cbo_NguoiQuanLy2.Name = "cbo_NguoiQuanLy2";
-            this.cbo_NguoiQuanLy2.Size = new System.Drawing.Size(193, 25);
+            this.cbo_NguoiQuanLy2.Size = new System.Drawing.Size(193, 29);
             this.cbo_NguoiQuanLy2.TabIndex = 8;
             this.cbo_NguoiQuanLy2.SelectedIndexChanged += new System.EventHandler(this.cbo_NguoiQuanLy2_SelectedIndexChanged);
             // 
@@ -409,7 +431,7 @@
             this.txt_NhaCungCap2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_NhaCungCap2.Location = new System.Drawing.Point(411, 135);
             this.txt_NhaCungCap2.Name = "txt_NhaCungCap2";
-            this.txt_NhaCungCap2.Size = new System.Drawing.Size(193, 25);
+            this.txt_NhaCungCap2.Size = new System.Drawing.Size(193, 29);
             this.txt_NhaCungCap2.TabIndex = 6;
             // 
             // label14
@@ -419,7 +441,7 @@
             this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(264, 179);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 20);
+            this.label14.Size = new System.Drawing.Size(145, 25);
             this.label14.TabIndex = 7;
             this.label14.Text = "Người quản lý:";
             // 
@@ -430,7 +452,7 @@
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(264, 137);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(108, 20);
+            this.label16.Size = new System.Drawing.Size(139, 25);
             this.label16.TabIndex = 5;
             this.label16.Text = "Nhà cung cấp:";
             // 
@@ -440,7 +462,7 @@
             this.txt_TenVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_TenVatTu2.Location = new System.Drawing.Point(411, 95);
             this.txt_TenVatTu2.Name = "txt_TenVatTu2";
-            this.txt_TenVatTu2.Size = new System.Drawing.Size(193, 25);
+            this.txt_TenVatTu2.Size = new System.Drawing.Size(193, 29);
             this.txt_TenVatTu2.TabIndex = 2;
             // 
             // label13
@@ -450,7 +472,7 @@
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(264, 95);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 20);
+            this.label13.Size = new System.Drawing.Size(105, 25);
             this.label13.TabIndex = 1;
             this.label13.Text = "Tên vật tư:";
             // 
@@ -500,9 +522,11 @@
             this.dgv_DanhSachVatTu2.Location = new System.Drawing.Point(8, 202);
             this.dgv_DanhSachVatTu2.Name = "dgv_DanhSachVatTu2";
             this.dgv_DanhSachVatTu2.ReadOnly = true;
+            this.dgv_DanhSachVatTu2.RowHeadersWidth = 51;
             this.dgv_DanhSachVatTu2.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachVatTu2.TabIndex = 11;
             this.dgv_DanhSachVatTu2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachVatTu2_CellClick);
+            this.dgv_DanhSachVatTu2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachVatTu2_CellContentClick);
             // 
             // label15
             // 
@@ -512,33 +536,13 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label15.Location = new System.Drawing.Point(39, 19);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(143, 20);
+            this.label15.Size = new System.Drawing.Size(179, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "SỬA, XÓA VẬT TƯ:";
             // 
-            // txt_MaVatTu2
-            // 
-            this.txt_MaVatTu2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MaVatTu2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MaVatTu2.Location = new System.Drawing.Point(411, 53);
-            this.txt_MaVatTu2.Name = "txt_MaVatTu2";
-            this.txt_MaVatTu2.Size = new System.Drawing.Size(193, 25);
-            this.txt_MaVatTu2.TabIndex = 13;
-            // 
-            // lbl_mavattu2
-            // 
-            this.lbl_mavattu2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_mavattu2.AutoSize = true;
-            this.lbl_mavattu2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mavattu2.Location = new System.Drawing.Point(264, 53);
-            this.lbl_mavattu2.Name = "lbl_mavattu2";
-            this.lbl_mavattu2.Size = new System.Drawing.Size(81, 20);
-            this.lbl_mavattu2.TabIndex = 12;
-            this.lbl_mavattu2.Text = "Mã vật tư:";
-            // 
             // frm_VatTu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 511);

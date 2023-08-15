@@ -156,7 +156,12 @@ private void frm_VatTu_Load(object sender, EventArgs e)
             txt_MaVatTu2.Text = mavattu;
             txt_TenVatTu2.Text = tenvattu;
             txt_NhaCungCap2.Text = nhacungcap;
-            txt_NhaCungCap2.Text = nguoiquanly;
+            cbo_NguoiQuanLy2.Text = nguoiquanly;
+        }
+
+        private void dgv_DanhSachVatTu2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

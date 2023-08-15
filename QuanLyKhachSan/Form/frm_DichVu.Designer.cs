@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl_DichVu_ADM = new System.Windows.Forms.TabControl();
             this.tabPage_ThemDichVu = new System.Windows.Forms.TabPage();
+            this.btn_rp = new System.Windows.Forms.Button();
             this.txt_DonGia = new System.Windows.Forms.TextBox();
             this.txt_DonViTinh = new System.Windows.Forms.TextBox();
             this.txt_TenDichVu = new System.Windows.Forms.TextBox();
@@ -43,11 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_TimDichVu = new System.Windows.Forms.TabPage();
-            this.cbo_MaDichVu = new System.Windows.Forms.ComboBox();
             this.txt_TenDichVu1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgv_DanhSachDichVu1 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage_Sua_XoaDichVu = new System.Windows.Forms.TabPage();
             this.txt_Madichvu2 = new System.Windows.Forms.TextBox();
@@ -81,7 +80,6 @@
             this.lbl_DangKyDichVu = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_rp = new System.Windows.Forms.Button();
             this.tabControl_DichVu_ADM.SuspendLayout();
             this.tabPage_ThemDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachDichVu)).BeginInit();
@@ -130,6 +128,23 @@
             this.tabPage_ThemDichVu.TabIndex = 0;
             this.tabPage_ThemDichVu.Text = "Thêm dịch vụ";
             this.tabPage_ThemDichVu.Click += new System.EventHandler(this.tabPage_ThemDichVu_Click);
+            // 
+            // btn_rp
+            // 
+            this.btn_rp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_rp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.btn_rp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_rp.FlatAppearance.BorderSize = 0;
+            this.btn_rp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_rp.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rp.ForeColor = System.Drawing.Color.White;
+            this.btn_rp.Location = new System.Drawing.Point(944, 100);
+            this.btn_rp.Name = "btn_rp";
+            this.btn_rp.Size = new System.Drawing.Size(123, 43);
+            this.btn_rp.TabIndex = 46;
+            this.btn_rp.Text = "Report";
+            this.btn_rp.UseVisualStyleBackColor = false;
+            this.btn_rp.Click += new System.EventHandler(this.btn_rp_Click);
             // 
             // txt_DonGia
             // 
@@ -260,11 +275,9 @@
             // 
             this.tabPage_TimDichVu.BackColor = System.Drawing.Color.White;
             this.tabPage_TimDichVu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage_TimDichVu.Controls.Add(this.cbo_MaDichVu);
             this.tabPage_TimDichVu.Controls.Add(this.txt_TenDichVu1);
             this.tabPage_TimDichVu.Controls.Add(this.label7);
             this.tabPage_TimDichVu.Controls.Add(this.dgv_DanhSachDichVu1);
-            this.tabPage_TimDichVu.Controls.Add(this.label9);
             this.tabPage_TimDichVu.Controls.Add(this.label10);
             this.tabPage_TimDichVu.Location = new System.Drawing.Point(4, 30);
             this.tabPage_TimDichVu.Name = "tabPage_TimDichVu";
@@ -272,16 +285,6 @@
             this.tabPage_TimDichVu.Size = new System.Drawing.Size(1106, 477);
             this.tabPage_TimDichVu.TabIndex = 1;
             this.tabPage_TimDichVu.Text = "Tìm dịch vụ";
-            // 
-            // cbo_MaDichVu
-            // 
-            this.cbo_MaDichVu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_MaDichVu.FormattingEnabled = true;
-            this.cbo_MaDichVu.Location = new System.Drawing.Point(520, 63);
-            this.cbo_MaDichVu.Name = "cbo_MaDichVu";
-            this.cbo_MaDichVu.Size = new System.Drawing.Size(193, 29);
-            this.cbo_MaDichVu.TabIndex = 51;
-            this.cbo_MaDichVu.SelectedIndexChanged += new System.EventHandler(this.cbo_MaDichVu_SelectedIndexChanged);
             // 
             // txt_TenDichVu1
             // 
@@ -319,17 +322,6 @@
             this.dgv_DanhSachDichVu1.RowHeadersWidth = 51;
             this.dgv_DanhSachDichVu1.Size = new System.Drawing.Size(1090, 252);
             this.dgv_DanhSachDichVu1.TabIndex = 49;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(401, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 25);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "Mã dịch vụ:";
             // 
             // label10
             // 
@@ -758,23 +750,6 @@
             // 
             this.KiemLoi.ContainerControl = this;
             // 
-            // btn_rp
-            // 
-            this.btn_rp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_rp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.btn_rp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_rp.FlatAppearance.BorderSize = 0;
-            this.btn_rp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rp.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rp.ForeColor = System.Drawing.Color.White;
-            this.btn_rp.Location = new System.Drawing.Point(944, 100);
-            this.btn_rp.Name = "btn_rp";
-            this.btn_rp.Size = new System.Drawing.Size(123, 43);
-            this.btn_rp.TabIndex = 46;
-            this.btn_rp.Text = "Report";
-            this.btn_rp.UseVisualStyleBackColor = false;
-            this.btn_rp.Click += new System.EventHandler(this.btn_rp_Click);
-            // 
             // frm_DichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -823,11 +798,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage_TimDichVu;
-        private System.Windows.Forms.ComboBox cbo_MaDichVu;
         private System.Windows.Forms.TextBox txt_TenDichVu1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgv_DanhSachDichVu1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabPage tabPage_Sua_XoaDichVu;
         private System.Windows.Forms.Button btn_Xoa;
