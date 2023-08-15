@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan
 {
-    partial class frm_ReportPhong
+    partial class frm_rpDichVu
     {
         /// <summary>
         /// Required designer variable.
@@ -36,23 +36,22 @@
             this.rpv_Phong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpv_Phong.LocalReport.ReportEmbeddedResource = "QuanLyKhachSan.Report_KhachHang.rdlc";
             this.rpv_Phong.Location = new System.Drawing.Point(0, 0);
-            this.rpv_Phong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpv_Phong.Margin = new System.Windows.Forms.Padding(4);
             this.rpv_Phong.Name = "rpv_Phong";
             this.rpv_Phong.ServerReport.BearerToken = null;
-            this.rpv_Phong.Size = new System.Drawing.Size(1387, 644);
-            this.rpv_Phong.TabIndex = 1;
-            this.rpv_Phong.Load += new System.EventHandler(this.rpv_Phong_Load);
+            this.rpv_Phong.Size = new System.Drawing.Size(1125, 491);
+            this.rpv_Phong.TabIndex = 2;
             // 
-            // frm_ReportPhong
+            // frm_rpDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 644);
+            this.ClientSize = new System.Drawing.Size(1125, 491);
             this.Controls.Add(this.rpv_Phong);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frm_ReportPhong";
+            this.Name = "frm_rpDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Report Phòng";
+            this.Text = "Report Dịch vụ";
+            this.Load += new System.EventHandler(this.frm_rpDichVu_Load);
             this.ResumeLayout(false);
 
         }

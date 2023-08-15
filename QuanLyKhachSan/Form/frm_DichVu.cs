@@ -318,5 +318,16 @@ namespace QuanLyKhachSan
             dgv_DanhSachDichVu3.Columns["DonGia"].HeaderText = "Đơn giá";
             dgv_DanhSachDichVu3.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
         }
+
+        private void tabPage_ThemDichVu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_rp_Click(object sender, EventArgs e)
+        {
+            frm_rpDichVu frm_RpDichVu = new frm_rpDichVu();
+            frm_RpDichVu.ShowDialog();
+        }
     }
 }

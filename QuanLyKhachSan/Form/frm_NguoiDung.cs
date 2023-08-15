@@ -174,11 +174,9 @@ namespace QuanLyKhachSan
             dgv_DanhSachNguoiDung1.DataSource = data;
             dgv_DanhSachNguoiDung2.DataSource = data;
 
-            // Clear all items in the combo boxes
             cbo_phanquen_them.Items.Clear();
             cbo_phanquyen_sua.Items.Clear();
 
-            // Add new items to the combo boxes
             cbo_phanquen_them.Items.Add("Nhân viên");
             cbo_phanquen_them.Items.Add("Quản lý");
             cbo_phanquyen_sua.Items.Add("Nhân viên");
