@@ -168,7 +168,7 @@ namespace QuanLyKhachSan.BUS
                 {
                     throw new Exception("Mã nhân sự không tồn tại");
                 }
-                else if (frag == true)
+                else if (frag == true && taiKhoans.Count > 0)
                 {
                     DA_.SaveData(taiKhoans);
                     MessageBox.Show("Thêm dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

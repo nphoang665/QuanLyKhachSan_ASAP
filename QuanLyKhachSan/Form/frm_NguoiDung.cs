@@ -169,15 +169,21 @@ namespace QuanLyKhachSan
         }
         void loadThongTin()
         {
-
             var data = dstk.LoadDsTkData();
             dgv_DanhSachNguoiDung.DataSource = data;
             dgv_DanhSachNguoiDung1.DataSource = data;
             dgv_DanhSachNguoiDung2.DataSource = data;
+
+            // Clear all items in the combo boxes
+            cbo_phanquen_them.Items.Clear();
+            cbo_phanquyen_sua.Items.Clear();
+
+            // Add new items to the combo boxes
             cbo_phanquen_them.Items.Add("Nhân viên");
             cbo_phanquen_them.Items.Add("Quản lý");
             cbo_phanquyen_sua.Items.Add("Nhân viên");
             cbo_phanquyen_sua.Items.Add("Quản lý");
+
             dgv_DanhSachNguoiDung.Columns[0].HeaderCell.Value = "Tên đăng nhập";
             dgv_DanhSachNguoiDung.Columns[1].HeaderCell.Value = "Mật khẩu";
             dgv_DanhSachNguoiDung.Columns[3].HeaderCell.Value = "Phân quyền";
@@ -193,6 +199,7 @@ namespace QuanLyKhachSan
             dgv_DanhSachNguoiDung2.Columns["TenDangNhap"].ReadOnly = true;
             dgv_DanhSachNguoiDung2.Columns["Phanquyen"].ReadOnly = true;
         }
+
         private void frm_NguoiDung_Load(object sender, EventArgs e)
         {
 

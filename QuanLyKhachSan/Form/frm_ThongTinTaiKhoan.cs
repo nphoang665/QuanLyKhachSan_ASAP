@@ -102,26 +102,30 @@ namespace QuanLyKhachSan
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
                 bus.LuuAnhNv(Manhansu, pictureBox1.Image);
+                MessageBox.Show("Đổi ảnh đại diện thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         private void btn_XoaAvt_Click(object sender, EventArgs e)
         {
-            if (txt_gioitinh.Texts == "Nam")
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                pictureBox1.Image = Properties.Resources.male_information;
-            }
-            else if (txt_gioitinh.Text == "Nữ")
-            {
-                pictureBox1.Image = Properties.Resources.Female_Information;
+                if (txt_gioitinh.Texts == "Nam")
+                {
+                    pictureBox1.Image = Properties.Resources.male_information;
+                }
+                else if (txt_gioitinh.Texts == "Nữ")
+                {
+                    pictureBox1.Image = Properties.Resources.Female_Information;
+                }
+                MessageBox.Show("Xóa ảnh đại diện thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btn_KhoiPhucAvt_Click(object sender, EventArgs e)
         {
-          
-                bus.KhoiPhucAnhNv(Manhansu, pictureBox1);
-            
+            bus.KhoiPhucAnhNv(Manhansu, pictureBox1);
+            MessageBox.Show("Khôi phục ảnh đại diện thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
