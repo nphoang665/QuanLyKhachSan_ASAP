@@ -18,28 +18,32 @@ namespace QuanLyKhachSan
         {
             if (daChonDong)
             {
-                string lyDo = "";
-                string reason = Microsoft.VisualBasic.Interaction.InputBox("Lý do", "Nhập lý do", lyDo);
-
-                if (reason != null)
+                DialogResult result = MessageBox.Show("Bạn chắc chắn muốn hủy tài khoản này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    if (!string.IsNullOrEmpty(reason))
+                    string lyDo = "";
+                    string reason = Microsoft.VisualBasic.Interaction.InputBox("Lý do", "Nhập lý do", lyDo);
+
+                    if (reason != null)
                     {
-                        string taiKhoan = dgv_tkChuaXacThuc.Rows[viTri].Cells[0].Value.ToString();
-                        if (taiKhoan != null)
+                        if (!string.IsNullOrEmpty(reason))
                         {
-                            bus.CapNhatTinhTrangVaLyDoTaiKhoan(taiKhoan, "ThatBai", reason);
-                            loadDuLieu();
+                            string taiKhoan = dgv_tkChuaXacThuc.Rows[viTri].Cells[0].Value.ToString();
+                            if (taiKhoan != null)
+                            {
+                                bus.CapNhatTinhTrangVaLyDoTaiKhoan(taiKhoan, "ThatBai", reason);
+                                loadDuLieu();
+                            }
                         }
                     }
-                    
                 }
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn giá trị!", "Thông báo");
+                MessageBox.Show("Bạn chưa chọn giá trị!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
 
 
@@ -72,7 +76,7 @@ namespace QuanLyKhachSan
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn giá trị!", "Thông báo");
+                MessageBox.Show("Bạn chưa chọn giá trị!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         int viTri;

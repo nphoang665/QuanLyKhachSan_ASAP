@@ -149,19 +149,17 @@ namespace QuanLyKhachSan
 
         private void btn_ThuePhong_Click(object sender, EventArgs e)
         {
-
-
             // Kiểm tra xem đã chọn khách hàng
             if (cbo_MaKhachHang.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn khách hàng trước khi thuê.", "Thông báo");
+                MessageBox.Show("Vui lòng chọn khách hàng trước khi thuê.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Kiểm tra xem đã chọn phòng trống từ danh sách dgv_PhongTrong
             if (dgv_PhongTrong.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn ít nhất một phòng trống từ danh sách.", "Thông báo");
+                MessageBox.Show("Vui lòng chọn ít nhất một phòng trống từ danh sách.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -176,7 +174,7 @@ namespace QuanLyKhachSan
             DateTime ngayThue = dtp_NgayThue.Value.Date;
             if (ngayThue > DateTime.Now.Date)
             {
-                MessageBox.Show("Ngày thuê không được lớn hơn ngày hiện tại.", "Thông báo");
+                MessageBox.Show("Ngày thuê không được lớn hơn ngày hiện tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -184,9 +182,10 @@ namespace QuanLyKhachSan
             bool isPhongChon = lsv_phongchon.Items.Cast<ListViewItem>().Any(item => item.Text.Equals("Mã phòng: " + maPhong));
             if (!isPhongChon)
             {
-                MessageBox.Show("Vui lòng chọn phòng từ danh sách trước khi thuê.", "Thông báo");
+                MessageBox.Show("Vui lòng chọn phòng từ danh sách trước khi thuê.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+        
 
             // Thêm thông tin thuê phòng vào cơ sở dữ liệu
             try

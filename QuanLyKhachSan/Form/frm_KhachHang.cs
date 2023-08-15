@@ -89,7 +89,7 @@ namespace QuanLyKhachSan
                 if (!chkCccd)  
                     return;
                 bus.ThemKH(txt_makh.Text, txt_TenKhachHang.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_CMND.Text);
-                MessageBox.Show("Đã thêm thông tin khách hàng " + txt_TenKhachHang.Text);
+                MessageBox.Show("Đã thêm thông tin khách hàng " + txt_TenKhachHang.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 bus.LoadDsKh(dgv_DanhSachKhachHang2);
                 bus.LoadDsKh(dgv_DanhSachKhachHang);
                 bus.LoadDsKh(dgv_DanhSachKhachHang1);
@@ -116,7 +116,7 @@ namespace QuanLyKhachSan
 
                 bus.XoaKH(txt_makh_sua.Text);
             }
-            MessageBox.Show("Đã xóa thông tin khách hàng "+txt_tenkh_sua.Text);
+            MessageBox.Show("Đã xóa thông tin khách hàng "+txt_tenkh_sua.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             bus.LoadDsKh(dgv_DanhSachKhachHang2);
             bus.LoadDsKh(dgv_DanhSachKhachHang);
             bus.LoadDsKh(dgv_DanhSachKhachHang1);
@@ -142,7 +142,7 @@ namespace QuanLyKhachSan
                 DialogResult result = MessageBox.Show("Bạn có muốn sủa thông tin khách hàng này không?", "Sửa", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                     bus.SuaKH(txt_makh_sua.Text, txt_tenkh_sua.Text, gioitinh, dtp_NgaySinh.Value.Date, txt_diachi_sua.Text, txt_sdt_sua.Text, txt_cccd_sua.Text);
-                MessageBox.Show("Đã sửa thông tin khách hàng " + txt_tenkh_sua.Text);
+                MessageBox.Show("Đã sửa thông tin khách hàng " + txt_tenkh_sua.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 bus.LoadDsKh(dgv_DanhSachKhachHang2);
                 bus.LoadDsKh(dgv_DanhSachKhachHang);
                 bus.LoadDsKh(dgv_DanhSachKhachHang1);

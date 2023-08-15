@@ -103,31 +103,31 @@ namespace QuanLyKhachSan.BUS
                     tk = tenDangNhap;
                     if (tenDangNhap == "")
                     {
-                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: TenDangNhap");
+                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: TenDangNhap", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         frag = false;
                         break;
                     }
                     if (matKhau == "")
                     {
-                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: MatKhau");
+                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: MatKhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         frag = false;
                         break;
                     }
                     if (tenDangNhap.Length < 5 || tenDangNhap.Length > 20)
                     {
-                        MessageBox.Show("Tên đăng nhập phải có độ dài từ 5 đến 20 ký tự! Dòng: " + (row.Index + 1) + ", cột: TenDangNhap");
+                        MessageBox.Show("Tên đăng nhập phải có độ dài từ 5 đến 20 ký tự! Dòng: " + (row.Index + 1) + ", cột: TenDangNhap", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         frag = false;
                         break;
                     }
                     if (matKhau.Length < 5 || matKhau.Length > 20)
                     {
-                        MessageBox.Show("Mật khẩu phải có độ dài từ 5 đến 20 ký tự! Dòng: " + (row.Index + 1) + ", cột: MatKhau");
+                        MessageBox.Show("Mật khẩu phải có độ dài từ 5 đến 20 ký tự! Dòng: " + (row.Index + 1) + ", cột: MatKhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         frag = false;
                         break;
                     }
                     if (maNhanSu == "")
                     {
-                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: MaNhanSu");
+                        MessageBox.Show("Bạn chưa nhập dữ liệu ở dòng: " + (row.Index + 1) + ", cột: MaNhanSu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         frag = false;
                         break;
                     }
@@ -171,15 +171,16 @@ namespace QuanLyKhachSan.BUS
                 else if (frag == true)
                 {
                     DA_.SaveData(taiKhoans);
-                    MessageBox.Show("Lưu thành công");
+                    MessageBox.Show("Thêm dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }
+
 
 
 

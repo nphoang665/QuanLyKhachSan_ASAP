@@ -161,24 +161,24 @@ namespace QuanLyKhachSan.DA
 
                 if (matKhau == "")
                 {
-                    MessageBox.Show("Bạn chưa nhập mật khẩu cho tài khoản: " + tenDangNhap);
+                    MessageBox.Show("Bạn chưa nhập mật khẩu cho tài khoản: " + tenDangNhap, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (matKhau.Length < 5 || matKhau.Length > 20)
                 {
-                    MessageBox.Show("Mật khẩu phải có độ dài từ 5 đến 20 ký tự! Tài khoản: " + tenDangNhap);
+                    MessageBox.Show("Mật khẩu phải có độ dài từ 5 đến 20 ký tự! Tài khoản: " + tenDangNhap, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (maNhanSu == "")
                 {
-                    MessageBox.Show("Bạn chưa nhập mã nhân sự cho tài khoản: " + tenDangNhap);
+                    MessageBox.Show("Bạn chưa nhập mã nhân sự cho tài khoản: " + tenDangNhap, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 var nhanSu = db.NhanSus.FirstOrDefault(n => n.MaNhanSu == maNhanSu);
                 if (nhanSu == null)
                 {
-                    MessageBox.Show("Mã nhân sự không tồn tại: " + maNhanSu);
+                    MessageBox.Show("Mã nhân sự không tồn tại: " + maNhanSu, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -205,8 +205,9 @@ namespace QuanLyKhachSan.DA
             }
 
             db.SaveChanges();
-            MessageBox.Show("Lưu thông tin thành công");
+            MessageBox.Show("Lưu thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         public List<TaiKhoan> LayDsTk_Data()
         {

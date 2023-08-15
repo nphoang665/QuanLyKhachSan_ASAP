@@ -95,7 +95,7 @@ namespace QuanLyKhachSan
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show("Đã thêm thông tin nhân viên " + txt_TenNhanVien.Text);
+            MessageBox.Show("Đã thêm thông tin nhân viên " + txt_TenNhanVien.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -126,7 +126,7 @@ namespace QuanLyKhachSan
                 File.AppendAllText("error.log", ex.ToString() + Environment.NewLine);
                 return;
             }
-            MessageBox.Show("Đã sửa thông tin nhân viên " + txt_TenNhanVien2.Text);
+            MessageBox.Show("Đã sửa thông tin nhân viên " + txt_TenNhanVien2.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txt_manv_sua.Enabled = true;
             bus.LoadDsNv(dgv_nhansu);
             bus.LoadDsNv(dgv1_NhanSu);
@@ -149,7 +149,7 @@ namespace QuanLyKhachSan
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show("Đã xóa thông tin nhân viên " + txt_TenNhanVien2.Text);
+            MessageBox.Show("Đã xóa thông tin nhân viên " + txt_TenNhanVien2.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txt_manv_sua.Enabled = true;
 
         }

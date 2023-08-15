@@ -22,7 +22,7 @@ namespace QuanLyKhachSan
 
             if (string.IsNullOrEmpty(maVatTu) || string.IsNullOrEmpty(tenVatTu) || string.IsNullOrEmpty(nhaCungCap) || string.IsNullOrEmpty(nguoiQuanLy))
             {
-                MessageBox.Show("Error: Vui lòng nhập đầy đủ thông tin.");
+                MessageBox.Show("Error: Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -33,7 +33,7 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -50,7 +50,7 @@ namespace QuanLyKhachSan
 
             if (string.IsNullOrEmpty(maVatTu) || string.IsNullOrEmpty(tenVatTu) || string.IsNullOrEmpty(nhaCungCap) || string.IsNullOrEmpty(nguoiQuanLy))
             {
-                MessageBox.Show("Error: Vui lòng nhập đầy đủ thông tin.");
+                MessageBox.Show("Error: Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -62,7 +62,7 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -73,7 +73,7 @@ namespace QuanLyKhachSan
             string maVatTu = txt_MaVatTu2.Text;
             if (string.IsNullOrEmpty(maVatTu))
             {
-                MessageBox.Show("Error: Vui lòng nhập mã vật tư.");
+                MessageBox.Show("Error: Vui lòng nhập mã vật tư.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -85,11 +85,13 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+    
 
-        private void frm_VatTu_Load(object sender, EventArgs e)
+
+private void frm_VatTu_Load(object sender, EventArgs e)
         {
 
             bus.LoadNhanSu(cbo_NguoiQuanLy);

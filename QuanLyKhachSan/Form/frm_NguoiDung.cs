@@ -1,4 +1,5 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.BUS;
 using System;
 using System.Data;
 using System.Drawing;
@@ -16,7 +17,6 @@ namespace QuanLyKhachSan
             dstk = new BUS_QuanLyTaiKhoan();
 
         }
-        private int initialRowCount;
         private void txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
             string timKiem = txt_TimKiem.Texts;
@@ -197,7 +197,6 @@ namespace QuanLyKhachSan
         {
 
             loadThongTin();
-            initialRowCount = dgv_DanhSachNguoiDung.Rows.Count;
 
         }
 
@@ -455,7 +454,7 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

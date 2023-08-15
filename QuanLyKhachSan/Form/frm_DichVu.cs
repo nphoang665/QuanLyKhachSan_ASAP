@@ -201,7 +201,7 @@ namespace QuanLyKhachSan
                     if (dialogResult == DialogResult.Yes)
                     {
                         listView_DichVuDaDat.Items.Remove(selectedItem);
-                        MessageBox.Show("Xóa dịch vụ thành công!","Thông báo");
+                        MessageBox.Show("Xóa dịch vụ thành công!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else

@@ -19,17 +19,16 @@ namespace QuanLyKhachSan.BUS
         {
             return da.LayMatKhau(tk);
         }
-        public bool DoiMatKhau(string tk, string mk,string mkmoi)
+        public bool DoiMatKhau(string tk, string mk, string mkmoi)
         {
             bool kt = da.DoiMatKhau(tk, mk, mkmoi);
             if (kt)
             {
-                MessageBox.Show("Đổi mật khẩu thành công");
+                MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Sai mật khẩu");
-
+                MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             return kt;
         }

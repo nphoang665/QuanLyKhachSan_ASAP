@@ -110,8 +110,6 @@ namespace QuanLyKhachSan
                         bool dangnhap = bus.DangNhapTaiKhoan(username, password);
                         if (dangnhap)
                         {
-
-
                             this.Hide();
                             frm_TrangChu frm = new frm_TrangChu(username);
                             frm.ShowDialog();
@@ -128,11 +126,11 @@ namespace QuanLyKhachSan
                     else if (tinhTrang == "ThatBai")
                     {
                         string lydo = bus.LayLyDo(username);
-                        MessageBox.Show("Đăng nhập thất bại. Lý do: " + lydo);
+                        MessageBox.Show("Đăng nhập thất bại. Lý do: " + lydo, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin xác thực");
+                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin xác thực", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
