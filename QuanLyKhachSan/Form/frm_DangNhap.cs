@@ -62,12 +62,17 @@ namespace QuanLyKhachSan
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Vui lòng nhập tên đăng nhập.");
                 }
+                else if (string.IsNullOrWhiteSpace(username))
+                {
+                    lbl_chk_MatKhau.Text = "";
+                    throw new Exception("Vui lòng nhập tên đăng nhập.");
+                }
                 else if (username.Length < 5 || username.Length > 20)
                 {
                     lbl_chk_MatKhau.Text = "";
                     throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if (string.IsNullOrEmpty(password))
+                else if (string.IsNullOrWhiteSpace(password))
                 {
                     lbl_chk_TenDangNhap.Text = "";
                     throw new Exception("Vui lòng nhập mật khẩu.");

@@ -52,7 +52,13 @@ namespace QuanLyKhachSan
                     lbl_remkmoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu cũ");
                 }
-                 if(matKhauCu.Length <5 || matKhauCu.Length > 20)
+                else if (string.IsNullOrWhiteSpace(matKhauCu))
+                {
+                    lbl_mkmoi_chk.Text = "";
+                    lbl_remkmoi_chk.Text = "";
+                    throw new Exception("Bạn chưa nhập mật khẩu cũ");
+                }
+                if (matKhauCu.Length <5 || matKhauCu.Length > 20)
                 {
                     lbl_mkmoi_chk.Text = "";
                     lbl_remkmoi_chk.Text = "";
@@ -73,6 +79,12 @@ namespace QuanLyKhachSan
                     lbl_remkmoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu mới");
                 }
+                else if (string.IsNullOrWhiteSpace(matKhauMoi))
+                {
+                    lbl_mkcu_chk.Text = "";
+                    lbl_remkmoi_chk.Text = "";
+                    throw new Exception("Bạn chưa nhập mật khẩu mới");
+                }
                 if (matKhauMoi.Length < 5 || matKhauMoi.Length > 20)
                 {
                     lbl_mkcu_chk.Text = "";
@@ -80,6 +92,12 @@ namespace QuanLyKhachSan
                     throw new Exception("Mật khẩu mới không được ít hơn 5 kí tự và nhiều hơn 20 kí tự");
                 }
                 else if (string.IsNullOrEmpty(nhapLaiMK))
+                {
+                    lbl_mkcu_chk.Text = "";
+                    lbl_mkmoi_chk.Text = "";
+                    throw new Exception("Bạn chưa nhập xác nhận mật khẩu mới");
+                }
+                else if (string.IsNullOrWhiteSpace(nhapLaiMK))
                 {
                     lbl_mkcu_chk.Text = "";
                     lbl_mkmoi_chk.Text = "";

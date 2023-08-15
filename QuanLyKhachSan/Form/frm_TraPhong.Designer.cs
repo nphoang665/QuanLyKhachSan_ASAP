@@ -63,7 +63,7 @@
             this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThanhToan.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(495, 449);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(475, 449);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(125, 45);
             this.btn_ThanhToan.TabIndex = 17;
@@ -79,7 +79,7 @@
             this.lbl_TenKhachHang.ForeColor = System.Drawing.Color.Blue;
             this.lbl_TenKhachHang.Location = new System.Drawing.Point(407, 155);
             this.lbl_TenKhachHang.Name = "lbl_TenKhachHang";
-            this.lbl_TenKhachHang.Size = new System.Drawing.Size(114, 19);
+            this.lbl_TenKhachHang.Size = new System.Drawing.Size(141, 24);
             this.lbl_TenKhachHang.TabIndex = 12;
             this.lbl_TenKhachHang.Text = "Tên khách hàng:";
             // 
@@ -91,7 +91,7 @@
             this.lbl_MaKhachHang.ForeColor = System.Drawing.Color.Blue;
             this.lbl_MaKhachHang.Location = new System.Drawing.Point(407, 120);
             this.lbl_MaKhachHang.Name = "lbl_MaKhachHang";
-            this.lbl_MaKhachHang.Size = new System.Drawing.Size(111, 19);
+            this.lbl_MaKhachHang.Size = new System.Drawing.Size(138, 24);
             this.lbl_MaKhachHang.TabIndex = 10;
             this.lbl_MaKhachHang.Text = "Mã khách hàng:";
             // 
@@ -103,7 +103,7 @@
             this.lbl_TieuDeThanhToan.ForeColor = System.Drawing.Color.Blue;
             this.lbl_TieuDeThanhToan.Location = new System.Drawing.Point(471, 17);
             this.lbl_TieuDeThanhToan.Name = "lbl_TieuDeThanhToan";
-            this.lbl_TieuDeThanhToan.Size = new System.Drawing.Size(173, 48);
+            this.lbl_TieuDeThanhToan.Size = new System.Drawing.Size(217, 61);
             this.lbl_TieuDeThanhToan.TabIndex = 9;
             this.lbl_TieuDeThanhToan.Text = "HÓA ĐƠN";
             // 
@@ -164,7 +164,7 @@
             this.lbl_SoNgayO.ForeColor = System.Drawing.Color.Blue;
             this.lbl_SoNgayO.Location = new System.Drawing.Point(451, 32);
             this.lbl_SoNgayO.Name = "lbl_SoNgayO";
-            this.lbl_SoNgayO.Size = new System.Drawing.Size(76, 19);
+            this.lbl_SoNgayO.Size = new System.Drawing.Size(93, 24);
             this.lbl_SoNgayO.TabIndex = 6;
             this.lbl_SoNgayO.Text = "Số ngày ở:";
             // 
@@ -175,7 +175,7 @@
             this.lbl_GiaPhong.ForeColor = System.Drawing.Color.Blue;
             this.lbl_GiaPhong.Location = new System.Drawing.Point(70, 72);
             this.lbl_GiaPhong.Name = "lbl_GiaPhong";
-            this.lbl_GiaPhong.Size = new System.Drawing.Size(78, 19);
+            this.lbl_GiaPhong.Size = new System.Drawing.Size(97, 24);
             this.lbl_GiaPhong.TabIndex = 2;
             this.lbl_GiaPhong.Text = "Giá phòng:";
             // 
@@ -186,7 +186,7 @@
             this.lbl_TongTien.ForeColor = System.Drawing.Color.Blue;
             this.lbl_TongTien.Location = new System.Drawing.Point(196, 152);
             this.lbl_TongTien.Name = "lbl_TongTien";
-            this.lbl_TongTien.Size = new System.Drawing.Size(181, 24);
+            this.lbl_TongTien.Size = new System.Drawing.Size(222, 30);
             this.lbl_TongTien.TabIndex = 8;
             this.lbl_TongTien.Text = "Tổng tiền thanh toán:";
             // 
@@ -197,7 +197,7 @@
             this.lbl_NgayThanhToan.ForeColor = System.Drawing.Color.Blue;
             this.lbl_NgayThanhToan.Location = new System.Drawing.Point(451, 72);
             this.lbl_NgayThanhToan.Name = "lbl_NgayThanhToan";
-            this.lbl_NgayThanhToan.Size = new System.Drawing.Size(120, 19);
+            this.lbl_NgayThanhToan.Size = new System.Drawing.Size(147, 24);
             this.lbl_NgayThanhToan.TabIndex = 4;
             this.lbl_NgayThanhToan.Text = "Ngày thanh toán:";
             // 
@@ -208,7 +208,7 @@
             this.lbl_NgayDatPhong.ForeColor = System.Drawing.Color.Blue;
             this.lbl_NgayDatPhong.Location = new System.Drawing.Point(70, 32);
             this.lbl_NgayDatPhong.Name = "lbl_NgayDatPhong";
-            this.lbl_NgayDatPhong.Size = new System.Drawing.Size(115, 19);
+            this.lbl_NgayDatPhong.Size = new System.Drawing.Size(142, 24);
             this.lbl_NgayDatPhong.TabIndex = 0;
             this.lbl_NgayDatPhong.Text = "Ngày đặt phòng:";
             // 
@@ -242,7 +242,7 @@
             this.lbl_Phong.ForeColor = System.Drawing.Color.Blue;
             this.lbl_Phong.Location = new System.Drawing.Point(407, 188);
             this.lbl_Phong.Name = "lbl_Phong";
-            this.lbl_Phong.Size = new System.Drawing.Size(54, 19);
+            this.lbl_Phong.Size = new System.Drawing.Size(66, 24);
             this.lbl_Phong.TabIndex = 14;
             this.lbl_Phong.Text = "Phòng:";
             // 
@@ -285,7 +285,7 @@
             this.lbl_TongTienDichVu.ForeColor = System.Drawing.Color.Blue;
             this.lbl_TongTienDichVu.Location = new System.Drawing.Point(67, 112);
             this.lbl_TongTienDichVu.Name = "lbl_TongTienDichVu";
-            this.lbl_TongTienDichVu.Size = new System.Drawing.Size(123, 19);
+            this.lbl_TongTienDichVu.Size = new System.Drawing.Size(152, 24);
             this.lbl_TongTienDichVu.TabIndex = 10;
             this.lbl_TongTienDichVu.Text = "Tổng tiền dịch vụ:";
             // 
@@ -320,13 +320,13 @@
             this.lbl_mahoadon.ForeColor = System.Drawing.Color.Blue;
             this.lbl_mahoadon.Location = new System.Drawing.Point(407, 91);
             this.lbl_mahoadon.Name = "lbl_mahoadon";
-            this.lbl_mahoadon.Size = new System.Drawing.Size(89, 19);
+            this.lbl_mahoadon.Size = new System.Drawing.Size(111, 24);
             this.lbl_mahoadon.TabIndex = 19;
             this.lbl_mahoadon.Text = "Mã hóa đơn:";
             // 
             // frm_TraPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 511);

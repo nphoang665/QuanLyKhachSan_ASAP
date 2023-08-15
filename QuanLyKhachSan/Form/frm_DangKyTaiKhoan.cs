@@ -32,6 +32,12 @@ namespace QuanLyKhachSan
                     lbl_mk_chkerr.Text = "";
                     throw new Exception("*Lỗi. Bạn chưa nhập căn cước công dân");
                 }
+                else if (string.IsNullOrWhiteSpace(txt_cccd.Texts))
+                {
+                    lbl_tk_checkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
+                    throw new Exception("*Lỗi. Bạn chưa nhập căn cước công dân");
+                }
                 else if (tt == null)
                 {
                     lbl_tk_checkerr.Text = "";
@@ -40,6 +46,12 @@ namespace QuanLyKhachSan
                 }
 
                 else if (tk == "")
+                {
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_mk_chkerr.Text = "";
+                    throw new Exception("*Lỗi. Bạn chưa nhập thông tin tài khoản");
+                }
+                else if (string.IsNullOrWhiteSpace(tk))
                 {
                     lbl_cccd_chkerr.Text = "";
                     lbl_mk_chkerr.Text = "";
@@ -59,6 +71,13 @@ namespace QuanLyKhachSan
                     throw new Exception("*Lỗi. Trùng tài khoản");
                 }
                 else if (mk == "")
+                {
+                    lbl_cccd_chkerr.Text = "";
+                    lbl_tk_checkerr.Text = "";
+                    throw new Exception("*Lỗi. Bạn chưa nhập mật khẩu");
+
+                }
+                else if (string.IsNullOrWhiteSpace(mk))
                 {
                     lbl_cccd_chkerr.Text = "";
                     lbl_tk_checkerr.Text = "";

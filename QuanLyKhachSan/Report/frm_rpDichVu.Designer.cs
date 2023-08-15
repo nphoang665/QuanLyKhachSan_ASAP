@@ -39,14 +39,14 @@
             this.rpv_Phong.Margin = new System.Windows.Forms.Padding(4);
             this.rpv_Phong.Name = "rpv_Phong";
             this.rpv_Phong.ServerReport.BearerToken = null;
-            this.rpv_Phong.Size = new System.Drawing.Size(1125, 491);
+            this.rpv_Phong.Size = new System.Drawing.Size(1209, 491);
             this.rpv_Phong.TabIndex = 2;
             // 
             // frm_rpDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 491);
+            this.ClientSize = new System.Drawing.Size(1209, 491);
             this.Controls.Add(this.rpv_Phong);
             this.Name = "frm_rpDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

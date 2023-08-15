@@ -45,27 +45,27 @@ namespace QuanLyKhachSan.DA
 
         public LuuMatKhau da_LayThongTinDaLuu()
         {
-            var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
+            var luuthongtin = db.LuuMatKhaus.FirstOrDefault();
 
-            return savedLoginInfo;
+            return luuthongtin;
         }
         public void da_CapNhapThongTin(string username, string password)
         {
             if (DangNhap(username, password))
             {
-                var savedLoginInfo = db.LuuMatKhaus.FirstOrDefault();
+                var luuthongtin = db.LuuMatKhaus.FirstOrDefault();
 
-                if (savedLoginInfo != null)
+                if (luuthongtin != null)
                 {
-                    db.LuuMatKhaus.Remove(savedLoginInfo);
+                    db.LuuMatKhaus.Remove(luuthongtin);
                 }
 
-                var newSavedLoginInfo = new LuuMatKhau
+                var luuthongtinmoi = new LuuMatKhau
                 {
                     TaiKhoan = username,
                     MatKhau = password
                 };
-                db.LuuMatKhaus.Add(newSavedLoginInfo);
+                db.LuuMatKhaus.Add(luuthongtinmoi);
                 db.SaveChanges();
             }
         }

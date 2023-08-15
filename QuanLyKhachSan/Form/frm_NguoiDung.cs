@@ -45,7 +45,7 @@ namespace QuanLyKhachSan
                 string tenDangNhap = txt_TenDangNhap.Texts;
                 string matKhau = txt_MatKhau.Texts;
                 string manhansu = txt_manhansu_them.Texts;
-                if (string.IsNullOrEmpty(tenDangNhap))
+                if (string.IsNullOrWhiteSpace(tenDangNhap))
                 {
                     lbl_mkthem_chk.Text = "";
                     lbl_pqthem_chk.Text = "";
@@ -66,7 +66,7 @@ namespace QuanLyKhachSan
                     lbl_mnsthem_chk.Text = "";
                     throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if (string.IsNullOrEmpty(matKhau))
+                else if (string.IsNullOrWhiteSpace(matKhau))
                 {
                     lbl_tdnthem_chk.Text = "";
                     lbl_pqthem_chk.Text = "";
@@ -80,7 +80,7 @@ namespace QuanLyKhachSan
                     lbl_mnsthem_chk.Text = "";
                     throw new Exception("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if (string.IsNullOrEmpty(manhansu))
+                else if (string.IsNullOrWhiteSpace(manhansu))
                 {
                     lbl_tdnthem_chk.Text = "";
                     lbl_mkthem_chk.Text = "";
@@ -213,7 +213,7 @@ namespace QuanLyKhachSan
                 string tenDangNhap = txt_tk_Sua.Texts;
                 string matKhau = txt_mk_Sua.Texts;
                 string manhansu = txt_manhansu_sua.Texts;
-                if (string.IsNullOrEmpty(tenDangNhap))
+                if (string.IsNullOrWhiteSpace(tenDangNhap))
                 {
                     lbl_mksua_Chk.Text = "";
                     lbl_mnssua_chk.Text = "";
@@ -234,7 +234,7 @@ namespace QuanLyKhachSan
                     lbl_pqsua_chk.Text = "";
                     throw new Exception("Tên đăng nhập không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if (string.IsNullOrEmpty(matKhau))
+                else if (string.IsNullOrWhiteSpace(matKhau))
                 {
                     lbl_tksua_chk.Text = "";
                     lbl_mnssua_chk.Text = "";
@@ -248,7 +248,7 @@ namespace QuanLyKhachSan
                     lbl_pqsua_chk.Text = "";
                     throw new Exception("Mật khẩu không được nhỏ hơn 5 và lớn hơn 20 kí tự");
                 }
-                else if (string.IsNullOrEmpty(manhansu))
+                else if (string.IsNullOrWhiteSpace(manhansu))
                 {
                     lbl_mksua_Chk.Text = "";
                     lbl_tksua_chk.Text = "";

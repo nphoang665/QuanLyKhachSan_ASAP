@@ -79,6 +79,11 @@ namespace QuanLyKhachSan
                    
                     throw new Exception("Bạn chưa nhập tên đăng nhập");
                 }
+                else if (string.IsNullOrWhiteSpace(tenDangNhap))
+                {
+
+                    throw new Exception("Bạn chưa nhập tên đăng nhập");
+                }
                 else if (tenDangNhap.Length < 5 || tenDangNhap.Length > 20)
                 {
                  
@@ -137,6 +142,11 @@ namespace QuanLyKhachSan
                     lbl_rematkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập mật khẩu");
                 }
+                else if (string.IsNullOrWhiteSpace(matKhauMoi))
+                {
+                    lbl_rematkhaumoi_chk.Text = "";
+                    throw new Exception("Bạn chưa nhập mật khẩu");
+                }
                 else if (txt_MatKhau.Texts.Length < 5 || txt_MatKhau.Texts.Length > 20)
                 {   
                     lbl_rematkhaumoi_chk.Text = "";
@@ -146,6 +156,11 @@ namespace QuanLyKhachSan
 
 
                 else if (txt_NhapLaiMK.Texts == "")
+                {
+                    lbl_matkhaumoi_chk.Text = "";
+                    throw new Exception("Bạn chưa nhập xác nhận lại mật khẩu");
+                }
+                else if (string.IsNullOrWhiteSpace(nhapLaiMK))
                 {
                     lbl_matkhaumoi_chk.Text = "";
                     throw new Exception("Bạn chưa nhập xác nhận lại mật khẩu");

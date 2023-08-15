@@ -37,8 +37,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
             this.lbl_tendangnhap_chk = new System.Windows.Forms.Label();
             this.pnl_dmk = new System.Windows.Forms.Panel();
+            this.txt_NhapLaiMK = new CustormTextbox.RJConTrol.RJTextBox();
+            this.txt_MatKhau = new CustormTextbox.RJConTrol.RJTextBox();
             this.lbl_matkhaumoi_chk = new System.Windows.Forms.Label();
             this.lbl_rematkhaumoi_chk = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,9 +56,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KiemLoi = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbl_notice_successfull = new System.Windows.Forms.Label();
-            this.txt_TenDangNhap = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_NhapLaiMK = new CustormTextbox.RJConTrol.RJTextBox();
-            this.txt_MatKhau = new CustormTextbox.RJConTrol.RJTextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnl_dmk.SuspendLayout();
@@ -75,7 +75,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label6.Location = new System.Drawing.Point(911, 454);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 23);
+            this.label6.Size = new System.Drawing.Size(88, 31);
             this.label6.TabIndex = 14;
             this.label6.Text = " A$AP";
             // 
@@ -87,7 +87,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.label5.Location = new System.Drawing.Point(812, 431);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(269, 23);
+            this.label5.Size = new System.Drawing.Size(344, 31);
             this.label5.TabIndex = 15;
             this.label5.Text = "Hệ thống quản lý khách sạn";
             // 
@@ -124,7 +124,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(33, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 22);
+            this.label2.Size = new System.Drawing.Size(178, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên đăng nhập:";
             // 
@@ -133,7 +133,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 17);
+            this.label1.Size = new System.Drawing.Size(283, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hệ thống quản lý khách sạn A$AP";
             // 
@@ -162,14 +162,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quên mật khẩu";
             // 
+            // txt_TenDangNhap
+            // 
+            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenDangNhap.BorderSize = 2;
+            this.txt_TenDangNhap.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenDangNhap.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(194, 36);
+            this.txt_TenDangNhap.Multiline = false;
+            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
+            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_TenDangNhap.PasswordChar = false;
+            this.txt_TenDangNhap.Size = new System.Drawing.Size(250, 41);
+            this.txt_TenDangNhap.TabIndex = 6;
+            this.txt_TenDangNhap.Texts = "";
+            this.txt_TenDangNhap.UnderLineStyle = true;
+            // 
             // lbl_tendangnhap_chk
             // 
             this.lbl_tendangnhap_chk.AutoSize = true;
             this.lbl_tendangnhap_chk.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tendangnhap_chk.ForeColor = System.Drawing.Color.Red;
-            this.lbl_tendangnhap_chk.Location = new System.Drawing.Point(197, 76);
+            this.lbl_tendangnhap_chk.Location = new System.Drawing.Point(178, 76);
             this.lbl_tendangnhap_chk.Name = "lbl_tendangnhap_chk";
-            this.lbl_tendangnhap_chk.Size = new System.Drawing.Size(14, 17);
+            this.lbl_tendangnhap_chk.Size = new System.Drawing.Size(15, 20);
             this.lbl_tendangnhap_chk.TabIndex = 5;
             this.lbl_tendangnhap_chk.Text = "*";
             this.lbl_tendangnhap_chk.Visible = false;
@@ -192,14 +209,48 @@
             this.pnl_dmk.Size = new System.Drawing.Size(463, 194);
             this.pnl_dmk.TabIndex = 4;
             // 
+            // txt_NhapLaiMK
+            // 
+            this.txt_NhapLaiMK.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_NhapLaiMK.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_NhapLaiMK.BorderSize = 2;
+            this.txt_NhapLaiMK.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NhapLaiMK.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txt_NhapLaiMK.Location = new System.Drawing.Point(172, 58);
+            this.txt_NhapLaiMK.Multiline = false;
+            this.txt_NhapLaiMK.Name = "txt_NhapLaiMK";
+            this.txt_NhapLaiMK.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_NhapLaiMK.PasswordChar = true;
+            this.txt_NhapLaiMK.Size = new System.Drawing.Size(250, 41);
+            this.txt_NhapLaiMK.TabIndex = 24;
+            this.txt_NhapLaiMK.Texts = "";
+            this.txt_NhapLaiMK.UnderLineStyle = true;
+            // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_MatKhau.BorderSize = 2;
+            this.txt_MatKhau.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MatKhau.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txt_MatKhau.Location = new System.Drawing.Point(172, 3);
+            this.txt_MatKhau.Multiline = false;
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_MatKhau.PasswordChar = true;
+            this.txt_MatKhau.Size = new System.Drawing.Size(250, 41);
+            this.txt_MatKhau.TabIndex = 23;
+            this.txt_MatKhau.Texts = "";
+            this.txt_MatKhau.UnderLineStyle = true;
+            // 
             // lbl_matkhaumoi_chk
             // 
             this.lbl_matkhaumoi_chk.AutoSize = true;
             this.lbl_matkhaumoi_chk.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_matkhaumoi_chk.ForeColor = System.Drawing.Color.Red;
-            this.lbl_matkhaumoi_chk.Location = new System.Drawing.Point(175, 42);
+            this.lbl_matkhaumoi_chk.Location = new System.Drawing.Point(153, 42);
             this.lbl_matkhaumoi_chk.Name = "lbl_matkhaumoi_chk";
-            this.lbl_matkhaumoi_chk.Size = new System.Drawing.Size(14, 17);
+            this.lbl_matkhaumoi_chk.Size = new System.Drawing.Size(15, 20);
             this.lbl_matkhaumoi_chk.TabIndex = 22;
             this.lbl_matkhaumoi_chk.Text = "*";
             this.lbl_matkhaumoi_chk.Visible = false;
@@ -209,9 +260,9 @@
             this.lbl_rematkhaumoi_chk.AutoSize = true;
             this.lbl_rematkhaumoi_chk.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_rematkhaumoi_chk.ForeColor = System.Drawing.Color.Red;
-            this.lbl_rematkhaumoi_chk.Location = new System.Drawing.Point(173, 99);
+            this.lbl_rematkhaumoi_chk.Location = new System.Drawing.Point(152, 99);
             this.lbl_rematkhaumoi_chk.Name = "lbl_rematkhaumoi_chk";
-            this.lbl_rematkhaumoi_chk.Size = new System.Drawing.Size(14, 17);
+            this.lbl_rematkhaumoi_chk.Size = new System.Drawing.Size(15, 20);
             this.lbl_rematkhaumoi_chk.TabIndex = 21;
             this.lbl_rematkhaumoi_chk.Text = "*";
             this.lbl_rematkhaumoi_chk.Visible = false;
@@ -223,7 +274,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(11, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 22);
+            this.label4.Size = new System.Drawing.Size(208, 26);
             this.label4.TabIndex = 12;
             this.label4.Text = "Nhập lại Mật khẩu:";
             // 
@@ -234,7 +285,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 22);
+            this.label3.Size = new System.Drawing.Size(161, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mật khẩu mới:";
             // 
@@ -320,7 +371,7 @@
             this.lbl_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
             this.lbl_DangNhap.Location = new System.Drawing.Point(248, 500);
             this.lbl_DangNhap.Name = "lbl_DangNhap";
-            this.lbl_DangNhap.Size = new System.Drawing.Size(89, 18);
+            this.lbl_DangNhap.Size = new System.Drawing.Size(111, 23);
             this.lbl_DangNhap.TabIndex = 20;
             this.lbl_DangNhap.Text = "Đăng nhập";
             this.lbl_DangNhap.Click += new System.EventHandler(this.lbl_DangNhap_Click_1);
@@ -347,65 +398,14 @@
             this.lbl_notice_successfull.ForeColor = System.Drawing.Color.DarkGreen;
             this.lbl_notice_successfull.Location = new System.Drawing.Point(128, 543);
             this.lbl_notice_successfull.Name = "lbl_notice_successfull";
-            this.lbl_notice_successfull.Size = new System.Drawing.Size(364, 54);
+            this.lbl_notice_successfull.Size = new System.Drawing.Size(454, 68);
             this.lbl_notice_successfull.TabIndex = 23;
             this.lbl_notice_successfull.Text = "Đổi mật khẩu thành công";
             this.lbl_notice_successfull.Visible = false;
             // 
-            // txt_TenDangNhap
-            // 
-            this.txt_TenDangNhap.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_TenDangNhap.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_TenDangNhap.BorderSize = 2;
-            this.txt_TenDangNhap.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenDangNhap.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(194, 36);
-            this.txt_TenDangNhap.Multiline = false;
-            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
-            this.txt_TenDangNhap.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_TenDangNhap.PasswordChar = false;
-            this.txt_TenDangNhap.Size = new System.Drawing.Size(250, 36);
-            this.txt_TenDangNhap.TabIndex = 6;
-            this.txt_TenDangNhap.Texts = "";
-            this.txt_TenDangNhap.UnderLineStyle = true;
-            // 
-            // txt_NhapLaiMK
-            // 
-            this.txt_NhapLaiMK.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_NhapLaiMK.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_NhapLaiMK.BorderSize = 2;
-            this.txt_NhapLaiMK.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NhapLaiMK.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txt_NhapLaiMK.Location = new System.Drawing.Point(172, 58);
-            this.txt_NhapLaiMK.Multiline = false;
-            this.txt_NhapLaiMK.Name = "txt_NhapLaiMK";
-            this.txt_NhapLaiMK.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_NhapLaiMK.PasswordChar = true;
-            this.txt_NhapLaiMK.Size = new System.Drawing.Size(250, 36);
-            this.txt_NhapLaiMK.TabIndex = 24;
-            this.txt_NhapLaiMK.Texts = "";
-            this.txt_NhapLaiMK.UnderLineStyle = true;
-            // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txt_MatKhau.BorderSize = 2;
-            this.txt_MatKhau.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MatKhau.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txt_MatKhau.Location = new System.Drawing.Point(172, 3);
-            this.txt_MatKhau.Multiline = false;
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Padding = new System.Windows.Forms.Padding(7);
-            this.txt_MatKhau.PasswordChar = true;
-            this.txt_MatKhau.Size = new System.Drawing.Size(250, 36);
-            this.txt_MatKhau.TabIndex = 23;
-            this.txt_MatKhau.Texts = "";
-            this.txt_MatKhau.UnderLineStyle = true;
-            // 
             // frm_QuenMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1208, 706);

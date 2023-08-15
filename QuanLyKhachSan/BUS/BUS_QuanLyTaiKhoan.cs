@@ -90,8 +90,8 @@ namespace QuanLyKhachSan.BUS
             bool frag = true;
             List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
             HashSet<string> tenDangNhapSet = new HashSet<string>();
-            bool hasDuplicateTenDangNhap = false;
-            bool maNhanSuNotExists = false;
+            bool ktTenDangNhap = false;
+            bool ktNhanSu = false;
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 if (!row.IsNewRow)
@@ -134,14 +134,14 @@ namespace QuanLyKhachSan.BUS
 
                     if (!tenDangNhapSet.Add(tenDangNhap))
                     {
-                        hasDuplicateTenDangNhap = true;
+                        ktTenDangNhap = true;
                         frag = false;
                         break;
                     }
 
                     if (!DA_.CheckMaNhanSu(maNhanSu))
                     {
-                        maNhanSuNotExists = true;
+                        ktNhanSu = true;
                         frag = false;
                         break;
                     }
@@ -160,11 +160,11 @@ namespace QuanLyKhachSan.BUS
 
             try
             {
-                if (hasDuplicateTenDangNhap)
+                if (ktTenDangNhap)
                 {
                     throw new Exception("Hệ thông đã tồn tại tài khoản này: " + tk);
                 }
-                else if (maNhanSuNotExists)
+                else if (ktNhanSu)
                 {
                     throw new Exception("Mã nhân sự không tồn tại");
                 }
